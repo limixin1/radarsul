@@ -1,0 +1,156 @@
+{
+  "dominio_planejado": "radarsul.site",
+  "estado": "preparado, ainda não publicado",
+  "arquivos": [
+    {
+      "caminho": ".gitignore",
+      "bytes": 70,
+      "sha256": "991152025e9770c64adaf421bd38ece3b46c75b0463b059cc4052b1e620a1197"
+    },
+    {
+      "caminho": ".streamlit/config.toml",
+      "bytes": 240,
+      "sha256": "d3dfac02975fb8ae8a3704a9c96b4c9d294fa8ad23e09e047a6b4a17af8045c9"
+    },
+    {
+      "caminho": "README.md",
+      "bytes": 7047,
+      "sha256": "aec231e35a02ba344ae43fde9b97c0581ee8079efb6f69c8b17c214359726224"
+    },
+    {
+      "caminho": "VERIFICACAO_PUBLICACAO.json",
+      "bytes": 428,
+      "sha256": "4f78305e4d7f8a152670656ea313caa6b7e46ade2e3ddd3fb0511e83342c09f7"
+    },
+    {
+      "caminho": "app.py",
+      "bytes": 75,
+      "sha256": "290db16327272325eb53905eb3e35a305d2b388f1552a2bd22276420db8694c5"
+    },
+    {
+      "caminho": "app_antt.py",
+      "bytes": 8750,
+      "sha256": "2359847c51312a1c9abb2b5c7eb089bfcb11b9d00751b4efa6731b1197eca909"
+    },
+    {
+      "caminho": "config.py",
+      "bytes": 981,
+      "sha256": "afc9f15ffcad1d8285b70bbb182fb8282aff4c55979a710604cf11ba798aaabb"
+    },
+    {
+      "caminho": "dados_brutos/coleta_20261026T224903Z.json",
+      "bytes": 2394,
+      "sha256": "d7e9378c9a5e3e7b85d215a01939c8eb2efcf02a58079e45c57dbae6222e600c"
+    },
+    {
+      "caminho": "dados_tratados/antt_acidentes.parquet",
+      "bytes": 120608,
+      "sha256": "3d2f1b222b5e6ee634b050a4db3734baf69cc06c8bb46e9168266adcff024fc9"
+    },
+    {
+      "caminho": "dados_tratados/antt_anual.parquet",
+      "bytes": 11295,
+      "sha256": "fb1821c4b9eac4073611872d1aedd7da5318b06df2116822775f7dba85661db2"
+    },
+    {
+      "caminho": "dados_tratados/antt_contexto_5km.parquet",
+      "bytes": 7585,
+      "sha256": "999e581002aee3c7c89f2566c3a349cae4ba75c457230d7dcba2d1f0d0049d6f"
+    },
+    {
+      "caminho": "dados_tratados/antt_coorte.parquet",
+      "bytes": 11996,
+      "sha256": "1c009ee24c37003f59d185d855c020ddc17c9a026583faa98844e77e05952237"
+    },
+    {
+      "caminho": "dados_tratados/antt_diario.parquet",
+      "bytes": 338712,
+      "sha256": "5b7b24328e5e47012696c2eb0445618e76d768486ab9db21980178261dbb3a64"
+    },
+    {
+      "caminho": "dados_tratados/antt_equipamentos.parquet",
+      "bytes": 9850,
+      "sha256": "a6be4ea44c52951f415a2ee227563eeb08b389bf3e7fa6d4fb302941f07de387"
+    },
+    {
+      "caminho": "dados_tratados/antt_mensal.parquet",
+      "bytes": 42452,
+      "sha256": "53746a4aeee309ab9d09cdf313100e32703267908c48bcec85e788a4083a4bd9"
+    },
+    {
+      "caminho": "dados_tratados/antt_possiveis_diario.parquet",
+      "bytes": 117044,
+      "sha256": "baafe587e27d6661377ba3fe432a9776b98ead21a012bb663ba396df176f8ab1"
+    },
+    {
+      "caminho": "dados_tratados/ocorrencias.parquet",
+      "bytes": 105139,
+      "sha256": "dcf143ed99e79b917f1952f35558de975bb3384f4d4d7e73ab15e50e780c405b"
+    },
+    {
+      "caminho": "documentacao/AUDITORIA_ANTT_E_VIABILIDADE.md",
+      "bytes": 3682,
+      "sha256": "c7360d9b560b3ecd73d017ff5d3fe734eceded7b9ecb6b63478bc5f8af3de71e"
+    },
+    {
+      "caminho": "documentacao/FONTES_OFICIAIS.md",
+      "bytes": 5229,
+      "sha256": "28a7d026c81ecfa82aee1f10fbd2d0539e77356034d6debf75bb712dbdf4c3fb"
+    },
+    {
+      "caminho": "relatorios/METODOLOGIA_E_DESCOBERTAS.md",
+      "bytes": 3564,
+      "sha256": "b1d6f6da5721f058d642009c5fa37dc61b69f477b645a16a35a4a6b17cbf80c0"
+    },
+    {
+      "caminho": "relatorios/QUALIDADE_DADOS.md",
+      "bytes": 2674,
+      "sha256": "47ee0fb203c4752ec5a6eea7661bef2aab401f4a92867d740745efa66d105817"
+    },
+    {
+      "caminho": "relatorios/auditoria_antt.json",
+      "bytes": 22331,
+      "sha256": "3cb5154099bb66afb552fc62249d0e5cc9326e07a04c8f375c8997a21e05ddba"
+    },
+    {
+      "caminho": "relatorios/descobertas_antt.json",
+      "bytes": 2267,
+      "sha256": "e8501f0a0c0afc433f2e9181bfdce4a2b824f0ccf1bfc2e8380aa6ef948f4884"
+    },
+    {
+      "caminho": "relatorios/resumo_antt.json",
+      "bytes": 1605,
+      "sha256": "5b12ff71d96e063fd8d2fab2a7fb0e6687fd906af059f253d22ef965ee3b6f96"
+    },
+    {
+      "caminho": "render.yaml",
+      "bytes": 549,
+      "sha256": "d1fe57177b22a4949a45995fd2e4d8b2d132977b378a3c384998544b67918315"
+    },
+    {
+      "caminho": "requirements.txt",
+      "bytes": 89,
+      "sha256": "6e096cbba45826cfd0af24bb0b92a3ff1e7170a28e7cb624792c6e36070db70c"
+    },
+    {
+      "caminho": "src/__init__.py",
+      "bytes": 73,
+      "sha256": "702b4b1cea9123723c2fa23d52d6b90d954e9a5beb067d6af246f9fc8b9a60b2"
+    },
+    {
+      "caminho": "src/antt.py",
+      "bytes": 18886,
+      "sha256": "c6bf1ff07fa61000337fc80946023b306bbf8794b3f4b85eff7d8d5342e963d2"
+    },
+    {
+      "caminho": "src/antt_charts.py",
+      "bytes": 4577,
+      "sha256": "72faf553c612b161c1b4cfadac7bf6a3b2931d92357355711ee404c9546633dd"
+    },
+    {
+      "caminho": "src/antt_report.py",
+      "bytes": 3633,
+      "sha256": "0c579a6ca29caba59dd36d5e8230fd4cb30b14b22a2bc3661c8ac35359bab3b5"
+    }
+  ]
+}

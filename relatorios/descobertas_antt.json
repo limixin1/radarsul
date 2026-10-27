@@ -1,0 +1,59 @@
+[
+  {
+    "id": "D1",
+    "titulo": "O índice acima de 120 km/h varia de 0.74 a 6.34 por 10 mil",
+    "minimo": 0.7390116163973114,
+    "maximo": 6.343146230944732,
+    "periodo": "2024–2025",
+    "equipamentos": 20,
+    "max_id": "VC101-9",
+    "max_altas": 7091,
+    "max_denominador": 11178995,
+    "interpretacao": "Heterogeneidade entre contagens publicadas em pontos monitorados com cobertura diária mínima de 90% em cada ano.",
+    "limite": "Limiar analítico de 120 km/h. Não é frequência de autuações, nem risco de acidente. Cobertura é de registros, não de operação."
+  },
+  {
+    "id": "D2",
+    "titulo": "A ordenação anual do índice apresenta Spearman 0.96",
+    "rho": 0.9624060150375939,
+    "persistentes": [
+      "VC101-39",
+      "VC101-4",
+      "VC101-7",
+      "VC101-9"
+    ],
+    "n_persistentes": 4,
+    "periodo": "2024–2025",
+    "interpretacao": "Quatro equipamentos estão no quartil superior nos dois anos. A consulta pode priorizar investigação de padrões repetidos.",
+    "limite": "Dois anos e seleção de cobertura. Não é validação de previsão. Sem teste de significância ou inferência causal."
+  },
+  {
+    "id": "D3",
+    "titulo": "O contexto por segmentos de 5 km apresenta Spearman -0.58",
+    "rho": -0.5842532854724708,
+    "segmentos": 16,
+    "sensibilidade": [
+      {
+        "largura_km": 2,
+        "segmentos": 16,
+        "spearman": -0.45541747253447173,
+        "spearman_combinacoes_data_km": -0.4406790430026118
+      },
+      {
+        "largura_km": 5,
+        "segmentos": 16,
+        "spearman": -0.5842532854724708,
+        "spearman_combinacoes_data_km": -0.5842532854724708
+      },
+      {
+        "largura_km": 10,
+        "segmentos": 14,
+        "spearman": -0.4461538461538462,
+        "spearman_combinacoes_data_km": -0.4378440493271549
+      }
+    ],
+    "periodo": "2024–2025",
+    "interpretacao": "Em segmentos disjuntos de 5 km e somente nos dias em que todos os equipamentos do segmento publicaram, maior índice acima de 120 não acompanha maior contagem de registros de acidentes.",
+    "limite": "Não significa efeito protetor da velocidade. Fluxo, localização dos radares, seleção, subregistro e agregação espacial podem explicar a associação."
+  }
+]

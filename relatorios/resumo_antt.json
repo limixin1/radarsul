@@ -1,0 +1,75 @@
+{
+  "versao": "2.0",
+  "coleta_local": "26/10/2026",
+  "periodo_principal": [
+    "2024-01-01",
+    "2025-12-31"
+  ],
+  "equipamentos_trafego": 42,
+  "municipios": 15,
+  "coorte_equipamentos": 20,
+  "coorte_ids": [
+    "VC101-10",
+    "VC101-11",
+    "VC101-12",
+    "VC101-13",
+    "VC101-14",
+    "VC101-15",
+    "VC101-19",
+    "VC101-21",
+    "VC101-22",
+    "VC101-24",
+    "VC101-25",
+    "VC101-26",
+    "VC101-31",
+    "VC101-32",
+    "VC101-38",
+    "VC101-39",
+    "VC101-4",
+    "VC101-42",
+    "VC101-7",
+    "VC101-9"
+  ],
+  "coorte_passagens": 226870300,
+  "coorte_altas": 57163,
+  "coorte_indice_por10mil": 2.519633464583068,
+  "todos_passagens_2024_2025": 410813535,
+  "todos_altas_2024_2025": 111980,
+  "spearman_anos": 0.9624060150375939,
+  "persistentes": [
+    "VC101-39",
+    "VC101-4",
+    "VC101-7",
+    "VC101-9"
+  ],
+  "limiares_q75": {
+    "2024": 4.0728398313450045,
+    "2025": 3.6728028445734275
+  },
+  "spearman_contexto_5km": -0.5842532854724708,
+  "segmentos_contexto": 16,
+  "taxa_possiveis_infracoes_disponivel": false,
+  "acidentes_antt_2024_2025": 3499,
+  "criciuma": [
+    {
+      "identificador": "VC101-30",
+      "ano": 2024,
+      "passagens": 4549086,
+      "altas": 1299,
+      "dias": 306,
+      "dias_calendario": 366,
+      "cobertura_dias": 0.8360655737704918,
+      "por_10_mil": 2.8555186690249426
+    },
+    {
+      "identificador": "VC101-30",
+      "ano": 2025,
+      "passagens": 5011647,
+      "altas": 1113,
+      "dias": 332,
+      "dias_calendario": 365,
+      "cobertura_dias": 0.9095890410958904,
+      "por_10_mil": 2.220826806038015
+    }
+  ]
+}

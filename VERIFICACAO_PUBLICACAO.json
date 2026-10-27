@@ -1,0 +1,14 @@
+{
+  "aplicativo": "SENTINELA 2.0",
+  "dominio_planejado": "radarsul.site",
+  "verificacoes_locais": {
+    "cinco_telas_sem_excecao": true,
+    "relatorio_criciuma": true,
+    "blueprint_python_free": true,
+    "dados_incluidos": "Todos os Parquet necessários ao aplicativo",
+    "servidor_bind_0_0_0_0_http_200": true
+  },
+  "memoria_pico_app_test_mib": 289.5,
+  "publicacao_externa_realizada": false,
+  "dns_alterado": false
+}

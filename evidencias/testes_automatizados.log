@@ -1,0 +1,92 @@
+test_absent_accident_source_year_never_becomes_zero (test_analysis.AnalysisTests.test_absent_accident_source_year_never_becomes_zero) ... ok
+test_aggregation_is_ratio_of_sums (test_analysis.AnalysisTests.test_aggregation_is_ratio_of_sums) ... ok
+test_context_matches_original_and_does_not_multiply_accidents (test_analysis.AnalysisTests.test_context_matches_original_and_does_not_multiply_accidents) ... ok
+test_daily_contract_rejects_duplicates_and_inconsistent_counts (test_analysis.AnalysisTests.test_daily_contract_rejects_duplicates_and_inconsistent_counts) ... ok
+test_ineligible_point_and_other_years_have_no_safety_class (test_analysis.AnalysisTests.test_ineligible_point_and_other_years_have_no_safety_class) ... ok
+test_invalid_ratio_is_unavailable (test_analysis.AnalysisTests.test_invalid_ratio_is_unavailable) ... ok
+test_investigation_uses_fixed_reference_and_reproduces_four_ids (test_analysis.AnalysisTests.test_investigation_uses_fixed_reference_and_reproduces_four_ids) ... ok
+test_location_join_rejects_missing_or_ambiguous_id (test_analysis.AnalysisTests.test_location_join_rejects_missing_or_ambiguous_id) ... ok
+test_missing_current_speed_reference_does_not_hide_real_point (test_analysis.AnalysisTests.test_missing_current_speed_reference_does_not_hide_real_point) ... ok
+test_quality_evidence_keeps_documented_day_and_all_records (test_analysis.AnalysisTests.test_quality_evidence_keeps_documented_day_and_all_records) ... ok
+test_quartile_ties_are_included_without_forcing_four_points (test_analysis.AnalysisTests.test_quartile_ties_are_included_without_forcing_four_points) ... ok
+test_raw_unknown_bands_invalid_counts_and_locations (test_analysis.AnalysisTests.test_raw_unknown_bands_invalid_counts_and_locations) ... ok
+test_reference_snapshot_and_derived_tables (test_analysis.AnalysisTests.test_reference_snapshot_and_derived_tables) ... ok
+test_sensitivity_changes_population_without_altering_snapshot (test_analysis.AnalysisTests.test_sensitivity_changes_population_without_altering_snapshot) ... ok
+test_zero_annual_denominator_excluded_from_reference_and_rule (test_analysis.AnalysisTests.test_zero_annual_denominator_excluded_from_reference_and_rule) ... ok
+test_zero_denominator_is_not_zero_index (test_analysis.AnalysisTests.test_zero_denominator_is_not_zero_index) ... ok
+test_2026_accident_context_is_unavailable_instead_of_zero (test_app.DashboardTests.test_2026_accident_context_is_unavailable_instead_of_zero) ... 2026-10-27 07:00:25.147 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_all_five_pages_have_native_tables_and_no_exception (test_app.DashboardTests.test_all_five_pages_have_native_tables_and_no_exception) ... 2026-10-27 07:00:29.621 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_comparator_one_id_has_one_row_and_no_persistence_chart (test_app.DashboardTests.test_comparator_one_id_has_one_row_and_no_persistence_chart) ... 2026-10-27 07:00:37.623 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_comparator_two_ids_use_only_selected_points (test_app.DashboardTests.test_comparator_two_ids_use_only_selected_points) ... 2026-10-27 07:00:41.046 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_constant_correlation_is_unavailable (test_app.DashboardTests.test_constant_correlation_is_unavailable) ... ok
+test_criciuma_2026_has_dynamic_one_radar_and_181_dates (test_app.DashboardTests.test_criciuma_2026_has_dynamic_one_radar_and_181_dates) ... 2026-10-27 07:00:44.462 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_empty_comparator_removes_chart_and_csv (test_app.DashboardTests.test_empty_comparator_removes_chart_and_csv) ... 2026-10-27 07:00:49.503 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_empty_global_filters_have_specific_messages (test_app.DashboardTests.test_empty_global_filters_have_specific_messages) ... 2026-10-27 07:00:53.139 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_global_change_preserves_valid_ids_without_replacing_invalid_selection (test_app.DashboardTests.test_global_change_preserves_valid_ids_without_replacing_invalid_selection) ... 2026-10-27 07:00:56.771 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_history_line_and_heatmap_have_same_single_id (test_app.DashboardTests.test_history_line_and_heatmap_have_same_single_id) ... 2026-10-27 07:01:01.136 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_load_failure_is_recoverable_without_stacktrace_or_nonexistent_command (test_app.DashboardTests.test_load_failure_is_recoverable_without_stacktrace_or_nonexistent_command) ... 2026-10-27 07:01:04.790 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+Falha ao carregar snapshot SENTINELA
+Traceback (most recent call last):
+  File "/workspace/radarsul/app_antt.py", line 196, in main
+    frames, summary = load()
+                      ^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1139, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1143, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1198, in _execute_mock_call
+    raise effect
+ValueError: sensitive internal detail
+ok
+test_method_has_four_official_sources_and_unavailable_metric (test_app.DashboardTests.test_method_has_four_official_sources_and_unavailable_metric) ... 2026-10-27 07:01:04.863 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_monthly_zero_denominator_has_unavailable_state (test_app.DashboardTests.test_monthly_zero_denominator_has_unavailable_state) ... ok
+test_nonconsecutive_years_leave_gap_in_line (test_app.DashboardTests.test_nonconsecutive_years_leave_gap_in_line) ... ok
+test_aggregation_drift (test_data.SnapshotTests.test_aggregation_drift) ... ok
+test_cannot_enable_incompatible_ratio (test_data.SnapshotTests.test_cannot_enable_incompatible_ratio) ... ok
+test_corrupted_bytes_rejected_before_read (test_data.SnapshotTests.test_corrupted_bytes_rejected_before_read) ... ok
+test_date_inconsistency (test_data.SnapshotTests.test_date_inconsistency) ... ok
+test_duplicate_daily_key (test_data.SnapshotTests.test_duplicate_daily_key) ... ok
+test_fractional_count (test_data.SnapshotTests.test_fractional_count) ... ok
+test_invalid_numerator (test_data.SnapshotTests.test_invalid_numerator) ... ok
+test_missing_file_is_friendly_contract_error (test_data.SnapshotTests.test_missing_file_is_friendly_contract_error) ... ok
+test_missing_location (test_data.SnapshotTests.test_missing_location) ... ok
+test_optional_prf_failure_does_not_break_antt (test_data.SnapshotTests.test_optional_prf_failure_does_not_break_antt) ... ok
+test_snapshot_and_known_totals (test_data.SnapshotTests.test_snapshot_and_known_totals) ... ok
+test_stale_reference (test_data.SnapshotTests.test_stale_reference) ... ok
+test_unknown_equipment (test_data.SnapshotTests.test_unknown_equipment) ... ok
+test_accident_context_has_actual_segment_and_no_causal_claim (test_report.ReportTests.test_accident_context_has_actual_segment_and_no_causal_claim) ... ok
+test_b_absence_is_unavailable_not_zero (test_report.ReportTests.test_b_absence_is_unavailable_not_zero) ... ok
+test_b_uses_id_date_intersection (test_report.ReportTests.test_b_uses_id_date_intersection) ... ok
+test_criciuma_recomputes_annual_and_has_sources (test_report.ReportTests.test_criciuma_recomputes_annual_and_has_sources) ... ok
+test_empty_selection_keeps_scope_and_no_metrics (test_report.ReportTests.test_empty_selection_keeps_scope_and_no_metrics) ... ok
+test_fixed_reference_and_local_quality_in_report (test_report.ReportTests.test_fixed_reference_and_local_quality_in_report) ... ok
+test_repeated_pattern_narrative_is_evidence_specific (test_report.ReportTests.test_repeated_pattern_narrative_is_evidence_specific) ... ok
+test_requested_unobserved_year_does_not_disappear_from_context (test_report.ReportTests.test_requested_unobserved_year_does_not_disappear_from_context) ... ok
+test_zero_denominator_is_unavailable (test_report.ReportTests.test_zero_denominator_is_unavailable) ... ok
+test_catalog_links_and_limits (test_report.SourceTests.test_catalog_links_and_limits) ... ok
+test_catalog_matches_filename_not_record_order (test_report.SourceTests.test_catalog_matches_filename_not_record_order) ... ok
+test_corrupt_manifest_does_not_crash_module_identification (test_report.SourceTests.test_corrupt_manifest_does_not_crash_module_identification) ... ok
+test_format_number_does_not_hide_missing (test_report.SourceTests.test_format_number_does_not_hide_missing) ... ok
+test_snapshot_uses_data_hashes (test_report.SourceTests.test_snapshot_uses_data_hashes) ... ok
+test_version_reads_render_commit_without_assuming_deploy (test_report.SourceTests.test_version_reads_render_commit_without_assuming_deploy) ... ok
+test_all_annual_equipment_values (test_work_reference.WorkReferenceTests.test_all_annual_equipment_values) ... ok
+test_all_monthly_equipment_values (test_work_reference.WorkReferenceTests.test_all_monthly_equipment_values) ... ok
+test_common_date_accident_counts (test_work_reference.WorkReferenceTests.test_common_date_accident_counts) ... ok
+test_ranking_fixed_reference (test_work_reference.WorkReferenceTests.test_ranking_fixed_reference) ... ok
+
+----------------------------------------------------------------------
+Ran 62 tests in 51.909s
+
+OK

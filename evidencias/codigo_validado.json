@@ -1,0 +1,99 @@
+{
+  "commit_codigo_validado": "daf7356cbb830eb2879c032bb1f47c666fdee382",
+  "baseline": "e5baed4fdab7575690a408f4ab492fd63790a00e",
+  "observacao": "Testes executados na árvore antes de criar os commits, com estes mesmos bytes. Documentação/evidências podem ter commit posterior.",
+  "arquivos": [
+    {
+      "caminho": "MANIFESTO_PUBLICACAO.json",
+      "sha256": "045f15f03e6586fe6ad9c2ac18d82f65c3446af75b49cf2c84a3e293368e36b2"
+    },
+    {
+      "caminho": "app.py",
+      "sha256": "290db16327272325eb53905eb3e35a305d2b388f1552a2bd22276420db8694c5"
+    },
+    {
+      "caminho": "app_antt.py",
+      "sha256": "1bd26c682f0254ca1299e4988ea9e460039befbab0fdc7233e8247d4e0a73373"
+    },
+    {
+      "caminho": "config.py",
+      "sha256": "afc9f15ffcad1d8285b70bbb182fb8282aff4c55979a710604cf11ba798aaabb"
+    },
+    {
+      "caminho": "render.yaml",
+      "sha256": "d1fe57177b22a4949a45995fd2e4d8b2d132977b378a3c384998544b67918315"
+    },
+    {
+      "caminho": "requirements.txt",
+      "sha256": "6e096cbba45826cfd0af24bb0b92a3ff1e7170a28e7cb624792c6e36070db70c"
+    },
+    {
+      "caminho": "src/__init__.py",
+      "sha256": "702b4b1cea9123723c2fa23d52d6b90d954e9a5beb067d6af246f9fc8b9a60b2"
+    },
+    {
+      "caminho": "src/antt.py",
+      "sha256": "74ced40e462541b5f9abc261e4a602e9a20e0c6438d532e5eff83a851cdef7b2"
+    },
+    {
+      "caminho": "src/antt_charts.py",
+      "sha256": "46903ef249b2506182c75197fc81b969021cfa57fe5b69443927ecffa1f9e63d"
+    },
+    {
+      "caminho": "src/antt_report.py",
+      "sha256": "195bd95c05a1f20d81cd4ab4852dd962936aabf3c30645d05703267c5a1057be"
+    },
+    {
+      "caminho": "src/sentinel_analysis.py",
+      "sha256": "41efd9f4c79ee44ede9e1f58274428bf88d8cdfcbcefc7e1bb6f15bdc52e07fa"
+    },
+    {
+      "caminho": "src/sentinel_data.py",
+      "sha256": "e0786f45759a11cc69a6cef3c5250a42686d80c74e4a3ef0a7dda522604a8e9f"
+    },
+    {
+      "caminho": "src/sentinel_sources.py",
+      "sha256": "b2aeb2c3d04e26dc60594f5bb8025b51b1e7a3b3ca17b23105f24e2c17a5285d"
+    },
+    {
+      "caminho": "tests/browser_smoke.cjs",
+      "sha256": "47c155930918640098ec29d8692d23d6ac5bc2e50594d0c342ac870189892af3"
+    },
+    {
+      "caminho": "tests/fixtures/work_2026-10-27/anual_recalculado.csv",
+      "sha256": "d6709646ae27cb2ff5329e1fee5e351e5aca6d84a79250c28659f0375ae77097"
+    },
+    {
+      "caminho": "tests/fixtures/work_2026-10-27/contexto_5km.csv",
+      "sha256": "d71d85fb2cf66e277eb8527d4b6cb6431a0ad7697d41c7d578f860c23767b7f7"
+    },
+    {
+      "caminho": "tests/fixtures/work_2026-10-27/mensal_recalculado.csv",
+      "sha256": "7c34565d33d0d0ccb287ffb1de3909640a30e864156bd0abcfd9617dc0644e70"
+    },
+    {
+      "caminho": "tests/fixtures/work_2026-10-27/ranking_coorte.csv",
+      "sha256": "1efbe3215dbc145fd9bd4fe67211ae9684a33993a39a994a266848ef6c0a1cd3"
+    },
+    {
+      "caminho": "tests/test_analysis.py",
+      "sha256": "d4e8cf1aa969874b958973a1db87546e2badadc1c16c83665b0e179d39971942"
+    },
+    {
+      "caminho": "tests/test_app.py",
+      "sha256": "ad8125821dcac10a3e86de37c2a25e417d0b1114777fe3a76c97999cf79ae5eb"
+    },
+    {
+      "caminho": "tests/test_data.py",
+      "sha256": "85d8d9e86b5e863ae36092e5f2f757bebeb5bc20e3a1b404a0e0d348c3602b1d"
+    },
+    {
+      "caminho": "tests/test_report.py",
+      "sha256": "e36c34a472fc0b3149c355299896057c73372cdff8297dad8e2f8d6294e2c9ac"
+    },
+    {
+      "caminho": "tests/test_work_reference.py",
+      "sha256": "1227eaf4f5cc704bc6d16ef1b5dc177e5097175468ffbdfff4f4e65ca0c7d457"
+    }
+  ]
+}

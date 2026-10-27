@@ -1,6 +1,6 @@
 # Auditoria das quatro bases ANTT
 
-Versão 2.0, 26/10/2026. O ZIP recebido contém quatro CSV reais e manifesto bem-sucedido. Todos os hashes conferem. As respostas HTML de rejeição de 23/10 ficam preservadas no manifesto antigo como histórico, sem uso analítico.
+Registro histórico da versão 2.0, 26/10/2026. A integração daquela etapa recebeu um ZIP com quatro CSV reais e registrou a conferência dos hashes. Esses CSV e o manifesto antigo de rejeições HTML de 23/10 não acompanham este checkout, que inclui os dados tratados e o manifesto de coleta bem-sucedida. As afirmações abaixo descrevem aquela integração; a revisão atual valida o snapshot disponível e registra a impossibilidade de refazer o ETL sem os originais em [VALIDACAO_SENTINELA.md](../VALIDACAO_SENTINELA.md).
 
 | Fonte | Linhas | Intervalo observado | Unidade |
 |---|---:|---|---|

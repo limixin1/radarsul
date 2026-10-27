@@ -1,0 +1,72 @@
+{
+  "python": "3.12.14",
+  "snapshot_parquet_hashes": "9/9 preservados",
+  "localizador": {
+    "pontos_originais": 42,
+    "pontos_apos_duas_coordenadas_invalidas_em_copia_de_teste": 40,
+    "resultado": "passed"
+  },
+  "contexto_sensibilidade": [
+    {
+      "largura_km": 2,
+      "segmentos": 16,
+      "spearman": -0.45541747253447173,
+      "resultado": "passed"
+    },
+    {
+      "largura_km": 5,
+      "segmentos": 16,
+      "spearman": -0.5842532854724708,
+      "resultado": "passed"
+    },
+    {
+      "largura_km": 10,
+      "segmentos": 14,
+      "spearman": -0.4461538461538462,
+      "resultado": "passed"
+    }
+  ],
+  "exportacao_csv": {
+    "ids": [
+      "VC101-9",
+      "VC101-39",
+      "VC101-4"
+    ],
+    "colunas_numericas_conferidas": [
+      "passagens",
+      "altas",
+      "dias",
+      "por_10_mil"
+    ],
+    "tolerancia": 1e-12,
+    "resultado": "passed"
+  },
+  "comandos": {
+    "dependencias": {
+      "exit_code": 0,
+      "stdout": "No broken requirements found."
+    },
+    "compilacao": {
+      "exit_code": 0,
+      "stdout": ""
+    },
+    "diff": {
+      "exit_code": 0,
+      "stdout": ""
+    }
+  },
+  "testes_automatizados": {
+    "executados": 62,
+    "falhas": 0,
+    "errors": 0,
+    "skipped": 0,
+    "duracao_segundos": 51.909,
+    "log": "evidencias/testes_automatizados.log"
+  },
+  "navegador": {
+    "checks": 13,
+    "falhas": 0,
+    "log": "evidencias/navegador.json"
+  },
+  "producao": "Não publicada nem validada nesta revisão"
+}

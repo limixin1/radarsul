@@ -1,0 +1,47 @@
+{
+  "problema": "SEN-001",
+  "baseline_commit": "e5baed4fdab7575690a408f4ab492fd63790a00e",
+  "metodo": "Streamlit AppTest, inspeção do proto.spec JSON dos gráficos; controles reais executados no aplicativo baseline antes de editar.",
+  "antes": [
+    {
+      "tela": "Comparador de equipamentos",
+      "selecao_local": [
+        "VC101-4"
+      ],
+      "tabela_radares": 1,
+      "grafico_persistencia_radares": 20,
+      "causa": "aid derivado dos ids globais, não de chosen"
+    },
+    {
+      "tela": "Comparador de equipamentos",
+      "selecao_local": [],
+      "tabela_radares": 0,
+      "grafico_persistencia_radares": 20
+    },
+    {
+      "tela": "Evolução e persistência",
+      "selecao_local": [
+        "VC101-9"
+      ],
+      "serie_radares": [
+        "VC101-9"
+      ],
+      "matriz_temporal_quantidade_radares": 20,
+      "causa": "coverage_map(monthly,ids,years)"
+    }
+  ],
+  "depois": {
+    "comando": "OPENBLAS_NUM_THREADS=1 .venv/bin/python -m unittest tests.test_app -v",
+    "testes": [
+      "test_comparator_one_id_has_one_row_and_no_persistence_chart",
+      "test_comparator_two_ids_use_only_selected_points",
+      "test_empty_comparator_removes_chart_and_csv",
+      "test_history_line_and_heatmap_have_same_single_id",
+      "test_global_change_preserves_valid_ids_without_replacing_invalid_selection"
+    ],
+    "comportamento_esperado": "Comparação com1: tabela1, sem correlação; com2: apenas2 pontos; com0: sem gráfico/CSV. Histórico com1: linha1 e matriz1. Troca global remove IDs inválidos sem substituir escolha.",
+    "resultado": "Cinco regressões de seleção passaram no AppTest; suíte integrada final executada pelo agente principal."
+  },
+  "limite": "Reprodução anterior registrada no turno de inspeção; sem alterar o checkout principal para reexecutar baseline.",
+  "reexecucao_baseline": "AppTest.from_string(subprocess.run([git,show,e5baed4fdab7575690a408f4ab492fd63790a00e:app_antt.py]).stdout), com módulos analíticos atuais; o defeito de escopo reproduz as observações originais."
+}

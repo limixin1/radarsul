@@ -35,7 +35,7 @@ def profile(df,encoding):
 
 
 def passages(df):
-    required=['identificador','data_da_passagem','velocidade','volume_total','km_m','sentido_da_passagem','faixa_da_passagem','tipo_de_veiculo']
+    required=['identificador','data_da_passagem','velocidade','volume_total','km_m','sentido_da_passagem','faixa_da_passagem','tipo_de_veiculo','latitude','longitude']
     if set(required)-set(df):raise ValueError('Esquema ANTT não reconhecido.')
     out=df.copy()
     out['data']=pd.to_datetime(out.data_da_passagem,format='%d/%m/%Y',errors='coerce')
@@ -44,21 +44,60 @@ def passages(df):
     out['faixa_velocidade']=out.velocidade.str.strip()
     if not out.faixa_velocidade.isin(BANDS).all():raise ValueError('Faixa de velocidade nova ou não reconhecida.')
     out['acima_120']=out.faixa_velocidade.isin(['121 - 140','141 - 160','> 160 KM/h'])
-    invalid=out.data.isna()|out.km.isna()|out.quantidade.isna()|out.quantidade.lt(0)|(out.quantidade%1).ne(0)
+    invalid=(out.data.isna()|out.km.isna()|out.quantidade.isna()|~np.isfinite(out.km)|~np.isfinite(out.quantidade)
+             |out.quantidade.lt(0)|(out.quantidade%1).ne(0)
+             |out.identificador.isna()|out.identificador.astype('string').str.strip().eq('')
+             |~out.sentido_da_passagem.isin(['Crescente','Decrescente'])
+             |out.faixa_da_passagem.isna())
     if invalid.any():raise ValueError(f'{int(invalid.sum())} linhas com data, km ou quantidade inválidos. Revisar antes de analisar.')
     out['ano']=out.data.dt.year
     out['mes']=out.data.dt.to_period('M').astype(str)
     out['quantidade_alta']=out.quantidade.where(out.acima_120,0)
     out['lat']=number(out.latitude);out['lon']=number(out.longitude)
+    if out.duplicated().any():
+        raise ValueError('Linhas de passagens duplicadas: revisar a origem antes de somar.')
+    locations=out.groupby('identificador').agg(km=('km','nunique'),sentido=('sentido_da_passagem','nunique'))
+    if locations.gt(1).any().any():
+        raise ValueError('Equipamento com localização ou sentido variável: separar históricos.')
     return out
 
 
 def weighted_index(high,total):
-    """Índice por 10 mil contagens publicadas da própria base A."""
-    return 10000*high/total if pd.notna(total) and total>0 else np.nan
+    """Razão entre somas da mesma base; entradas impossíveis ficam indisponíveis."""
+    try:
+        if (pd.isna(high) or pd.isna(total) or not np.isfinite(high)
+                or not np.isfinite(total) or total<=0 or high<0 or high>total):
+            return np.nan
+        return 10000*(high/total)
+    except (TypeError,ValueError):
+        return np.nan
+
+
+def validate_daily(daily):
+    """Contrato das contagens publicadas, sem preencher ausências com zeros."""
+    required={'identificador','data','ano','mes','passagens','altas'}
+    if required-set(daily):
+        raise ValueError('Esquema diário incompleto: '+', '.join(sorted(required-set(daily))))
+    if daily.empty:
+        return
+    dates=pd.to_datetime(daily.data,errors='coerce')
+    if (daily.identificador.isna().any() or daily.identificador.astype('string').str.strip().eq('').any()
+            or dates.isna().any() or daily.duplicated(['identificador','data']).any()):
+        raise ValueError('Identificador/data inválido ou chave diária duplicada.')
+    if not (daily.ano.eq(dates.dt.year).all() and daily.mes.eq(dates.dt.strftime('%Y-%m')).all()):
+        raise ValueError('Ano ou mês incompatível com a data publicada.')
+    for col in ['passagens','altas']:
+        if not pd.api.types.is_numeric_dtype(daily[col]):
+            raise ValueError('Contagens diárias devem ter tipo numérico explícito.')
+        numbers=pd.to_numeric(daily[col],errors='coerce')
+        if (numbers.isna()|~np.isfinite(numbers)|numbers.lt(0)|(numbers%1).ne(0)).any():
+            raise ValueError('Contagens diárias devem ser inteiras, finitas e não negativas.')
+    if daily.altas.gt(daily.passagens).any():
+        raise ValueError('Numerador acima do denominador da mesma base.')
 
 
 def annual_table(daily):
+    validate_daily(daily)
     out=daily.groupby(['identificador','ano'],as_index=False).agg(passagens=('passagens','sum'),altas=('altas','sum'),dias=('data','nunique'))
     out['dias_calendario']=out.ano.map(lambda y:366 if calendar.isleap(int(y)) else 365)
     out['cobertura_dias']=out.dias/out.dias_calendario
@@ -67,14 +106,31 @@ def annual_table(daily):
 
 
 def cohort_ids(annual,threshold=MIN_COVERAGE):
+    if not np.isfinite(threshold) or not 0<=threshold<=1:
+        raise ValueError('Cobertura mínima deve estar entre zero e um.')
     target=annual.loc[annual.ano.isin(YEARS)]
+    target=target.loc[target.por_10_mil.notna() & np.isfinite(target.por_10_mil)]
     g=target.groupby('identificador').agg(anos=('ano','nunique'),cobertura_min=('cobertura_dias','min'))
     return sorted(g.index[g.anos.eq(2)&g.cobertura_min.ge(threshold)].tolist())
 
 
 def equipment_table(daily,metadata,years=YEARS):
+    validate_daily(daily)
+    required={'identificador','km','municipio','sentido'}
+    if required-set(metadata):
+        raise ValueError('Cadastro sem identificador/localização necessários.')
+    if metadata.identificador.isna().any() or metadata.identificador.duplicated().any():
+        raise ValueError('Cadastro com identificador ausente ou duplicado.')
     selected=daily.loc[daily.ano.isin(years)]
     if selected.empty:return pd.DataFrame(columns=[*metadata.columns,'passagens','altas','dias','por_10_mil'])
+    if set(selected.identificador)-set(metadata.identificador):
+        raise ValueError('Equipamento diário sem localização na base A.')
+    dimensions=metadata.loc[metadata.identificador.isin(selected.identificador)]
+    km=pd.to_numeric(dimensions.km,errors='coerce')
+    if (km.isna().any() or not np.isfinite(km).all()
+            or dimensions.municipio.isna().any() or dimensions.municipio.astype('string').str.strip().eq('').any()
+            or not dimensions.sentido.isin(['Crescente','Decrescente']).all()):
+        raise ValueError('Localização do equipamento inválida; não inferir por proximidade.')
     out=selected.groupby('identificador',as_index=False).agg(passagens=('passagens','sum'),altas=('altas','sum'),dias=('data','nunique'))
     out['por_10_mil']=10000*out.altas/out.passagens.replace(0,np.nan)
     before=out.passagens.sum()
@@ -84,6 +140,7 @@ def equipment_table(daily,metadata,years=YEARS):
 
 
 def monthly_table(daily):
+    validate_daily(daily)
     out=daily.groupby(['identificador','mes'],as_index=False).agg(passagens=('passagens','sum'),altas=('altas','sum'),dias=('data','nunique'))
     out['data_mes']=pd.to_datetime(out.mes+'-01')
     out['cobertura_dias']=out.dias/out.data_mes.dt.days_in_month
@@ -93,12 +150,18 @@ def monthly_table(daily):
 
 
 def context_table(daily,metadata,accidents,ids,years=YEARS,width=5):
+    if not np.isfinite(width) or width<=0:
+        raise ValueError('Largura de segmento deve ser positiva e finita.')
+    years=sorted(set(years))
+    if set(years)-set(accidents.ano.dropna()):
+        raise ValueError('Fonte de acidentes indisponível para um ou mais anos selecionados; ausência não é zero.')
     points=equipment_table(daily.loc[daily.identificador.isin(ids)],metadata,years)
     columns=['segmento_inicio','passagens','altas','equipamentos','por_10_mil','registros_acidentes','combinacoes_data_km','segmento','dias_comuns','cobertura_dias_comuns']
     if points.empty:return pd.DataFrame(columns=columns)
     points['segmento_inicio']=np.floor(points.km/width)*width
     expected=points.groupby('segmento_inicio').identificador.nunique()
-    rows=daily.loc[daily.identificador.isin(ids)&daily.ano.isin(years)].merge(
+    rows=daily.loc[daily.identificador.isin(ids)&daily.ano.isin(years)
+                   &daily.data.between(accidents.data.min(),accidents.data.max())].merge(
         points[['identificador','segmento_inicio']],on='identificador',how='left',validate='many_to_one')
     day=rows.groupby(['segmento_inicio','data'],as_index=False).agg(
         passagens=('passagens','sum'),altas=('altas','sum'),equipamentos_publicando=('identificador','nunique'))

@@ -1,6 +1,6 @@
 {
   "dominio_planejado": "radarsul.site",
-  "estado": "preparado, ainda não publicado",
+  "estado": "publicado no Render; domínio personalizado pendente",
   "arquivos": [
     {
       "caminho": ".gitignore",
@@ -14,13 +14,13 @@
     },
     {
       "caminho": "README.md",
-      "bytes": 7047,
-      "sha256": "aec231e35a02ba344ae43fde9b97c0581ee8079efb6f69c8b17c214359726224"
+      "bytes": 7380,
+      "sha256": "b7cfb9651c37c315d8c4e6dd7dee5d228c90f90d9b613bb318e767df2a9cb207"
     },
     {
       "caminho": "VERIFICACAO_PUBLICACAO.json",
-      "bytes": 428,
-      "sha256": "4f78305e4d7f8a152670656ea313caa6b7e46ade2e3ddd3fb0511e83342c09f7"
+      "bytes": 949,
+      "sha256": "f0c86ef0260b403c2f8d0697d4234a7ceb0364e39331ab6f9134af07c2d2f12b"
     },
     {
       "caminho": "app.py",

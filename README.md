@@ -2,9 +2,9 @@
 
 Este pacote mantém o aplicativo Python/Streamlit e os mesmos indicadores do SENTINELA 2.0. O endereço pretendido é **radarsul.site**, registrado na Hostinger. Hospedagem proposta: Render, serviço Web gratuito. A identidade do aplicativo permanece SENTINELA; o domínio não altera o nome ou a análise do projeto.
 
-**Estado:** pacote preparado para publicação. Ainda é necessário criar o serviço na conta do usuário, concluir a implantação e conectar o domínio. Nenhuma alteração de DNS foi realizada por este pacote.
+**Estado:** serviço publicado no plano Free do Render, no workspace TCC 371, em [radarsul.onrender.com](https://radarsul.onrender.com). A implantação do commit `c100045fd7b5dcc5d7017758d6f8fa7f5fb985dd` foi concluída; a página inicial e `/_stcore/health` responderam com HTTP 200. A associação e a verificação de `radarsul.site` ainda estão pendentes. Nenhuma alteração de DNS foi realizada.
 
-## 1. Enviar os arquivos para o GitHub
+## 1. Enviar os arquivos para o GitHub (reprodução da instalação)
 
 Se a publicação for conduzida pela integração Render no ChatGPT, conecte sua conta e siga o fluxo disponível. O procedimento manual abaixo também pode ser usado.
 
@@ -13,7 +13,7 @@ Se a publicação for conduzida pela integração Render no ChatGPT, conecte sua
 3. Confirme que `app.py`, `requirements.txt` e `render.yaml` aparecem na raiz. As pastas `src`, `dados_tratados`, `relatorios` e `.streamlit` devem acompanhar o envio. Envie os arquivos extraídos, em vez do ZIP fechado.
 4. O repositório pode ser privado. Autorize ao Render somente o acesso necessário ao repositório escolhido. O pacote contém dados administrativos públicos e não contém credenciais.
 
-## 2. Publicar no Render
+## 2. Publicar no Render (reprodução da instalação)
 
 Entre em https://dashboard.render.com e conecte sua conta GitHub.
 
@@ -83,4 +83,4 @@ As dependências de notebook, testes e exportação de figuras foram omitidas da
 - https://render.com/docs/blueprint-spec
 - https://www.hostinger.com/support/4737652-how-to-point-a-domain-to-external-services-at-hostinger/
 
-Consulta: 26/10/2026. A validação local está em `VERIFICACAO_PUBLICACAO.json`; ela não comprova uma implantação externa. Nenhuma senha, chave de API ou configuração de conta pessoal deve ser colocada no repositório.
+Consulta: 26/10/2026. Os registros de validação local e de implantação estão em `VERIFICACAO_PUBLICACAO.json`. A confirmação HTTP não substitui uma conferência visual no navegador da apresentação. Nenhuma senha, chave de API ou configuração de conta pessoal deve ser colocada no repositório.

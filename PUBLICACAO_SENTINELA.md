@@ -2,6 +2,8 @@
 
 Este documento descreve uma etapa posterior à revisão. **Não foi executado deploy nesta implementação.** Não há migração, banco ou secret novo. Não altere DNS, plano, faturamento ou configuração de produção como parte de uma verificação local.
 
+Revisão disponível no [PR #1](https://github.com/limixin1/radarsul/pull/1), em rascunho, na branch `fix/sentinela-validacao`. O PR foi criado para revisão; não foi realizado merge ou deploy.
+
 ## Antes de publicar
 
 1. Revisar a branch `fix/sentinela-validacao`, o diff, os commits e [VALIDACAO_SENTINELA.md](VALIDACAO_SENTINELA.md). Resolver ou aceitar explicitamente as [pendências](PENDENCIAS_SENTINELA.md), principalmente acessibilidade e limites das fontes.

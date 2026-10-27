@@ -1,0 +1,15 @@
+{
+  "branch_enviada": "fix/sentinela-validacao",
+  "pull_request": {
+    "baseRefName": "main",
+    "headRefName": "fix/sentinela-validacao",
+    "headRefOid": "e55c9ffd1b8c9eef2255e083de2910bd6e96db87",
+    "isDraft": true,
+    "number": 1,
+    "state": "OPEN",
+    "url": "https://github.com/limixin1/radarsul/pull/1"
+  },
+  "merge_executado": false,
+  "deploy_executado": false,
+  "verificacoes_remotas": "Em execução na consulta inicial; resultados locais em verificacao_tecnica.json"
+}

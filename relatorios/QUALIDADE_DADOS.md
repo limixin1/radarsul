@@ -1,6 +1,8 @@
 # Qualidade dos dados — ANTT 2.0
 
-Dados coletados em 26/10/2026. Auditoria reproduzível: `python -m src.antt`. Resultados máquina: `auditoria_antt.json`.
+Registro histórico dos dados coletados em 26/10/2026. Os resultados de integração abaixo foram preservados; não são uma nova inspeção dos CSV nesta revisão.
+
+A rotina `python -m src.antt` exige os quatro CSV originais com os hashes do manifesto e escreve saídas; esses CSV não estão neste pacote. Para repetir o ETL, preparar uma cópia descartável com esses insumos. A validação disponível offline parte dos Parquet e reconcilia diário/mensal/anual/coorte: veja [VALIDACAO_SENTINELA.md](../VALIDACAO_SENTINELA.md). Resultados históricos de máquina: `auditoria_antt.json`.
 
 | Verificação | Resultado | Tratamento |
 |---|---|---|
@@ -26,4 +28,4 @@ O ano PNV/SNV do cadastro não é data de instalação. Limites atuais não fora
 
 ## PRF independente
 
-Os 1.750 registros do corredor em 2024–2025 permanecem em arquivos próprios. Há 46 divergências de soma de pessoas, mantidas com flags. Não há soma ou deduplicação cruzada com os 3.499 registros ANTT no mesmo período. O módulo PRF conserva o dicionário e testes próprios; os achados principais desta versão usam ANTT.
+Os 1.750 registros do corredor em 2024–2025 estão em `dados_tratados/ocorrencias.parquet`. Os ZIP originais e seu manifesto não acompanham este checkout. Há 46 divergências de soma de pessoas, mantidas com flags. Não há soma ou deduplicação cruzada com os 3.499 registros ANTT no mesmo período. O dicionário e os testes do módulo PRF da entrega completa não estão neste checkout; as flags existentes foram preservadas. Os achados principais desta versão usam ANTT.

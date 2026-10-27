@@ -1,0 +1,150 @@
+{
+  "environment": "local cloud / Chromium headless",
+  "started_at_utc": "2026-10-27T07:00:19.892Z",
+  "base_commit": "e5baed4fdab7575690a408f4ab492fd63790a00e",
+  "working_tree": "Alterações locais em validação; os hashes do código testado constam em codigo_validado.json.",
+  "checks": [
+    {
+      "name": "Inicialização real e ranking desktop",
+      "status": "passed",
+      "ms": 3648,
+      "details": {
+        "status": 200,
+        "html_lang": "en"
+      }
+    },
+    {
+      "name": "Tabela HTML equivalente ao ranking e foco por teclado",
+      "status": "passed",
+      "ms": 121,
+      "details": {
+        "focus": {
+          "tag": "BUTTON",
+          "name": "Zoom out"
+        },
+        "note": "Percurso parcial de teclado; não equivale a teste com leitor de tela."
+      }
+    },
+    {
+      "name": "Toolbar Plotly: zoom, reset, tela cheia e download PNG",
+      "status": "passed",
+      "ms": 1470,
+      "details": {
+        "controls": [
+          "Download plot as a PNG",
+          "Zoom",
+          "Pan",
+          "Zoom in",
+          "Zoom out",
+          "Autoscale",
+          "Reset axes",
+          "Fullscreen"
+        ],
+        "png_bytes_verified": true,
+        "axes_changed_and_reset": true
+      }
+    },
+    {
+      "name": "Clique real no localizador sincroniza a ficha",
+      "status": "passed",
+      "ms": 893,
+      "details": {
+        "expected": "VC101-21",
+        "ficha": "VC101-21",
+        "real_mouse_click": true
+      }
+    },
+    {
+      "name": "Navegação: Comparador de equipamentos",
+      "status": "passed",
+      "ms": 707,
+      "details": {
+        "filename": "sentinela_comparacao_2024-2025_VC101-9_VC101-39_VC101-4.csv",
+        "bytes": 1400,
+        "export_verified": true
+      }
+    },
+    {
+      "name": "Navegação: Evolução e persistência",
+      "status": "passed",
+      "ms": 1067,
+      "details": {
+        "heading": "Histórico de velocidade"
+      }
+    },
+    {
+      "name": "Navegação: Contexto rodoviário",
+      "status": "passed",
+      "ms": 389,
+      "details": {
+        "heading": "Acidentes no contexto"
+      }
+    },
+    {
+      "name": "Navegação: Relatório preventivo",
+      "status": "passed",
+      "ms": 1536,
+      "details": {
+        "filename": "SENTINELA_relatorio_preventivo.md",
+        "bytes": 34052,
+        "export_verified": true
+      }
+    },
+    {
+      "name": "Refluxo e cabeçalho a 320 CSS px",
+      "status": "passed",
+      "ms": 666,
+      "details": {
+        "viewport": 320,
+        "document_width": 320,
+        "intro_top": 80,
+        "header_bottom": 60
+      }
+    },
+    {
+      "name": "Refluxo e cabeçalho a 390 CSS px",
+      "status": "passed",
+      "ms": 402,
+      "details": {
+        "viewport": 390,
+        "document_width": 390,
+        "intro_top": 80,
+        "header_bottom": 60
+      }
+    },
+    {
+      "name": "Refluxo e cabeçalho a 768 CSS px",
+      "status": "passed",
+      "ms": 447,
+      "details": {
+        "viewport": 768,
+        "document_width": 768,
+        "intro_top": 80,
+        "header_bottom": 60
+      }
+    },
+    {
+      "name": "Refluxo e cabeçalho a 1366 CSS px",
+      "status": "passed",
+      "ms": 503,
+      "details": {
+        "viewport": 1366,
+        "document_width": 1366,
+        "intro_top": 80,
+        "header_bottom": 60
+      }
+    },
+    {
+      "name": "Sem erros JavaScript de página",
+      "status": "passed",
+      "ms": 1,
+      "details": []
+    }
+  ],
+  "limitations": [
+    "Sem leitor de tela real ou estudo com usuários.",
+    "Idioma html=en do framework; sem conformidade WCAG declarada.",
+    "Produção e nova restauração não testadas."
+  ],
+  "finished_at_utc": "2026-10-27T07:00:32.464Z"
+}

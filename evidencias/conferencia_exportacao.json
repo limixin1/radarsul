@@ -1,0 +1,17 @@
+{
+  "arquivo": "evidencias/comparacao_navegador.csv",
+  "ids": [
+    "VC101-9",
+    "VC101-39",
+    "VC101-4"
+  ],
+  "campos_conferidos": [
+    "passagens",
+    "altas",
+    "dias",
+    "por_10_mil"
+  ],
+  "tolerancia": 1e-12,
+  "resultado": "passed",
+  "referencia": "reagregação do snapshot diário por equipamento e anos2024/2025"
+}

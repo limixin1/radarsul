@@ -6,7 +6,7 @@ Estudo quantitativo, observacional, exploratório e descritivo de registros admi
 
 10.000 × contagens A das faixas 121–140, 141–160 e >160 / contagens A de todas as faixas publicadas, para o mesmo ponto e período. O limiar é analítico, sem reconstrução legal. A taxa possíveis infratores/passagens não foi validada e permanece bloqueada. A classe veicular de A é frequentemente ausente; códigos de faixa de A/B divergem.
 
-Dos 42 pontos, a coorte fixa contém 20 com publicação em pelo menos 90% dos dias de cada ano. Ela reúne 57.163 contagens acima de 120 em 226.870.300 publicadas, índice agregado 2,519633 por 10 mil. O agregado pondera por contagens, e não pela média simples dos índices. Mediana e quartis entre pontos estão no notebook. Cobertura de publicação não é uptime nem completude.
+Dos 42 pontos, a coorte fixa contém 20 com publicação em pelo menos 90% dos dias de cada ano. Ela reúne 57.163 contagens acima de 120 em 226.870.300 publicadas, índice agregado 2,519633 por 10 mil. O agregado pondera por contagens, e não pela média simples dos índices. Os quartis de referência são recalculados a partir dos agregados anuais; o notebook da entrega anterior não acompanha este checkout. Cobertura de publicação não é uptime nem completude.
 
 ## D1 — heterogeneidade
 
@@ -30,4 +30,4 @@ Cobertura de 80%, 90% e 95% gera 27, 20 e 9 pontos e índices agregados de 2,539
 
 VC101-30, Criciúma, publica em 306/366 dias em 2024 e 332/365 em 2025. Índices 2,855519 e 2,220827 por 10 mil. São 1.299/4.549.086 e 1.113/5.011.647 contagens. O ponto fica fora da coorte principal, mas continua disponível em consulta local. A diferença entre anos não demonstra melhora de segurança.
 
-Fontes, hashes, transformações, tabelas e saídas acompanham o notebook. `descobertas_antt.json` e `resumo_antt.json` são os resultados principais; `descobertas.json` e `resumo.json` são o contexto PRF independente.
+Fontes e hashes históricos estão em `documentacao/FONTES_OFICIAIS.md` e no manifesto de coleta. Transformações estão em `src/antt.py`; `descobertas_antt.json` e `resumo_antt.json` preservam resultados históricos. O notebook, os CSV originais e os arquivos `descobertas.json`/`resumo.json` da entrega PRF não acompanham este checkout. O contexto PRF disponível é o Parquet tratado. A revisão atual e seus limites de reprodução estão em [VALIDACAO_SENTINELA.md](../VALIDACAO_SENTINELA.md).

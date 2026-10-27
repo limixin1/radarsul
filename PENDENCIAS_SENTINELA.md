@@ -1,0 +1,15 @@
+# Pendências do SENTINELA
+
+Registro de 27/10/2026 após validações locais. Esta lista contém somente critérios ainda não concluídos; a situação detalhada por SEN/CT está em [VALIDACAO_SENTINELA.md](VALIDACAO_SENTINELA.md). Itens de integração devem ser retirados quando houver resultado verificável, sem ocultar as limitações externas.
+
+| Pendência | Justificativa e dependência | Critério de encerramento |
+|---|---|---|
+| SEN-007 / CT-16: idioma do documento e leitor de tela | Streamlit 1.66.1 não expôs configuração suportada de idioma na inspeção. `lang=en` não deve ser ocultado por alegação de conformidade; não foi executado percurso com tecnologia assistiva. | Solução suportada testada, idioma DOM pt-BR e percurso com leitor de tela/teclado registrado; sem exigir redesign completo por suposição. |
+| SEN-013/014 / CT-25: ampliação e percurso de foco | Chromium verificou 320/390/768/1366 px sem overflow, mas não ampliação de texto/zoom 200% nem percurso completo de foco em cada largura. | Ensaios de ampliação e foco registrados; preservar alternativa aos dados bidimensionais. |
+| SEN-006 / CT-15: compreensão por usuários reais | Avaliação heurística e automação não medem compreensão de leigos/gestores. | Ensaio com participantes distinguindo por10mil, contagens/pessoas, ausência de causalidade e próximo passo. |
+| SEN-004 / INV-001: explicar volumes de 29/08/2025 | Observação verificável; causa de publicação/operação/tráfego desconhecida. Não excluir dias automaticamente. | Evidência da origem ou esclarecimento do publicador; até lá manter aviso de causa não confirmada. |
+| Reproduzir o ETL completo desde os CSV oficiais | Quatro CSV ausentes no checkout/ZIP da auditoria e download negado no CONNECT do proxy para `dados.antt.gov.br`. ZIPs/PDF PRF também não acompanham o checkout. | Acesso autorizado à fonte ou fornecimento seguro dos artefatos, hashes conferidos e reprodução em cópia descartável; dados novos não podem substituir o snapshot sem revisão. |
+| SEN-005: compatibilidade A/B, limites históricos e completude | Fontes não demonstram população/faixa/categoria equivalente, histórico regulamentado ou cobertura intradiária. Não é falha corrigível por dividir contagens. | Documentação e dados adicionais do publicador, protocolo de equivalência e testes. B/A, classes veiculares, previsão e risco permanecem indisponíveis. |
+| SEN-014/015 / CT-26: versão corrigida em produção e desempenho real | Sem autorização de deploy nesta tarefa; ensaios locais não comprovam revisão, partida fria ou concorrência no Render. | Publicação autorizada pelo responsável e validação datada de commit/snapshot, cinco telas/downloads e medições no ambiente real. |
+
+ANTT e PRF permanecem fontes separadas. Não constituem pendências de implementação: previsão de acidentes, score absoluto de risco, inferência causal, preenchimento de ausência por zero e frequência B/A incompatível. Esses resultados estão deliberadamente fora das saídas permitidas.

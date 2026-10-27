@@ -1,6 +1,8 @@
 # Fontes oficiais e proveniência
 
-Snapshot principal coletado pelo usuário em 26/10/2026. SHA-256 conferido na integração. O horário do manifesto é UTC. Consulta dos dicionários ANTT: 26/10/2026.
+Registro de proveniência do snapshot coletado pelo usuário em 26/10/2026, com SHA-256 conferido na integração histórica. O horário do manifesto é UTC. As declarações de consulta abaixo são daquela etapa; não equivalem a uma nova coleta nesta revisão.
+
+Neste checkout há Parquet tratados e manifesto ANTT, sem os quatro CSV originais, ZIP originais PRF ou PDFs. A nova tentativa de obter os CSV nesta implementação foi negada pelo proxy da rede (CONNECT HTTP403 para `dados.antt.gov.br`). O painel continua usando o snapshot identificado, sem anunciar atualização dos bytes oficiais. Ver [VALIDACAO_SENTINELA.md](../VALIDACAO_SENTINELA.md).
 
 ## volume-radar-viacosteira.csv
 
@@ -77,17 +79,17 @@ Snapshot principal coletado pelo usuário em 26/10/2026. SHA-256 conferido na in
 - [C — acidentes por km](https://dados.antt.gov.br/dataset/8a57b663-2302-405a-bf5a-cbece12c13d1/resource/3d9e26ca-5d8f-4854-9744-836e8bcb088e/download/dicionario_dados_surod_acidentes_km.pdf)
 - [D — cadastro](https://dados.antt.gov.br/dataset/79d287f4-f5ca-4385-a17c-f61f53831f17/resource/b10de933-f8fa-4f13-8a40-a87759b0b4c9/download/radar_dicionario_dados.pdf)
 
-Os PDF foram lidos via consulta web. Não se afirma que cópias oficiais dos quatro dicionários foram baixadas para este pacote. A divergência entre exemplos de velocidade numérica e intervalos textuais reais está documentada na auditoria.
+A integração histórica registrou leitura dos PDFs via consulta web. A auditoria independente de 27/10/2026 recuperou integralmente apenas o texto de A; B/C/D não foram confirmados integralmente naquela consulta. Esta implementação não refez essas leituras. Não se afirma que cópias oficiais dos quatro dicionários foram baixadas para este pacote. A divergência entre exemplos de velocidade numérica e intervalos textuais reais está documentada na auditoria.
 
 ## PRF e trecho
 
-- [PRF — dados abertos](https://www.gov.br/prf/pt-br/acesso-a-informacao/dados-abertos/dados-abertos-da-prf). Extrações por ocorrência de 2024 e 2025 coletadas em 23/10/2026; manifestos e ZIP originais incluídos.
-- [PRF — dicionário](https://www.gov.br/prf/pt-br/acesso-a-informacao/dados-abertos/dicionario-acidentes). PDF oficial incluído, sem supor correspondência perfeita entre exemplos de 2017 e o formato atual.
+- [PRF — dados abertos](https://www.gov.br/prf/pt-br/acesso-a-informacao/dados-abertos/dados-abertos-da-prf). A documentação histórica registra extrações por ocorrência de 2024 e 2025 coletadas em 23/10/2026. Neste checkout está incluído somente o Parquet tratado `dados_tratados/ocorrencias.parquet`; manifestos e ZIP originais PRF não estão presentes.
+- [PRF — dicionário](https://www.gov.br/prf/pt-br/acesso-a-informacao/dados-abertos/dicionario-acidentes). Referência oficial identificada; PDF não incluído neste checkout. Não se presume correspondência perfeita entre exemplos de 2017 e o formato atual.
 - [ANTT — ViaCosteira](https://www.gov.br/antt/pt-br/assuntos/rodovias/concessionarias/lista-de-concessoes/ccr-viacosteira/ccr-viacosteira-capa). Delimitação de referência do corredor.
 
 ## Regulamento e comparação funcional
 
-- [Hackathon TC3S](https://profgustavozanatta.vercel.app/#/hackathon-tc3s). Sete páginas verificadas em 23/10/2026. Links e exigências em REGULAMENTO_E_CONFORMIDADE.md.
+- [Hackathon TC3S](https://profgustavozanatta.vercel.app/#/hackathon-tc3s). Sete páginas verificadas em 23/10/2026. O documento REGULAMENTO_E_CONFORMIDADE.md pertence à entrega anterior e não está presente neste checkout.
 - [ANTT — painéis interativos](https://www.gov.br/antt/pt-br/assuntos/informacoes-estrategicas/paineis_interativos).
 - [DNIT — sinistros de trânsito/SIOR](https://www.gov.br/dnit/pt-br/assuntos/infraestrutura-rodoviaria/sinistros-de-transito).
 - [INRIX — Roadway Analytics](https://inrix.com/products/roadway-analytics/). Descrição do fornecedor, sem teste do produto.

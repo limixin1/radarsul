@@ -1,0 +1,26 @@
+{
+  "auditoria_recebida": "SENTINELA_AUDITORIA_2026-10-27.zip",
+  "sha256_zip": "af19da66e9679cdb9d7a1f160bd0508a767195c555eb180042cfb7ffc7081b02",
+  "baseline_commit": "e5baed4fdab7575690a408f4ab492fd63790a00e",
+  "natureza": "Entrada para conferência; não prova de comportamento da versão corrigida",
+  "documentos": [
+    {
+      "arquivo": "documentacao/auditoria_work/AUDITORIA_SENTINELA.md",
+      "sha256": "2c462f3f44c142e2522c9c05908f28121c3da600c212e93de5e32f39d8b399d8"
+    },
+    {
+      "arquivo": "documentacao/auditoria_work/BACKLOG_SENTINELA.md",
+      "sha256": "dde19b176b273fd24293c64cf1f2482c08094da1c60bbced99182ca96dca7977"
+    },
+    {
+      "arquivo": "documentacao/auditoria_work/ESPECIFICACAO_SENTINELA.md",
+      "sha256": "8feba51215651b067f3cf7fc352f086a6e0a9507d9a4b6165e27b2203349afa6"
+    },
+    {
+      "arquivo": "documentacao/auditoria_work/FONTES_E_VALIDACOES.md",
+      "sha256": "a47ddc16ecc83f072b238e0bee2fbcf1eef348dc08280d5d358eaf5660d24e3a"
+    }
+  ],
+  "download_novo_antt": "CONNECT HTTP 403 do proxy; CSV originais não disponíveis nesta sessão",
+  "integridade_snapshot": "9 Parquet iguais aos hashes históricos de MANIFESTO_PUBLICACAO.json antes das alterações; preservados nesta implementação"
+}

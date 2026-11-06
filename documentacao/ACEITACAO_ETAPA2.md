@@ -43,3 +43,15 @@ A maior parte do tempo residual da instância candidata ocorre em conteúdo e ex
 - Compilação e diff sem erros; nenhum Parquet alterado.
 - Reproduzir: iniciar a branch em porta nova e executar `python scripts/investigate_performance.py --url ws://127.0.0.1:8506/_stcore/stream --output /tmp/sentinela-sessoes.json`. Não executar carga em produção.
 - Falta habilitar o Brave para cumprir os cenários visuais e PNG solicitados. Depois, coletar evidências por largura/zoom, teclado e downloads, corrigir problemas efetivos e repetir cenários afetados.
+
+## Nova tentativa com Chrome, Brave e navegador integrado em 06/11/2026
+
+A pedido do usuário, o acesso foi revalidado do zero pela ferramenta `mcp__cua_repl.js`, sem estender ao Chrome uma conclusão anterior sobre o Brave. `cua.getState()` retornou inventário vazio e erro de acesso. Em seguida foram tentadas separadamente as chamadas documentadas `cua.createBrowserTab('chrome', ...)`, `cua.createBrowserTab('brave', ...)` e `cua.createBrowserTab('iab', ...)`, todas com a URL local 8506. **Cada chamada retornou “Local browser use is disabled in Work settings”.** Nenhuma aba foi disponibilizada à ferramenta. Trata-se do resultado desta sessão, mesmo que o controle tenha funcionado em outro momento.
+
+O Git local estava limpo na branch solicitada e no commit `42dec24`. O PR remoto #2 confirmou a mesma ponta, continuando em rascunho, sem commits posteriores a preservar nesta consulta. Foram lidos integralmente AGENTS.md, matriz F01–F24, validação de 05/11 e este relatório.
+
+A aplicação em `http://127.0.0.1:8506` continuava ativa: saúde `ok`, sessão concluída sem exceções, quatro downloads HTTP 200, agregado 2,520 por 10 mil, 226.870.300 contagens e 57.163 acima de 120 km/h. O ZIP exportado identificou exatamente `42dec2424379062144e710be4da8d2125a23c067` e snapshot `2026-10-26.1`. Essas verificações são de protocolo/arquivo, não de interface. O Render MCP confirmou o deploy publicado antigo `dep-dbg7476c6qcc73ei65g0`, em `e5baed4`, estado live; portanto o site público não foi usado para validar a branch corrigida. A CI do commit `42dec24`, run 42153357635, foi reconferida como success.
+
+Evidência estruturada: `evidencias/tentativas-navegadores-2026-11-06.json`. Sem alteração do código ou dos dados nesta rodada, não se repetiu a carga ou a suíte local sem motivo novo. Os resultados de desempenho da seção anterior permanecem válidos dentro de seus limites; não há nova evidência para atribuir a lentidão a infraestrutura nem propor contratação.
+
+Continuam sem validação no navegador as cinco páginas e seus percursos visuais, busca, filtros, vazios, compartilhamento/reload/recuperação, clique nos downloads, PNG, larguras de 320/360/390/768/1366 px, zoom 200%, teclado/foco, contraste composto e legibilidade. Não foram produzidas capturas fictícias nem classificados testes de protocolo como testes de viewport. Participantes, leitor de tela e dispositivos reais continuam pendentes. O próximo passo depende de uma sessão de navegador disponibilizada à ferramenta; esta tentativa não encerra a aceitação.

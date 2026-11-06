@@ -79,3 +79,7 @@ As primeiras amostras (`sessoes-5.json`/`sessoes-10.json`) coincidiram com outra
 ## Continuação no PR #2
 
 A investigação posterior e seus limites constam em [ACEITACAO_ETAPA2.md](ACEITACAO_ETAPA2.md). O cliente de carga foi corrigido para não bloquear observação de outras sessões durante downloads. Foram amostrados CPU/carga/RAM, perfil e tempos por etapa; cache de consulta limitado a oito entradas foi acrescentado com teste de isolamento/invalidação. A instância candidata nova está em 127.0.0.1:8506. A aceitação visual continua sem evidência por bloqueio do Brave e a meta permanece aberta.
+
+## Revalidação em 06/11/2026
+
+Ver a seção de novas tentativas em [ACEITACAO_ETAPA2.md](ACEITACAO_ETAPA2.md) e `evidencias/tentativas-navegadores-2026-11-06.json`. Foram testados diretamente Chrome, Brave e navegador integrado; todos retornaram nesta sessão “Local browser use is disabled in Work settings”. Aplicação/ZIP local 8506 identificaram `42dec24`, snapshot correto e resultados de referência, com quatro downloads HTTP 200. O site publicado continua em `e5baed4`. Sem mudanças no código/dados e sem novos resultados visuais; aceitação de telas, PNG e acesso por teclado continua pendente.

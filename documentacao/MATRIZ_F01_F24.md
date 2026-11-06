@@ -42,3 +42,9 @@ Não há participantes ou aparelhos reais disponíveis. Roteiro/formulário em `
 Ver [ACEITACAO_ETAPA2.md](ACEITACAO_ETAPA2.md). F20/F22 avançaram com perfil, recursos amostrados, correção do cliente de carga, cache limitado por consulta e tempos de etapas. F21 recebeu teste de isolamento/invalidação do novo cache. Dez sessões no candidato levaram até 9,977 s, ainda acima da meta; condições das rodadas diferem e não permitem atribuição causal isolada. Nenhum Parquet foi alterado.
 
 F04/F12/F13 e aceitação visual de F05–F11/F18 **continuam pendentes**: Brave ainda bloqueado por configuração do Work. Não há evidência nova de viewport, zoom, teclado, contraste efetivo ou PNG. Participantes, leitor de tela e hospedagem da nova versão continuam pendentes. Esta etapa não encerra a meta de aceitação.
+
+## Revalidação de acesso em 06/11/2026
+
+Chrome, Brave e navegador integrado foram tentados **separadamente** pela ferramenta `mcp__cua_repl.js`; as três tentativas diretas falharam com “Local browser use is disabled in Work settings”. Ver `evidencias/tentativas-navegadores-2026-11-06.json` e a nova seção de `ACEITACAO_ETAPA2.md`. A aplicação local 8506 e a identidade de seu ZIP foram reconfirmadas em `42dec24`, distintas do Render público em `e5baed4`; PR #2/CI anterior foram reconferidos.
+
+Nenhum estado de aceite visual F01–F19 foi promovido nesta rodada. F04/F12/F13 e os percursos visuais, URLs/reload e PNG permanecem pendentes, assim como pessoas, leitor de tela e aparelhos reais. Esta evidência atualiza o bloqueio para incluir os resultados efetivamente observados no Chrome e no navegador integrado, sem presumir configuração idêntica a partir do Brave.

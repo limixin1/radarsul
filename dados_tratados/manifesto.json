@@ -1,0 +1,320 @@
+{
+  "contrato": 1,
+  "versao": "2026-10-26.1",
+  "transformacao": "antt-2.0+prf-1.0",
+  "coleta_antt": "2026-10-26",
+  "coleta_prf": "2026-10-23",
+  "cobertura": {
+    "trafego": {
+      "inicio": "2022-01-01",
+      "fim": "2026-06-30",
+      "nota": "Dias com publicação; não comprova operação contínua nem completude de faixas. 2026 parcial até 30/06."
+    },
+    "possiveis": {
+      "inicio": "2022-12-30",
+      "fim": "2026-06-02",
+      "nota": "Base B separada. Intervalo do inventário bruto; ausência de linhas não comprova zero infrações. Taxa B/A bloqueada."
+    },
+    "antt": {
+      "inicio": "2021-05-01",
+      "fim": "2025-12-31",
+      "nota": "Intervalo do inventário do CSV de acidentes, sem garantia de completude. Repetições sem ID preservadas."
+    },
+    "prf": {
+      "inicio": "2024-01-01",
+      "fim": "2025-12-31",
+      "nota": "Arquivos anuais PRF 2024 e 2025. Ausência de registro não prova ausência real de acidente."
+    }
+  },
+  "politica": "90% por ano calendário completo; 80% por mês para exibição; sem inferência de operação.",
+  "declaracao_cobertura": "Inventário temporal dos arquivos brutos e nomes anuais PRF; não certifica completude das fontes de acidentes.",
+  "proveniencia": [
+    {
+      "arquivo": "volume-radar-viacosteira.csv",
+      "url": "https://dados.antt.gov.br/dataset/269aebaa-05e7-4d76-a105-408f12bf4094/resource/2af017dc-edde-4501-9c10-ae1f0da461f6/download/volume-radar-viacosteira.csv",
+      "acesso_utc": "2026-10-26T22:46:35.184423+00:00",
+      "status_http": 200,
+      "content_type": "text/csv",
+      "bytes_resposta": 47784599,
+      "sha256_resposta": "d2a0b20ba6fa0fc2dcd69a11cd87e2248982327e908e4161a3d617271372c0f0",
+      "estado": "obtido",
+      "bytes": 47784599,
+      "sha256": "d2a0b20ba6fa0fc2dcd69a11cd87e2248982327e908e4161a3d617271372c0f0"
+    },
+    {
+      "arquivo": "quantidade-possiveis-infratores-viacosteira.csv",
+      "url": "https://dados.antt.gov.br/dataset/c3844135-55c4-43b3-88a0-247f6ff9ca67/resource/121be806-df31-4ebb-aa2d-8caa5f102226/download/quantidade-possiveis-infratores-viacosteira.csv",
+      "acesso_utc": "2026-10-26T22:48:01.082448+00:00",
+      "status_http": 200,
+      "content_type": "text/csv",
+      "bytes_resposta": 24500215,
+      "sha256_resposta": "3dd3b9bb37834e80fc4d94de22170aa85d7013224a5b8f56397967ede8c4aa93",
+      "estado": "obtido",
+      "bytes": 24500215,
+      "sha256": "3dd3b9bb37834e80fc4d94de22170aa85d7013224a5b8f56397967ede8c4aa93"
+    },
+    {
+      "arquivo": "demostrativo_acidentes_viacosteira.csv",
+      "url": "https://dados.antt.gov.br/dataset/8a57b663-2302-405a-bf5a-cbece12c13d1/resource/05e0cbd2-2acb-4b81-8124-3c28a3030234/download/demostrativo_acidentes_viacosteira.csv",
+      "acesso_utc": "2026-10-26T22:48:42.786818+00:00",
+      "status_http": 200,
+      "content_type": "text/csv",
+      "bytes_resposta": 433240,
+      "sha256_resposta": "a798c5ca821f8f6905102c60c5c9300da454729b6f5ef06d5cd429d684b3e00e",
+      "estado": "obtido",
+      "bytes": 433240,
+      "sha256": "a798c5ca821f8f6905102c60c5c9300da454729b6f5ef06d5cd429d684b3e00e"
+    },
+    {
+      "arquivo": "dados-dos-radares6_2026.csv",
+      "url": "https://dados.antt.gov.br/dataset/79d287f4-f5ca-4385-a17c-f61f53831f17/resource/64044fcf-756e-4fd1-9cb2-a6037785829d/download/dados-dos-radares6_2026.csv",
+      "acesso_utc": "2026-10-26T22:48:55.149473+00:00",
+      "status_http": 200,
+      "content_type": "text/csv",
+      "bytes_resposta": 147125,
+      "sha256_resposta": "a5d2b6facc9eed86a88c94bfa7870a31576db2b832daf0f664802497e60cf17d",
+      "estado": "obtido",
+      "bytes": 147125,
+      "sha256": "a5d2b6facc9eed86a88c94bfa7870a31576db2b832daf0f664802497e60cf17d"
+    },
+    {
+      "ano": 2024,
+      "url": "https://drive.google.com/uc?export=download&id=14lB0vqMFkaZj8HZ44b0njYgxs9nAN8KO",
+      "fonte_oficial": "https://www.gov.br/prf/pt-br/acesso-a-informacao/dados-abertos/dados-abertos-da-prf",
+      "acesso_utc": "2026-10-23T14:09:08.732335+00:00",
+      "status_http": 200,
+      "bytes": 3783609,
+      "sha256": "905dac836867297b261e4edefff6cdb470809814e7e1796b3f2f57517099d165",
+      "content_type": "application/octet-stream",
+      "url_final": "https://drive.usercontent.google.com/download?id=14lB0vqMFkaZj8HZ44b0njYgxs9nAN8KO&export=download",
+      "arquivo": "datatran2024.zip",
+      "estado": "obtido"
+    },
+    {
+      "ano": 2025,
+      "url": "https://drive.google.com/uc?export=download&id=1-G3MdmHBt6CprDwcW99xxC4BZ2DU5ryR",
+      "fonte_oficial": "https://www.gov.br/prf/pt-br/acesso-a-informacao/dados-abertos/dados-abertos-da-prf",
+      "acesso_utc": "2026-10-23T14:09:08.732686+00:00",
+      "status_http": 200,
+      "bytes": 3727148,
+      "sha256": "52c8a631ac9d428bf845e2fa996b8c61f66b219f7014a61d292f9d95d186bb0f",
+      "content_type": "application/octet-stream",
+      "url_final": "https://drive.usercontent.google.com/download?id=1-G3MdmHBt6CprDwcW99xxC4BZ2DU5ryR&export=download",
+      "arquivo": "datatran2025.zip",
+      "estado": "obtido"
+    }
+  ],
+  "arquivos": {
+    "dados_tratados/antt_diario.parquet": {
+      "sha256": "5b7b24328e5e47012696c2eb0445618e76d768486ab9db21980178261dbb3a64",
+      "bytes": 338712,
+      "opcional": false,
+      "linhas": 59168,
+      "esquema": {
+        "identificador": "string",
+        "data": "datetime64[ns]",
+        "ano": "int32",
+        "mes": "object",
+        "passagens": "Int64",
+        "altas": "Int64",
+        "faixas_publicadas": "int64"
+      }
+    },
+    "dados_tratados/antt_mensal.parquet": {
+      "sha256": "53746a4aeee309ab9d09cdf313100e32703267908c48bcec85e788a4083a4bd9",
+      "bytes": 42452,
+      "opcional": false,
+      "linhas": 2139,
+      "esquema": {
+        "identificador": "string",
+        "mes": "object",
+        "passagens": "Int64",
+        "altas": "Int64",
+        "dias": "int64",
+        "data_mes": "datetime64[ns]",
+        "cobertura_dias": "float64",
+        "por_10_mil": "Float64",
+        "comparavel_80pct": "bool"
+      }
+    },
+    "dados_tratados/antt_anual.parquet": {
+      "sha256": "fb1821c4b9eac4073611872d1aedd7da5318b06df2116822775f7dba85661db2",
+      "bytes": 11295,
+      "opcional": false,
+      "linhas": 210,
+      "esquema": {
+        "identificador": "string",
+        "ano": "int32",
+        "passagens": "Int64",
+        "altas": "Int64",
+        "dias": "int64",
+        "dias_calendario": "int64",
+        "cobertura_dias": "float64",
+        "por_10_mil": "Float64"
+      }
+    },
+    "dados_tratados/antt_equipamentos.parquet": {
+      "sha256": "a6be4ea44c52951f415a2ee227563eeb08b389bf3e7fa6d4fb302941f07de387",
+      "bytes": 9850,
+      "opcional": false,
+      "linhas": 42,
+      "esquema": {
+        "identificador": "string",
+        "km": "Float64",
+        "municipio": "string",
+        "sentido": "string",
+        "lat": "Float64",
+        "lon": "Float64",
+        "km_distintos": "int64",
+        "sentidos_distintos": "int64",
+        "rodovia": "object",
+        "uf": "object",
+        "limite_leve_ref_2026": "Int64",
+        "limite_pesado_ref_2026": "Int64",
+        "situacao": "string",
+        "coorte_90pct_2024_2025": "bool"
+      }
+    },
+    "dados_tratados/antt_possiveis_diario.parquet": {
+      "sha256": "baafe587e27d6661377ba3fe432a9776b98ead21a012bb663ba396df176f8ab1",
+      "bytes": 117044,
+      "opcional": false,
+      "linhas": 37835,
+      "esquema": {
+        "identificador": "string",
+        "data": "datetime64[ns]",
+        "ano": "int32",
+        "mes": "object",
+        "possiveis": "Int64",
+        "faixas": "int64"
+      }
+    },
+    "dados_tratados/antt_acidentes.parquet": {
+      "sha256": "3d2f1b222b5e6ee634b050a4db3734baf69cc06c8bb46e9168266adcff024fc9",
+      "bytes": 120608,
+      "opcional": false,
+      "linhas": 8841,
+      "esquema": {
+        "concessionaria": "string",
+        "data_texto": "string",
+        "km_texto": "string",
+        "trecho": "string",
+        "data": "datetime64[ns]",
+        "km": "Float64",
+        "ano": "int32",
+        "linha_fonte": "int64",
+        "chave_repetida": "bool"
+      }
+    },
+    "dados_tratados/antt_contexto_5km.parquet": {
+      "sha256": "999e581002aee3c7c89f2566c3a349cae4ba75c457230d7dcba2d1f0d0049d6f",
+      "bytes": 7585,
+      "opcional": false,
+      "linhas": 16,
+      "esquema": {
+        "segmento_inicio": "Float64",
+        "passagens": "Int64",
+        "altas": "Int64",
+        "equipamentos": "int64",
+        "dias_comuns": "int64",
+        "por_10_mil": "Float64",
+        "cobertura_dias_comuns": "float64",
+        "registros_acidentes": "int64",
+        "combinacoes_data_km": "int64",
+        "segmento": "object"
+      }
+    },
+    "dados_tratados/antt_coorte.parquet": {
+      "sha256": "1c009ee24c37003f59d185d855c020ddc17c9a026583faa98844e77e05952237",
+      "bytes": 11996,
+      "opcional": false,
+      "linhas": 20,
+      "esquema": {
+        "identificador": "string",
+        "passagens": "Int64",
+        "altas": "Int64",
+        "dias": "int64",
+        "por_10_mil": "Float64",
+        "km": "Float64",
+        "municipio": "string",
+        "sentido": "string",
+        "lat": "Float64",
+        "lon": "Float64",
+        "km_distintos": "int64",
+        "sentidos_distintos": "int64",
+        "rodovia": "object",
+        "uf": "object",
+        "limite_leve_ref_2026": "Int64",
+        "limite_pesado_ref_2026": "Int64",
+        "situacao": "string",
+        "coorte_90pct_2024_2025": "bool"
+      }
+    },
+    "dados_tratados/ocorrencias.parquet": {
+      "sha256": "dcf143ed99e79b917f1952f35558de975bb3384f4d4d7e73ab15e50e780c405b",
+      "bytes": 105139,
+      "opcional": true,
+      "linhas": 1750,
+      "esquema": {
+        "id": "string",
+        "data_inversa": "string",
+        "dia_semana": "string",
+        "horario": "string",
+        "uf": "string",
+        "br": "Int64",
+        "km": "Float64",
+        "municipio": "string",
+        "causa_acidente": "string",
+        "tipo_acidente": "string",
+        "classificacao_acidente": "string",
+        "fase_dia": "string",
+        "sentido_via": "string",
+        "condicao_metereologica": "string",
+        "tipo_pista": "string",
+        "tracado_via": "string",
+        "uso_solo": "string",
+        "pessoas": "Int64",
+        "mortos": "Int64",
+        "feridos_leves": "Int64",
+        "feridos_graves": "Int64",
+        "ilesos": "Int64",
+        "ignorados": "Int64",
+        "feridos": "Int64",
+        "veiculos": "Int64",
+        "latitude": "Float64",
+        "longitude": "Float64",
+        "regional": "string",
+        "delegacia": "string",
+        "uop": "string",
+        "arquivo_origem": "object",
+        "data": "datetime64[ns]",
+        "ano": "Int64",
+        "mes": "string",
+        "hora": "Int64",
+        "dia_semana_num": "Int64",
+        "grave_ou_fatal": "boolean",
+        "fatal": "boolean",
+        "vitimas_graves_fatais": "Int64",
+        "problema_contagem": "boolean",
+        "problema_soma_feridos": "boolean",
+        "problema_soma_pessoas": "boolean",
+        "coordenada_suspeita": "boolean"
+      }
+    },
+    "relatorios/resumo_antt.json": {
+      "sha256": "5b12ff71d96e063fd8d2fab2a7fb0e6687fd906af059f253d22ef965ee3b6f96",
+      "bytes": 1605,
+      "opcional": false
+    },
+    "relatorios/auditoria_antt.json": {
+      "sha256": "3cb5154099bb66afb552fc62249d0e5cc9326e07a04c8f375c8997a21e05ddba",
+      "bytes": 22331,
+      "opcional": false
+    },
+    "relatorios/descobertas_antt.json": {
+      "sha256": "e8501f0a0c0afc433f2e9181bfdce4a2b824f0ccf1bfc2e8380aa6ef948f4884",
+      "bytes": 2267,
+      "opcional": false
+    }
+  }
+}

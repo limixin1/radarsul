@@ -1,0 +1,58 @@
+SENTINELA — Consulta verificável
+Área: Grupo com boa cobertura em 2024–2025. Cidade: Laguna.
+Anos solicitados: 2024, 2025. Anos com tráfego: 2024, 2025.
+Pontos solicitados: VC101-9.
+Pontos com tráfego: VC101-9.
+Sentidos: Crescente, Decrescente.
+Publicações de tráfego: 2024-01-01 a 2025-12-31.
+Contagens publicadas: 11.178.995. Acima de 120 km/h: 7.091. Índice agregado: 6,343 por 10 mil.
+Não representa risco individual, probabilidade de acidente, veículos únicos ou autuações. Não somar ANTT e PRF. Taxa B/A
+bloqueada.
+Comparação: ≥90% dos dias de cada ano calendário solicitado, denominador positivo e período anual completo no snapshot.
+Demais consultas são exploratórias.
+
+Cobertura por ponto e ano
+Dias publicados não comprovam operação ou completude de faixas. A cobertura do intervalo usa o período declarado da fonte; a
+cobertura anual usa o calendário completo.
+                           Dias                         Dias do                    Contagens         Contagens        Índice por 10
+                Dias                      Cobertura                  Cobertura do
+Equipamento Ano            do                           intervalo da               publicadas        acima de 120     mil
+                publicados                do ano (%)                 intervalo (%)
+                           ano                          fonte                      (base A)          km/h (base A)    contagens
+VC101-9        2024 361             366   98,6%         366          98,6%          5.322.924        3.324            6,245
+VC101-9        2025 365             365   100,0%        365          100,0%         5.856.071        3.767            6,433
+
+
+Contextos de acidentes independentes
+ANTT — envelope contínuo: 45 registros publicados; período disponível no snapshot. Anos solicitados [2024, 2025]; cobertos
+[2024, 2025]; intervalos [['2024-01-01', '2024-12-31'], ['2025-01-01', '2025-12-31']]. Área: BR-101/SC, km 301,500 a 306,500, margem
+de 2,5 km entre pontos; ambos os sentidos. Intervalo do inventário do CSV de acidentes, sem garantia de completude. Repetições
+sem ID preservadas.
+PRF — trecho integral: 1.750 registros publicados; período disponível no snapshot. Anos solicitados [2024, 2025]; cobertos [2024,
+2025]; intervalos [['2024-01-01', '2024-12-31'], ['2025-01-01', '2025-12-31']]. Área: BR-101/SC, km 244,680 a 465,100; ambos os
+sentidos; independente da seleção de pontos. Arquivos anuais PRF 2024 e 2025. Ausência de registro não prova ausência real de
+acidente. Desses registros do trecho, 36 têm município Criciúma nos anos disponíveis. Não são atribuídos a um radar.
+
+Base B separada
+24.139 contagens em 592 datas publicadas.
+Taxa possíveis infratores/tráfego bloqueada por incompatibilidade de faixas e classificação.
+Fontes e rastreabilidade
+Aplicação 2.1.0; código 7dbdd277ae4af0fd008235bcbff702b1534fa5ac+alterações-locais; snapshot 2026-10-26.1; geração UTC
+2026-11-06T21:48:44.303681+00:00.
+Reproduzir após publicação — A URL pública reproduzirá esta versão somente após sua publicação; confira código e snapshot.
+   volume-radar-viacosteira.csv, coleta 2026-10-26T22:46:35.184423+00:00, SHA-256
+   d2a0b20ba6fa0fc2dcd69a11cd87e2248982327e908e4161a3d617271372c0f0
+   quantidade-possiveis-infratores-viacosteira.csv, coleta 2026-10-26T22:48:01.082448+00:00, SHA-256
+   3dd3b9bb37834e80fc4d94de22170aa85d7013224a5b8f56397967ede8c4aa93
+   demostrativo_acidentes_viacosteira.csv, coleta 2026-10-26T22:48:42.786818+00:00, SHA-256
+   a798c5ca821f8f6905102c60c5c9300da454729b6f5ef06d5cd429d684b3e00e
+   dados-dos-radares6_2026.csv, coleta 2026-10-26T22:48:55.149473+00:00, SHA-256
+   a5d2b6facc9eed86a88c94bfa7870a31576db2b832daf0f664802497e60cf17d
+   datatran2024.zip, coleta 2026-10-23T14:09:08.732335+00:00, SHA-256
+   905dac836867297b261e4edefff6cdb470809814e7e1796b3f2f57517099d165
+   datatran2025.zip, coleta 2026-10-23T14:09:08.732686+00:00, SHA-256
+   52c8a631ac9d428bf845e2fa996b8c61f66b219f7014a61d292f9d95d186bb0f
+120 km/h é limiar dos intervalos publicados, sem inferir infração regulamentada. Cadastro de junho de 2026 não reconstrói limites
+históricos. Repetições ANTT sem ID preservadas. Correlação e persistência não validam previsão ou causalidade. Associação
+negativa não significa proteção pela velocidade.
+

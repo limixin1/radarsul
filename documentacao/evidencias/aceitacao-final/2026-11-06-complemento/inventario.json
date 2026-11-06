@@ -1,0 +1,200 @@
+{
+  "arquivos": [
+    {
+      "arquivo": "README.md",
+      "bytes": 2978,
+      "sha256": "160b49c6ca0ec7b3ca2f9b3d878d556faad0145b9631467587920f9e2b9c208a"
+    },
+    {
+      "arquivo": "filtros-teclado.json",
+      "bytes": 2566,
+      "sha256": "c1e33dc61e3b7af113defe18ec7098a601992b82d9d08d7f9076fb9589bd3a8c"
+    },
+    {
+      "arquivo": "impressao-antes-primeira-pagina.png",
+      "bytes": 101769,
+      "sha256": "b2726bc12a0ccee228827128cf2ececa95f7656db30ee8f3a00980e6af1b67d6",
+      "dimensoes": [
+        850,
+        1200
+      ]
+    },
+    {
+      "arquivo": "impressao-antes.pdf",
+      "bytes": 242179,
+      "sha256": "bbd3c6ff7d7738ea6e2300f8e4e27935c982653d596fa921543cdc4bbb8cad99"
+    },
+    {
+      "arquivo": "impressao-viewports.json",
+      "bytes": 435,
+      "sha256": "863fe5099e54e998cdfb83ef78cd90780a05312fcb0117eadb4ca781997d5d0c"
+    },
+    {
+      "arquivo": "laguna-teclado.jpg",
+      "bytes": 62358,
+      "sha256": "3836e9e5c738a6e08ab86d05a7b87ec1d76ddfb06e66ff0eed8de2f7b403dcdb",
+      "dimensoes": [
+        1366,
+        631
+      ]
+    },
+    {
+      "arquivo": "paginas-teclado.json",
+      "bytes": 4976,
+      "sha256": "9693f82629a68311dbef39e3898eea59606ff94b2f240060b61c78eb671f4eb7"
+    },
+    {
+      "arquivo": "png-gerado-por-teclado-laguna.png",
+      "bytes": 50355,
+      "sha256": "0dcbb22524fd46e9b6540ccbb071a8245038c639f6b703e5d154d94d4462175e",
+      "dimensoes": [
+        1100,
+        650
+      ]
+    },
+    {
+      "arquivo": "print-final-20-1.png",
+      "bytes": 107041,
+      "sha256": "e20e4f7432dd6dbace3c45f98daac74dcf64d8cba59010292dbea550c384efda",
+      "dimensoes": [
+        850,
+        1200
+      ]
+    },
+    {
+      "arquivo": "print-final-20-2.png",
+      "bytes": 113511,
+      "sha256": "745b0431056124df291ecf3aa11699f204b0b47337df45683e08e195a2d8d897",
+      "dimensoes": [
+        850,
+        1200
+      ]
+    },
+    {
+      "arquivo": "print-final-20-3.png",
+      "bytes": 85949,
+      "sha256": "2cb7637e8f565450de69360cf5fac25774ee2bb3b1e69e0fb11e8b3d4dff6832",
+      "dimensoes": [
+        850,
+        1200
+      ]
+    },
+    {
+      "arquivo": "print-final-laguna-1.png",
+      "bytes": 102238,
+      "sha256": "b74e2e90f68214640abaaf7b3955622338dc07454f833f424ae56dab2c855ccd",
+      "dimensoes": [
+        850,
+        1200
+      ]
+    },
+    {
+      "arquivo": "print-final-laguna-2.png",
+      "bytes": 78052,
+      "sha256": "fab7396751004ac40f1df9a72f404a5188e10949d2eaa4088447adb6664bfaa5",
+      "dimensoes": [
+        850,
+        1200
+      ]
+    },
+    {
+      "arquivo": "print-final-laguna-3.png",
+      "bytes": 8787,
+      "sha256": "97470bfe768c8497fb7d0f7502577d4f120aec3dc91f0bee3f265e79f09e6a3e",
+      "dimensoes": [
+        850,
+        1200
+      ]
+    },
+    {
+      "arquivo": "pytest-impressao.log",
+      "bytes": 98,
+      "sha256": "a67ec0911c0b01838214e14b1f32d5110797bef29393a2d55c843d99e8d8c335"
+    },
+    {
+      "arquivo": "pytest-impressao.xml",
+      "bytes": 419,
+      "sha256": "e6a36edf523eabb612108e51bb82694c363858f6bb5f56a8b6a18334a7d0b499"
+    },
+    {
+      "arquivo": "relatorio-impressao-final-20-pontos.txt",
+      "bytes": 9966,
+      "sha256": "b20d75da2bf3a51faf2ff3145daaed5c4885b0036c1ec667aa2b744dc9c91328"
+    },
+    {
+      "arquivo": "relatorio-impressao-final-laguna.txt",
+      "bytes": 4369,
+      "sha256": "e168bb9053e0406de5979c5860c114e9c7100761e4f9ae6e7343673b02a4dfd0"
+    },
+    {
+      "arquivo": "relatorio-print-wrapper-1366.jpg",
+      "bytes": 139243,
+      "sha256": "52c298ded00ca5121a78d8046f30db64830ec479e3e71c758a8f3c71762657bf",
+      "dimensoes": [
+        1366,
+        900
+      ]
+    },
+    {
+      "arquivo": "relatorio-print-wrapper-320.jpg",
+      "bytes": 31552,
+      "sha256": "bd7fbaa3dc1d2fdc92f6fd370eb58068b8aaffe7faee0111d786dfea247ecbcc",
+      "dimensoes": [
+        320,
+        900
+      ]
+    },
+    {
+      "arquivo": "relatorio-print-wrapper-360.jpg",
+      "bytes": 66945,
+      "sha256": "9757a2aaceae52a7e1b09b0cb26a2febfed06c1f77d90fd23ec98b5523dbd9ac",
+      "dimensoes": [
+        360,
+        900
+      ]
+    },
+    {
+      "arquivo": "relatorio-print-wrapper-390.jpg",
+      "bytes": 76542,
+      "sha256": "970f93504c4ecbea2729d6926ab3958abb57e1d0d32ed31ab49515ce39789654",
+      "dimensoes": [
+        390,
+        900
+      ]
+    },
+    {
+      "arquivo": "relatorio-print-wrapper-768.jpg",
+      "bytes": 124026,
+      "sha256": "ab3e432a2d5261a30ea59e017ae252cfcb9e1b511ff491797cdad20db68d6704",
+      "dimensoes": [
+        768,
+        900
+      ]
+    },
+    {
+      "arquivo": "teclado-percurso.json",
+      "bytes": 14592,
+      "sha256": "2bf6d76f64b5a64da9dce5e08f52abc931535166cc897c2495e9b1f85799742e"
+    },
+    {
+      "arquivo": "validacao-impressao.json",
+      "bytes": 436,
+      "sha256": "39175ace114f915f011c19274a83ff66385de8b8bd01909c10157dc4adda5800"
+    },
+    {
+      "arquivo": "zoom-nativo-200-manual.json",
+      "bytes": 732,
+      "sha256": "1e2d2ea0e591467ed3b65573fd7ae5b6c6c33ca2eec9a8e9080fbf2f793e7914"
+    },
+    {
+      "arquivo": "../../../../output/pdf/sentinela-aceitacao-20-pontos.pdf",
+      "bytes": 286143,
+      "sha256": "153f2a6f89c2587c0d52dff25c4a46792a12bd6a11e907367a72ccee0e154f6e"
+    },
+    {
+      "arquivo": "../../../../output/pdf/sentinela-aceitacao-laguna.pdf",
+      "bytes": 158035,
+      "sha256": "6026d80487cbea6961d057e1bcb125251606b5cc0c7cd40fc80dc4bed8592d27"
+    }
+  ]
+}

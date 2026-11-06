@@ -1,0 +1,26 @@
+[
+  {
+    "page": "Comparador de equipamentos",
+    "focus": "1",
+    "text": "Comparador de equipamentos\n\nEscolha uma cidade e os pontos no painel de filtros. Consulte contagens publicadas de velocidade, confira os dias disponíveis e exporte a consulta com suas fontes.\n\n1 ponto solicitado · Grupo com boa cobertura em 2024–2025 · Laguna · anos: 2024, 2025 · sentidos: Crescente, Decrescente. Comparação: ≥90% dos dias de cada ano calendário solicitado, denominador positivo e período anual completo no snapshot. Demais consultas são exploratórias.\n\nÍndice: contagens nas faixas acima de 120 km/h ÷ contagens publicadas da mesma base de tráfego × 10.000. Não representa probabilidade de acidente, veículos únicos ou autuações confirmadas.\n\n120 km/h é um limiar dos intervalos publicados, não o limite regulamentado de cada ponto. Ausência de faixa não comprova ausência real de passagem.\n\nkeyboard_arrow_right\n\nTabela para leitura e teclado — comparação da seleção\n\nA comparação",
+    "url": "http://127.0.0.1:8506/?v=1&pagina=Comparador+de+equipamentos&anos=2024&anos=2025&area=Grupo+com+boa+cobertura+em+2024%E2%80%932025&sentidos=Crescente&sentidos=Decrescente&cidade=Laguna&pontos=VC101-9"
+  },
+  {
+    "page": "Evolução e persistência",
+    "focus": "2",
+    "text": "Evolução e persistência\n\nEscolha uma cidade e os pontos no painel de filtros. Consulte contagens publicadas de velocidade, confira os dias disponíveis e exporte a consulta com suas fontes.\n\n1 ponto solicitado · Grupo com boa cobertura em 2024–2025 · Laguna · anos: 2024, 2025 · sentidos: Crescente, Decrescente. Comparação: ≥90% dos dias de cada ano calendário solicitado, denominador positivo e período anual completo no snapshot. Demais consultas são exploratórias.\n\nÍndice: contagens nas faixas acima de 120 km/h ÷ contagens publicadas da mesma base de tráfego × 10.000. Não representa probabilidade de acidente, veículos únicos ou autuações confirmadas.\n\n120 km/h é um limiar dos intervalos publicados, não o limite regulamentado de cada ponto. Ausência de faixa não comprova ausência real de passagem.\n\nAs curvas incluem somente os pontos selecionados. Índices mensais exigem 80% dos dias public",
+    "url": "http://127.0.0.1:8506/?v=1&pagina=Evolu%C3%A7%C3%A3o+e+persist%C3%AAncia&anos=2024&anos=2025&area=Grupo+com+boa+cobertura+em+2024%E2%80%932025&sentidos=Crescente&sentidos=Decrescente&cidade=Laguna&pontos=VC101-9"
+  },
+  {
+    "page": "Contexto rodoviário",
+    "focus": "3",
+    "text": "Contexto rodoviário\n\nEscolha uma cidade e os pontos no painel de filtros. Consulte contagens publicadas de velocidade, confira os dias disponíveis e exporte a consulta com suas fontes.\n\n1 ponto solicitado · Grupo com boa cobertura em 2024–2025 · Laguna · anos: 2024, 2025 · sentidos: Crescente, Decrescente. Comparação: ≥90% dos dias de cada ano calendário solicitado, denominador positivo e período anual completo no snapshot. Demais consultas são exploratórias.\n\nÍndice: contagens nas faixas acima de 120 km/h ÷ contagens publicadas da mesma base de tráfego × 10.000. Não representa probabilidade de acidente, veículos únicos ou autuações confirmadas.\n\n120 km/h é um limiar dos intervalos publicados, não o limite regulamentado de cada ponto. Ausência de faixa não comprova ausência real de passagem.\n\nANTT: segmentos disjuntos de 5 km\n\nNão há segmentos suficientes com pontos selecionados elegívei",
+    "url": "http://127.0.0.1:8506/?v=1&pagina=Contexto+rodovi%C3%A1rio&anos=2024&anos=2025&area=Grupo+com+boa+cobertura+em+2024%E2%80%932025&sentidos=Crescente&sentidos=Decrescente&cidade=Laguna&pontos=VC101-9"
+  },
+  {
+    "page": "Relatório preventivo",
+    "focus": "4",
+    "text": "Relatório preventivo\n\nEscolha uma cidade e os pontos no painel de filtros. Consulte contagens publicadas de velocidade, confira os dias disponíveis e exporte a consulta com suas fontes.\n\n1 ponto solicitado · Grupo com boa cobertura em 2024–2025 · Laguna · anos: 2024, 2025 · sentidos: Crescente, Decrescente. Comparação: ≥90% dos dias de cada ano calendário solicitado, denominador positivo e período anual completo no snapshot. Demais consultas são exploratórias.\n\nÍndice: contagens nas faixas acima de 120 km/h ÷ contagens publicadas da mesma base de tráfego × 10.000. Não representa probabilidade de acidente, veículos únicos ou autuações confirmadas.\n\n120 km/h é um limiar dos intervalos publicados, não o limite regulamentado de cada ponto. Ausência de faixa não comprova ausência real de passagem.\n\nDias publicados por ponto e ano\nkeyboard_arrow_right\n\nTabela para leitura e teclado — cobertura",
+    "url": "http://127.0.0.1:8506/?v=1&pagina=Relat%C3%B3rio+preventivo&anos=2024&anos=2025&area=Grupo+com+boa+cobertura+em+2024%E2%80%932025&sentidos=Crescente&sentidos=Decrescente&cidade=Laguna&pontos=VC101-9"
+  }
+]

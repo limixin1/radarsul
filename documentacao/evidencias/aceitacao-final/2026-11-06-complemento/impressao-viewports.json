@@ -1,0 +1,32 @@
+[
+  {
+    "main": 310,
+    "reportWidth": 278,
+    "scroll": 310,
+    "width": 320
+  },
+  {
+    "main": 350,
+    "reportWidth": 318,
+    "scroll": 350,
+    "width": 360
+  },
+  {
+    "main": 380,
+    "reportWidth": 348,
+    "scroll": 380,
+    "width": 390
+  },
+  {
+    "main": 758,
+    "reportWidth": 726,
+    "scroll": 758,
+    "width": 768
+  },
+  {
+    "main": 1056,
+    "reportWidth": 896,
+    "scroll": 1056,
+    "width": 1366
+  }
+]

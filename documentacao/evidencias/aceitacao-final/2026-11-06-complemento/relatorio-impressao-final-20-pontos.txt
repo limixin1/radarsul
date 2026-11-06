@@ -1,0 +1,105 @@
+SENTINELA — Consulta verificável
+Área: Grupo com boa cobertura em 2024–2025. Cidade: Todas as cidades.
+Anos solicitados: 2024, 2025. Anos com tráfego: 2024, 2025.
+Pontos solicitados: VC101-32, VC101-38, VC101-14, VC101-13, VC101-21, VC101-7, VC101-10, VC101-24, VC101-25, VC101-9, VC101-
+31, VC101-4, VC101-15, VC101-22, VC101-26, VC101-19, VC101-42, VC101-39, VC101-11, VC101-12.
+Pontos com tráfego: VC101-10, VC101-11, VC101-12, VC101-13, VC101-14, VC101-15, VC101-19, VC101-21, VC101-22, VC101-24,
+VC101-25, VC101-26, VC101-31, VC101-32, VC101-38, VC101-39, VC101-4, VC101-42, VC101-7, VC101-9.
+Sentidos: Crescente, Decrescente.
+Publicações de tráfego: 2024-01-01 a 2025-12-31.
+Contagens publicadas: 226.870.300. Acima de 120 km/h: 57.163. Índice agregado: 2,520 por 10 mil.
+Não representa risco individual, probabilidade de acidente, veículos únicos ou autuações. Não somar ANTT e PRF. Taxa B/A
+bloqueada.
+Comparação: ≥90% dos dias de cada ano calendário solicitado, denominador positivo e período anual completo no snapshot.
+Demais consultas são exploratórias.
+
+Cobertura por ponto e ano
+Dias publicados não comprovam operação ou completude de faixas. A cobertura do intervalo usa o período declarado da fonte; a
+cobertura anual usa o calendário completo.
+
+                           Dias                        Dias do                    Contagens        Contagens       Índice por 10
+                Dias                      Cobertura                 Cobertura do
+Equipamento Ano            do                          intervalo da               publicadas       acima de 120    mil
+                publicados                do ano (%)                intervalo (%)
+                           ano                         fonte                      (base A)         km/h (base A)   contagens
+VC101-32       2024 345             366   94,3%        366          94,3%         3.963.977        988             2,492
+VC101-32       2025 360             365   98,6%        365          98,6%         4.066.972        793             1,950
+VC101-38       2024 346             366   94,5%        366          94,5%         5.527.234        1.539           2,784
+VC101-38       2025 343             365   94,0%        365          94,0%         5.157.113        1.332           2,583
+VC101-14       2024 345             366   94,3%        366          94,3%         7.291.520        1.260           1,728
+VC101-14       2025 337             365   92,3%        365          92,3%         6.599.701        1.506           2,282
+VC101-13       2024 359             366   98,1%        366          98,1%         8.275.733        624             0,754
+VC101-13       2025 357             365   97,8%        365          97,8%         6.728.744        558             0,829
+VC101-21       2024 363             366   99,2%        366          99,2%         5.773.958        1.789           3,098
+VC101-21       2025 361             365   98,9%        365          98,9%         5.701.591        1.606           2,817
+VC101-7        2024 366             366   100,0%       366          100,0%        6.522.332        2.717           4,166
+VC101-7        2025 364             365   99,7%        365          99,7%         4.990.565        2.041           4,090
+VC101-10       2024 331             366   90,4%        366          90,4%         5.691.623        1.466           2,576
+VC101-10       2025 365             365   100,0%       365          100,0%        5.949.806        1.349           2,267
+VC101-24       2024 336             366   91,8%        366          91,8%         4.824.511        739             1,532
+VC101-24       2025 350             365   95,9%        365          95,9%         5.914.825        873             1,476
+                                Dias                    Dias do                    Contagens         Contagens        Índice por 10
+                     Dias                 Cobertura                  Cobertura do
+Equipamento Ano                 do                      intervalo da               publicadas        acima de 120     mil
+                     publicados           do ano (%)                 intervalo (%)
+                                ano                     fonte                      (base A)          km/h (base A)    contagens
+VC101-25       2024 360            366    98,4%         366          98,4%          6.168.664        741              1,201
+VC101-25       2025 349            365    95,6%         365          95,6%          5.595.812        907              1,621
+VC101-9        2024 361            366    98,6%         366          98,6%          5.322.924        3.324            6,245
+VC101-9        2025 365            365    100,0%        365          100,0%         5.856.071        3.767            6,433
+VC101-31       2024 342            366    93,4%         366          93,4%          3.810.039        1.656            4,346
+VC101-31       2025 339            365    92,9%         365          92,9%          4.335.238        1.532            3,534
+VC101-4        2024 354            366    96,7%         366          96,7%          5.129.851        2.353            4,587
+VC101-4        2025 359            365    98,4%         365          98,4%          5.270.292        2.272            4,311
+VC101-15       2024 364            366    99,5%         366          99,5%          7.287.429        697              0,956
+VC101-15       2025 339            365    92,9%         365          92,9%          6.741.710        632              0,937
+VC101-22       2024 335            366    91,5%         366          91,5%          6.224.359        1.111            1,785
+VC101-22       2025 341            365    93,4%         365          93,4%          6.547.876        1.173            1,791
+VC101-26       2024 364            366    99,5%         366          99,5%          3.911.536        1.581            4,042
+VC101-26       2025 365            365    100,0%        365          100,0%         6.173.163        2.629            4,259
+VC101-19       2024 346            366    94,5%         366          94,5%          4.905.431        291              0,593
+VC101-19       2025 362            365    99,2%         365          99,2%          3.646.532        341              0,935
+VC101-42       2024 366            366    100,0%        366          100,0%         4.819.796        1.902            3,946
+VC101-42       2025 365            365    100,0%        365          100,0%         4.840.339        1.686            3,483
+VC101-39       2024 350            366    95,6%         366          95,6%          5.244.340        2.564            4,889
+VC101-39       2025 363            365    99,5%         365          99,5%          4.615.054        2.495            5,406
+VC101-11       2024 344            366    94,0%         366          94,0%          7.781.536        384              0,493
+VC101-11       2025 337            365    92,3%         365          92,3%          6.518.541        933              1,431
+VC101-12       2024 366            366    100,0%        366          100,0%         6.819.126        485              0,711
+VC101-12       2025 340            365    93,2%         365          93,2%          6.324.436        527              0,833
+
+
+Contextos de acidentes independentes
+ANTT — envelope contínuo: 3.300 registros publicados; período disponível no snapshot. Anos solicitados [2024, 2025]; cobertos
+[2024, 2025]; intervalos [['2024-01-01', '2024-12-31'], ['2025-01-01', '2025-12-31']]. Área: BR-101/SC, km 249,900 a 448,100, margem
+de 2,5 km entre pontos; ambos os sentidos. Intervalo do inventário do CSV de acidentes, sem garantia de completude. Repetições
+sem ID preservadas.
+PRF — trecho integral: 1.750 registros publicados; período disponível no snapshot. Anos solicitados [2024, 2025]; cobertos [2024,
+2025]; intervalos [['2024-01-01', '2024-12-31'], ['2025-01-01', '2025-12-31']]. Área: BR-101/SC, km 244,680 a 465,100; ambos os
+sentidos; independente da seleção de pontos. Arquivos anuais PRF 2024 e 2025. Ausência de registro não prova ausência real de
+acidente. Desses registros do trecho, 36 têm município Criciúma nos anos disponíveis. Não são atribuídos a um radar.
+Base B separada
+178.988 contagens em 677 datas publicadas.
+Taxa possíveis infratores/tráfego bloqueada por incompatibilidade de faixas e classificação.
+
+Fontes e rastreabilidade
+Aplicação 2.1.0; código 7dbdd277ae4af0fd008235bcbff702b1534fa5ac+alterações-locais; snapshot 2026-10-26.1; geração UTC
+2026-11-06T21:46:00.265788+00:00.
+Reproduzir após publicação — A URL pública reproduzirá esta versão somente após sua publicação; confira código e snapshot.
+   volume-radar-viacosteira.csv, coleta 2026-10-26T22:46:35.184423+00:00, SHA-256
+   d2a0b20ba6fa0fc2dcd69a11cd87e2248982327e908e4161a3d617271372c0f0
+   quantidade-possiveis-infratores-viacosteira.csv, coleta 2026-10-26T22:48:01.082448+00:00, SHA-256
+   3dd3b9bb37834e80fc4d94de22170aa85d7013224a5b8f56397967ede8c4aa93
+   demostrativo_acidentes_viacosteira.csv, coleta 2026-10-26T22:48:42.786818+00:00, SHA-256
+   a798c5ca821f8f6905102c60c5c9300da454729b6f5ef06d5cd429d684b3e00e
+   dados-dos-radares6_2026.csv, coleta 2026-10-26T22:48:55.149473+00:00, SHA-256
+   a5d2b6facc9eed86a88c94bfa7870a31576db2b832daf0f664802497e60cf17d
+   datatran2024.zip, coleta 2026-10-23T14:09:08.732335+00:00, SHA-256
+   905dac836867297b261e4edefff6cdb470809814e7e1796b3f2f57517099d165
+   datatran2025.zip, coleta 2026-10-23T14:09:08.732686+00:00, SHA-256
+   52c8a631ac9d428bf845e2fa996b8c61f66b219f7014a61d292f9d95d186bb0f
+
+120 km/h é limiar dos intervalos publicados, sem inferir infração regulamentada. Cadastro de junho de 2026 não reconstrói limites
+históricos. Repetições ANTT sem ID preservadas. Correlação e persistência não validam previsão ou causalidade. Associação
+negativa não significa proteção pela velocidade.
+

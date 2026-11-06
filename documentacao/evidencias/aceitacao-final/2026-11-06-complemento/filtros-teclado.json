@@ -1,0 +1,24 @@
+[
+  {
+    "case": "Backspace remove 2025",
+    "url": "http://127.0.0.1:8506/?v=1&pagina=Relat%C3%B3rio+preventivo&anos=2024&area=Grupo+com+boa+cobertura+em+2024%E2%80%932025&sentidos=Crescente&sentidos=Decrescente&cidade=Todas+as+cidades&pontos=VC101-32&pontos=VC101-38&pontos=VC101-14&pontos=VC101-13&pontos=VC101-21&pontos=VC101-7&pontos=VC101-10&pontos=VC101-24&pontos=VC101-25&pontos=VC101-9&pontos=VC101-31&pontos=VC101-4&pontos=VC101-15&pontos=VC101-22&pontos=VC101-26&pontos=VC101-19&pontos=VC101-42&pontos=VC101-39&pontos=VC101-11&pontos=VC101-12"
+  },
+  {
+    "case": "Backspace esvazia anos",
+    "downloads": 0,
+    "text": "Relatório preventivo\n\nEscolha uma cidade e os pontos no painel de filtros. Consulte contagens publicadas de velocidade, confira os dias disponíveis e exporte a consulta com suas fontes.\n\n20 pontos solicitados · Grupo com boa cobertura em 2024–2025 · Todas as cidades · anos: nenhum · sentidos: Crescente, Decrescente. Comparação: ≥90% dos dias de cada ano calendário solicitado, denominador positivo e período anual completo no snapshot. Demais consultas são exploratórias.\n\nNenhum ano selecionado. Escolha ao menos um ano ou restaure a consulta padrão.",
+    "url": "http://127.0.0.1:8506/?v=1&pagina=Relat%C3%B3rio+preventivo&anos=&area=Grupo+com+boa+cobertura+em+2024%E2%80%932025&sentidos=Crescente&sentidos=Decrescente&cidade=Todas+as+cidades&pontos=VC101-32&pontos=VC101-38&pontos=VC101-14&pontos=VC101-13&pontos=VC101-21&pontos=VC101-7&pontos=VC101-10&pontos=VC101-24&pontos=VC101-25&pontos=VC101-9&pontos=VC101-31&pontos=VC101-4&pontos=VC101-15&pontos=VC101-22&pontos=VC101-26&pontos=VC101-19&pontos=VC101-42&pontos=VC101-39&pontos=VC101-11&pontos=VC101-12"
+  },
+  {
+    "case": "Backspace remove Decrescente",
+    "url": "http://127.0.0.1:8506/?v=1&pagina=Vis%C3%A3o+geral&anos=2024&anos=2025&area=Grupo+com+boa+cobertura+em+2024%E2%80%932025&sentidos=Crescente&cidade=Todas+as+cidades&pontos=VC101-7&pontos=VC101-24&pontos=VC101-31&pontos=VC101-22&pontos=VC101-26&pontos=VC101-39&pontos=VC101-11"
+  },
+  {
+    "case": "Área Criciúma escolhida com setas/Enter (opção efetivamente aplicada)",
+    "url": "http://127.0.0.1:8506/?v=1&pagina=Vis%C3%A3o+geral&anos=2024&anos=2025&area=Crici%C3%BAma%3A+VC101-30&sentidos=Crescente&cidade=Todas+as+cidades&pontos=VC101-30"
+  },
+  {
+    "case": "Pontos Backspace remove último",
+    "url": "http://127.0.0.1:8506/?v=1&pagina=Vis%C3%A3o+geral&anos=2024&anos=2025&area=Crici%C3%BAma%3A+VC101-30&sentidos=Crescente&cidade=Todas+as+cidades&pontos="
+  }
+]

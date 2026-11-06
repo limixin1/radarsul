@@ -39,7 +39,22 @@ button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible,[
 p,li,h1,h2,h3{overflow-wrap:anywhere}
 [data-testid="stMarkdownContainer"] table{display:block;max-width:100%;overflow-x:auto}
 @media(max-width:600px){.block-container{padding-left:1rem;padding-right:1rem}h1{font-size:1.8rem!important}[data-testid="stMetricValue"]{font-size:1.6rem} [data-testid="stHorizontalBlock"]{flex-wrap:wrap} [data-testid="stColumn"]{min-width:200px;flex:1 1 100%}}
-@media print{[data-testid="stSidebar"],header,button{display:none!important}.block-container{padding:0!important}}
+@media print{
+[data-testid="stSidebar"],header,button{display:none!important}
+.block-container{padding:0!important}
+/* O relatório completo substitui as grades interativas na impressão. */
+[data-testid="stMainBlockContainer"]:has(.st-key-print_report)>[data-testid="stVerticalBlock"]>:not(.st-key-print_report):not(:has(.st-key-print_report)){display:none!important}
+.st-key-print_report [data-testid="stMarkdownContainer"] table{display:table;width:100%;table-layout:auto;overflow:visible}
+.st-key-print_report th,.st-key-print_report td{overflow-wrap:normal;font-size:9pt;padding:4px}
+.st-key-print_report td{white-space:nowrap}
+.st-key-print_report p,.st-key-print_report li{font-size:10pt;line-height:1.4;orphans:3;widows:3}
+.st-key-print_report p{margin:0 0 8pt}
+.st-key-print_report h1{font-size:22pt}
+.st-key-print_report h2{font-size:15pt}
+.st-key-print_report thead{display:table-header-group}
+.st-key-print_report tr{break-inside:avoid}
+.st-key-print_report h1,.st-key-print_report h2,.st-key-print_report h3{break-after:avoid}
+}
 </style>'''
 
 
@@ -205,7 +220,8 @@ def main():
     export_started=perf_counter()
     possible=frames['antt_possiveis_diario'].loc[lambda x:x.ano.isin(years)&x.identificador.isin(ids)]
     document=markdown_report(selected,eq,cov,emeta,possible)
-    if page==PAGES[4]:st.markdown(document)
+    if page==PAGES[4]:
+        with st.container(key='print_report'):st.markdown(document)
     st.subheader('Exportar esta consulta')
     st.caption('CSV brasileiro: UTF-8, ponto e vírgula e vírgula decimal. ZIP inclui CSV técnico, cobertura, relatório e metadados completos. O PNG está no menu do gráfico. O relatório pode ser impresso pelo navegador.')
     st.download_button('Baixar comparação em CSV (pt-BR)',csv_bytes(eq[columns],emeta),filename(emeta,'csv'),'text/csv',on_click='ignore')

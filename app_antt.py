@@ -7,6 +7,7 @@ import pandas as pd
 import streamlit as st
 from config import ROOT, KM_MIN, KM_MAX
 from src.antt import context_table, weighted_index
+from src.chart_locale import PT_BR
 from src.antt_charts import ranking, evolution, persistence, persistence_data, coverage_map, road_context, correlation, monthly_grid
 from src.data_package import validate, token, MANIFEST
 from src.query import PAGES, AREAS, YEARS, DIRECTIONS, POLICY, area_ids, query_tables, point_label, display_table, source_result, parse_url, url_state, br
@@ -34,8 +35,9 @@ CSS='''<style>
 .block-container{padding-top:4.5rem;max-width:1480px}
 [data-testid="stCaptionContainer"]{opacity:1!important;color:#142B3C!important}
 [data-testid="stCaptionContainer"] p{color:#142B3C!important;opacity:1!important}
-button:focus-visible,a:focus-visible,input:focus-visible,[role="combobox"]:focus-visible{outline:3px solid #075E68!important;outline-offset:3px}
+button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible,[tabindex]:focus-visible,[role="combobox"]:focus-visible{outline:3px solid #075E68!important;outline-offset:3px}
 p,li,h1,h2,h3{overflow-wrap:anywhere}
+[data-testid="stMarkdownContainer"] table{display:block;max-width:100%;overflow-x:auto}
 @media(max-width:600px){.block-container{padding-left:1rem;padding-right:1rem}h1{font-size:1.8rem!important}[data-testid="stMetricValue"]{font-size:1.6rem} [data-testid="stHorizontalBlock"]{flex-wrap:wrap} [data-testid="stColumn"]{min-width:200px;flex:1 1 100%}}
 @media print{[data-testid="stSidebar"],header,button{display:none!important}.block-container{padding:0!important}}
 </style>'''
@@ -61,9 +63,9 @@ def table(t,label):
 
 def chart(fig,summary,t,label,export_name):
     st.write(summary)
-    fig.add_annotation(text='Snapshot '+export_name.split('_')[1]+' · consulta '+export_name.split('_')[2],x=0,y=-.34,xref='paper',yref='paper',showarrow=False,xanchor='left',font=dict(size=12,color='#142B3C'))
-    fig.update_layout(margin_b=120)
-    st.plotly_chart(fig,width='stretch',config={'locale':'pt-BR','displaylogo':False,'toImageButtonOptions':{'format':'png','filename':export_name,'width':1100,'height':650,'scale':1}})
+    fig.add_annotation(text='Snapshot '+export_name.split('_')[1]+'<br>Consulta '+export_name.split('_')[2],x=0,y=0,yshift=-132,yanchor='top',xref='paper',yref='paper',showarrow=False,xanchor='left',font=dict(size=12,color='#142B3C'))
+    fig.update_layout(margin_b=190)
+    st.plotly_chart(fig,width='stretch',theme=None,config={'locale':'pt-BR','locales':{'pt-BR':PT_BR},'displayModeBar':True,'displaylogo':False,'toImageButtonOptions':{'format':'png','filename':export_name,'width':1100,'height':650,'scale':1}})
     with st.expander('Dados e resumo do gráfico — '+label):st.table(display_table(t))
 
 def sources_for(frames,ids,years,manifest,meta):
@@ -129,7 +131,7 @@ def main():
     st.sidebar.caption(f'Aplicação {APP_VERSION} · dados {manifest["versao"]}')
     st.title(page if page!=PAGES[0] else 'Consulte um ponto da BR-101/SC')
     st.write('Escolha uma cidade e os pontos no painel de filtros. Consulte contagens publicadas de velocidade, confira os dias disponíveis e exporte a consulta com suas fontes.')
-    st.caption(f'{len(ids)} pontos solicitados · {area} · {city} · anos: {", ".join(map(str,years)) or "nenhum"} · sentidos: {", ".join(directions) or "nenhum"}. {POLICY}')
+    st.caption(f'{len(ids)} {"ponto solicitado" if len(ids)==1 else "pontos solicitados"} · {area} · {city} · anos: {", ".join(map(str,years)) or "nenhum"} · sentidos: {", ".join(directions) or "nenhum"}. {POLICY}')
     if not years:st.info('Nenhum ano selecionado. Escolha ao menos um ano ou restaure a consulta padrão.');return
     if not directions:st.info('Nenhum sentido selecionado. Escolha crescente ou decrescente ou restaure o padrão.');return
     if not available:
@@ -149,7 +151,9 @@ def main():
     st.info('Índice: contagens nas faixas acima de 120 km/h ÷ contagens publicadas da mesma base de tráfego × 10.000. Não representa probabilidade de acidente, veículos únicos ou autuações confirmadas.')
     st.caption('120 km/h é um limiar dos intervalos publicados, não o limite regulamentado de cada ponto. Ausência de faixa não comprova ausência real de passagem.')
     eligible=eq.loc[eq.elegivel]
-    if len(eligible)<len(eq):st.warning(f'{len(eq)-len(eligible)} pontos com tráfego são exploratórios neste período: cobertura anual insuficiente ou ano parcial. Seus índices permanecem disponíveis na tabela, sem disputar o ranking.')
+    if len(eligible)<len(eq):
+        count=len(eq)-len(eligible)
+        st.warning(f'{count} {"ponto com tráfego é exploratório" if count==1 else "pontos com tráfego são exploratórios"} neste período: cobertura anual insuficiente ou ano parcial. Os índices permanecem disponíveis na tabela, sem disputar o ranking.')
     no_data=set(ids)-set(eq.identificador)
     if no_data:st.warning('Pontos solicitados sem publicação no período: '+', '.join(sorted(no_data))+'. A tabela de cobertura preserva esses pontos.')
     columns=['identificador','municipio','km','sentido','passagens','altas','dias','por_10_mil','cobertura_minima','elegivel']
@@ -159,8 +163,8 @@ def main():
         st.caption('Agregado = razão entre somas, ponderada pelas contagens. A cobertura detalhada por ponto e ano está abaixo.')
         if len(eligible):
             winner=eligible.iloc[0]
-            st.write(f'Maior índice entre os {len(eligible)} pontos elegíveis: {labels[winner.identificador]} — {br(winner.por_10_mil,3)} por 10 mil; menor cobertura anual {br(winner.cobertura_minima*100,1)}%.')
-            chart(ranking(eligible,years),f'O ranking mostra até 12 de {len(eligible)} pontos elegíveis. A lista completa inclui também os pontos exploratórios.',eligible.head(12)[columns],'ranking',export_name+'_ranking')
+            st.write(f'Maior índice da comparação ({len(eligible)} {"ponto elegível" if len(eligible)==1 else "pontos elegíveis"}): {labels[winner.identificador]} — {br(winner.por_10_mil,3)} por 10 mil; menor cobertura anual {br(winner.cobertura_minima*100,1)}%.')
+            chart(ranking(eligible,years),f'O ranking mostra {min(12,len(eligible))} de {len(eligible)} {"ponto elegível" if len(eligible)==1 else "pontos elegíveis"}. A lista completa inclui também os pontos exploratórios.',eligible.head(12)[columns],'ranking',export_name+'_ranking')
         else:st.info('Nenhum ponto elegível para comparação anual neste período. Consulte os valores exploratórios e sua cobertura; não há destaque comparável.')
         table(eq[columns],'todos os pontos com publicação')
     elif page==PAGES[1]:

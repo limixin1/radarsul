@@ -1,0 +1,33 @@
+2026-11-05 23:53:01,918 INFO sentinela pacote_validado snapshot=2026-10-26.1 segundos=0.803
+2026-11-05 23:53:03,108 INFO sentinela etapas_consulta {"carregamento_s": 1.1074243399998522, "consulta_s": 0.21192126799905964, "conteudo_s": 0.7302052499999263, "exportacoes_e_fontes_s": 0.0868631089997507}
+2026-11-05 23:53:03,109 INFO sentinela consulta pagina=Visão geral pontos=20 anos=2 snapshot=2026-10-26.1 segundos=2.193
+2026-11-05 23:53:07,054 INFO sentinela etapas_consulta {"carregamento_s": 0.5484518230005051, "consulta_s": 0.019942351998906815, "conteudo_s": 1.5644608000002336, "exportacoes_e_fontes_s": 0.4659099190012057}
+2026-11-05 23:53:07,055 INFO sentinela consulta pagina=Visão geral pontos=20 anos=2 snapshot=2026-10-26.1 segundos=2.761
+2026-11-05 23:53:07,197 INFO sentinela etapas_consulta {"carregamento_s": 0.6764407999999094, "consulta_s": 0.08644642999934149, "conteudo_s": 1.4624205310010439, "exportacoes_e_fontes_s": 0.5503769389997615}
+2026-11-05 23:53:07,207 INFO sentinela consulta pagina=Visão geral pontos=20 anos=2 snapshot=2026-10-26.1 segundos=2.858
+2026-11-05 23:53:07,321 INFO sentinela etapas_consulta {"carregamento_s": 0.3423674770001526, "consulta_s": 0.07334863700089045, "conteudo_s": 1.6706451350000862, "exportacoes_e_fontes_s": 0.7827572440000949}
+2026-11-05 23:53:07,327 INFO sentinela consulta pagina=Visão geral pontos=20 anos=2 snapshot=2026-10-26.1 segundos=3.042
+2026-11-05 23:53:07,488 INFO sentinela etapas_consulta {"carregamento_s": 0.15706817700083775, "consulta_s": 0.0353138830014359, "conteudo_s": 1.888709368000491, "exportacoes_e_fontes_s": 0.8102918960012175}
+2026-11-05 23:53:07,489 INFO sentinela consulta pagina=Visão geral pontos=20 anos=2 snapshot=2026-10-26.1 segundos=3.202
+2026-11-05 23:53:07,612 INFO sentinela etapas_consulta {"carregamento_s": 0.36061372100084554, "consulta_s": 0.023434678998455638, "conteudo_s": 1.7683039270013978, "exportacoes_e_fontes_s": 0.8928327770008764}
+2026-11-05 23:53:07,612 INFO sentinela consulta pagina=Visão geral pontos=20 anos=2 snapshot=2026-10-26.1 segundos=3.321
+2026-11-05 23:53:14,840 INFO sentinela etapas_consulta {"carregamento_s": 0.10967670599893609, "consulta_s": 0.030285122000350384, "conteudo_s": 1.8430840900000476, "exportacoes_e_fontes_s": 1.9695333580002625}
+2026-11-05 23:53:14,873 INFO sentinela consulta pagina=Visão geral pontos=20 anos=2 snapshot=2026-10-26.1 segundos=4.078
+2026-11-05 23:53:15,148 INFO sentinela etapas_consulta {"carregamento_s": 0.23681019600007858, "consulta_s": 0.010817378999490757, "conteudo_s": 1.704695634000018, "exportacoes_e_fontes_s": 1.5819508770000539}
+2026-11-05 23:53:15,171 INFO sentinela consulta pagina=Visão geral pontos=20 anos=2 snapshot=2026-10-26.1 segundos=4.371
+2026-11-05 23:53:15,248 INFO sentinela etapas_consulta {"carregamento_s": 0.21265798599961272, "consulta_s": 0.007907479999630596, "conteudo_s": 1.734866153999974, "exportacoes_e_fontes_s": 1.6741814100005286}
+2026-11-05 23:53:15,248 INFO sentinela consulta pagina=Visão geral pontos=20 anos=2 snapshot=2026-10-26.1 segundos=4.454
+2026-11-05 23:53:15,894 INFO sentinela etapas_consulta {"carregamento_s": 0.3706324880004104, "consulta_s": 0.015220929999486543, "conteudo_s": 2.7434334239987948, "exportacoes_e_fontes_s": 1.2618731319998915}
+2026-11-05 23:53:15,907 INFO sentinela consulta pagina=Visão geral pontos=20 anos=2 snapshot=2026-10-26.1 segundos=5.080
+2026-11-05 23:53:16,084 INFO sentinela etapas_consulta {"carregamento_s": 0.3658763799994631, "consulta_s": 0.01809189400046307, "conteudo_s": 2.7274379419995967, "exportacoes_e_fontes_s": 1.3266658230004396}
+2026-11-05 23:53:16,099 INFO sentinela consulta pagina=Visão geral pontos=20 anos=2 snapshot=2026-10-26.1 segundos=5.286
+2026-11-05 23:53:16,249 INFO sentinela etapas_consulta {"carregamento_s": 0.452305097000135, "consulta_s": 0.010210271000687499, "conteudo_s": 2.708607716000188, "exportacoes_e_fontes_s": 1.3882026449991827}
+2026-11-05 23:53:16,251 INFO sentinela consulta pagina=Visão geral pontos=20 anos=2 snapshot=2026-10-26.1 segundos=5.024
+2026-11-05 23:53:16,383 INFO sentinela etapas_consulta {"carregamento_s": 0.3799782830010372, "consulta_s": 0.0045380449992080685, "conteudo_s": 3.026144546998694, "exportacoes_e_fontes_s": 1.188483564001217}
+2026-11-05 23:53:16,384 INFO sentinela consulta pagina=Visão geral pontos=20 anos=2 snapshot=2026-10-26.1 segundos=5.389
+2026-11-05 23:53:16,492 INFO sentinela etapas_consulta {"carregamento_s": 0.48120277500129305, "consulta_s": 0.016236190000199713, "conteudo_s": 2.9715113880010904, "exportacoes_e_fontes_s": 1.2856054090007092}
+2026-11-05 23:53:16,493 INFO sentinela consulta pagina=Visão geral pontos=20 anos=2 snapshot=2026-10-26.1 segundos=5.241
+2026-11-05 23:53:16,623 INFO sentinela etapas_consulta {"carregamento_s": 0.45167563499853713, "consulta_s": 0.011546526000529411, "conteudo_s": 3.4684111130009114, "exportacoes_e_fontes_s": 1.0349842320010794}
+2026-11-05 23:53:16,624 INFO sentinela consulta pagina=Visão geral pontos=20 anos=2 snapshot=2026-10-26.1 segundos=5.832
+2026-11-05 23:53:16,625 INFO sentinela etapas_consulta {"carregamento_s": 0.3125809989996924, "consulta_s": 0.011826377998659154, "conteudo_s": 3.4774370359991735, "exportacoes_e_fontes_s": 0.9636891320005816}
+2026-11-05 23:53:16,737 INFO sentinela consulta pagina=Visão geral pontos=20 anos=2 snapshot=2026-10-26.1 segundos=5.564

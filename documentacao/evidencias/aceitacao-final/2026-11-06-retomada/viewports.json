@@ -1,0 +1,234 @@
+[
+  {
+    "page": "Relatório preventivo",
+    "height": 900,
+    "mainScrollWidth": 310,
+    "mainWidth": 310,
+    "width": 320
+  },
+  {
+    "page": "Relatório preventivo",
+    "height": 900,
+    "mainScrollWidth": 350,
+    "mainWidth": 350,
+    "width": 360
+  },
+  {
+    "page": "Relatório preventivo",
+    "height": 900,
+    "mainScrollWidth": 380,
+    "mainWidth": 380,
+    "width": 390
+  },
+  {
+    "page": "Relatório preventivo",
+    "height": 900,
+    "mainScrollWidth": 758,
+    "mainWidth": 758,
+    "width": 768
+  },
+  {
+    "page": "Relatório preventivo",
+    "height": 900,
+    "mainScrollWidth": 1056,
+    "mainWidth": 1056,
+    "width": 1366
+  },
+  {
+    "page": "Visão geral",
+    "height": 900,
+    "mainScrollWidth": 310,
+    "mainWidth": 310,
+    "width": 320
+  },
+  {
+    "page": "Visão geral",
+    "height": 900,
+    "mainScrollWidth": 350,
+    "mainWidth": 350,
+    "width": 360
+  },
+  {
+    "page": "Visão geral",
+    "height": 900,
+    "mainScrollWidth": 380,
+    "mainWidth": 380,
+    "width": 390
+  },
+  {
+    "page": "Visão geral",
+    "height": 900,
+    "mainScrollWidth": 758,
+    "mainWidth": 758,
+    "width": 768
+  },
+  {
+    "page": "Visão geral",
+    "height": 900,
+    "mainScrollWidth": 1056,
+    "mainWidth": 1056,
+    "width": 1366
+  },
+  {
+    "page": "Contexto rodoviário",
+    "years": [
+      2026
+    ],
+    "height": 900,
+    "mainScrollWidth": 310,
+    "mainWidth": 310,
+    "width": 320
+  },
+  {
+    "page": "Contexto rodoviário",
+    "years": [
+      2026
+    ],
+    "height": 900,
+    "mainScrollWidth": 350,
+    "mainWidth": 350,
+    "width": 360
+  },
+  {
+    "page": "Contexto rodoviário",
+    "years": [
+      2026
+    ],
+    "height": 900,
+    "mainScrollWidth": 380,
+    "mainWidth": 380,
+    "width": 390
+  },
+  {
+    "page": "Contexto rodoviário",
+    "years": [
+      2026
+    ],
+    "height": 900,
+    "mainScrollWidth": 758,
+    "mainWidth": 758,
+    "width": 768
+  },
+  {
+    "page": "Contexto rodoviário",
+    "years": [
+      2026
+    ],
+    "height": 900,
+    "mainScrollWidth": 1056,
+    "mainWidth": 1056,
+    "width": 1366
+  },
+  {
+    "page": "Comparador de equipamentos",
+    "main": 310,
+    "plots": 1,
+    "scroll": 310,
+    "width": 320
+  },
+  {
+    "page": "Comparador de equipamentos",
+    "main": 350,
+    "plots": 1,
+    "scroll": 350,
+    "width": 360
+  },
+  {
+    "page": "Comparador de equipamentos",
+    "main": 380,
+    "plots": 1,
+    "scroll": 380,
+    "width": 390
+  },
+  {
+    "page": "Comparador de equipamentos",
+    "main": 758,
+    "plots": 1,
+    "scroll": 758,
+    "width": 768
+  },
+  {
+    "page": "Comparador de equipamentos",
+    "main": 1056,
+    "plots": 1,
+    "scroll": 1285,
+    "width": 1366
+  },
+  {
+    "page": "Comparador de equipamentos",
+    "phase": "após estabilização",
+    "main": 1056,
+    "scroll": 1056,
+    "width": 1366
+  },
+  {
+    "page": "Evolução e persistência",
+    "main": 310,
+    "plots": 2,
+    "scroll": 310,
+    "width": 320
+  },
+  {
+    "page": "Evolução e persistência",
+    "main": 350,
+    "plots": 2,
+    "scroll": 350,
+    "width": 360
+  },
+  {
+    "page": "Evolução e persistência",
+    "main": 380,
+    "plots": 2,
+    "scroll": 380,
+    "width": 390
+  },
+  {
+    "page": "Evolução e persistência",
+    "main": 758,
+    "plots": 2,
+    "scroll": 758,
+    "width": 768
+  },
+  {
+    "page": "Evolução e persistência",
+    "main": 1056,
+    "plots": 2,
+    "scroll": 1056,
+    "width": 1366
+  },
+  {
+    "page": "Evolução e persistência",
+    "phase": "final",
+    "main": 310,
+    "scroll": 310,
+    "width": 320
+  },
+  {
+    "page": "Evolução e persistência",
+    "phase": "final",
+    "main": 350,
+    "scroll": 350,
+    "width": 360
+  },
+  {
+    "page": "Evolução e persistência",
+    "phase": "final",
+    "main": 380,
+    "scroll": 380,
+    "width": 390
+  },
+  {
+    "page": "Evolução e persistência",
+    "phase": "final",
+    "main": 758,
+    "scroll": 758,
+    "width": 768
+  },
+  {
+    "page": "Evolução e persistência",
+    "phase": "final",
+    "main": 1056,
+    "scroll": 1056,
+    "width": 1366
+  }
+]

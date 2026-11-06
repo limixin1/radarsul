@@ -1,0 +1,18 @@
+[
+  {
+    "arquivo": "datatran2024.zip",
+    "linhas_originais": 73202,
+    "linhas_trecho": 921,
+    "ids_duplicados": 0,
+    "soma_pessoas_divergente": 23,
+    "coordenadas_suspeitas": 0
+  },
+  {
+    "arquivo": "datatran2025.zip",
+    "linhas_originais": 72529,
+    "linhas_trecho": 829,
+    "ids_duplicados": 0,
+    "soma_pessoas_divergente": 23,
+    "coordenadas_suspeitas": 0
+  }
+]

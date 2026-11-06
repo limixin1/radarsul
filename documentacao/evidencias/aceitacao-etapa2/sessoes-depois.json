@@ -1,0 +1,2417 @@
+{
+  "gerado_utc": "2026-11-06T02:52:56.786233+00:00",
+  "ambiente": "Loopback Linux; cliente e servidor na mesma máquina compartilhada; sem navegador. Downloads em threads para não bloquear observação dos pares. Limites cgroup não disponíveis neste host.",
+  "lotes": [
+    {
+      "sessoes": 1,
+      "recursos_amostrados": [
+        {
+          "segundos": 3.681000089272857e-05,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            9.39111328125,
+            6.53759765625,
+            4.154296875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 801468,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2445092
+        },
+        {
+          "segundos": 0.2521158800009289,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            9.39111328125,
+            6.53759765625,
+            4.154296875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 784644,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2456724
+        },
+        {
+          "segundos": 0.5047270380000555,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            9.39111328125,
+            6.53759765625,
+            4.154296875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 783780,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2456988
+        },
+        {
+          "segundos": 0.7555556800016348,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            9.39111328125,
+            6.53759765625,
+            4.154296875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 782920,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2457240
+        },
+        {
+          "segundos": 1.0062010050005483,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            9.39111328125,
+            6.53759765625,
+            4.154296875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 782512,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2457376
+        },
+        {
+          "segundos": 1.2571306440004264,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            9.39111328125,
+            6.53759765625,
+            4.154296875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 779108,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2457944
+        },
+        {
+          "segundos": 1.5078018650001468,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.87890625,
+            6.478515625,
+            4.14794921875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 773280,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2464052
+        },
+        {
+          "segundos": 1.7588190320002468,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.87890625,
+            6.478515625,
+            4.14794921875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 769772,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2465156
+        },
+        {
+          "segundos": 2.0095468910003547,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.87890625,
+            6.478515625,
+            4.14794921875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 764972,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2465948
+        },
+        {
+          "segundos": 2.2602154030009842,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.87890625,
+            6.478515625,
+            4.14794921875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 715732,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2466372
+        },
+        {
+          "segundos": 2.511437333001595,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.87890625,
+            6.478515625,
+            4.14794921875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 769724,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2460048
+        },
+        {
+          "segundos": 2.7627452750002703,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.87890625,
+            6.478515625,
+            4.14794921875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 762240,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2460948
+        },
+        {
+          "segundos": 3.0140151260002312,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.87890625,
+            6.478515625,
+            4.14794921875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 753852,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2467340
+        },
+        {
+          "segundos": 3.264740280001206,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.87890625,
+            6.478515625,
+            4.14794921875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 744500,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2475584
+        },
+        {
+          "segundos": 3.515187335000519,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.87890625,
+            6.478515625,
+            4.14794921875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 732212,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2485324
+        },
+        {
+          "segundos": 3.7659104150006897,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.87890625,
+            6.478515625,
+            4.14794921875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 727128,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2485392
+        },
+        {
+          "segundos": 4.016801731000669,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.87890625,
+            6.478515625,
+            4.14794921875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 744304,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2478076
+        },
+        {
+          "segundos": 4.267874501001643,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.87890625,
+            6.478515625,
+            4.14794921875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 751568,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2472508
+        },
+        {
+          "segundos": 4.5225919320000685,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.87890625,
+            6.478515625,
+            4.14794921875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 759256,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2454624
+        },
+        {
+          "segundos": 4.776291432001017,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.87890625,
+            6.478515625,
+            4.14794921875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 736208,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2446032
+        },
+        {
+          "segundos": 5.027158135000718,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.87890625,
+            6.478515625,
+            4.14794921875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 729532,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2445664
+        },
+        {
+          "segundos": 5.279963234001116,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.87890625,
+            6.478515625,
+            4.14794921875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 714368,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2445832
+        },
+        {
+          "segundos": 5.531447791001483,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.87890625,
+            6.478515625,
+            4.14794921875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 707868,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2434752
+        },
+        {
+          "segundos": 5.783016975001374,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.87890625,
+            6.478515625,
+            4.14794921875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 707080,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2434888
+        },
+        {
+          "segundos": 6.033731937000994,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.87890625,
+            6.478515625,
+            4.14794921875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 708240,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2435112
+        },
+        {
+          "segundos": 6.28455540899995,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.87890625,
+            6.478515625,
+            4.14794921875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 708488,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2435176
+        },
+        {
+          "segundos": 6.535680316001162,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.40771484375,
+            6.42041015625,
+            4.1416015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 714096,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2435876
+        },
+        {
+          "segundos": 6.78618004800046,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.40771484375,
+            6.42041015625,
+            4.1416015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 714224,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2435968
+        }
+      ],
+      "resultados": [
+        {
+          "primeiro_delta_s": 4.217508796000402,
+          "bytes_recebidos": 57527,
+          "script_concluido": true,
+          "tempo_conexao_e_servidor_s": 6.835682632001408,
+          "tempo_execucao_e_transmissao_s": 6.729682196000795,
+          "tempo_total_com_downloads_s": 6.869016104001275,
+          "metricas": [
+            {
+              "label": "Índice agregado por 10 mil",
+              "value": "2,520"
+            },
+            {
+              "label": "Contagens publicadas",
+              "value": "226.870.300"
+            },
+            {
+              "label": "Acima de 120 km/h",
+              "value": "57.163"
+            }
+          ],
+          "erros": [],
+          "downloads": [
+            {
+              "label": "Baixar comparação em CSV (pt-BR)",
+              "url": "/media/9e85a6fc19c54dcc8a363541f1c87653.csv",
+              "status": 200,
+              "bytes": 34518,
+              "sha256": "dbce7a2ef854cb20e992c18d1e3a34bf591082970760a3f69376a53fc5e85f5e",
+              "content_type": "text/csv; charset=utf-8",
+              "tempo_download_s": 0.016147067999554565
+            },
+            {
+              "label": "Baixar relatório em Markdown",
+              "url": "/media/9cafd70b0a83f20b0dcab415fe91f881.md",
+              "status": 200,
+              "bytes": 8865,
+              "sha256": "d6a9db6c87bbc3b4d2e15dc87fec0f0da69ea6add24199ce384cea41dd65443d",
+              "content_type": "text/markdown; charset=utf-8",
+              "tempo_download_s": 0.005177647000891739
+            },
+            {
+              "label": "Baixar consulta completa em ZIP",
+              "url": "/media/85a00fcc1d63bbeb0dd69b0bf6976a9f.zip",
+              "status": 200,
+              "bytes": 13655,
+              "sha256": "7a1e88713d692ca656ebb7bb79122a099a2f205b8715496efba4576045dee786",
+              "content_type": "application/zip",
+              "tempo_download_s": 0.007647534001080203,
+              "arquivos": [
+                "comparacao_pt-BR.csv",
+                "comparacao_tecnica.csv",
+                "cobertura_pt-BR.csv",
+                "metadados.json",
+                "relatorio.md"
+              ],
+              "snapshot": "2026-10-26.1",
+              "anos_solicitados": [
+                2024,
+                2025
+              ]
+            },
+            {
+              "label": "Baixar manifesto de dados",
+              "url": "/media/23f8b67696cd4ca7934d7529c06eb6b6.json",
+              "status": 200,
+              "bytes": 12989,
+              "sha256": "d4579c67426b449f5d4d8d90a936da832bca16ea1c1cbb01e7b0f02e2fb834e4",
+              "content_type": "application/json",
+              "tempo_download_s": 0.0021537269985856256
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sessoes": 5,
+      "recursos_amostrados": [
+        {
+          "segundos": 0.00011237999933655374,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.40771484375,
+            6.42041015625,
+            4.1416015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 712768,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2436044
+        },
+        {
+          "segundos": 0.2518070179994538,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.40771484375,
+            6.42041015625,
+            4.1416015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 711304,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2436096
+        },
+        {
+          "segundos": 0.5031473239996558,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.40771484375,
+            6.42041015625,
+            4.1416015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 702584,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2436572
+        },
+        {
+          "segundos": 0.7558668130004662,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.40771484375,
+            6.42041015625,
+            4.1416015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 713248,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2403396
+        },
+        {
+          "segundos": 1.0088174310003524,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.40771484375,
+            6.42041015625,
+            4.1416015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 678508,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2392720
+        },
+        {
+          "segundos": 1.260139922000235,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.40771484375,
+            6.42041015625,
+            4.1416015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 678200,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2378864
+        },
+        {
+          "segundos": 1.5116206500006228,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.40771484375,
+            6.42041015625,
+            4.1416015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 681772,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2379876
+        },
+        {
+          "segundos": 1.7622471470003802,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.40771484375,
+            6.42041015625,
+            4.1416015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 660932,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2380536
+        },
+        {
+          "segundos": 2.0136374539997632,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.40771484375,
+            6.42041015625,
+            4.1416015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 659548,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2380636
+        },
+        {
+          "segundos": 2.265128053000808,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.40771484375,
+            6.42041015625,
+            4.1416015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 659548,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2380968
+        },
+        {
+          "segundos": 2.5159475800010114,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.40771484375,
+            6.42041015625,
+            4.1416015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 659296,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2381008
+        },
+        {
+          "segundos": 2.7682677310003783,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.40771484375,
+            6.42041015625,
+            4.1416015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 659296,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2381420
+        },
+        {
+          "segundos": 3.020170534000499,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.40771484375,
+            6.42041015625,
+            4.1416015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 678476,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2381464
+        },
+        {
+          "segundos": 3.2716654260002542,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.40771484375,
+            6.42041015625,
+            4.1416015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 675756,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2381520
+        },
+        {
+          "segundos": 3.522128947000965,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.40771484375,
+            6.42041015625,
+            4.1416015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 674372,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2382172
+        },
+        {
+          "segundos": 3.77278402400043,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.40771484375,
+            6.42041015625,
+            4.1416015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 673796,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2382256
+        },
+        {
+          "segundos": 4.023447977000615,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.40771484375,
+            6.42041015625,
+            4.1416015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 673648,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2382456
+        },
+        {
+          "segundos": 4.2741377700003795,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.40771484375,
+            6.42041015625,
+            4.1416015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 673720,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2382488
+        },
+        {
+          "segundos": 4.524794601000394,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            7.89453125,
+            6.3466796875,
+            4.1298828125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 671836,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2382792
+        },
+        {
+          "segundos": 4.775460225000643,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            7.89453125,
+            6.3466796875,
+            4.1298828125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 671836,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2382924
+        },
+        {
+          "segundos": 5.026139163999687,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            7.89453125,
+            6.3466796875,
+            4.1298828125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 671676,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2382992
+        },
+        {
+          "segundos": 5.276820819000932,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            7.89453125,
+            6.3466796875,
+            4.1298828125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 671676,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2383012
+        },
+        {
+          "segundos": 5.5276872890008235,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            7.89453125,
+            6.3466796875,
+            4.1298828125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 671164,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2384404
+        },
+        {
+          "segundos": 5.77855240000099,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            7.89453125,
+            6.3466796875,
+            4.1298828125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 664468,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2384072
+        },
+        {
+          "segundos": 6.030388850000236,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            7.89453125,
+            6.3466796875,
+            4.1298828125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 679852,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2384164
+        }
+      ],
+      "resultados": [
+        {
+          "primeiro_delta_s": 0.747544690999348,
+          "bytes_recebidos": 57527,
+          "script_concluido": true,
+          "tempo_conexao_e_servidor_s": 6.20105350599988,
+          "tempo_execucao_e_transmissao_s": 6.19387829399966,
+          "tempo_total_com_downloads_s": 6.2183029589996295,
+          "metricas": [
+            {
+              "label": "Índice agregado por 10 mil",
+              "value": "2,520"
+            },
+            {
+              "label": "Contagens publicadas",
+              "value": "226.870.300"
+            },
+            {
+              "label": "Acima de 120 km/h",
+              "value": "57.163"
+            }
+          ],
+          "erros": [],
+          "downloads": [
+            {
+              "label": "Baixar comparação em CSV (pt-BR)",
+              "url": "/media/83fe47abde7fcf1387b5992953505527.csv",
+              "status": 200,
+              "bytes": 34518,
+              "sha256": "70895067c9720c991bd5a78988e07e66df4638771b9d2893f8b9299a7833064b",
+              "content_type": "text/csv; charset=utf-8",
+              "tempo_download_s": 0.0031481120004173135
+            },
+            {
+              "label": "Baixar relatório em Markdown",
+              "url": "/media/23548e85611ba68106a53650af01fc73.md",
+              "status": 200,
+              "bytes": 8865,
+              "sha256": "5bf63d5650cea4d4a7cca0a212f67e248b0eea3d6562dd2ace6a7aa093934761",
+              "content_type": "text/markdown; charset=utf-8",
+              "tempo_download_s": 0.003008219999173889
+            },
+            {
+              "label": "Baixar consulta completa em ZIP",
+              "url": "/media/24a8b7396083f56221a4c56a8505f002.zip",
+              "status": 200,
+              "bytes": 13655,
+              "sha256": "bc58f65d6f1307d64338f30b37ec5b28b57348e76bddb1467516cea7bd4ae02a",
+              "content_type": "application/zip",
+              "tempo_download_s": 0.0026371669991931412,
+              "arquivos": [
+                "comparacao_pt-BR.csv",
+                "comparacao_tecnica.csv",
+                "cobertura_pt-BR.csv",
+                "metadados.json",
+                "relatorio.md"
+              ],
+              "snapshot": "2026-10-26.1",
+              "anos_solicitados": [
+                2024,
+                2025
+              ]
+            },
+            {
+              "label": "Baixar manifesto de dados",
+              "url": "/media/23f8b67696cd4ca7934d7529c06eb6b6.json",
+              "status": 200,
+              "bytes": 12989,
+              "sha256": "d4579c67426b449f5d4d8d90a936da832bca16ea1c1cbb01e7b0f02e2fb834e4",
+              "content_type": "application/json",
+              "tempo_download_s": 0.008002240998393972
+            }
+          ]
+        },
+        {
+          "primeiro_delta_s": 0.5808699579993117,
+          "bytes_recebidos": 57527,
+          "script_concluido": true,
+          "tempo_conexao_e_servidor_s": 6.204183417999957,
+          "tempo_execucao_e_transmissao_s": 5.786260626000512,
+          "tempo_total_com_downloads_s": 6.233793243998662,
+          "metricas": [
+            {
+              "label": "Índice agregado por 10 mil",
+              "value": "2,520"
+            },
+            {
+              "label": "Contagens publicadas",
+              "value": "226.870.300"
+            },
+            {
+              "label": "Acima de 120 km/h",
+              "value": "57.163"
+            }
+          ],
+          "erros": [],
+          "downloads": [
+            {
+              "label": "Baixar comparação em CSV (pt-BR)",
+              "url": "/media/e43fa1687e679265e4451125501b5b63.csv",
+              "status": 200,
+              "bytes": 34518,
+              "sha256": "da586e6111b99ae042f5a90ffe6637ece3fccd2c3999d742bfa9d2bf21fcc5ba",
+              "content_type": "text/csv; charset=utf-8",
+              "tempo_download_s": 0.003647247000117204
+            },
+            {
+              "label": "Baixar relatório em Markdown",
+              "url": "/media/02c5f42983fb4e2707d60824487f452f.md",
+              "status": 200,
+              "bytes": 8865,
+              "sha256": "13272e2599e912535a04184cbc1bc602eeb9d072701f9b6b6a96927d36990712",
+              "content_type": "text/markdown; charset=utf-8",
+              "tempo_download_s": 0.0036976619994675275
+            },
+            {
+              "label": "Baixar consulta completa em ZIP",
+              "url": "/media/ec3c2a169f6947c533dbe08fb7d6d2e5.zip",
+              "status": 200,
+              "bytes": 13655,
+              "sha256": "f7112e38d6791a091c6bb7ce7863dfb13f283a58d7fc1f27f3a4fbafadf28949",
+              "content_type": "application/zip",
+              "tempo_download_s": 0.008913406998544815,
+              "arquivos": [
+                "comparacao_pt-BR.csv",
+                "comparacao_tecnica.csv",
+                "cobertura_pt-BR.csv",
+                "metadados.json",
+                "relatorio.md"
+              ],
+              "snapshot": "2026-10-26.1",
+              "anos_solicitados": [
+                2024,
+                2025
+              ]
+            },
+            {
+              "label": "Baixar manifesto de dados",
+              "url": "/media/23f8b67696cd4ca7934d7529c06eb6b6.json",
+              "status": 200,
+              "bytes": 12989,
+              "sha256": "d4579c67426b449f5d4d8d90a936da832bca16ea1c1cbb01e7b0f02e2fb834e4",
+              "content_type": "application/json",
+              "tempo_download_s": 0.011119992001113133
+            }
+          ]
+        },
+        {
+          "primeiro_delta_s": 0.6760990299990226,
+          "bytes_recebidos": 57527,
+          "script_concluido": true,
+          "tempo_conexao_e_servidor_s": 6.213251273999049,
+          "tempo_execucao_e_transmissao_s": 5.782849589999387,
+          "tempo_total_com_downloads_s": 6.241663363000043,
+          "metricas": [
+            {
+              "label": "Índice agregado por 10 mil",
+              "value": "2,520"
+            },
+            {
+              "label": "Contagens publicadas",
+              "value": "226.870.300"
+            },
+            {
+              "label": "Acima de 120 km/h",
+              "value": "57.163"
+            }
+          ],
+          "erros": [],
+          "downloads": [
+            {
+              "label": "Baixar comparação em CSV (pt-BR)",
+              "url": "/media/7fabac9de34850984188d898bdd08c3c.csv",
+              "status": 200,
+              "bytes": 34518,
+              "sha256": "0571a633a9397e587450b6499bffac5f3f4d0728197b0718924bfe4f2bb3be28",
+              "content_type": "text/csv; charset=utf-8",
+              "tempo_download_s": 0.006286356001510285
+            },
+            {
+              "label": "Baixar relatório em Markdown",
+              "url": "/media/6a7dabaf0ce807ba450b84014c079e06.md",
+              "status": 200,
+              "bytes": 8865,
+              "sha256": "699af46eb4a02ab331799804882be3391e36546e2a70e1480905ac0bda8e4875",
+              "content_type": "text/markdown; charset=utf-8",
+              "tempo_download_s": 0.012015510001219809
+            },
+            {
+              "label": "Baixar consulta completa em ZIP",
+              "url": "/media/4d9155359c6f12a71f98fbd64449bc01.zip",
+              "status": 200,
+              "bytes": 13656,
+              "sha256": "53b6d88709ba00936dcac798b8d0bad41a38b5a630d184d0a116fb893bbb99c2",
+              "content_type": "application/zip",
+              "tempo_download_s": 0.005951421000645496,
+              "arquivos": [
+                "comparacao_pt-BR.csv",
+                "comparacao_tecnica.csv",
+                "cobertura_pt-BR.csv",
+                "metadados.json",
+                "relatorio.md"
+              ],
+              "snapshot": "2026-10-26.1",
+              "anos_solicitados": [
+                2024,
+                2025
+              ]
+            },
+            {
+              "label": "Baixar manifesto de dados",
+              "url": "/media/23f8b67696cd4ca7934d7529c06eb6b6.json",
+              "status": 200,
+              "bytes": 12989,
+              "sha256": "d4579c67426b449f5d4d8d90a936da832bca16ea1c1cbb01e7b0f02e2fb834e4",
+              "content_type": "application/json",
+              "tempo_download_s": 0.0037406640003609937
+            }
+          ]
+        },
+        {
+          "primeiro_delta_s": 0.699689123999633,
+          "bytes_recebidos": 57527,
+          "script_concluido": true,
+          "tempo_conexao_e_servidor_s": 6.2170859809994,
+          "tempo_execucao_e_transmissao_s": 5.776328887999625,
+          "tempo_total_com_downloads_s": 6.243486941999436,
+          "metricas": [
+            {
+              "label": "Índice agregado por 10 mil",
+              "value": "2,520"
+            },
+            {
+              "label": "Contagens publicadas",
+              "value": "226.870.300"
+            },
+            {
+              "label": "Acima de 120 km/h",
+              "value": "57.163"
+            }
+          ],
+          "erros": [],
+          "downloads": [
+            {
+              "label": "Baixar comparação em CSV (pt-BR)",
+              "url": "/media/322d2ff5ad4f6f9e8e460ee35b9f7590.csv",
+              "status": 200,
+              "bytes": 34518,
+              "sha256": "7c42ffae18c1bd1ddb272f3da515f8789f20892e0f2cdf013ab754cdd4f0351f",
+              "content_type": "text/csv; charset=utf-8",
+              "tempo_download_s": 0.007055772999592591
+            },
+            {
+              "label": "Baixar relatório em Markdown",
+              "url": "/media/9943837b1451e71817cd9bafeb0ec6ea.md",
+              "status": 200,
+              "bytes": 8865,
+              "sha256": "50dc3ebbbf447a13d793d419dff7cc27f1325b8f006885d53c46ec642d0eab3f",
+              "content_type": "text/markdown; charset=utf-8",
+              "tempo_download_s": 0.010410590999526903
+            },
+            {
+              "label": "Baixar consulta completa em ZIP",
+              "url": "/media/3e6cab9e9f176058b30e04641c562722.zip",
+              "status": 200,
+              "bytes": 13656,
+              "sha256": "af506d14bbf59b97ee252b1ee594270f7cabc19d2e6102b7b390d4faddc2f2bc",
+              "content_type": "application/zip",
+              "tempo_download_s": 0.004196145000605611,
+              "arquivos": [
+                "comparacao_pt-BR.csv",
+                "comparacao_tecnica.csv",
+                "cobertura_pt-BR.csv",
+                "metadados.json",
+                "relatorio.md"
+              ],
+              "snapshot": "2026-10-26.1",
+              "anos_solicitados": [
+                2024,
+                2025
+              ]
+            },
+            {
+              "label": "Baixar manifesto de dados",
+              "url": "/media/23f8b67696cd4ca7934d7529c06eb6b6.json",
+              "status": 200,
+              "bytes": 12989,
+              "sha256": "d4579c67426b449f5d4d8d90a936da832bca16ea1c1cbb01e7b0f02e2fb834e4",
+              "content_type": "application/json",
+              "tempo_download_s": 0.004128440999920713
+            }
+          ]
+        },
+        {
+          "primeiro_delta_s": 0.6929271960016194,
+          "bytes_recebidos": 57527,
+          "script_concluido": true,
+          "tempo_conexao_e_servidor_s": 6.225253155998871,
+          "tempo_execucao_e_transmissao_s": 5.776663249000194,
+          "tempo_total_com_downloads_s": 6.2498742649986525,
+          "metricas": [
+            {
+              "label": "Índice agregado por 10 mil",
+              "value": "2,520"
+            },
+            {
+              "label": "Contagens publicadas",
+              "value": "226.870.300"
+            },
+            {
+              "label": "Acima de 120 km/h",
+              "value": "57.163"
+            }
+          ],
+          "erros": [],
+          "downloads": [
+            {
+              "label": "Baixar comparação em CSV (pt-BR)",
+              "url": "/media/dcb765a4fffbcaf27b0dc7c8552162b5.csv",
+              "status": 200,
+              "bytes": 34518,
+              "sha256": "0fb1e8d609f9f3c5d98e1bfb35ac029d5e0f88a646b8ac7c3489ae8fde354f7e",
+              "content_type": "text/csv; charset=utf-8",
+              "tempo_download_s": 0.009821713998462656
+            },
+            {
+              "label": "Baixar relatório em Markdown",
+              "url": "/media/d571c19019658ee99c2be8ef23286deb.md",
+              "status": 200,
+              "bytes": 8865,
+              "sha256": "b7dff5cdf848ec2a39f299bdb0a2eabd9bae9355c621537109a3c31a8bc9ab85",
+              "content_type": "text/markdown; charset=utf-8",
+              "tempo_download_s": 0.004507906000071671
+            },
+            {
+              "label": "Baixar consulta completa em ZIP",
+              "url": "/media/d9a7b242263fc22b8f6f820729e90e90.zip",
+              "status": 200,
+              "bytes": 13651,
+              "sha256": "d528e61d5043fec2e50e646320919d6c0e5f57e015f1280900b82d7cbb780b8a",
+              "content_type": "application/zip",
+              "tempo_download_s": 0.001809981000405969,
+              "arquivos": [
+                "comparacao_pt-BR.csv",
+                "comparacao_tecnica.csv",
+                "cobertura_pt-BR.csv",
+                "metadados.json",
+                "relatorio.md"
+              ],
+              "snapshot": "2026-10-26.1",
+              "anos_solicitados": [
+                2024,
+                2025
+              ]
+            },
+            {
+              "label": "Baixar manifesto de dados",
+              "url": "/media/23f8b67696cd4ca7934d7529c06eb6b6.json",
+              "status": 200,
+              "bytes": 12989,
+              "sha256": "d4579c67426b449f5d4d8d90a936da832bca16ea1c1cbb01e7b0f02e2fb834e4",
+              "content_type": "application/json",
+              "tempo_download_s": 0.00806867099890951
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sessoes": 10,
+      "recursos_amostrados": [
+        {
+          "segundos": 0.0001289430001634173,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            7.89453125,
+            6.3466796875,
+            4.1298828125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 679472,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2384204
+        },
+        {
+          "segundos": 0.25204761599889025,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            7.89453125,
+            6.3466796875,
+            4.1298828125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 679192,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2384308
+        },
+        {
+          "segundos": 0.5027583329992922,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            7.89453125,
+            6.3466796875,
+            4.1298828125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 679156,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2384504
+        },
+        {
+          "segundos": 0.7535882339998352,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            7.89453125,
+            6.3466796875,
+            4.1298828125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 679228,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2384992
+        },
+        {
+          "segundos": 1.0045673429995077,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            7.89453125,
+            6.3466796875,
+            4.1298828125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 671632,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2385072
+        },
+        {
+          "segundos": 1.2553855869991821,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            7.89453125,
+            6.3466796875,
+            4.1298828125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 630844,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2381836
+        },
+        {
+          "segundos": 1.5060470030002762,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            7.89453125,
+            6.3466796875,
+            4.1298828125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 589808,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2378352
+        },
+        {
+          "segundos": 1.7567597349989228,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            7.89453125,
+            6.3466796875,
+            4.1298828125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 575380,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2376336
+        },
+        {
+          "segundos": 2.0077436230003514,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            7.89453125,
+            6.3466796875,
+            4.1298828125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 572960,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2376356
+        },
+        {
+          "segundos": 2.2594285420000233,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            7.89453125,
+            6.3466796875,
+            4.1298828125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 564848,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2376364
+        },
+        {
+          "segundos": 2.511076114999014,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            7.89453125,
+            6.3466796875,
+            4.1298828125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 562252,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2376440
+        },
+        {
+          "segundos": 2.7629404439994687,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            7.89453125,
+            6.3466796875,
+            4.1298828125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 560940,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2376520
+        },
+        {
+          "segundos": 3.014327797000078,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            7.89453125,
+            6.3466796875,
+            4.1298828125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 562780,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2375788
+        },
+        {
+          "segundos": 3.2649722619989916,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.0634765625,
+            6.40771484375,
+            4.16162109375
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 566200,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2369400
+        },
+        {
+          "segundos": 3.516401840999606,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.0634765625,
+            6.40771484375,
+            4.16162109375
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 566248,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2368908
+        },
+        {
+          "segundos": 3.7673518209994654,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.0634765625,
+            6.40771484375,
+            4.16162109375
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 565060,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2368916
+        },
+        {
+          "segundos": 4.017910679998749,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.0634765625,
+            6.40771484375,
+            4.16162109375
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 563628,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2370052
+        },
+        {
+          "segundos": 4.269038999000259,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.0634765625,
+            6.40771484375,
+            4.16162109375
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 562716,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2370204
+        },
+        {
+          "segundos": 4.520644748999985,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.0634765625,
+            6.40771484375,
+            4.16162109375
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 563436,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2370540
+        },
+        {
+          "segundos": 4.77180170399879,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.0634765625,
+            6.40771484375,
+            4.16162109375
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 561092,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2370716
+        },
+        {
+          "segundos": 5.022849351000332,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.0634765625,
+            6.40771484375,
+            4.16162109375
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 561092,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2370736
+        },
+        {
+          "segundos": 5.273602856999787,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.0634765625,
+            6.40771484375,
+            4.16162109375
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 559824,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2371256
+        },
+        {
+          "segundos": 5.524428557999272,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.0634765625,
+            6.40771484375,
+            4.16162109375
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 567604,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2366908
+        },
+        {
+          "segundos": 5.7751064200001565,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.0634765625,
+            6.40771484375,
+            4.16162109375
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 523620,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2363884
+        },
+        {
+          "segundos": 6.026049866999529,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.0634765625,
+            6.40771484375,
+            4.16162109375
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 535008,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2359872
+        },
+        {
+          "segundos": 6.2770753469994816,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.0634765625,
+            6.40771484375,
+            4.16162109375
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 539928,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2359060
+        },
+        {
+          "segundos": 6.528330078999716,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.0634765625,
+            6.40771484375,
+            4.16162109375
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 550896,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2358188
+        },
+        {
+          "segundos": 6.779047317999357,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.0634765625,
+            6.40771484375,
+            4.16162109375
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 556132,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2357600
+        },
+        {
+          "segundos": 7.029829756998879,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.0634765625,
+            6.40771484375,
+            4.16162109375
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 555924,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2356056
+        },
+        {
+          "segundos": 7.28102675899936,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.0634765625,
+            6.40771484375,
+            4.16162109375
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 553692,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2356628
+        },
+        {
+          "segundos": 7.531651305998821,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.0634765625,
+            6.40771484375,
+            4.16162109375
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 554644,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2355208
+        },
+        {
+          "segundos": 7.7823106329997245,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.0634765625,
+            6.40771484375,
+            4.16162109375
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 558748,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2351500
+        },
+        {
+          "segundos": 8.032969361998767,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.21875,
+            6.4677734375,
+            4.193359375
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 561120,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2351256
+        },
+        {
+          "segundos": 8.283704609999404,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.21875,
+            6.4677734375,
+            4.193359375
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 562004,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2350644
+        },
+        {
+          "segundos": 8.53434063199893,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.21875,
+            6.4677734375,
+            4.193359375
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 563268,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2350748
+        },
+        {
+          "segundos": 8.784972989999005,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.21875,
+            6.4677734375,
+            4.193359375
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 563260,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2350552
+        },
+        {
+          "segundos": 9.035625167000035,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.21875,
+            6.4677734375,
+            4.193359375
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 563872,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2350412
+        },
+        {
+          "segundos": 9.286188727999615,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.21875,
+            6.4677734375,
+            4.193359375
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 565456,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2350576
+        },
+        {
+          "segundos": 9.536848657999144,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.21875,
+            6.4677734375,
+            4.193359375
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 565832,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2350148
+        },
+        {
+          "segundos": 9.78753103499912,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.21875,
+            6.4677734375,
+            4.193359375
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 566124,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2349732
+        },
+        {
+          "segundos": 10.039188803999423,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            8.21875,
+            6.4677734375,
+            4.193359375
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 653180,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2349308
+        }
+      ],
+      "resultados": [
+        {
+          "primeiro_delta_s": 3.0933992540012696,
+          "bytes_recebidos": 57527,
+          "script_concluido": true,
+          "tempo_conexao_e_servidor_s": 9.987705500001539,
+          "tempo_execucao_e_transmissao_s": 9.97658244700142,
+          "tempo_total_com_downloads_s": 10.030100932001005,
+          "metricas": [
+            {
+              "label": "Índice agregado por 10 mil",
+              "value": "2,520"
+            },
+            {
+              "label": "Contagens publicadas",
+              "value": "226.870.300"
+            },
+            {
+              "label": "Acima de 120 km/h",
+              "value": "57.163"
+            }
+          ],
+          "erros": [],
+          "downloads": [
+            {
+              "label": "Baixar comparação em CSV (pt-BR)",
+              "url": "/media/d8a43603bd3be8e6bf99acb40ec95610.csv",
+              "status": 200,
+              "bytes": 34518,
+              "sha256": "944d2a6e96dee12d4c80ee40a3ce723bd3fa90fca333c400d55124b6b8833afa",
+              "content_type": "text/csv; charset=utf-8",
+              "tempo_download_s": 0.014877931000228273
+            },
+            {
+              "label": "Baixar relatório em Markdown",
+              "url": "/media/52d848ce8ee06a3743da34d136e69c0a.md",
+              "status": 200,
+              "bytes": 8865,
+              "sha256": "6d89813f92e6fa66b44b174bb2126a983018787db247c748f96de91eeb87f5a9",
+              "content_type": "text/markdown; charset=utf-8",
+              "tempo_download_s": 0.01177314300002763
+            },
+            {
+              "label": "Baixar consulta completa em ZIP",
+              "url": "/media/8ddedfc9d8ef0b64191e1077eb9f9efa.zip",
+              "status": 200,
+              "bytes": 13656,
+              "sha256": "b76626c475c572d784cdc1b1344c4288a2b9f903a65c1a4e128128a7c666c3ec",
+              "content_type": "application/zip",
+              "tempo_download_s": 0.006633631001022877,
+              "arquivos": [
+                "comparacao_pt-BR.csv",
+                "comparacao_tecnica.csv",
+                "cobertura_pt-BR.csv",
+                "metadados.json",
+                "relatorio.md"
+              ],
+              "snapshot": "2026-10-26.1",
+              "anos_solicitados": [
+                2024,
+                2025
+              ]
+            },
+            {
+              "label": "Baixar manifesto de dados",
+              "url": "/media/23f8b67696cd4ca7934d7529c06eb6b6.json",
+              "status": 200,
+              "bytes": 12989,
+              "sha256": "d4579c67426b449f5d4d8d90a936da832bca16ea1c1cbb01e7b0f02e2fb834e4",
+              "content_type": "application/json",
+              "tempo_download_s": 0.008612221001385478
+            }
+          ]
+        },
+        {
+          "primeiro_delta_s": 9.548706839999795,
+          "bytes_recebidos": 57527,
+          "script_concluido": true,
+          "tempo_conexao_e_servidor_s": 9.971718767999846,
+          "tempo_execucao_e_transmissao_s": 9.590876551001202,
+          "tempo_total_com_downloads_s": 9.986548169999878,
+          "metricas": [
+            {
+              "label": "Índice agregado por 10 mil",
+              "value": "2,520"
+            },
+            {
+              "label": "Contagens publicadas",
+              "value": "226.870.300"
+            },
+            {
+              "label": "Acima de 120 km/h",
+              "value": "57.163"
+            }
+          ],
+          "erros": [],
+          "downloads": [
+            {
+              "label": "Baixar comparação em CSV (pt-BR)",
+              "url": "/media/a9cf41dfd0bbd93e26c013df02ae87fd.csv",
+              "status": 200,
+              "bytes": 34518,
+              "sha256": "4a21609f1865d10055e2b26f023786e7511ffda11e98c27455ed22fe5d786dc6",
+              "content_type": "text/csv; charset=utf-8",
+              "tempo_download_s": 0.003970812998886686
+            },
+            {
+              "label": "Baixar relatório em Markdown",
+              "url": "/media/d7606aff4a8aeb642f81c6cfd550db79.md",
+              "status": 200,
+              "bytes": 8865,
+              "sha256": "019ac5547677d06dab0eeeaa214d2b4f9317554f53a0ef007342a1fc64986ffe",
+              "content_type": "text/markdown; charset=utf-8",
+              "tempo_download_s": 0.0037432119988807244
+            },
+            {
+              "label": "Baixar consulta completa em ZIP",
+              "url": "/media/dc3349a84187e1508b434b263bd087ea.zip",
+              "status": 200,
+              "bytes": 13656,
+              "sha256": "edc30d07546373ff1582675b1b4e11eca8d1e8200d61da117e24efe2b4100bbb",
+              "content_type": "application/zip",
+              "tempo_download_s": 0.003092671999183949,
+              "arquivos": [
+                "comparacao_pt-BR.csv",
+                "comparacao_tecnica.csv",
+                "cobertura_pt-BR.csv",
+                "metadados.json",
+                "relatorio.md"
+              ],
+              "snapshot": "2026-10-26.1",
+              "anos_solicitados": [
+                2024,
+                2025
+              ]
+            },
+            {
+              "label": "Baixar manifesto de dados",
+              "url": "/media/23f8b67696cd4ca7934d7529c06eb6b6.json",
+              "status": 200,
+              "bytes": 12989,
+              "sha256": "d4579c67426b449f5d4d8d90a936da832bca16ea1c1cbb01e7b0f02e2fb834e4",
+              "content_type": "application/json",
+              "tempo_download_s": 0.003414847999010817
+            }
+          ]
+        },
+        {
+          "primeiro_delta_s": 9.543002909998904,
+          "bytes_recebidos": 57527,
+          "script_concluido": true,
+          "tempo_conexao_e_servidor_s": 9.973954136001339,
+          "tempo_execucao_e_transmissao_s": 9.584543596000003,
+          "tempo_total_com_downloads_s": 9.993511186999967,
+          "metricas": [
+            {
+              "label": "Índice agregado por 10 mil",
+              "value": "2,520"
+            },
+            {
+              "label": "Contagens publicadas",
+              "value": "226.870.300"
+            },
+            {
+              "label": "Acima de 120 km/h",
+              "value": "57.163"
+            }
+          ],
+          "erros": [],
+          "downloads": [
+            {
+              "label": "Baixar comparação em CSV (pt-BR)",
+              "url": "/media/c08188dc6f35c6b6fca9a4f0100e94c2.csv",
+              "status": 200,
+              "bytes": 34518,
+              "sha256": "04c970a20e2a3be81d319552077f3c56f2029f9fbf02aa9d55f5b43c8f0b70b9",
+              "content_type": "text/csv; charset=utf-8",
+              "tempo_download_s": 0.003375619000507868
+            },
+            {
+              "label": "Baixar relatório em Markdown",
+              "url": "/media/a56c1b91c52b495e7b38f94f2ba64907.md",
+              "status": 200,
+              "bytes": 8865,
+              "sha256": "fd66bd6a156ed9406bfd260f3d1aee3cc0e82ae7c387c27e3c3349fe580e105a",
+              "content_type": "text/markdown; charset=utf-8",
+              "tempo_download_s": 0.003269427999839536
+            },
+            {
+              "label": "Baixar consulta completa em ZIP",
+              "url": "/media/4c60f02124dc5884b709fbcfb7bf585f.zip",
+              "status": 200,
+              "bytes": 13653,
+              "sha256": "f87ae02a0970682cea0ded25868028d66b1f3196020c78c9a19ae58fa3344eb8",
+              "content_type": "application/zip",
+              "tempo_download_s": 0.0038774289987486554,
+              "arquivos": [
+                "comparacao_pt-BR.csv",
+                "comparacao_tecnica.csv",
+                "cobertura_pt-BR.csv",
+                "metadados.json",
+                "relatorio.md"
+              ],
+              "snapshot": "2026-10-26.1",
+              "anos_solicitados": [
+                2024,
+                2025
+              ]
+            },
+            {
+              "label": "Baixar manifesto de dados",
+              "url": "/media/23f8b67696cd4ca7934d7529c06eb6b6.json",
+              "status": 200,
+              "bytes": 12989,
+              "sha256": "d4579c67426b449f5d4d8d90a936da832bca16ea1c1cbb01e7b0f02e2fb834e4",
+              "content_type": "application/json",
+              "tempo_download_s": 0.008262695000667009
+            }
+          ]
+        },
+        {
+          "primeiro_delta_s": 9.483528348000618,
+          "bytes_recebidos": 57527,
+          "script_concluido": true,
+          "tempo_conexao_e_servidor_s": 9.992036683999686,
+          "tempo_execucao_e_transmissao_s": 9.529713091000303,
+          "tempo_total_com_downloads_s": 10.024631266000142,
+          "metricas": [
+            {
+              "label": "Índice agregado por 10 mil",
+              "value": "2,520"
+            },
+            {
+              "label": "Contagens publicadas",
+              "value": "226.870.300"
+            },
+            {
+              "label": "Acima de 120 km/h",
+              "value": "57.163"
+            }
+          ],
+          "erros": [],
+          "downloads": [
+            {
+              "label": "Baixar comparação em CSV (pt-BR)",
+              "url": "/media/4b3d44a3a0ece34adf505cf5029977ca.csv",
+              "status": 200,
+              "bytes": 34518,
+              "sha256": "8b896069bb1edbfab735355b94f42222ed11eaa9682a18c848996491c8366b85",
+              "content_type": "text/csv; charset=utf-8",
+              "tempo_download_s": 0.007026363000477431
+            },
+            {
+              "label": "Baixar relatório em Markdown",
+              "url": "/media/aad50429fd24a349defa917a726dd6d5.md",
+              "status": 200,
+              "bytes": 8865,
+              "sha256": "a72884cb17e647c3afec374d24dd43f782892985e6615b711a6cf865a231ec00",
+              "content_type": "text/markdown; charset=utf-8",
+              "tempo_download_s": 0.008771046001129434
+            },
+            {
+              "label": "Baixar consulta completa em ZIP",
+              "url": "/media/42039ee0f42984bb2ae596296815160d.zip",
+              "status": 200,
+              "bytes": 13653,
+              "sha256": "1e0b0fefa597b72848a44694d596d6ac75dbf9201b7296df58f3c6ca2b3485d3",
+              "content_type": "application/zip",
+              "tempo_download_s": 0.008201929998904234,
+              "arquivos": [
+                "comparacao_pt-BR.csv",
+                "comparacao_tecnica.csv",
+                "cobertura_pt-BR.csv",
+                "metadados.json",
+                "relatorio.md"
+              ],
+              "snapshot": "2026-10-26.1",
+              "anos_solicitados": [
+                2024,
+                2025
+              ]
+            },
+            {
+              "label": "Baixar manifesto de dados",
+              "url": "/media/23f8b67696cd4ca7934d7529c06eb6b6.json",
+              "status": 200,
+              "bytes": 12989,
+              "sha256": "d4579c67426b449f5d4d8d90a936da832bca16ea1c1cbb01e7b0f02e2fb834e4",
+              "content_type": "application/json",
+              "tempo_download_s": 0.007859240999096073
+            }
+          ]
+        },
+        {
+          "primeiro_delta_s": 9.423993266000252,
+          "bytes_recebidos": 57527,
+          "script_concluido": true,
+          "tempo_conexao_e_servidor_s": 9.993487445000937,
+          "tempo_execucao_e_transmissao_s": 9.4681656140001,
+          "tempo_total_com_downloads_s": 10.027640349000649,
+          "metricas": [
+            {
+              "label": "Índice agregado por 10 mil",
+              "value": "2,520"
+            },
+            {
+              "label": "Contagens publicadas",
+              "value": "226.870.300"
+            },
+            {
+              "label": "Acima de 120 km/h",
+              "value": "57.163"
+            }
+          ],
+          "erros": [],
+          "downloads": [
+            {
+              "label": "Baixar comparação em CSV (pt-BR)",
+              "url": "/media/6416dfc732b956c238793d1856ba44d7.csv",
+              "status": 200,
+              "bytes": 34518,
+              "sha256": "f76467e48a4c39b55e02027c90ba077a8fb4b8357e3edb54329ddf92c059def5",
+              "content_type": "text/csv; charset=utf-8",
+              "tempo_download_s": 0.008053752000705572
+            },
+            {
+              "label": "Baixar relatório em Markdown",
+              "url": "/media/1907f6ff4beb9a65a2a5f041cb68f0fc.md",
+              "status": 200,
+              "bytes": 8865,
+              "sha256": "fc4ae77c1e87e076cdb969c27889480cd404d72522ed25f2a4683d42eb620e60",
+              "content_type": "text/markdown; charset=utf-8",
+              "tempo_download_s": 0.011395011000786326
+            },
+            {
+              "label": "Baixar consulta completa em ZIP",
+              "url": "/media/aa4e682f56c263234a71db9e7d792b9b.zip",
+              "status": 200,
+              "bytes": 13657,
+              "sha256": "5fb7a7f094b2b43134a7a24f9fe1f63ecdc0f2c216a71ff4c6ca2062452539e5",
+              "content_type": "application/zip",
+              "tempo_download_s": 0.007182274999649962,
+              "arquivos": [
+                "comparacao_pt-BR.csv",
+                "comparacao_tecnica.csv",
+                "cobertura_pt-BR.csv",
+                "metadados.json",
+                "relatorio.md"
+              ],
+              "snapshot": "2026-10-26.1",
+              "anos_solicitados": [
+                2024,
+                2025
+              ]
+            },
+            {
+              "label": "Baixar manifesto de dados",
+              "url": "/media/23f8b67696cd4ca7934d7529c06eb6b6.json",
+              "status": 200,
+              "bytes": 12989,
+              "sha256": "d4579c67426b449f5d4d8d90a936da832bca16ea1c1cbb01e7b0f02e2fb834e4",
+              "content_type": "application/json",
+              "tempo_download_s": 0.006351482999889413
+            }
+          ]
+        },
+        {
+          "primeiro_delta_s": 9.35258073300065,
+          "bytes_recebidos": 57527,
+          "script_concluido": true,
+          "tempo_conexao_e_servidor_s": 9.995256180998695,
+          "tempo_execucao_e_transmissao_s": 9.394786308999755,
+          "tempo_total_com_downloads_s": 10.031218963000356,
+          "metricas": [
+            {
+              "label": "Índice agregado por 10 mil",
+              "value": "2,520"
+            },
+            {
+              "label": "Contagens publicadas",
+              "value": "226.870.300"
+            },
+            {
+              "label": "Acima de 120 km/h",
+              "value": "57.163"
+            }
+          ],
+          "erros": [],
+          "downloads": [
+            {
+              "label": "Baixar comparação em CSV (pt-BR)",
+              "url": "/media/9ca070ef384b6dfb80e2b9be3107096d.csv",
+              "status": 200,
+              "bytes": 34518,
+              "sha256": "a861c3b921b550212fe0c6f60504b06ff40ecb91c2073122f7397f18b7cc3a7c",
+              "content_type": "text/csv; charset=utf-8",
+              "tempo_download_s": 0.01035446000059892
+            },
+            {
+              "label": "Baixar relatório em Markdown",
+              "url": "/media/f08f4d940b0b10c632c9474ecad64890.md",
+              "status": 200,
+              "bytes": 8865,
+              "sha256": "25a8bc9c6815bf73f554645895ede2a837e7a3bb7a0dac7d9a7033851069003c",
+              "content_type": "text/markdown; charset=utf-8",
+              "tempo_download_s": 0.008826671000861097
+            },
+            {
+              "label": "Baixar consulta completa em ZIP",
+              "url": "/media/41b0f88f2ff93d77d7d14bee5870c9b1.zip",
+              "status": 200,
+              "bytes": 13652,
+              "sha256": "a485f715b2b28ffc1683f0ff883ef95c88c8ebd71a2c54993073fc7fffd4c054",
+              "content_type": "application/zip",
+              "tempo_download_s": 0.007002738000664976,
+              "arquivos": [
+                "comparacao_pt-BR.csv",
+                "comparacao_tecnica.csv",
+                "cobertura_pt-BR.csv",
+                "metadados.json",
+                "relatorio.md"
+              ],
+              "snapshot": "2026-10-26.1",
+              "anos_solicitados": [
+                2024,
+                2025
+              ]
+            },
+            {
+              "label": "Baixar manifesto de dados",
+              "url": "/media/23f8b67696cd4ca7934d7529c06eb6b6.json",
+              "status": 200,
+              "bytes": 12989,
+              "sha256": "d4579c67426b449f5d4d8d90a936da832bca16ea1c1cbb01e7b0f02e2fb834e4",
+              "content_type": "application/json",
+              "tempo_download_s": 0.009159531000477728
+            }
+          ]
+        },
+        {
+          "primeiro_delta_s": 9.346021977999044,
+          "bytes_recebidos": 57527,
+          "script_concluido": true,
+          "tempo_conexao_e_servidor_s": 9.99862834600026,
+          "tempo_execucao_e_transmissao_s": 9.388898449999033,
+          "tempo_total_com_downloads_s": 10.035486419001245,
+          "metricas": [
+            {
+              "label": "Índice agregado por 10 mil",
+              "value": "2,520"
+            },
+            {
+              "label": "Contagens publicadas",
+              "value": "226.870.300"
+            },
+            {
+              "label": "Acima de 120 km/h",
+              "value": "57.163"
+            }
+          ],
+          "erros": [],
+          "downloads": [
+            {
+              "label": "Baixar comparação em CSV (pt-BR)",
+              "url": "/media/66195a6825a45ab7d67e649662b85013.csv",
+              "status": 200,
+              "bytes": 34518,
+              "sha256": "48b1cd2cd904dd239102ad7e1d4e9cd4c3f09c62c6a94ce716c99cf4af8fc116",
+              "content_type": "text/csv; charset=utf-8",
+              "tempo_download_s": 0.012202324000099907
+            },
+            {
+              "label": "Baixar relatório em Markdown",
+              "url": "/media/aea3e4b6068a68da0f7b8e12508e81c9.md",
+              "status": 200,
+              "bytes": 8865,
+              "sha256": "b19c36fbfcca2dc58ea06f84de0fff197a6239209deb92129eff952d9291186d",
+              "content_type": "text/markdown; charset=utf-8",
+              "tempo_download_s": 0.0069568079998134635
+            },
+            {
+              "label": "Baixar consulta completa em ZIP",
+              "url": "/media/2295cba0fe461e15c25c8a3ce51a815b.zip",
+              "status": 200,
+              "bytes": 13654,
+              "sha256": "0dcad55262e6c93ed7b6b934da8e12ea73de8d9378ba27cf76ae953527c521c8",
+              "content_type": "application/zip",
+              "tempo_download_s": 0.006874861999676796,
+              "arquivos": [
+                "comparacao_pt-BR.csv",
+                "comparacao_tecnica.csv",
+                "cobertura_pt-BR.csv",
+                "metadados.json",
+                "relatorio.md"
+              ],
+              "snapshot": "2026-10-26.1",
+              "anos_solicitados": [
+                2024,
+                2025
+              ]
+            },
+            {
+              "label": "Baixar manifesto de dados",
+              "url": "/media/23f8b67696cd4ca7934d7529c06eb6b6.json",
+              "status": 200,
+              "bytes": 12989,
+              "sha256": "d4579c67426b449f5d4d8d90a936da832bca16ea1c1cbb01e7b0f02e2fb834e4",
+              "content_type": "application/json",
+              "tempo_download_s": 0.01023103099942091
+            }
+          ]
+        },
+        {
+          "primeiro_delta_s": 9.344934172000649,
+          "bytes_recebidos": 57527,
+          "script_concluido": true,
+          "tempo_conexao_e_servidor_s": 10.00294372999997,
+          "tempo_execucao_e_transmissao_s": 9.389252359000238,
+          "tempo_total_com_downloads_s": 10.03650710599868,
+          "metricas": [
+            {
+              "label": "Índice agregado por 10 mil",
+              "value": "2,520"
+            },
+            {
+              "label": "Contagens publicadas",
+              "value": "226.870.300"
+            },
+            {
+              "label": "Acima de 120 km/h",
+              "value": "57.163"
+            }
+          ],
+          "erros": [],
+          "downloads": [
+            {
+              "label": "Baixar comparação em CSV (pt-BR)",
+              "url": "/media/f3e2ade9ddd3fb0cfffa038d89e3bb5e.csv",
+              "status": 200,
+              "bytes": 34518,
+              "sha256": "18b9c94fc0ee5d052f00736985dc51872d96f793dd6c52800b03931255d97d6e",
+              "content_type": "text/csv; charset=utf-8",
+              "tempo_download_s": 0.008901078999770107
+            },
+            {
+              "label": "Baixar relatório em Markdown",
+              "url": "/media/16c10a603c9645a62ff40e0a03951fd1.md",
+              "status": 200,
+              "bytes": 8865,
+              "sha256": "5f5d2dfd48e8bd607270e7ef45c8981fc3b3f2475580745098e05467be2b0d36",
+              "content_type": "text/markdown; charset=utf-8",
+              "tempo_download_s": 0.009491411999988486
+            },
+            {
+              "label": "Baixar consulta completa em ZIP",
+              "url": "/media/a5c89bf7e3558153bc7e8aee92541774.zip",
+              "status": 200,
+              "bytes": 13653,
+              "sha256": "06e08e1ca70a01553574ceea083c4ad3e9de7f2bf04eb3a3666c751cf04e2a73",
+              "content_type": "application/zip",
+              "tempo_download_s": 0.007085667999490397,
+              "arquivos": [
+                "comparacao_pt-BR.csv",
+                "comparacao_tecnica.csv",
+                "cobertura_pt-BR.csv",
+                "metadados.json",
+                "relatorio.md"
+              ],
+              "snapshot": "2026-10-26.1",
+              "anos_solicitados": [
+                2024,
+                2025
+              ]
+            },
+            {
+              "label": "Baixar manifesto de dados",
+              "url": "/media/23f8b67696cd4ca7934d7529c06eb6b6.json",
+              "status": 200,
+              "bytes": 12989,
+              "sha256": "d4579c67426b449f5d4d8d90a936da832bca16ea1c1cbb01e7b0f02e2fb834e4",
+              "content_type": "application/json",
+              "tempo_download_s": 0.007533078000051319
+            }
+          ]
+        },
+        {
+          "primeiro_delta_s": 9.346902049001073,
+          "bytes_recebidos": 57527,
+          "script_concluido": true,
+          "tempo_conexao_e_servidor_s": 10.006075428998884,
+          "tempo_execucao_e_transmissao_s": 9.39143408900054,
+          "tempo_total_com_downloads_s": 10.038961887999903,
+          "metricas": [
+            {
+              "label": "Índice agregado por 10 mil",
+              "value": "2,520"
+            },
+            {
+              "label": "Contagens publicadas",
+              "value": "226.870.300"
+            },
+            {
+              "label": "Acima de 120 km/h",
+              "value": "57.163"
+            }
+          ],
+          "erros": [],
+          "downloads": [
+            {
+              "label": "Baixar comparação em CSV (pt-BR)",
+              "url": "/media/d34d49ba3e127270f04fb9e038342a8b.csv",
+              "status": 200,
+              "bytes": 34518,
+              "sha256": "0f9de2e5fe72c62b20fe13827b68cd9deb62021cbfa1d0bb5e1cd30a625c0b3e",
+              "content_type": "text/csv; charset=utf-8",
+              "tempo_download_s": 0.008570116999180755
+            },
+            {
+              "label": "Baixar relatório em Markdown",
+              "url": "/media/1b4ab1864efc979c0dfdff79152f1112.md",
+              "status": 200,
+              "bytes": 8865,
+              "sha256": "da232115afab31d0c8a5d13a48efaad0ab9e2bdd816462e8989239520bc6d89a",
+              "content_type": "text/markdown; charset=utf-8",
+              "tempo_download_s": 0.008714397001313046
+            },
+            {
+              "label": "Baixar consulta completa em ZIP",
+              "url": "/media/730033227611f096e3569931289f4f0c.zip",
+              "status": 200,
+              "bytes": 13656,
+              "sha256": "fe5d3fa84868aec9c9a5e229d69598a6681501339a0a459be8c79a684ee2d710",
+              "content_type": "application/zip",
+              "tempo_download_s": 0.01011498400112032,
+              "arquivos": [
+                "comparacao_pt-BR.csv",
+                "comparacao_tecnica.csv",
+                "cobertura_pt-BR.csv",
+                "metadados.json",
+                "relatorio.md"
+              ],
+              "snapshot": "2026-10-26.1",
+              "anos_solicitados": [
+                2024,
+                2025
+              ]
+            },
+            {
+              "label": "Baixar manifesto de dados",
+              "url": "/media/23f8b67696cd4ca7934d7529c06eb6b6.json",
+              "status": 200,
+              "bytes": 12989,
+              "sha256": "d4579c67426b449f5d4d8d90a936da832bca16ea1c1cbb01e7b0f02e2fb834e4",
+              "content_type": "application/json",
+              "tempo_download_s": 0.00500435399953858
+            }
+          ]
+        },
+        {
+          "primeiro_delta_s": 9.296239969999078,
+          "bytes_recebidos": 57527,
+          "script_concluido": true,
+          "tempo_conexao_e_servidor_s": 10.008026759000131,
+          "tempo_execucao_e_transmissao_s": 9.34007745999952,
+          "tempo_total_com_downloads_s": 10.03781993099983,
+          "metricas": [
+            {
+              "label": "Índice agregado por 10 mil",
+              "value": "2,520"
+            },
+            {
+              "label": "Contagens publicadas",
+              "value": "226.870.300"
+            },
+            {
+              "label": "Acima de 120 km/h",
+              "value": "57.163"
+            }
+          ],
+          "erros": [],
+          "downloads": [
+            {
+              "label": "Baixar comparação em CSV (pt-BR)",
+              "url": "/media/36cf9e7afcdb7ae797d760894dfceb61.csv",
+              "status": 200,
+              "bytes": 34518,
+              "sha256": "f0279fe05d5b4a482b1f71d5d242fb13e41aa45909f27c5cb401bf917ef0d926",
+              "content_type": "text/csv; charset=utf-8",
+              "tempo_download_s": 0.006693059000099311
+            },
+            {
+              "label": "Baixar relatório em Markdown",
+              "url": "/media/223c6c0357a4504a4f27d252116460c5.md",
+              "status": 200,
+              "bytes": 8865,
+              "sha256": "c1f73fbb6a0ffc1370b736407e13358c47634df2bbd0e69e4c4af2eeddacb968",
+              "content_type": "text/markdown; charset=utf-8",
+              "tempo_download_s": 0.007460340000761789
+            },
+            {
+              "label": "Baixar consulta completa em ZIP",
+              "url": "/media/767ce411d05dea983a067d21571e0e95.zip",
+              "status": 200,
+              "bytes": 13657,
+              "sha256": "6859f763c95e570d7c3425baa306c2e13f1921fc0c485ba7b4c10c5d2dc89d0f",
+              "content_type": "application/zip",
+              "tempo_download_s": 0.009309234999818727,
+              "arquivos": [
+                "comparacao_pt-BR.csv",
+                "comparacao_tecnica.csv",
+                "cobertura_pt-BR.csv",
+                "metadados.json",
+                "relatorio.md"
+              ],
+              "snapshot": "2026-10-26.1",
+              "anos_solicitados": [
+                2024,
+                2025
+              ]
+            },
+            {
+              "label": "Baixar manifesto de dados",
+              "url": "/media/23f8b67696cd4ca7934d7529c06eb6b6.json",
+              "status": 200,
+              "bytes": 12989,
+              "sha256": "d4579c67426b449f5d4d8d90a936da832bca16ea1c1cbb01e7b0f02e2fb834e4",
+              "content_type": "application/json",
+              "tempo_download_s": 0.005685089001417509
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,519 @@
+[
+  {
+    "arquivo": "sentinela_2026-10-26.1_3d68043d9f (1).csv",
+    "bytes": 34518,
+    "sha256": "d1561ecb3f5e2d3d7715879d26178a52a31c8afa02c8d7901dbfcba4e77f5fab",
+    "linhas": 20,
+    "snapshot": "2026-10-26.1",
+    "codigo": "7396d0f8cbce6ec29c3107a0ab97bda31e592127+alterações-locais",
+    "anos": "2024, 2025",
+    "altas": 57163,
+    "passagens": 226870300
+  },
+  {
+    "arquivo": "sentinela_2026-10-26.1_3d68043d9f (1).zip",
+    "bytes": 13652,
+    "sha256": "0d3a926a6d3721c26c129f0d90980cb2be811dbcc01905e51d3fb7073982c0e7",
+    "integridade": null,
+    "arquivos": [
+      "comparacao_pt-BR.csv",
+      "comparacao_tecnica.csv",
+      "cobertura_pt-BR.csv",
+      "metadados.json",
+      "relatorio.md"
+    ],
+    "snapshot": "2026-10-26.1",
+    "metadados": {
+      "aplicacao": "SENTINELA",
+      "versao_aplicacao": "2.1.0",
+      "codigo": "7396d0f8cbce6ec29c3107a0ab97bda31e592127+alterações-locais",
+      "snapshot": "2026-10-26.1",
+      "gerado_utc": "2026-11-06T21:32:19.996430+00:00",
+      "filtros_solicitados": {
+        "page": "Visão geral",
+        "years": [
+          2024,
+          2025
+        ],
+        "area": "Grupo com boa cobertura em 2024–2025",
+        "directions": [
+          "Crescente",
+          "Decrescente"
+        ],
+        "city": "Todas as cidades",
+        "points": [
+          "VC101-32",
+          "VC101-38",
+          "VC101-14",
+          "VC101-13",
+          "VC101-21",
+          "VC101-7",
+          "VC101-10",
+          "VC101-24",
+          "VC101-25",
+          "VC101-9",
+          "VC101-31",
+          "VC101-4",
+          "VC101-15",
+          "VC101-22",
+          "VC101-26",
+          "VC101-19",
+          "VC101-42",
+          "VC101-39",
+          "VC101-11",
+          "VC101-12"
+        ]
+      },
+      "efetivo": {
+        "equipamentos": [
+          "VC101-10",
+          "VC101-11",
+          "VC101-12",
+          "VC101-13",
+          "VC101-14",
+          "VC101-15",
+          "VC101-19",
+          "VC101-21",
+          "VC101-22",
+          "VC101-24",
+          "VC101-25",
+          "VC101-26",
+          "VC101-31",
+          "VC101-32",
+          "VC101-38",
+          "VC101-39",
+          "VC101-4",
+          "VC101-42",
+          "VC101-7",
+          "VC101-9"
+        ],
+        "anos_com_trafego": [
+          2024,
+          2025
+        ],
+        "inicio_publicado": "2024-01-01",
+        "fim_publicado": "2025-12-31"
+      },
+      "unidade": "Contagens nas faixas acima de 120 km/h por 10 mil contagens publicadas da mesma base A",
+      "politica_cobertura": "Comparação: ≥90% dos dias de cada ano calendário solicitado, denominador positivo e período anual completo no snapshot. Demais consultas são exploratórias.",
+      "fontes_acidentes": [
+        {
+          "fonte": "ANTT — envelope contínuo",
+          "situacao": "período disponível no snapshot",
+          "anos_solicitados": [
+            2024,
+            2025
+          ],
+          "anos_cobertos": [
+            2024,
+            2025
+          ],
+          "anos_sem_cobertura": [],
+          "intervalos": [
+            [
+              "2024-01-01",
+              "2024-12-31"
+            ],
+            [
+              "2025-01-01",
+              "2025-12-31"
+            ]
+          ],
+          "quantidade": 3300,
+          "escopo": "BR-101/SC, km 249,900 a 448,100, margem de 2,5 km entre pontos; ambos os sentidos",
+          "nota": "Intervalo do inventário do CSV de acidentes, sem garantia de completude. Repetições sem ID preservadas."
+        },
+        {
+          "fonte": "PRF — trecho integral",
+          "situacao": "período disponível no snapshot",
+          "anos_solicitados": [
+            2024,
+            2025
+          ],
+          "anos_cobertos": [
+            2024,
+            2025
+          ],
+          "anos_sem_cobertura": [],
+          "intervalos": [
+            [
+              "2024-01-01",
+              "2024-12-31"
+            ],
+            [
+              "2025-01-01",
+              "2025-12-31"
+            ]
+          ],
+          "quantidade": 1750,
+          "escopo": "BR-101/SC, km 244,680 a 465,100; ambos os sentidos; independente da seleção de pontos",
+          "nota": "Arquivos anuais PRF 2024 e 2025. Ausência de registro não prova ausência real de acidente. Desses registros do trecho, 36 têm município Criciúma nos anos disponíveis. Não são atribuídos a um radar."
+        }
+      ],
+      "cobertura_declarada": {
+        "trafego": {
+          "inicio": "2022-01-01",
+          "fim": "2026-06-30",
+          "nota": "Dias com publicação; não comprova operação contínua nem completude de faixas. 2026 parcial até 30/06."
+        },
+        "possiveis": {
+          "inicio": "2022-12-30",
+          "fim": "2026-06-02",
+          "nota": "Base B separada. Intervalo do inventário bruto; ausência de linhas não comprova zero infrações. Taxa B/A bloqueada."
+        },
+        "antt": {
+          "inicio": "2021-05-01",
+          "fim": "2025-12-31",
+          "nota": "Intervalo do inventário do CSV de acidentes, sem garantia de completude. Repetições sem ID preservadas."
+        },
+        "prf": {
+          "inicio": "2024-01-01",
+          "fim": "2025-12-31",
+          "nota": "Arquivos anuais PRF 2024 e 2025. Ausência de registro não prova ausência real de acidente."
+        }
+      },
+      "proveniencia": [
+        {
+          "arquivo": "volume-radar-viacosteira.csv",
+          "url": "https://dados.antt.gov.br/dataset/269aebaa-05e7-4d76-a105-408f12bf4094/resource/2af017dc-edde-4501-9c10-ae1f0da461f6/download/volume-radar-viacosteira.csv",
+          "acesso_utc": "2026-10-26T22:46:35.184423+00:00",
+          "status_http": 200,
+          "content_type": "text/csv",
+          "bytes_resposta": 47784599,
+          "sha256_resposta": "d2a0b20ba6fa0fc2dcd69a11cd87e2248982327e908e4161a3d617271372c0f0",
+          "estado": "obtido",
+          "bytes": 47784599,
+          "sha256": "d2a0b20ba6fa0fc2dcd69a11cd87e2248982327e908e4161a3d617271372c0f0"
+        },
+        {
+          "arquivo": "quantidade-possiveis-infratores-viacosteira.csv",
+          "url": "https://dados.antt.gov.br/dataset/c3844135-55c4-43b3-88a0-247f6ff9ca67/resource/121be806-df31-4ebb-aa2d-8caa5f102226/download/quantidade-possiveis-infratores-viacosteira.csv",
+          "acesso_utc": "2026-10-26T22:48:01.082448+00:00",
+          "status_http": 200,
+          "content_type": "text/csv",
+          "bytes_resposta": 24500215,
+          "sha256_resposta": "3dd3b9bb37834e80fc4d94de22170aa85d7013224a5b8f56397967ede8c4aa93",
+          "estado": "obtido",
+          "bytes": 24500215,
+          "sha256": "3dd3b9bb37834e80fc4d94de22170aa85d7013224a5b8f56397967ede8c4aa93"
+        },
+        {
+          "arquivo": "demostrativo_acidentes_viacosteira.csv",
+          "url": "https://dados.antt.gov.br/dataset/8a57b663-2302-405a-bf5a-cbece12c13d1/resource/05e0cbd2-2acb-4b81-8124-3c28a3030234/download/demostrativo_acidentes_viacosteira.csv",
+          "acesso_utc": "2026-10-26T22:48:42.786818+00:00",
+          "status_http": 200,
+          "content_type": "text/csv",
+          "bytes_resposta": 433240,
+          "sha256_resposta": "a798c5ca821f8f6905102c60c5c9300da454729b6f5ef06d5cd429d684b3e00e",
+          "estado": "obtido",
+          "bytes": 433240,
+          "sha256": "a798c5ca821f8f6905102c60c5c9300da454729b6f5ef06d5cd429d684b3e00e"
+        },
+        {
+          "arquivo": "dados-dos-radares6_2026.csv",
+          "url": "https://dados.antt.gov.br/dataset/79d287f4-f5ca-4385-a17c-f61f53831f17/resource/64044fcf-756e-4fd1-9cb2-a6037785829d/download/dados-dos-radares6_2026.csv",
+          "acesso_utc": "2026-10-26T22:48:55.149473+00:00",
+          "status_http": 200,
+          "content_type": "text/csv",
+          "bytes_resposta": 147125,
+          "sha256_resposta": "a5d2b6facc9eed86a88c94bfa7870a31576db2b832daf0f664802497e60cf17d",
+          "estado": "obtido",
+          "bytes": 147125,
+          "sha256": "a5d2b6facc9eed86a88c94bfa7870a31576db2b832daf0f664802497e60cf17d"
+        },
+        {
+          "ano": 2024,
+          "url": "https://drive.google.com/uc?export=download&id=14lB0vqMFkaZj8HZ44b0njYgxs9nAN8KO",
+          "fonte_oficial": "https://www.gov.br/prf/pt-br/acesso-a-informacao/dados-abertos/dados-abertos-da-prf",
+          "acesso_utc": "2026-10-23T14:09:08.732335+00:00",
+          "status_http": 200,
+          "bytes": 3783609,
+          "sha256": "905dac836867297b261e4edefff6cdb470809814e7e1796b3f2f57517099d165",
+          "content_type": "application/octet-stream",
+          "url_final": "https://drive.usercontent.google.com/download?id=14lB0vqMFkaZj8HZ44b0njYgxs9nAN8KO&export=download",
+          "arquivo": "datatran2024.zip",
+          "estado": "obtido"
+        },
+        {
+          "ano": 2025,
+          "url": "https://drive.google.com/uc?export=download&id=1-G3MdmHBt6CprDwcW99xxC4BZ2DU5ryR",
+          "fonte_oficial": "https://www.gov.br/prf/pt-br/acesso-a-informacao/dados-abertos/dados-abertos-da-prf",
+          "acesso_utc": "2026-10-23T14:09:08.732686+00:00",
+          "status_http": 200,
+          "bytes": 3727148,
+          "sha256": "52c8a631ac9d428bf845e2fa996b8c61f66b219f7014a61d292f9d95d186bb0f",
+          "content_type": "application/octet-stream",
+          "url_final": "https://drive.usercontent.google.com/download?id=1-G3MdmHBt6CprDwcW99xxC4BZ2DU5ryR&export=download",
+          "arquivo": "datatran2025.zip",
+          "estado": "obtido"
+        }
+      ],
+      "consulta_relativa": "?v=1&pagina=Vis%C3%A3o+geral&anos=2024&anos=2025&area=Grupo+com+boa+cobertura+em+2024%E2%80%932025&sentidos=Crescente&sentidos=Decrescente&cidade=Todas+as+cidades&pontos=VC101-32&pontos=VC101-38&pontos=VC101-14&pontos=VC101-13&pontos=VC101-21&pontos=VC101-7&pontos=VC101-10&pontos=VC101-24&pontos=VC101-25&pontos=VC101-9&pontos=VC101-31&pontos=VC101-4&pontos=VC101-15&pontos=VC101-22&pontos=VC101-26&pontos=VC101-19&pontos=VC101-42&pontos=VC101-39&pontos=VC101-11&pontos=VC101-12",
+      "consulta_publica_apos_publicacao": "https://radarsul.site/?v=1&pagina=Vis%C3%A3o+geral&anos=2024&anos=2025&area=Grupo+com+boa+cobertura+em+2024%E2%80%932025&sentidos=Crescente&sentidos=Decrescente&cidade=Todas+as+cidades&pontos=VC101-32&pontos=VC101-38&pontos=VC101-14&pontos=VC101-13&pontos=VC101-21&pontos=VC101-7&pontos=VC101-10&pontos=VC101-24&pontos=VC101-25&pontos=VC101-9&pontos=VC101-31&pontos=VC101-4&pontos=VC101-15&pontos=VC101-22&pontos=VC101-26&pontos=VC101-19&pontos=VC101-42&pontos=VC101-39&pontos=VC101-11&pontos=VC101-12",
+      "aviso_url": "A URL pública reproduzirá esta versão somente após sua publicação; confira código e snapshot.",
+      "limites": "Não representa risco individual, probabilidade de acidente, veículos únicos ou autuações. Não somar ANTT e PRF. Taxa B/A bloqueada."
+    }
+  },
+  {
+    "arquivo": "sentinela_2026-10-26.1_3d68043d9f.csv",
+    "bytes": 34518,
+    "sha256": "9a96c12c2e0c5e2824da376a928ce937c7a54c95fe3a613159b81110dbabdf72",
+    "linhas": 20,
+    "snapshot": "2026-10-26.1",
+    "codigo": "0f789fffe2d42a16f3b621ac9083954871f38408+alterações-locais",
+    "anos": "2024, 2025",
+    "altas": 57163,
+    "passagens": 226870300
+  },
+  {
+    "arquivo": "sentinela_2026-10-26.1_3d68043d9f.md",
+    "bytes": 8865,
+    "sha256": "6168fddd26e477c557a101e661e5d02d86f87271695af7241ef0386624289eb6",
+    "inicio": "# SENTINELA — Consulta verificável\n\nÁrea: Grupo com boa cobertura em 2024–2025. Cidade: Todas as cidades.\n\nAnos solicitados: 2024, 2025. Anos com tráfego: 2024, 2025.\n\nPontos solicitados: VC101-32, VC101-38, VC101-14, VC101-13, VC101-21, VC101-7, VC101-10, VC101-24, VC101-25, VC101-9, VC101-31, VC101-4, VC101-15, VC101-22, VC101-26, VC101-19, VC101-42, VC101-39, VC101-11, VC101-12.\n\nPontos com trá",
+    "final": "(https://drive.google.com/uc?export=download&id=1-G3MdmHBt6CprDwcW99xxC4BZ2DU5ryR), coleta 2026-10-23T14:09:08.732686+00:00, SHA-256 52c8a631ac9d428bf845e2fa996b8c61f66b219f7014a61d292f9d95d186bb0f\n\n120 km/h é limiar dos intervalos publicados, sem inferir infração regulamentada. Cadastro de junho de 2026 não reconstrói limites históricos. Repetições ANTT sem ID preservadas. Correlação e persistência não validam previsão ou causalidade. Associação negativa não significa proteção pela velocidade.\n"
+  },
+  {
+    "arquivo": "sentinela_2026-10-26.1_3d68043d9f.zip",
+    "bytes": 13654,
+    "sha256": "93420cb763c14a47407408e5add7fa70058c8c7dd34000e48f0938af9305ccfd",
+    "integridade": null,
+    "arquivos": [
+      "comparacao_pt-BR.csv",
+      "comparacao_tecnica.csv",
+      "cobertura_pt-BR.csv",
+      "metadados.json",
+      "relatorio.md"
+    ],
+    "snapshot": "2026-10-26.1",
+    "metadados": {
+      "aplicacao": "SENTINELA",
+      "versao_aplicacao": "2.1.0",
+      "codigo": "0f789fffe2d42a16f3b621ac9083954871f38408+alterações-locais",
+      "snapshot": "2026-10-26.1",
+      "gerado_utc": "2026-11-06T21:31:25.146451+00:00",
+      "filtros_solicitados": {
+        "page": "Visão geral",
+        "years": [
+          2024,
+          2025
+        ],
+        "area": "Grupo com boa cobertura em 2024–2025",
+        "directions": [
+          "Crescente",
+          "Decrescente"
+        ],
+        "city": "Todas as cidades",
+        "points": [
+          "VC101-32",
+          "VC101-38",
+          "VC101-14",
+          "VC101-13",
+          "VC101-21",
+          "VC101-7",
+          "VC101-10",
+          "VC101-24",
+          "VC101-25",
+          "VC101-9",
+          "VC101-31",
+          "VC101-4",
+          "VC101-15",
+          "VC101-22",
+          "VC101-26",
+          "VC101-19",
+          "VC101-42",
+          "VC101-39",
+          "VC101-11",
+          "VC101-12"
+        ]
+      },
+      "efetivo": {
+        "equipamentos": [
+          "VC101-10",
+          "VC101-11",
+          "VC101-12",
+          "VC101-13",
+          "VC101-14",
+          "VC101-15",
+          "VC101-19",
+          "VC101-21",
+          "VC101-22",
+          "VC101-24",
+          "VC101-25",
+          "VC101-26",
+          "VC101-31",
+          "VC101-32",
+          "VC101-38",
+          "VC101-39",
+          "VC101-4",
+          "VC101-42",
+          "VC101-7",
+          "VC101-9"
+        ],
+        "anos_com_trafego": [
+          2024,
+          2025
+        ],
+        "inicio_publicado": "2024-01-01",
+        "fim_publicado": "2025-12-31"
+      },
+      "unidade": "Contagens nas faixas acima de 120 km/h por 10 mil contagens publicadas da mesma base A",
+      "politica_cobertura": "Comparação: ≥90% dos dias de cada ano calendário solicitado, denominador positivo e período anual completo no snapshot. Demais consultas são exploratórias.",
+      "fontes_acidentes": [
+        {
+          "fonte": "ANTT — envelope contínuo",
+          "situacao": "período disponível no snapshot",
+          "anos_solicitados": [
+            2024,
+            2025
+          ],
+          "anos_cobertos": [
+            2024,
+            2025
+          ],
+          "anos_sem_cobertura": [],
+          "intervalos": [
+            [
+              "2024-01-01",
+              "2024-12-31"
+            ],
+            [
+              "2025-01-01",
+              "2025-12-31"
+            ]
+          ],
+          "quantidade": 3300,
+          "escopo": "BR-101/SC, km 249,900 a 448,100, margem de 2,5 km entre pontos; ambos os sentidos",
+          "nota": "Intervalo do inventário do CSV de acidentes, sem garantia de completude. Repetições sem ID preservadas."
+        },
+        {
+          "fonte": "PRF — trecho integral",
+          "situacao": "período disponível no snapshot",
+          "anos_solicitados": [
+            2024,
+            2025
+          ],
+          "anos_cobertos": [
+            2024,
+            2025
+          ],
+          "anos_sem_cobertura": [],
+          "intervalos": [
+            [
+              "2024-01-01",
+              "2024-12-31"
+            ],
+            [
+              "2025-01-01",
+              "2025-12-31"
+            ]
+          ],
+          "quantidade": 1750,
+          "escopo": "BR-101/SC, km 244,680 a 465,100; ambos os sentidos; independente da seleção de pontos",
+          "nota": "Arquivos anuais PRF 2024 e 2025. Ausência de registro não prova ausência real de acidente. Desses registros do trecho, 36 têm município Criciúma nos anos disponíveis. Não são atribuídos a um radar."
+        }
+      ],
+      "cobertura_declarada": {
+        "trafego": {
+          "inicio": "2022-01-01",
+          "fim": "2026-06-30",
+          "nota": "Dias com publicação; não comprova operação contínua nem completude de faixas. 2026 parcial até 30/06."
+        },
+        "possiveis": {
+          "inicio": "2022-12-30",
+          "fim": "2026-06-02",
+          "nota": "Base B separada. Intervalo do inventário bruto; ausência de linhas não comprova zero infrações. Taxa B/A bloqueada."
+        },
+        "antt": {
+          "inicio": "2021-05-01",
+          "fim": "2025-12-31",
+          "nota": "Intervalo do inventário do CSV de acidentes, sem garantia de completude. Repetições sem ID preservadas."
+        },
+        "prf": {
+          "inicio": "2024-01-01",
+          "fim": "2025-12-31",
+          "nota": "Arquivos anuais PRF 2024 e 2025. Ausência de registro não prova ausência real de acidente."
+        }
+      },
+      "proveniencia": [
+        {
+          "arquivo": "volume-radar-viacosteira.csv",
+          "url": "https://dados.antt.gov.br/dataset/269aebaa-05e7-4d76-a105-408f12bf4094/resource/2af017dc-edde-4501-9c10-ae1f0da461f6/download/volume-radar-viacosteira.csv",
+          "acesso_utc": "2026-10-26T22:46:35.184423+00:00",
+          "status_http": 200,
+          "content_type": "text/csv",
+          "bytes_resposta": 47784599,
+          "sha256_resposta": "d2a0b20ba6fa0fc2dcd69a11cd87e2248982327e908e4161a3d617271372c0f0",
+          "estado": "obtido",
+          "bytes": 47784599,
+          "sha256": "d2a0b20ba6fa0fc2dcd69a11cd87e2248982327e908e4161a3d617271372c0f0"
+        },
+        {
+          "arquivo": "quantidade-possiveis-infratores-viacosteira.csv",
+          "url": "https://dados.antt.gov.br/dataset/c3844135-55c4-43b3-88a0-247f6ff9ca67/resource/121be806-df31-4ebb-aa2d-8caa5f102226/download/quantidade-possiveis-infratores-viacosteira.csv",
+          "acesso_utc": "2026-10-26T22:48:01.082448+00:00",
+          "status_http": 200,
+          "content_type": "text/csv",
+          "bytes_resposta": 24500215,
+          "sha256_resposta": "3dd3b9bb37834e80fc4d94de22170aa85d7013224a5b8f56397967ede8c4aa93",
+          "estado": "obtido",
+          "bytes": 24500215,
+          "sha256": "3dd3b9bb37834e80fc4d94de22170aa85d7013224a5b8f56397967ede8c4aa93"
+        },
+        {
+          "arquivo": "demostrativo_acidentes_viacosteira.csv",
+          "url": "https://dados.antt.gov.br/dataset/8a57b663-2302-405a-bf5a-cbece12c13d1/resource/05e0cbd2-2acb-4b81-8124-3c28a3030234/download/demostrativo_acidentes_viacosteira.csv",
+          "acesso_utc": "2026-10-26T22:48:42.786818+00:00",
+          "status_http": 200,
+          "content_type": "text/csv",
+          "bytes_resposta": 433240,
+          "sha256_resposta": "a798c5ca821f8f6905102c60c5c9300da454729b6f5ef06d5cd429d684b3e00e",
+          "estado": "obtido",
+          "bytes": 433240,
+          "sha256": "a798c5ca821f8f6905102c60c5c9300da454729b6f5ef06d5cd429d684b3e00e"
+        },
+        {
+          "arquivo": "dados-dos-radares6_2026.csv",
+          "url": "https://dados.antt.gov.br/dataset/79d287f4-f5ca-4385-a17c-f61f53831f17/resource/64044fcf-756e-4fd1-9cb2-a6037785829d/download/dados-dos-radares6_2026.csv",
+          "acesso_utc": "2026-10-26T22:48:55.149473+00:00",
+          "status_http": 200,
+          "content_type": "text/csv",
+          "bytes_resposta": 147125,
+          "sha256_resposta": "a5d2b6facc9eed86a88c94bfa7870a31576db2b832daf0f664802497e60cf17d",
+          "estado": "obtido",
+          "bytes": 147125,
+          "sha256": "a5d2b6facc9eed86a88c94bfa7870a31576db2b832daf0f664802497e60cf17d"
+        },
+        {
+          "ano": 2024,
+          "url": "https://drive.google.com/uc?export=download&id=14lB0vqMFkaZj8HZ44b0njYgxs9nAN8KO",
+          "fonte_oficial": "https://www.gov.br/prf/pt-br/acesso-a-informacao/dados-abertos/dados-abertos-da-prf",
+          "acesso_utc": "2026-10-23T14:09:08.732335+00:00",
+          "status_http": 200,
+          "bytes": 3783609,
+          "sha256": "905dac836867297b261e4edefff6cdb470809814e7e1796b3f2f57517099d165",
+          "content_type": "application/octet-stream",
+          "url_final": "https://drive.usercontent.google.com/download?id=14lB0vqMFkaZj8HZ44b0njYgxs9nAN8KO&export=download",
+          "arquivo": "datatran2024.zip",
+          "estado": "obtido"
+        },
+        {
+          "ano": 2025,
+          "url": "https://drive.google.com/uc?export=download&id=1-G3MdmHBt6CprDwcW99xxC4BZ2DU5ryR",
+          "fonte_oficial": "https://www.gov.br/prf/pt-br/acesso-a-informacao/dados-abertos/dados-abertos-da-prf",
+          "acesso_utc": "2026-10-23T14:09:08.732686+00:00",
+          "status_http": 200,
+          "bytes": 3727148,
+          "sha256": "52c8a631ac9d428bf845e2fa996b8c61f66b219f7014a61d292f9d95d186bb0f",
+          "content_type": "application/octet-stream",
+          "url_final": "https://drive.usercontent.google.com/download?id=1-G3MdmHBt6CprDwcW99xxC4BZ2DU5ryR&export=download",
+          "arquivo": "datatran2025.zip",
+          "estado": "obtido"
+        }
+      ],
+      "consulta_relativa": "?v=1&pagina=Vis%C3%A3o+geral&anos=2024&anos=2025&area=Grupo+com+boa+cobertura+em+2024%E2%80%932025&sentidos=Crescente&sentidos=Decrescente&cidade=Todas+as+cidades&pontos=VC101-32&pontos=VC101-38&pontos=VC101-14&pontos=VC101-13&pontos=VC101-21&pontos=VC101-7&pontos=VC101-10&pontos=VC101-24&pontos=VC101-25&pontos=VC101-9&pontos=VC101-31&pontos=VC101-4&pontos=VC101-15&pontos=VC101-22&pontos=VC101-26&pontos=VC101-19&pontos=VC101-42&pontos=VC101-39&pontos=VC101-11&pontos=VC101-12",
+      "consulta_publica_apos_publicacao": "https://radarsul.site/?v=1&pagina=Vis%C3%A3o+geral&anos=2024&anos=2025&area=Grupo+com+boa+cobertura+em+2024%E2%80%932025&sentidos=Crescente&sentidos=Decrescente&cidade=Todas+as+cidades&pontos=VC101-32&pontos=VC101-38&pontos=VC101-14&pontos=VC101-13&pontos=VC101-21&pontos=VC101-7&pontos=VC101-10&pontos=VC101-24&pontos=VC101-25&pontos=VC101-9&pontos=VC101-31&pontos=VC101-4&pontos=VC101-15&pontos=VC101-22&pontos=VC101-26&pontos=VC101-19&pontos=VC101-42&pontos=VC101-39&pontos=VC101-11&pontos=VC101-12",
+      "aviso_url": "A URL pública reproduzirá esta versão somente após sua publicação; confira código e snapshot.",
+      "limites": "Não representa risco individual, probabilidade de acidente, veículos únicos ou autuações. Não somar ANTT e PRF. Taxa B/A bloqueada."
+    }
+  }
+]

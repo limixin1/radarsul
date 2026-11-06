@@ -1,0 +1,22 @@
+{
+  "consulta_local": "2026-11-05 America/Sao_Paulo",
+  "metodo_cores": "Luminância relativa sRGB conforme WCAG; cores de projeto, opacidade prevista 1. Não é inspeção do DOM final.",
+  "contrastes": [
+    {"texto":"#142B3C","fundo":"#FAFBFC","razao":14.070603777745703},
+    {"texto":"#142B3C","fundo":"#EEF3F5","razao":13.032700186728114},
+    {"texto":"#075E68","fundo":"#FAFBFC","razao":7.213255277039405},
+    {"texto":"#075E68","fundo":"#EEF3F5","razao":6.681176933194147}
+  ],
+  "navegador": {
+    "solicitado":"Brave",
+    "ferramenta":"cua.getState",
+    "resultado":"Local browser use is disabled in Work settings",
+    "inventario_browsers":[],
+    "tentativas":"repetidas após usuário informar que ativaria; mesmo bloqueio",
+    "capturas_realizadas":false,
+    "viewports_examinados":[],
+    "teclado_real_examinado":false,
+    "leitor_tela_examinado":false,
+    "png_baixado_no_navegador":false
+  }
+}

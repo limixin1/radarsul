@@ -1,86 +1,66 @@
-# Radar Sul — publicação do painel SENTINELA
+# SENTINELA — consultas históricas da BR-101/SC
 
-Este pacote mantém o aplicativo Python/Streamlit e os mesmos indicadores do SENTINELA 2.0. O endereço pretendido é **radarsul.site**, registrado na Hostinger. Hospedagem proposta: Render, serviço Web gratuito. A identidade do aplicativo permanece SENTINELA; o domínio não altera o nome ou a análise do projeto.
+O SENTINELA permite localizar pontos por cidade, quilômetro e sentido, consultar contagens publicadas nas faixas de velocidade, verificar cobertura e exportar uma consulta rastreável. O índice é a razão entre contagens acima de 120 km/h e todas as contagens da **mesma base de tráfego**, multiplicada por 10.000. Não estima risco de acidente, veículos únicos ou autuações.
 
-**Estado:** serviço publicado no plano Free do Render, no workspace TCC 371, em [radarsul.onrender.com](https://radarsul.onrender.com). A implantação do commit `c100045fd7b5dcc5d7017758d6f8fa7f5fb985dd` foi concluída; a página inicial e `/_stcore/health` responderam com HTTP 200. A associação e a verificação de `radarsul.site` ainda estão pendentes. Nenhuma alteração de DNS foi realizada.
+Esta entrega prepara a versão 2.1.0 na branch `correcao/sentinela-auditoria`, com snapshot `2026-10-26.1`. A versão publicada permanece histórica (`e5baed4`): não houve merge, deploy, mudança de domínio, plano ou permissões. Consulte a [matriz F01–F24](documentacao/MATRIZ_F01_F24.md) e o [registro de validação](documentacao/VALIDACAO_2026-11-05.md) para distinguir implementação e aceitação pendente. O [README anterior](documentacao/README_PUBLICACAO_2026-10-26.md) preserva as instruções e evidências históricas de publicação.
 
-## 1. Enviar os arquivos para o GitHub (reprodução da instalação)
+## Executar e validar
 
-Se a publicação for conduzida pela integração Render no ChatGPT, conecte sua conta e siga o fluxo disponível. O procedimento manual abaixo também pode ser usado.
+Use Python **3.12.14**, a versão configurada em `render.yaml` e `.python-version`:
 
-1. Entre em https://github.com e crie um repositório chamado `radarsul`. O nome é uma sugestão; a conta pode usar outro nome de repositório.
-2. Extraia este ZIP. Envie o conteúdo da pasta extraída para a raiz do repositório, mantendo as subpastas.
-3. Confirme que `app.py`, `requirements.txt` e `render.yaml` aparecem na raiz. As pastas `src`, `dados_tratados`, `relatorios` e `.streamlit` devem acompanhar o envio. Envie os arquivos extraídos, em vez do ZIP fechado.
-4. O repositório pode ser privado. Autorize ao Render somente o acesso necessário ao repositório escolhido. O pacote contém dados administrativos públicos e não contém credenciais.
+```bash
+python3.12 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements-dev.txt
+python -m src.data_package validate
+python -m pytest -q
+python -m streamlit run app.py --server.address=127.0.0.1 --server.port=8502 --server.headless=true
+```
 
-## 2. Publicar no Render (reprodução da instalação)
+O executável `python3.12` deve reportar 3.12.14; a versão do sistema pode ser diferente. Nesta entrega foi criado `.venv312` com CPython 3.12.14 via uv e as dependências fixadas, sem substituir o Python do sistema. Em produção bastam `requirements.txt`; `requirements-dev.txt` acrescenta testes e análise de dependências.
 
-Entre em https://dashboard.render.com e conecte sua conta GitHub.
+```bash
+python -m compileall -q app.py app_antt.py src tests
+python -m pip_audit
+PYTHONPATH=. python scripts/benchmark.py
+python scripts/probe_session.py --sessions 1
+```
 
-### Usar a configuração pronta
+O último comando exige o servidor local em 8502 e verifica uma sessão WebSocket e downloads HTTP. Aceita 1, 5 e 10 sessões **somente em loopback**, para não gerar carga em produção. Não mede renderização, acessibilidade, mobile ou retomada do Render. Execute sem outros ensaios concorrentes e registre memória e condições.
 
-Crie um **Blueprint**, selecione o repositório e utilize o arquivo `render.yaml`. Confira que o serviço `radarsul` usa o plano **Free**, sem banco de dados ou disco adicional. O arquivo fixa Python 3.12, o comando de inicialização e o endpoint de saúde. Ele também declara o domínio `radarsul.site`, cuja verificação depende da etapa de DNS abaixo.
+## Dados e limites
 
-### Alternativa: criar Web Service manualmente
+- Tráfego ANTT: inventário de 01/01/2022 a 30/06/2026. Possíveis infratores: inventário de 30/12/2022 a 02/06/2026, em base separada; taxa B/A permanece bloqueada.
+- Acidentes ANTT: inventário de 01/05/2021 a 31/12/2025. PRF deste snapshot: arquivos anuais 2024 e 2025. Indisponibilidade em outros anos significa falta **nesta instalação**, mesmo que o publicador já ofereça arquivos adicionais.
+- Períodos e notas constam no manifesto tratado. O intervalo do inventário não certifica completude de acidentes. Primeira/última ocorrência não comprovam cobertura contínua.
+- Ranking anual: ≥90% de dias com publicação em **cada ano completo solicitado**, denominador positivo. 2026 é exploratório. A tabela apresenta cobertura do calendário e do intervalo declarado da fonte. Publicação não comprova operação ou completude diária.
+- Histórico: índice oculto no gráfico quando há menos de 80% dos dias do mês. A tabela fornece contagens e cobertura para inspeção; ausência não vira zero.
+- O grupo histórico tem 20 pontos em 2024–2025; Criciúma não satisfaz essa cobertura nos dois anos e pode ser consultada em Todos os equipamentos. Áreas e sentidos são mostrados junto aos resultados.
+- Acidentes ANTT sem ID inequívoco mantêm repetições. ANTT e PRF não são somados. Segmentos disjuntos de 5 km usam apenas dias em que todos os pontos selecionados do segmento publicaram. Envelope ANTT e trecho PRF integral são contextos distintos.
+- Cadastro de junho de 2026 não reconstrói limites históricos. Não estimar velocidade média por pontos médios nem interpretar correlação como causalidade, proteção ou previsão.
 
-Selecione **New > Web Service** e o repositório. Preencha:
+## Reprodução e restauração
 
-| Campo | Valor |
-|---|---|
-| Name | `radarsul` ou outro nome disponível |
-| Language / Runtime | Python |
-| Region | Virginia, se disponível |
-| Root Directory | Vazio, quando os arquivos estiverem na raiz |
-| Build Command | `python -m pip install -r requirements.txt` |
-| Start Command | `python -m streamlit run app.py --server.address=0.0.0.0 --server.port=$PORT --server.headless=true --browser.gatherUsageStats=false` |
-| Instance Type / Plan | **Free** |
-| Health Check Path | `/_stcore/health` |
-| Environment Variable | `PYTHON_VERSION` igual ao valor definido em `render.yaml` |
+O [kit bruto fornecido](_contexto/SENTINELA_bases_ANTT.zip) contém quatro CSV ANTT, dois ZIP PRF e manifestos. O [prompt integral](_contexto/Prompt_Correcao_Completa_SENTINELA_2026-11-05.md) e a [auditoria histórica convertida](_contexto/Auditoria_Produto_SENTINELA_2026-11-02.md) permanecem no contexto.
 
-Crie o serviço e acompanhe os logs até a implantação concluir. Abra o endereço `onrender.com` realmente atribuído pelo Render e teste as cinco telas, Criciúma e o download do relatório. Não presuma que o nome exato `radarsul.onrender.com` estará disponível.
+```bash
+python -m src.rebuild --raw-zip _contexto/SENTINELA_bases_ANTT.zip --output /tmp/sentinela-rebuild
+cat /tmp/sentinela-rebuild/comparacao.json
+python -m src.data_package validate --root /tmp/sentinela-rebuild
+```
 
-## 3. Conectar radarsul.site
+Use saída nova e vazia. Não reconstrua sobre o conjunto em uso. O comando verifica os hashes brutos, executa `src.antt.build`, reconstrói PRF e compara os nove Parquet com a referência. `python -m src.antt` continua válido quando os quatro CSV e `coleta_20261026T224903Z.json` estão em `dados_brutos`, mas grava produtos e relatórios locais; prefira a reprodução isolada. Não existe `analisar.py`.
 
-Faça esta etapa depois de o aplicativo abrir pelo endereço do Render. Mantenha o domínio e a gestão de DNS na Hostinger.
+Uma mudança legítima de dados requer revisão, nova versão e manifesto gerado **depois** da comparação. `python -m src.data_package manifest --root DIRETORIO` é uma ação de manutenção, não uma forma de ignorar corrupção. O build valida o manifesto já versionado; não gera hashes novos para aceitar arquivos desconhecidos.
 
-1. No Render, abra o serviço > **Settings > Custom Domains** e adicione `radarsul.site`, se o Blueprint ainda não tiver adicionado. O Render também configura a variante `www` para redirecionamento.
-2. Confira as instruções e os valores efetivamente mostrados pelo Render.
-3. Na Hostinger, acesse **Domínios > radarsul.site > DNS / Nameservers**, ou a área DNS equivalente da versão atual do painel.
-4. Para o domínio raiz, uma opção documentada pelo Render é:
+A restauração usa o conjunto inteiro de uma revisão conhecida: código, `dados_tratados`, `relatorios` e manifesto juntos. Instale dependências, valide contrato, execute testes, abra a consulta padrão e exporte. Para produção, veja [operação e rollback](documentacao/OPERACAO.md). O health check do Streamlit comprova resposta do processo; não substitui integridade analítica.
 
-| Tipo | Nome | Destino |
-|---|---|---|
-| A | `@` | `216.24.57.1` |
-| CNAME | `www` | O hostname real do aplicativo, terminado em `.onrender.com` |
+## Estrutura e manutenção
 
-O IP acima consta na documentação oficial consultada em 26/10/2026. Use os valores atuais apresentados na configuração do seu serviço se houver diferença. No CNAME, informe apenas o hostname, sem `https://` ou barras.
+`src/antt.py` preserva a transformação e os indicadores originais. `src/query.py` reúne seleção, cobertura e rótulos; `src/data_package.py`, o contrato; `src/prf.py` e `src/rebuild.py`, reprodução; `src/exports.py`, rastreabilidade. `src/antt_charts.py` gera figuras; `app_antt.py` compõe as cinco páginas. `src/antt_report.py` mantém compatibilidade de chamadas anteriores.
 
-5. Ajuste somente registros conflitantes dos nomes `@` e `www`: entradas A/AAAA/CNAME/ALIAS de estacionamento ou encaminhamento antigo podem impedir a conexão. A documentação do Render pede retirar AAAA para os nomes apontados ao serviço, pois esse apontamento utiliza IPv4. Preserve registros de e-mail (MX, SPF, DKIM e DMARC), validações e outros subdomínios. Não é necessário trocar os nameservers apenas para usar esses registros.
-6. Volte ao Render e clique em **Verify**. Aguarde a propagação do DNS; a Hostinger orienta considerar até 24 horas, embora possa ocorrer antes.
-7. Depois da verificação, o Render emite o certificado HTTPS. Teste `https://radarsul.site` e a variante `www`. DNS e certificado ainda precisam ser verificados na implantação real.
+`dados_tratados/manifesto.json` inclui hashes, esquemas, proveniência, períodos e condições consultadas. Os [recursos oficiais e condições de reutilização](documentacao/FONTES_OFICIAIS.md) distinguem coleta do snapshot e atualização atual do catálogo. CSV brasileiro usa UTF-8 BOM, `;` e vírgula decimal; o ZIP oferece também CSV técnico, relatório e metadados. Precisão numérica é preservada. As URLs exportadas identificam uma consulta; conferir versão antes de comparar arquivos.
 
-## Plano gratuito e apresentação
+A CI em `.github/workflows/validacao.yml` valida Python, pacote, regressões e dependências. Ativação de proteção da main e condicionamento de deploy no Render dependem de uma etapa posterior de administração; não foram ativados por este PR.
 
-Na documentação consultada, o serviço Free aceita domínio próprio e certificado TLS gerenciado. O plano de workspace Hobby inclui dois domínios; outros domínios além da franquia podem ser cobrados. O limite de computação Free é compartilhado com os demais serviços gratuitos do workspace, incluindo 750 horas por mês. Este pacote declara explicitamente `plan: free`, sem criar banco, disco ou outro serviço pago.
-
-O aplicativo pausa após 15 minutos sem tráfego e leva aproximadamente um minuto para reativar. Abra o endereço e confira o painel antes de iniciar a apresentação. Mantenha o HTML offline do kit completo como reserva.
-
-O serviço Free tem 512 MB de RAM e recursos limitados. A publicação real e o uso simultâneo ainda precisam ser observados. Não se promete disponibilidade contínua ou desempenho de produção. Os dados tratados do pacote fazem parte do código implantado; o aplicativo não depende de executar downloads ou recalcular o ETL na inicialização. Mudanças locais no servidor não são armazenamento durável.
-
-## Dados e escopo
-
-Inclui o snapshot tratado da ANTT, o contexto PRF independente e as mesmas fontes e limitações da versão 2.0. A taxa possíveis infratores/tráfego permanece bloqueada. Os dados originais, notebook, testes completos, slides e PDF continuam no kit completo já entregue. Este pacote menor serve à hospedagem, sem substituir a entrega acadêmica ou fingir conter todos os CSV originais.
-
-As dependências de notebook, testes e exportação de figuras foram omitidas da instalação do servidor, que usa apenas as bibliotecas necessárias ao painel. Todos os arquivos de dados necessários ao aplicativo estão incluídos.
-
-## Fontes oficiais da configuração
-
-- https://render.com/docs/free
-- https://render.com/docs/custom-domains
-- https://render.com/docs/configure-other-dns
-- https://render.com/docs/python-version
-- https://render.com/docs/web-services
-- https://render.com/docs/blueprint-spec
-- https://www.hostinger.com/support/4737652-how-to-point-a-domain-to-external-services-at-hostinger/
-
-Consulta: 26/10/2026. Os registros de validação local e de implantação estão em `VERIFICACAO_PUBLICACAO.json`. A confirmação HTTP não substitui uma conferência visual no navegador da apresentação. Nenhuma senha, chave de API ou configuração de conta pessoal deve ser colocada no repositório.
+Relatos: [issues do repositório](https://github.com/limixin1/radarsul/issues/new), com página, filtros e versão, evitando dados pessoais ou segredos. O proprietário do repositório é `limixin1`; responsáveis por atualização periódica, atendimento e disponibilidade ainda precisam ser designados pelo projeto. Nenhum contato operacional foi inventado.

@@ -1,0 +1,47 @@
+{
+  "antt_diario.parquet": {
+    "identico_bytes": true,
+    "identico_semantico": true,
+    "linhas": 59168
+  },
+  "antt_coorte.parquet": {
+    "identico_bytes": true,
+    "identico_semantico": true,
+    "linhas": 20
+  },
+  "antt_equipamentos.parquet": {
+    "identico_bytes": true,
+    "identico_semantico": true,
+    "linhas": 42
+  },
+  "antt_mensal.parquet": {
+    "identico_bytes": true,
+    "identico_semantico": true,
+    "linhas": 2139
+  },
+  "antt_contexto_5km.parquet": {
+    "identico_bytes": true,
+    "identico_semantico": true,
+    "linhas": 16
+  },
+  "antt_possiveis_diario.parquet": {
+    "identico_bytes": true,
+    "identico_semantico": true,
+    "linhas": 37835
+  },
+  "antt_acidentes.parquet": {
+    "identico_bytes": true,
+    "identico_semantico": true,
+    "linhas": 8841
+  },
+  "ocorrencias.parquet": {
+    "identico_bytes": true,
+    "identico_semantico": true,
+    "linhas": 1750
+  },
+  "antt_anual.parquet": {
+    "identico_bytes": true,
+    "identico_semantico": true,
+    "linhas": 210
+  }
+}

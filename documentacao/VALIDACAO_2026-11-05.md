@@ -83,3 +83,7 @@ A investigação posterior e seus limites constam em [ACEITACAO_ETAPA2.md](ACEIT
 ## Revalidação em 06/11/2026
 
 Ver a seção de novas tentativas em [ACEITACAO_ETAPA2.md](ACEITACAO_ETAPA2.md) e `evidencias/tentativas-navegadores-2026-11-06.json`. Foram testados diretamente Chrome, Brave e navegador integrado; todos retornaram nesta sessão “Local browser use is disabled in Work settings”. Aplicação/ZIP local 8506 identificaram `42dec24`, snapshot correto e resultados de referência, com quatro downloads HTTP 200. O site publicado continua em `e5baed4`. Sem mudanças no código/dados e sem novos resultados visuais; aceitação de telas, PNG e acesso por teclado continua pendente.
+
+## Continuação em 06/11 — navegador disponível
+
+O relato anterior de indisponibilidade é histórico. Ver [aceitação no navegador](ACEITACAO_NAVEGADOR_2026-11-06.md) e matriz atualizada: cenários reais, correções visuais, 28 regressões finais, evidências e desempenho. Downloads finais CSV/MD/ZIP bloqueados pela organização no Brave; PNG recebido e inspecionado. Zoom equivalente emulado, sem confirmação de zoom nativo. Pessoas/leitor de tela/aparelhos/hospedagem permanecem sem aprovação.

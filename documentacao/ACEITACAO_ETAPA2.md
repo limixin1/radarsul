@@ -55,3 +55,7 @@ A aplicação em `http://127.0.0.1:8506` continuava ativa: saúde `ok`, sessão 
 Evidência estruturada: `evidencias/tentativas-navegadores-2026-11-06.json`. Sem alteração do código ou dos dados nesta rodada, não se repetiu a carga ou a suíte local sem motivo novo. Os resultados de desempenho da seção anterior permanecem válidos dentro de seus limites; não há nova evidência para atribuir a lentidão a infraestrutura nem propor contratação.
 
 Continuam sem validação no navegador as cinco páginas e seus percursos visuais, busca, filtros, vazios, compartilhamento/reload/recuperação, clique nos downloads, PNG, larguras de 320/360/390/768/1366 px, zoom 200%, teclado/foco, contraste composto e legibilidade. Não foram produzidas capturas fictícias nem classificados testes de protocolo como testes de viewport. Participantes, leitor de tela e dispositivos reais continuam pendentes. O próximo passo depende de uma sessão de navegador disponibilizada à ferramenta; esta tentativa não encerra a aceitação.
+
+## Continuação em 06/11 — navegador disponível
+
+O relato anterior de indisponibilidade é histórico. Ver [aceitação no navegador](ACEITACAO_NAVEGADOR_2026-11-06.md) e matriz atualizada: cenários reais, correções visuais, 28 regressões finais, evidências e desempenho. Downloads finais CSV/MD/ZIP bloqueados pela organização no Brave; PNG recebido e inspecionado. Zoom equivalente emulado, sem confirmação de zoom nativo. Pessoas/leitor de tela/aparelhos/hospedagem permanecem sem aprovação.

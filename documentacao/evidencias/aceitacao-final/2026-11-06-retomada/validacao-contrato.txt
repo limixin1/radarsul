@@ -1,0 +1,5 @@
+CPython 3.12.14
+python -m src.data_package validate: pacote 2026-10-26.1, válido, 12 arquivos
+python -m compileall -q app.py app_antt.py src tests: exit 0
+git diff --check: exit 0
+pytest final: 28 passed in 131.13s

@@ -1,0 +1,494 @@
+{
+  "descricao": "Evidências reais desta continuação; arquivos nomeados antes/final/corrigido não são intercambiáveis. Bloqueio de downloads: captura fornecida pelo usuário, recortada para excluir outras abas.",
+  "arquivos": [
+    {
+      "arquivo": "bloqueio-downloads-informado-pelo-usuario.png",
+      "bytes": 44054,
+      "sha256": "f4caa579cc6c1e3fcb364a0fd5153637d055e6e2324e9e06572d7cd7a478e7f0",
+      "dimensoes": [
+        318,
+        539
+      ]
+    },
+    {
+      "arquivo": "comparacao-recebida.csv",
+      "bytes": 34518,
+      "sha256": "9a96c12c2e0c5e2824da376a928ce937c7a54c95fe3a613159b81110dbabdf72"
+    },
+    {
+      "arquivo": "comparador-1366.jpg",
+      "bytes": 152944,
+      "sha256": "84a32ffe6d041f6633081b09a692ab53c795b4a5c1cce94d6943381f1a1ee4cf",
+      "dimensoes": [
+        1366,
+        900
+      ]
+    },
+    {
+      "arquivo": "comparador-320.jpg",
+      "bytes": 55635,
+      "sha256": "d274aa51b85b560f46fe8a087104e15c0de130f2d6f9de3b9b77fadbf874a033",
+      "dimensoes": [
+        320,
+        900
+      ]
+    },
+    {
+      "arquivo": "comparador-360.jpg",
+      "bytes": 60120,
+      "sha256": "ca8c7a4a02ccaed2eb5b3062f6bd7fe29b4390d05ee0d3a52a95f18637ddb700",
+      "dimensoes": [
+        360,
+        900
+      ]
+    },
+    {
+      "arquivo": "comparador-390.jpg",
+      "bytes": 61391,
+      "sha256": "a467a069339c8d4c54703463b64e9726eb6d461199c49f99a1b1eecdb0067a51",
+      "dimensoes": [
+        390,
+        900
+      ]
+    },
+    {
+      "arquivo": "comparador-768.jpg",
+      "bytes": 100072,
+      "sha256": "d698a47d06819214c27a58887fff7e9f733beee0bbba7e027a3fa23aa986a39a",
+      "dimensoes": [
+        768,
+        900
+      ]
+    },
+    {
+      "arquivo": "consultas.json",
+      "bytes": 22016,
+      "sha256": "54ed30430c84dc7e6c0d57672e80eb0b592dbb396277164a788845041ba2dfe3"
+    },
+    {
+      "arquivo": "contexto-2026-1366.jpg",
+      "bytes": 147400,
+      "sha256": "451a81d66532383d27bc636976b4b4f348303d068f402e72d3462d38e1585c6c",
+      "dimensoes": [
+        1366,
+        900
+      ]
+    },
+    {
+      "arquivo": "contexto-2026-320.jpg",
+      "bytes": 59342,
+      "sha256": "ed673f1ff631712ad178cd17a047554bffc3c4af4254865cbd60e3711c01c344",
+      "dimensoes": [
+        320,
+        900
+      ]
+    },
+    {
+      "arquivo": "contexto-2026-360.jpg",
+      "bytes": 62273,
+      "sha256": "cf11561d364cab9ed66204d6ac11d5e3003da1a9eef8e245defd26793a7c7356",
+      "dimensoes": [
+        360,
+        900
+      ]
+    },
+    {
+      "arquivo": "contexto-2026-390.jpg",
+      "bytes": 65173,
+      "sha256": "b5a4de057311861cbf6e803d28f541a7d34659fe5be6f2eead2c5c60152668c5",
+      "dimensoes": [
+        390,
+        900
+      ]
+    },
+    {
+      "arquivo": "contexto-2026-768.jpg",
+      "bytes": 101302,
+      "sha256": "36e86333a79e978d05d19e7eeac15c82f684611d6b60fdae39f5261870ce8733",
+      "dimensoes": [
+        768,
+        900
+      ]
+    },
+    {
+      "arquivo": "desempenho-final.json",
+      "bytes": 58607,
+      "sha256": "85a888bf6e1a692c3633e8bc5006bbec39b90640e79bb93088d2373f6b9d37cc"
+    },
+    {
+      "arquivo": "desktop-1366.jpg",
+      "bytes": 112171,
+      "sha256": "7e8a917374996689805620e728dbffde2b2a3570edf62cb7ff7b91c473a2c1f6",
+      "dimensoes": [
+        1366,
+        687
+      ]
+    },
+    {
+      "arquivo": "desktop-final.jpg",
+      "bytes": 100126,
+      "sha256": "d1c69aadec5ef375bc5f1f8586ba9894ef3574805deac240b7eedfe6a20d8e12",
+      "dimensoes": [
+        1366,
+        631
+      ]
+    },
+    {
+      "arquivo": "download-diagnostico.json",
+      "bytes": 1444,
+      "sha256": "34b6e53a265f07ca40f3d6217aee3e1ee496ddfe24f041338129f69575d47966"
+    },
+    {
+      "arquivo": "downloads-recebidos.json",
+      "bytes": 3503,
+      "sha256": "07be2ab47250efaf32302bccbc20cb47e1022615f023a9402572fee0b8b33d56"
+    },
+    {
+      "arquivo": "etapas-servidor.log",
+      "bytes": 6222,
+      "sha256": "cd14e56729665be2a1dd6472b30a1fa83559ebf846cbb80bdceae703c316dc5b"
+    },
+    {
+      "arquivo": "evolucao-1366.jpg",
+      "bytes": 167441,
+      "sha256": "7413935811c469c46f4dbc6f66c61b5bb58efc8fc1a4d04ddcb41d04ee0dc6cc",
+      "dimensoes": [
+        1366,
+        900
+      ]
+    },
+    {
+      "arquivo": "evolucao-320-graficos-corrigido.jpg",
+      "bytes": 49873,
+      "sha256": "94c1029b2826242b550264794c864c5c71faeb2790aad78c79b800f6c101fc4f",
+      "dimensoes": [
+        320,
+        900
+      ]
+    },
+    {
+      "arquivo": "evolucao-320-graficos.jpg",
+      "bytes": 50254,
+      "sha256": "654806ad8997731e1bf223e82bedc3fd4757043ec28b723b7f9c49e51b82b41d",
+      "dimensoes": [
+        320,
+        900
+      ]
+    },
+    {
+      "arquivo": "evolucao-320.jpg",
+      "bytes": 56438,
+      "sha256": "c6455bfc7751bfbb465039ade49d174c0a05c1f93776a39d843298e55026fcb9",
+      "dimensoes": [
+        320,
+        900
+      ]
+    },
+    {
+      "arquivo": "evolucao-360.jpg",
+      "bytes": 61845,
+      "sha256": "c8af5cadb4f24b49a0031401f1ebbd769103c80b8678a87265cae1e716025742",
+      "dimensoes": [
+        360,
+        900
+      ]
+    },
+    {
+      "arquivo": "evolucao-390.jpg",
+      "bytes": 64358,
+      "sha256": "21de6dc0ab1944a141a4b0d5a7d870101ab067df5a64d98355d4d1ae270dea8d",
+      "dimensoes": [
+        390,
+        900
+      ]
+    },
+    {
+      "arquivo": "evolucao-768.jpg",
+      "bytes": 110370,
+      "sha256": "d45cc180ded7af1a2ddd857da0ce6a02420a1abae9a1780a60a0f096bfb13e0c",
+      "dimensoes": [
+        768,
+        900
+      ]
+    },
+    {
+      "arquivo": "evolucao-final-1366.jpg",
+      "bytes": 133338,
+      "sha256": "e51eb5cc08fee1a0dcb5c93a26ff2940f81741fb130af2fd1fd42a6a3ab0b5bb",
+      "dimensoes": [
+        1366,
+        900
+      ]
+    },
+    {
+      "arquivo": "evolucao-final-320.jpg",
+      "bytes": 49873,
+      "sha256": "94c1029b2826242b550264794c864c5c71faeb2790aad78c79b800f6c101fc4f",
+      "dimensoes": [
+        320,
+        900
+      ]
+    },
+    {
+      "arquivo": "evolucao-final-360.jpg",
+      "bytes": 50471,
+      "sha256": "429c8c424096c8c666e00ad5affa6bf1bb2de65b501b1b80e4dc917117e707fc",
+      "dimensoes": [
+        360,
+        900
+      ]
+    },
+    {
+      "arquivo": "evolucao-final-390.jpg",
+      "bytes": 56533,
+      "sha256": "a6297e9f5415864a2f2d5c680451b7d07b9508f6ce8f94438fe3fc4e23cc5df8",
+      "dimensoes": [
+        390,
+        900
+      ]
+    },
+    {
+      "arquivo": "evolucao-final-768.jpg",
+      "bytes": 85343,
+      "sha256": "c3c1d56fb2bdf9e06db5e6f8ce006f3d050b1d3fc79ecd5e0356ff4a93472f6f",
+      "dimensoes": [
+        768,
+        900
+      ]
+    },
+    {
+      "arquivo": "paginas.json",
+      "bytes": 17834,
+      "sha256": "a9e28faacb2faa1afb0bc6fe680dda90ada45752b422b795683c2a21b3c6a2a1"
+    },
+    {
+      "arquivo": "pytest-final.log",
+      "bytes": 111,
+      "sha256": "d45a155c3df0ec5fcde7cca4fe6861e6bc631259608a6732aaecdb740882a598"
+    },
+    {
+      "arquivo": "pytest-final.xml",
+      "bytes": 3000,
+      "sha256": "20a9e6a69874b6173a9a791d93566db30ce4eeb707773093de4fd1561386984f"
+    },
+    {
+      "arquivo": "pytest.log",
+      "bytes": 111,
+      "sha256": "fb8e2bb82d40653d315225990ec7b2921655e32dce889ab4f01475c30bd3798a"
+    },
+    {
+      "arquivo": "pytest.xml",
+      "bytes": 3000,
+      "sha256": "25e88f91cbefd91ab94355a58d3dcc0fbd7b0bab3cb288daca8dfa7c437e649f"
+    },
+    {
+      "arquivo": "ranking-exportado-antes-ajuste-titulo.png",
+      "bytes": 94623,
+      "sha256": "b8847a6bce06bbf9eb9dbf4c93576125cc9cf7cd9d40b049d8f1da2b3665adeb",
+      "dimensoes": [
+        1100,
+        650
+      ]
+    },
+    {
+      "arquivo": "ranking-exportado-final.png",
+      "bytes": 94447,
+      "sha256": "8bd6fbdc0b6506aad2787e4913e92518858acd62794e4742585132964449d368",
+      "dimensoes": [
+        1100,
+        650
+      ]
+    },
+    {
+      "arquivo": "relatorio-1366-corrigido.jpg",
+      "bytes": 146828,
+      "sha256": "eeb4197aebb3cbb8f6c71c14586e1e81a57fd4d9ea644d3989373693f99cd106",
+      "dimensoes": [
+        1366,
+        900
+      ]
+    },
+    {
+      "arquivo": "relatorio-1366.jpg",
+      "bytes": 147808,
+      "sha256": "0f5bb8e700c7b791400f56de8792cee7c4d36ca4baf86015def271239edc37bb",
+      "dimensoes": [
+        1366,
+        900
+      ]
+    },
+    {
+      "arquivo": "relatorio-320-corrigido.jpg",
+      "bytes": 54256,
+      "sha256": "7aadd3d288a5f2dd0e73e8d812436dc9b4a308fb5f76c76d7511a5c83c9b7d11",
+      "dimensoes": [
+        320,
+        900
+      ]
+    },
+    {
+      "arquivo": "relatorio-320-real.jpg",
+      "bytes": 49112,
+      "sha256": "0bd838771b8e3819b59fb8b72db606c9130f1e7560ca36c246c0a747feb820f0",
+      "dimensoes": [
+        320,
+        900
+      ]
+    },
+    {
+      "arquivo": "relatorio-320-topo.jpg",
+      "bytes": 54212,
+      "sha256": "1cab52a2518e999642b87ecfd0ba19fa03cc4f1c7fdd3596b6ea3527510894a9",
+      "dimensoes": [
+        320,
+        900
+      ]
+    },
+    {
+      "arquivo": "relatorio-320.jpg",
+      "bytes": 54318,
+      "sha256": "65a6486632f5d4125dfea6f1e7d2ccb0806b3cd3ad86fb9269a26601afd6f633",
+      "dimensoes": [
+        320,
+        900
+      ]
+    },
+    {
+      "arquivo": "relatorio-360-corrigido.jpg",
+      "bytes": 61190,
+      "sha256": "ea795700671bcc1cc7b12c0b35e4e70b5ecf331dbcf102ea31ac92ce62bf3523",
+      "dimensoes": [
+        360,
+        900
+      ]
+    },
+    {
+      "arquivo": "relatorio-360.jpg",
+      "bytes": 61027,
+      "sha256": "a1ab0adf04f2415168f41948c32a285b800a6af4e10c219ecd6466e45d90217c",
+      "dimensoes": [
+        360,
+        900
+      ]
+    },
+    {
+      "arquivo": "relatorio-390-corrigido.jpg",
+      "bytes": 62034,
+      "sha256": "fc48316184ee101d4890a64603a28705eceaf69caa920e5bcacb7ee321838008",
+      "dimensoes": [
+        390,
+        900
+      ]
+    },
+    {
+      "arquivo": "relatorio-390.jpg",
+      "bytes": 61953,
+      "sha256": "806b31c0277693fecc19e7a7312d8688c0a10175618fdf4076d8948a811db33a",
+      "dimensoes": [
+        390,
+        900
+      ]
+    },
+    {
+      "arquivo": "relatorio-768-corrigido.jpg",
+      "bytes": 92615,
+      "sha256": "d1fae2c28fc1157db33a33a9cbe6c02161601121439d9e8d2fc22044e8986faa",
+      "dimensoes": [
+        768,
+        900
+      ]
+    },
+    {
+      "arquivo": "relatorio-768.jpg",
+      "bytes": 92109,
+      "sha256": "934302a522e9b6ad6400f4b1a4a824d47283ca1191d3d5bc26d35d236035a32e",
+      "dimensoes": [
+        768,
+        900
+      ]
+    },
+    {
+      "arquivo": "sem-pontos.jpg",
+      "bytes": 74527,
+      "sha256": "61e2565513f9f68149eee142f16d098f2b3bd54cec2f42008b56e5a3ca985a30",
+      "dimensoes": [
+        1366,
+        631
+      ]
+    },
+    {
+      "arquivo": "teclado.json",
+      "bytes": 1797,
+      "sha256": "f80fd360057d12f0049ec8bd3483ca723dd3f94cd23e3d7c8ea803f293880a84"
+    },
+    {
+      "arquivo": "validacao-contrato.txt",
+      "bytes": 216,
+      "sha256": "4a33b701cb34751baa6eb10770554c4de6d17857a8fce279b99dc100ce76dbd2"
+    },
+    {
+      "arquivo": "viewports.json",
+      "bytes": 4090,
+      "sha256": "29c8916968909219fbce24be1501ff44ba0bd8527bb245f9fc20100d49857d8d"
+    },
+    {
+      "arquivo": "visao-geral-1366.jpg",
+      "bytes": 148502,
+      "sha256": "fefd3283cf0f5173cc0ce94df2877f7833a5a21f08673a775878179ede8560a5",
+      "dimensoes": [
+        1366,
+        900
+      ]
+    },
+    {
+      "arquivo": "visao-geral-320.jpg",
+      "bytes": 56057,
+      "sha256": "392d9152259d5bc5a753fe810ac512b721b853bc5c9250b92d868daeda9b1541",
+      "dimensoes": [
+        320,
+        900
+      ]
+    },
+    {
+      "arquivo": "visao-geral-360.jpg",
+      "bytes": 58274,
+      "sha256": "41fe3e817cdc7640a284fc733fce7ae245a62e5b6814e97096a59d866175d383",
+      "dimensoes": [
+        360,
+        900
+      ]
+    },
+    {
+      "arquivo": "visao-geral-390.jpg",
+      "bytes": 59240,
+      "sha256": "6fb7c0bdf812528809fb09994e454b9b66203253754077d35c360d1bec9d4526",
+      "dimensoes": [
+        390,
+        900
+      ]
+    },
+    {
+      "arquivo": "visao-geral-768.jpg",
+      "bytes": 99892,
+      "sha256": "58620b0f6db2001e3955c3f16f0a1e5cba17d6837798fc4d50cf9d7470e8071e",
+      "dimensoes": [
+        768,
+        900
+      ]
+    },
+    {
+      "arquivo": "zoom-equivalente-200.jpg",
+      "bytes": 43600,
+      "sha256": "ab02e126a1dc3a240d3cfcad2e788703c6e938143019bad313ce74d8adc8eb56",
+      "dimensoes": [
+        683,
+        450
+      ]
+    },
+    {
+      "arquivo": "identidade-final.json",
+      "bytes": 463,
+      "sha256": "ab3d6b234193663467a77c7d46703e5aad126871528ccb263f1cd1ec58bd33e0"
+    }
+  ]
+}

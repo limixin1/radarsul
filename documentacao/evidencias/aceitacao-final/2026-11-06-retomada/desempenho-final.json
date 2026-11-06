@@ -1,0 +1,2047 @@
+{
+  "escopo": "loopback, sem downloads, sem suíte concorrente; navegador permanece aberto mas sem ações; não mede renderização nem Render",
+  "lotes": [
+    {
+      "sessoes": 1,
+      "recursos": [
+        {
+          "s": 2.2220000118977623e-05,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            4.45849609375,
+            4.5068359375,
+            3.66357421875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 631540,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2872332
+        },
+        {
+          "s": 0.25143507800021325,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            4.45849609375,
+            4.5068359375,
+            3.66357421875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 623176,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2877112
+        },
+        {
+          "s": 0.503043345000151,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            4.45849609375,
+            4.5068359375,
+            3.66357421875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 617544,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2883412
+        },
+        {
+          "s": 0.7540899020000325,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            4.45849609375,
+            4.5068359375,
+            3.66357421875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 615824,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2885216
+        },
+        {
+          "s": 1.0048680710001463,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            4.45849609375,
+            4.5068359375,
+            3.66357421875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 617156,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2874260
+        },
+        {
+          "s": 1.2559767670004476,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            4.7421875,
+            4.56494140625,
+            3.68701171875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 615792,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2873424
+        },
+        {
+          "s": 1.507167777000177,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            4.7421875,
+            4.56494140625,
+            3.68701171875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 616724,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2878732
+        },
+        {
+          "s": 1.7586290200001713,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            4.7421875,
+            4.56494140625,
+            3.68701171875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 612980,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2884464
+        },
+        {
+          "s": 2.0103888490002646,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            4.7421875,
+            4.56494140625,
+            3.68701171875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 606472,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2888896
+        },
+        {
+          "s": 2.263378519000071,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            4.7421875,
+            4.56494140625,
+            3.68701171875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 602788,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2891884
+        },
+        {
+          "s": 2.514293123000243,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            4.7421875,
+            4.56494140625,
+            3.68701171875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 616172,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2867232
+        },
+        {
+          "s": 2.7651391580002382,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            4.7421875,
+            4.56494140625,
+            3.68701171875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 615128,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2868520
+        },
+        {
+          "s": 3.015974949000338,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            4.7421875,
+            4.56494140625,
+            3.68701171875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 605948,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2878112
+        },
+        {
+          "s": 3.2667863320002652,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            4.7421875,
+            4.56494140625,
+            3.68701171875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 600388,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2888936
+        },
+        {
+          "s": 3.517468141000336,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            4.7421875,
+            4.56494140625,
+            3.68701171875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 615132,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2875228
+        },
+        {
+          "s": 3.7684253130000798,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            4.7421875,
+            4.56494140625,
+            3.68701171875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 605636,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2873336
+        },
+        {
+          "s": 4.020875707000414,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            4.7421875,
+            4.56494140625,
+            3.68701171875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 629156,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2849728
+        },
+        {
+          "s": 4.271592418000182,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            4.7421875,
+            4.56494140625,
+            3.68701171875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 623596,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2849968
+        }
+      ],
+      "resultados": [
+        {
+          "primeiro_delta_s": 0.40587544100026207,
+          "bytes_recebidos": 59098,
+          "script_concluido": true,
+          "tempo_conexao_e_servidor_s": 4.329095548999703,
+          "tempo_execucao_e_transmissao_s": 4.171496680000018,
+          "tempo_total_com_downloads_s": 4.3290986689999045,
+          "metricas": [
+            {
+              "label": "Índice agregado por 10 mil",
+              "value": "2,520"
+            },
+            {
+              "label": "Contagens publicadas",
+              "value": "226.870.300"
+            },
+            {
+              "label": "Acima de 120 km/h",
+              "value": "57.163"
+            }
+          ],
+          "erros": [],
+          "downloads": [
+            {
+              "label": "Baixar comparação em CSV (pt-BR)",
+              "url": "/media/a0fc00311fd2893591559b73e98243d6.csv"
+            },
+            {
+              "label": "Baixar relatório em Markdown",
+              "url": "/media/9a5c65ab8e694c9fbf9cfebdfcd77036.md"
+            },
+            {
+              "label": "Baixar consulta completa em ZIP",
+              "url": "/media/31723d0d69cad273c6c709e42b06d978.zip"
+            },
+            {
+              "label": "Baixar manifesto de dados",
+              "url": "/media/23f8b67696cd4ca7934d7529c06eb6b6.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sessoes": 5,
+      "recursos": [
+        {
+          "s": 0.00015130399970075814,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            4.7421875,
+            4.56494140625,
+            3.68701171875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 623768,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2850048
+        },
+        {
+          "s": 0.25132355100004133,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            4.7421875,
+            4.56494140625,
+            3.68701171875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 582340,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2846284
+        },
+        {
+          "s": 0.5020409029998518,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            4.7421875,
+            4.56494140625,
+            3.68701171875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 580984,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2841700
+        },
+        {
+          "s": 0.7530137589997139,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            4.7421875,
+            4.56494140625,
+            3.68701171875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 566040,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2839036
+        },
+        {
+          "s": 1.0041225320001104,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            4.7421875,
+            4.56494140625,
+            3.68701171875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 562772,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2835352
+        },
+        {
+          "s": 1.2551963319997412,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            4.7421875,
+            4.56494140625,
+            3.68701171875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 555572,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2832520
+        },
+        {
+          "s": 1.506318808999822,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            4.7421875,
+            4.56494140625,
+            3.68701171875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 542652,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2828232
+        },
+        {
+          "s": 1.7573333780001121,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            5.24365234375,
+            4.671875,
+            3.7265625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 544196,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2823380
+        },
+        {
+          "s": 2.0083123770000384,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            5.24365234375,
+            4.671875,
+            3.7265625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 542376,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2818276
+        },
+        {
+          "s": 2.2595646719996694,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            5.24365234375,
+            4.671875,
+            3.7265625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 537388,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2814208
+        },
+        {
+          "s": 2.5108020200000283,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            5.24365234375,
+            4.671875,
+            3.7265625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 543484,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2808920
+        },
+        {
+          "s": 2.7624788009998156,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            5.24365234375,
+            4.671875,
+            3.7265625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 544096,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2804068
+        },
+        {
+          "s": 3.0135636929999237,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            5.24365234375,
+            4.671875,
+            3.7265625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 544536,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2800764
+        },
+        {
+          "s": 3.2647042979997423,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            5.24365234375,
+            4.671875,
+            3.7265625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 547312,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2795928
+        },
+        {
+          "s": 3.5157732329998908,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            5.24365234375,
+            4.671875,
+            3.7265625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 546376,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2792644
+        },
+        {
+          "s": 3.7671644570000353,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            5.24365234375,
+            4.671875,
+            3.7265625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 547956,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2791416
+        },
+        {
+          "s": 4.01809468700003,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            5.24365234375,
+            4.671875,
+            3.7265625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 545888,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2790752
+        },
+        {
+          "s": 4.269810102000065,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            5.24365234375,
+            4.671875,
+            3.7265625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 547856,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2787656
+        },
+        {
+          "s": 4.521045628999673,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            5.24365234375,
+            4.671875,
+            3.7265625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 547604,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2787656
+        },
+        {
+          "s": 4.77232984200009,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            5.24365234375,
+            4.671875,
+            3.7265625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 546776,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2787400
+        },
+        {
+          "s": 5.024000523999803,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            5.24365234375,
+            4.671875,
+            3.7265625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 547656,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2784912
+        },
+        {
+          "s": 5.274822904999837,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            5.24365234375,
+            4.671875,
+            3.7265625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 544588,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2783160
+        },
+        {
+          "s": 5.526383711000108,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            5.24365234375,
+            4.671875,
+            3.7265625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 545824,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2781128
+        },
+        {
+          "s": 5.77819536700008,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            5.24365234375,
+            4.671875,
+            3.7265625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 542348,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2779868
+        },
+        {
+          "s": 6.029405114999918,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            5.24365234375,
+            4.671875,
+            3.7265625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 543188,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2778596
+        },
+        {
+          "s": 6.280626759999905,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            5.24365234375,
+            4.671875,
+            3.7265625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 543672,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2776556
+        },
+        {
+          "s": 6.531830096999784,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            5.24365234375,
+            4.671875,
+            3.7265625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 544452,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2775296
+        },
+        {
+          "s": 6.7825546579997535,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.5859375,
+            4.9599609375,
+            3.8251953125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 538312,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2773000
+        },
+        {
+          "s": 7.033290081999894,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.5859375,
+            4.9599609375,
+            3.8251953125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 511472,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2771292
+        },
+        {
+          "s": 7.286753109000074,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.5859375,
+            4.9599609375,
+            3.8251953125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 655240,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2758240
+        },
+        {
+          "s": 7.537575652999749,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.5859375,
+            4.9599609375,
+            3.8251953125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 650848,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2758372
+        },
+        {
+          "s": 7.78834363299984,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.5859375,
+            4.9599609375,
+            3.8251953125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 650052,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2758396
+        },
+        {
+          "s": 8.039224380999713,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.5859375,
+            4.9599609375,
+            3.8251953125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 649344,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2758452
+        },
+        {
+          "s": 8.291033686999981,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.5859375,
+            4.9599609375,
+            3.8251953125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 640732,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2758560
+        },
+        {
+          "s": 8.54193450699995,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.5859375,
+            4.9599609375,
+            3.8251953125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 649708,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2758584
+        },
+        {
+          "s": 8.792645602999983,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.5859375,
+            4.9599609375,
+            3.8251953125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 624764,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2758624
+        },
+        {
+          "s": 9.04329443000006,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.5859375,
+            4.9599609375,
+            3.8251953125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 619512,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2758624
+        },
+        {
+          "s": 9.294839572,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.5859375,
+            4.9599609375,
+            3.8251953125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 578220,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2758676
+        },
+        {
+          "s": 9.545585970000047,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.5859375,
+            4.9599609375,
+            3.8251953125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 571476,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2758728
+        },
+        {
+          "s": 9.796236679999765,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.5859375,
+            4.9599609375,
+            3.8251953125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 570040,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2758788
+        },
+        {
+          "s": 10.046896498000024,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.5859375,
+            4.9599609375,
+            3.8251953125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 569576,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2759688
+        },
+        {
+          "s": 10.297551362999911,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.5859375,
+            4.9599609375,
+            3.8251953125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 570212,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2759724
+        },
+        {
+          "s": 10.548206645999926,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.5859375,
+            4.9599609375,
+            3.8251953125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 531812,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2759816
+        },
+        {
+          "s": 10.798885489999975,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.5859375,
+            4.9599609375,
+            3.8251953125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 531716,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2759884
+        }
+      ],
+      "resultados": [
+        {
+          "primeiro_delta_s": 0.4862164269998175,
+          "bytes_recebidos": 59098,
+          "script_concluido": true,
+          "tempo_conexao_e_servidor_s": 10.862072572000216,
+          "tempo_execucao_e_transmissao_s": 10.853352818000076,
+          "tempo_total_com_downloads_s": 10.862073793000036,
+          "metricas": [
+            {
+              "label": "Índice agregado por 10 mil",
+              "value": "2,520"
+            },
+            {
+              "label": "Contagens publicadas",
+              "value": "226.870.300"
+            },
+            {
+              "label": "Acima de 120 km/h",
+              "value": "57.163"
+            }
+          ],
+          "erros": [],
+          "downloads": [
+            {
+              "label": "Baixar comparação em CSV (pt-BR)",
+              "url": "/media/c6b9827a38f826d71ef4dbc62c7d0327.csv"
+            },
+            {
+              "label": "Baixar relatório em Markdown",
+              "url": "/media/8a198284adec5fdb98a23c6fbf86c987.md"
+            },
+            {
+              "label": "Baixar consulta completa em ZIP",
+              "url": "/media/282a70a5193a82b1c274aa05332b01f8.zip"
+            },
+            {
+              "label": "Baixar manifesto de dados",
+              "url": "/media/23f8b67696cd4ca7934d7529c06eb6b6.json"
+            }
+          ]
+        },
+        {
+          "primeiro_delta_s": 0.7869465740000123,
+          "bytes_recebidos": 59098,
+          "script_concluido": true,
+          "tempo_conexao_e_servidor_s": 10.87546360799979,
+          "tempo_execucao_e_transmissao_s": 10.86058106199971,
+          "tempo_total_com_downloads_s": 10.875464743000066,
+          "metricas": [
+            {
+              "label": "Índice agregado por 10 mil",
+              "value": "2,520"
+            },
+            {
+              "label": "Contagens publicadas",
+              "value": "226.870.300"
+            },
+            {
+              "label": "Acima de 120 km/h",
+              "value": "57.163"
+            }
+          ],
+          "erros": [],
+          "downloads": [
+            {
+              "label": "Baixar comparação em CSV (pt-BR)",
+              "url": "/media/0d0f615aecc103aade453871165df8ca.csv"
+            },
+            {
+              "label": "Baixar relatório em Markdown",
+              "url": "/media/eb7c4419f5b51cd78f1292e18d20924c.md"
+            },
+            {
+              "label": "Baixar consulta completa em ZIP",
+              "url": "/media/7bf73c04b5bd284277d77ba1a592bb1c.zip"
+            },
+            {
+              "label": "Baixar manifesto de dados",
+              "url": "/media/23f8b67696cd4ca7934d7529c06eb6b6.json"
+            }
+          ]
+        },
+        {
+          "primeiro_delta_s": 0.7987698359997921,
+          "bytes_recebidos": 59098,
+          "script_concluido": true,
+          "tempo_conexao_e_servidor_s": 10.874637095000253,
+          "tempo_execucao_e_transmissao_s": 10.857523614000002,
+          "tempo_total_com_downloads_s": 10.874637938999967,
+          "metricas": [
+            {
+              "label": "Índice agregado por 10 mil",
+              "value": "2,520"
+            },
+            {
+              "label": "Contagens publicadas",
+              "value": "226.870.300"
+            },
+            {
+              "label": "Acima de 120 km/h",
+              "value": "57.163"
+            }
+          ],
+          "erros": [],
+          "downloads": [
+            {
+              "label": "Baixar comparação em CSV (pt-BR)",
+              "url": "/media/8d400bf51dbc9f4c79e3a46726ce3f40.csv"
+            },
+            {
+              "label": "Baixar relatório em Markdown",
+              "url": "/media/9ebb599b610c06e70318ee157d3726ce.md"
+            },
+            {
+              "label": "Baixar consulta completa em ZIP",
+              "url": "/media/ff547db34259fc878ba14c1da33fe425.zip"
+            },
+            {
+              "label": "Baixar manifesto de dados",
+              "url": "/media/23f8b67696cd4ca7934d7529c06eb6b6.json"
+            }
+          ]
+        },
+        {
+          "primeiro_delta_s": 0.800785046999863,
+          "bytes_recebidos": 59098,
+          "script_concluido": true,
+          "tempo_conexao_e_servidor_s": 10.838999591000174,
+          "tempo_execucao_e_transmissao_s": 10.820913131999987,
+          "tempo_total_com_downloads_s": 10.839000904000386,
+          "metricas": [
+            {
+              "label": "Índice agregado por 10 mil",
+              "value": "2,520"
+            },
+            {
+              "label": "Contagens publicadas",
+              "value": "226.870.300"
+            },
+            {
+              "label": "Acima de 120 km/h",
+              "value": "57.163"
+            }
+          ],
+          "erros": [],
+          "downloads": [
+            {
+              "label": "Baixar comparação em CSV (pt-BR)",
+              "url": "/media/c1a0c610c4c117094444ea592558ce5b.csv"
+            },
+            {
+              "label": "Baixar relatório em Markdown",
+              "url": "/media/4032abcbbc0b89902014a50d82b6b3cc.md"
+            },
+            {
+              "label": "Baixar consulta completa em ZIP",
+              "url": "/media/1b038f1dd44a1dc5ee570d6d1f331ee1.zip"
+            },
+            {
+              "label": "Baixar manifesto de dados",
+              "url": "/media/23f8b67696cd4ca7934d7529c06eb6b6.json"
+            }
+          ]
+        },
+        {
+          "primeiro_delta_s": 0.8005266099999062,
+          "bytes_recebidos": 59098,
+          "script_concluido": true,
+          "tempo_conexao_e_servidor_s": 10.849710114000118,
+          "tempo_execucao_e_transmissao_s": 10.828049315000044,
+          "tempo_total_com_downloads_s": 10.849711128000308,
+          "metricas": [
+            {
+              "label": "Índice agregado por 10 mil",
+              "value": "2,520"
+            },
+            {
+              "label": "Contagens publicadas",
+              "value": "226.870.300"
+            },
+            {
+              "label": "Acima de 120 km/h",
+              "value": "57.163"
+            }
+          ],
+          "erros": [],
+          "downloads": [
+            {
+              "label": "Baixar comparação em CSV (pt-BR)",
+              "url": "/media/41323947b7a384a33d0a8a40b784d6aa.csv"
+            },
+            {
+              "label": "Baixar relatório em Markdown",
+              "url": "/media/c9157b397ee5dbe9a5420fd7a1634b35.md"
+            },
+            {
+              "label": "Baixar consulta completa em ZIP",
+              "url": "/media/bf4210c4a2ee89d39d34ea62cd4d9917.zip"
+            },
+            {
+              "label": "Baixar manifesto de dados",
+              "url": "/media/23f8b67696cd4ca7934d7529c06eb6b6.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sessoes": 10,
+      "recursos": [
+        {
+          "s": 0.00019402200041440665,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.5859375,
+            4.9599609375,
+            3.8251953125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 527328,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2764748
+        },
+        {
+          "s": 0.25216622400012056,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.5859375,
+            4.9599609375,
+            3.8251953125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 627740,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2769800
+        },
+        {
+          "s": 0.5029648250001628,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.5859375,
+            4.9599609375,
+            3.8251953125
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 601764,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2769872
+        },
+        {
+          "s": 0.753567227000076,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.45849609375,
+            4.9609375,
+            3.83154296875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 518848,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2769892
+        },
+        {
+          "s": 1.004212175000248,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.45849609375,
+            4.9609375,
+            3.83154296875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 497648,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2769892
+        },
+        {
+          "s": 1.2565839230001075,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.45849609375,
+            4.9609375,
+            3.83154296875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 510604,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2767616
+        },
+        {
+          "s": 1.507595474000027,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.45849609375,
+            4.9609375,
+            3.83154296875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 513532,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2767624
+        },
+        {
+          "s": 1.7603307470003529,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.45849609375,
+            4.9609375,
+            3.83154296875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 512392,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2767656
+        },
+        {
+          "s": 2.0117241269999795,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.45849609375,
+            4.9609375,
+            3.83154296875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 511124,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2767672
+        },
+        {
+          "s": 2.263088885000343,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.45849609375,
+            4.9609375,
+            3.83154296875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 510872,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2767752
+        },
+        {
+          "s": 2.5145967080002265,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.45849609375,
+            4.9609375,
+            3.83154296875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 490616,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2767124
+        },
+        {
+          "s": 2.7652022930001294,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.45849609375,
+            4.9609375,
+            3.83154296875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 524016,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2754532
+        },
+        {
+          "s": 3.0172976570001993,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.45849609375,
+            4.9609375,
+            3.83154296875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 522696,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2754572
+        },
+        {
+          "s": 3.2688576690002265,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.45849609375,
+            4.9609375,
+            3.83154296875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 522444,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2754572
+        },
+        {
+          "s": 3.520159029000297,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.45849609375,
+            4.9609375,
+            3.83154296875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 521940,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2754584
+        },
+        {
+          "s": 3.771504728000309,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.45849609375,
+            4.9609375,
+            3.83154296875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 521956,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2754628
+        },
+        {
+          "s": 4.022439099000167,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.45849609375,
+            4.9609375,
+            3.83154296875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 520920,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2754800
+        },
+        {
+          "s": 4.273599029000252,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.45849609375,
+            4.9609375,
+            3.83154296875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 520760,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2754816
+        },
+        {
+          "s": 4.524603217000276,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.45849609375,
+            4.9609375,
+            3.83154296875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 519576,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2754972
+        },
+        {
+          "s": 4.775849414000277,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.45849609375,
+            4.9609375,
+            3.83154296875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 520680,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2754992
+        },
+        {
+          "s": 5.026370600000064,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.45849609375,
+            4.9609375,
+            3.83154296875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 520492,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2755004
+        },
+        {
+          "s": 5.277266716000213,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.45849609375,
+            4.9609375,
+            3.83154296875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 520568,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2755004
+        },
+        {
+          "s": 5.528101956000228,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.45849609375,
+            4.9609375,
+            3.83154296875
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 520116,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2755112
+        },
+        {
+          "s": 5.782183750000058,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.18115234375,
+            4.92822265625,
+            3.82666015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 514560,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2756788
+        },
+        {
+          "s": 6.0335871480001515,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.18115234375,
+            4.92822265625,
+            3.82666015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 518704,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2756936
+        },
+        {
+          "s": 6.28462500500018,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.18115234375,
+            4.92822265625,
+            3.82666015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 519256,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2757528
+        },
+        {
+          "s": 6.535569577000388,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.18115234375,
+            4.92822265625,
+            3.82666015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 526608,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2757548
+        },
+        {
+          "s": 6.786951817000045,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.18115234375,
+            4.92822265625,
+            3.82666015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 530588,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2757552
+        },
+        {
+          "s": 7.038616159000412,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.18115234375,
+            4.92822265625,
+            3.82666015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 538012,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2757560
+        },
+        {
+          "s": 7.289344685000287,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.18115234375,
+            4.92822265625,
+            3.82666015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 538012,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2757560
+        },
+        {
+          "s": 7.540086519000397,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.18115234375,
+            4.92822265625,
+            3.82666015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 538080,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2757560
+        },
+        {
+          "s": 7.790607546000047,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.18115234375,
+            4.92822265625,
+            3.82666015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 536964,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2757560
+        },
+        {
+          "s": 8.04132913300009,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.18115234375,
+            4.92822265625,
+            3.82666015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 534948,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2757560
+        },
+        {
+          "s": 8.291977351000241,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.18115234375,
+            4.92822265625,
+            3.82666015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 534724,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2757560
+        },
+        {
+          "s": 8.542592916000103,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.18115234375,
+            4.92822265625,
+            3.82666015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 534260,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2757564
+        },
+        {
+          "s": 8.793242423000265,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.18115234375,
+            4.92822265625,
+            3.82666015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 534820,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2757620
+        },
+        {
+          "s": 9.043907871000101,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.18115234375,
+            4.92822265625,
+            3.82666015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 534820,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2757636
+        },
+        {
+          "s": 9.294579800000065,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.18115234375,
+            4.92822265625,
+            3.82666015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 534820,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2757652
+        },
+        {
+          "s": 9.545272279000073,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.18115234375,
+            4.92822265625,
+            3.82666015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 537504,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2757688
+        },
+        {
+          "s": 9.795947177000016,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.18115234375,
+            4.92822265625,
+            3.82666015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 537204,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2757696
+        },
+        {
+          "s": 10.046609334000095,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.18115234375,
+            4.92822265625,
+            3.82666015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 539744,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2757760
+        },
+        {
+          "s": 10.297234607000064,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.18115234375,
+            4.92822265625,
+            3.82666015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 539472,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2757760
+        },
+        {
+          "s": 10.54787707100013,
+          "cpu_logicas": 4,
+          "carga_1_5_15min": [
+            6.18115234375,
+            4.92822265625,
+            3.82666015625
+          ],
+          "MemTotal_kib": 3883172,
+          "MemAvailable_kib": 539224,
+          "SwapTotal_kib": 6064204,
+          "SwapFree_kib": 2757760
+        }
+      ],
+      "resultados": [
+        {
+          "primeiro_delta_s": 1.219458788999873,
+          "bytes_recebidos": 59098,
+          "script_concluido": true,
+          "tempo_conexao_e_servidor_s": 10.729913990000114,
+          "tempo_execucao_e_transmissao_s": 10.705773088000115,
+          "tempo_total_com_downloads_s": 10.729914688999997,
+          "metricas": [
+            {
+              "label": "Índice agregado por 10 mil",
+              "value": "2,520"
+            },
+            {
+              "label": "Contagens publicadas",
+              "value": "226.870.300"
+            },
+            {
+              "label": "Acima de 120 km/h",
+              "value": "57.163"
+            }
+          ],
+          "erros": [],
+          "downloads": [
+            {
+              "label": "Baixar comparação em CSV (pt-BR)",
+              "url": "/media/5cec671dfc44853d532c03ad778c6300.csv"
+            },
+            {
+              "label": "Baixar relatório em Markdown",
+              "url": "/media/42e612256741c6f54aab8d51584daa43.md"
+            },
+            {
+              "label": "Baixar consulta completa em ZIP",
+              "url": "/media/1aa59eecdce70c364367c65ef43f9fdd.zip"
+            },
+            {
+              "label": "Baixar manifesto de dados",
+              "url": "/media/23f8b67696cd4ca7934d7529c06eb6b6.json"
+            }
+          ]
+        },
+        {
+          "primeiro_delta_s": 1.258816279000257,
+          "bytes_recebidos": 59098,
+          "script_concluido": true,
+          "tempo_conexao_e_servidor_s": 10.732371369999782,
+          "tempo_execucao_e_transmissao_s": 10.707131346000097,
+          "tempo_total_com_downloads_s": 10.732372099999793,
+          "metricas": [
+            {
+              "label": "Índice agregado por 10 mil",
+              "value": "2,520"
+            },
+            {
+              "label": "Contagens publicadas",
+              "value": "226.870.300"
+            },
+            {
+              "label": "Acima de 120 km/h",
+              "value": "57.163"
+            }
+          ],
+          "erros": [],
+          "downloads": [
+            {
+              "label": "Baixar comparação em CSV (pt-BR)",
+              "url": "/media/8c4747d343ce8cb73c53e640ec79678e.csv"
+            },
+            {
+              "label": "Baixar relatório em Markdown",
+              "url": "/media/fdfb5d275d4b81490037587a0aff8272.md"
+            },
+            {
+              "label": "Baixar consulta completa em ZIP",
+              "url": "/media/01e904d8707d2daaf2a671a58f927fd2.zip"
+            },
+            {
+              "label": "Baixar manifesto de dados",
+              "url": "/media/23f8b67696cd4ca7934d7529c06eb6b6.json"
+            }
+          ]
+        },
+        {
+          "primeiro_delta_s": 1.3800024460001623,
+          "bytes_recebidos": 59098,
+          "script_concluido": true,
+          "tempo_conexao_e_servidor_s": 10.738075300999753,
+          "tempo_execucao_e_transmissao_s": 10.702866298000117,
+          "tempo_total_com_downloads_s": 10.73807606399987,
+          "metricas": [
+            {
+              "label": "Índice agregado por 10 mil",
+              "value": "2,520"
+            },
+            {
+              "label": "Contagens publicadas",
+              "value": "226.870.300"
+            },
+            {
+              "label": "Acima de 120 km/h",
+              "value": "57.163"
+            }
+          ],
+          "erros": [],
+          "downloads": [
+            {
+              "label": "Baixar comparação em CSV (pt-BR)",
+              "url": "/media/17592918ec6f43614c8e7cfc940a29ce.csv"
+            },
+            {
+              "label": "Baixar relatório em Markdown",
+              "url": "/media/3e751dd58a13b6339bacc4df77214e90.md"
+            },
+            {
+              "label": "Baixar consulta completa em ZIP",
+              "url": "/media/263ea846b4367bb957b7f29af16b23b9.zip"
+            },
+            {
+              "label": "Baixar manifesto de dados",
+              "url": "/media/23f8b67696cd4ca7934d7529c06eb6b6.json"
+            }
+          ]
+        },
+        {
+          "primeiro_delta_s": 1.6008179890000065,
+          "bytes_recebidos": 59098,
+          "script_concluido": true,
+          "tempo_conexao_e_servidor_s": 10.740720954000153,
+          "tempo_execucao_e_transmissao_s": 10.70056198400016,
+          "tempo_total_com_downloads_s": 10.74072173400009,
+          "metricas": [
+            {
+              "label": "Índice agregado por 10 mil",
+              "value": "2,520"
+            },
+            {
+              "label": "Contagens publicadas",
+              "value": "226.870.300"
+            },
+            {
+              "label": "Acima de 120 km/h",
+              "value": "57.163"
+            }
+          ],
+          "erros": [],
+          "downloads": [
+            {
+              "label": "Baixar comparação em CSV (pt-BR)",
+              "url": "/media/265d982e6b87142594ced8a38db69bf6.csv"
+            },
+            {
+              "label": "Baixar relatório em Markdown",
+              "url": "/media/c161fdf2e90f12958a9bbc66d337ee07.md"
+            },
+            {
+              "label": "Baixar consulta completa em ZIP",
+              "url": "/media/e772ee88f8dc45a86a996f188752275c.zip"
+            },
+            {
+              "label": "Baixar manifesto de dados",
+              "url": "/media/23f8b67696cd4ca7934d7529c06eb6b6.json"
+            }
+          ]
+        },
+        {
+          "primeiro_delta_s": 2.6833474700001716,
+          "bytes_recebidos": 59098,
+          "script_concluido": true,
+          "tempo_conexao_e_servidor_s": 10.741736828000285,
+          "tempo_execucao_e_transmissao_s": 10.702182071000152,
+          "tempo_total_com_downloads_s": 10.741737405000094,
+          "metricas": [
+            {
+              "label": "Índice agregado por 10 mil",
+              "value": "2,520"
+            },
+            {
+              "label": "Contagens publicadas",
+              "value": "226.870.300"
+            },
+            {
+              "label": "Acima de 120 km/h",
+              "value": "57.163"
+            }
+          ],
+          "erros": [],
+          "downloads": [
+            {
+              "label": "Baixar comparação em CSV (pt-BR)",
+              "url": "/media/fd69f9c49e42522068e190291604c192.csv"
+            },
+            {
+              "label": "Baixar relatório em Markdown",
+              "url": "/media/fa4a5acdc63f4e4a1f07f494e9fd76b5.md"
+            },
+            {
+              "label": "Baixar consulta completa em ZIP",
+              "url": "/media/1eee4db454053dac3ca17b23443c52a9.zip"
+            },
+            {
+              "label": "Baixar manifesto de dados",
+              "url": "/media/23f8b67696cd4ca7934d7529c06eb6b6.json"
+            }
+          ]
+        },
+        {
+          "primeiro_delta_s": 4.606608403999871,
+          "bytes_recebidos": 59098,
+          "script_concluido": true,
+          "tempo_conexao_e_servidor_s": 10.738560776999748,
+          "tempo_execucao_e_transmissao_s": 10.701181518999874,
+          "tempo_total_com_downloads_s": 10.738562520999949,
+          "metricas": [
+            {
+              "label": "Índice agregado por 10 mil",
+              "value": "2,520"
+            },
+            {
+              "label": "Contagens publicadas",
+              "value": "226.870.300"
+            },
+            {
+              "label": "Acima de 120 km/h",
+              "value": "57.163"
+            }
+          ],
+          "erros": [],
+          "downloads": [
+            {
+              "label": "Baixar comparação em CSV (pt-BR)",
+              "url": "/media/3dfe59accf75e683e274bb5cde163943.csv"
+            },
+            {
+              "label": "Baixar relatório em Markdown",
+              "url": "/media/90f78e1b35b1e63cca343bb126a8d51a.md"
+            },
+            {
+              "label": "Baixar consulta completa em ZIP",
+              "url": "/media/c2a46ad0f20f216d20adbd9554e64aba.zip"
+            },
+            {
+              "label": "Baixar manifesto de dados",
+              "url": "/media/23f8b67696cd4ca7934d7529c06eb6b6.json"
+            }
+          ]
+        },
+        {
+          "primeiro_delta_s": 10.661024944000019,
+          "bytes_recebidos": 59098,
+          "script_concluido": true,
+          "tempo_conexao_e_servidor_s": 10.738871437999933,
+          "tempo_execucao_e_transmissao_s": 10.702857011000106,
+          "tempo_total_com_downloads_s": 10.738872486000218,
+          "metricas": [
+            {
+              "label": "Índice agregado por 10 mil",
+              "value": "2,520"
+            },
+            {
+              "label": "Contagens publicadas",
+              "value": "226.870.300"
+            },
+            {
+              "label": "Acima de 120 km/h",
+              "value": "57.163"
+            }
+          ],
+          "erros": [],
+          "downloads": [
+            {
+              "label": "Baixar comparação em CSV (pt-BR)",
+              "url": "/media/6f97c02d3fc8f99410b1a44f222772e0.csv"
+            },
+            {
+              "label": "Baixar relatório em Markdown",
+              "url": "/media/bf8bd5034df095fc16be7e6a73c61280.md"
+            },
+            {
+              "label": "Baixar consulta completa em ZIP",
+              "url": "/media/9b4ebf30f271cfe9bb6e9f2d3fc6c106.zip"
+            },
+            {
+              "label": "Baixar manifesto de dados",
+              "url": "/media/23f8b67696cd4ca7934d7529c06eb6b6.json"
+            }
+          ]
+        },
+        {
+          "primeiro_delta_s": 10.66297723400021,
+          "bytes_recebidos": 59098,
+          "script_concluido": true,
+          "tempo_conexao_e_servidor_s": 10.742138489999888,
+          "tempo_execucao_e_transmissao_s": 10.705455919000087,
+          "tempo_total_com_downloads_s": 10.742139641999984,
+          "metricas": [
+            {
+              "label": "Índice agregado por 10 mil",
+              "value": "2,520"
+            },
+            {
+              "label": "Contagens publicadas",
+              "value": "226.870.300"
+            },
+            {
+              "label": "Acima de 120 km/h",
+              "value": "57.163"
+            }
+          ],
+          "erros": [],
+          "downloads": [
+            {
+              "label": "Baixar comparação em CSV (pt-BR)",
+              "url": "/media/dd9fa1ccef489ab69dee27b06ba44241.csv"
+            },
+            {
+              "label": "Baixar relatório em Markdown",
+              "url": "/media/5fa0a6492fd283612ba0190db14d6f64.md"
+            },
+            {
+              "label": "Baixar consulta completa em ZIP",
+              "url": "/media/e652a06040099618882cfdad86ea872c.zip"
+            },
+            {
+              "label": "Baixar manifesto de dados",
+              "url": "/media/23f8b67696cd4ca7934d7529c06eb6b6.json"
+            }
+          ]
+        },
+        {
+          "primeiro_delta_s": 10.66462077899996,
+          "bytes_recebidos": 59098,
+          "script_concluido": true,
+          "tempo_conexao_e_servidor_s": 10.744621706000089,
+          "tempo_execucao_e_transmissao_s": 10.706985330999942,
+          "tempo_total_com_downloads_s": 10.744623447999857,
+          "metricas": [
+            {
+              "label": "Índice agregado por 10 mil",
+              "value": "2,520"
+            },
+            {
+              "label": "Contagens publicadas",
+              "value": "226.870.300"
+            },
+            {
+              "label": "Acima de 120 km/h",
+              "value": "57.163"
+            }
+          ],
+          "erros": [],
+          "downloads": [
+            {
+              "label": "Baixar comparação em CSV (pt-BR)",
+              "url": "/media/caa379c35d3778826af8e4b5ff6bde4a.csv"
+            },
+            {
+              "label": "Baixar relatório em Markdown",
+              "url": "/media/56c5e0c1feb8334d1af83dc32f8ee8bd.md"
+            },
+            {
+              "label": "Baixar consulta completa em ZIP",
+              "url": "/media/bdb7b11c570578cc8d51ed2880314026.zip"
+            },
+            {
+              "label": "Baixar manifesto de dados",
+              "url": "/media/23f8b67696cd4ca7934d7529c06eb6b6.json"
+            }
+          ]
+        },
+        {
+          "primeiro_delta_s": 10.665669050999895,
+          "bytes_recebidos": 59098,
+          "script_concluido": true,
+          "tempo_conexao_e_servidor_s": 10.747414906999893,
+          "tempo_execucao_e_transmissao_s": 10.709491780999997,
+          "tempo_total_com_downloads_s": 10.747416821000115,
+          "metricas": [
+            {
+              "label": "Índice agregado por 10 mil",
+              "value": "2,520"
+            },
+            {
+              "label": "Contagens publicadas",
+              "value": "226.870.300"
+            },
+            {
+              "label": "Acima de 120 km/h",
+              "value": "57.163"
+            }
+          ],
+          "erros": [],
+          "downloads": [
+            {
+              "label": "Baixar comparação em CSV (pt-BR)",
+              "url": "/media/0dfa772977933a74bb7f8096c613e519.csv"
+            },
+            {
+              "label": "Baixar relatório em Markdown",
+              "url": "/media/d3b3c781a129ddf4acc09ce58aa91e83.md"
+            },
+            {
+              "label": "Baixar consulta completa em ZIP",
+              "url": "/media/1057b9374b07939e7e6b3615c02a0072.zip"
+            },
+            {
+              "label": "Baixar manifesto de dados",
+              "url": "/media/23f8b67696cd4ca7934d7529c06eb6b6.json"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

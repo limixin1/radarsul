@@ -1,0 +1,15 @@
+{
+  "consulta_utc": "2026-11-06T21:33:08.016186+00:00",
+  "codigo_corrigido": "7396d0f",
+  "branch": "correcao/sentinela-auditoria",
+  "local": "http://127.0.0.1:8506",
+  "snapshot": "2026-10-26.1",
+  "render": {
+    "servico": "srv-dbfvgi59el5s73bealsg",
+    "deploy": "dep-dbg7476c6qcc73ei65g0",
+    "status": "live",
+    "sha": "e5baed4fdab7575690a408f4ab492fd63790a00e",
+    "origem": "Render list_deploys, somente leitura"
+  },
+  "dados_modificados": false
+}

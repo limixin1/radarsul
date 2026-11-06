@@ -1,0 +1,70 @@
+[
+  {
+    "name": "sentinela_2026-10-26.1_3d68043d9f_ranking (1).png",
+    "bytes": 92821,
+    "sha256": "e25d296ac437434a13b467ac5ad5630e991afc7853bff84dd2cc4216b5f62457"
+  },
+  {
+    "name": "sentinela_2026-10-26.1_3d68043d9f_ranking.png",
+    "bytes": 88366,
+    "sha256": "cb2cd7e853a9d86e987afe8c55cbb6f3801a466fa7102cb29f4aa09400a01bfc"
+  },
+  {
+    "name": "sentinela_2026-10-26.1_3d68043d9f.csv",
+    "bytes": 34518,
+    "sha256": "9a96c12c2e0c5e2824da376a928ce937c7a54c95fe3a613159b81110dbabdf72",
+    "rows": 20,
+    "columns": [
+      "identificador",
+      "municipio",
+      "km",
+      "sentido",
+      "passagens",
+      "altas",
+      "dias",
+      "por_10_mil",
+      "cobertura_minima",
+      "elegivel",
+      "anos_solicitados",
+      "equipamentos_solicitados",
+      "area_solicitada",
+      "sentidos_solicitados",
+      "unidade_indice",
+      "snapshot",
+      "codigo",
+      "gerado_utc",
+      "cobertura_acidentes_json"
+    ],
+    "first": {
+      "identificador": "VC101-9",
+      "municipio": "Laguna",
+      "km": "304,0",
+      "sentido": "Decrescente",
+      "passagens": "11178995",
+      "altas": "7091",
+      "dias": "726",
+      "por_10_mil": "6,343146230944732",
+      "cobertura_minima": "0,9863387978142076",
+      "elegivel": "True",
+      "anos_solicitados": "2024, 2025",
+      "equipamentos_solicitados": "VC101-32, VC101-38, VC101-14, VC101-13, VC101-21, VC101-7, VC101-10, VC101-24, VC101-25, VC101-9, VC101-31, VC101-4, VC101-15, VC101-22, VC101-26, VC101-19, VC101-42, VC101-39, VC101-11, VC101-12",
+      "area_solicitada": "Grupo com boa cobertura em 2024–2025",
+      "sentidos_solicitados": "Crescente, Decrescente",
+      "unidade_indice": "Contagens nas faixas acima de 120 km/h por 10 mil contagens publicadas da mesma base A",
+      "snapshot": "2026-10-26.1",
+      "codigo": "0f789fffe2d42a16f3b621ac9083954871f38408+alterações-locais",
+      "gerado_utc": "2026-11-06T21:10:53.585020+00:00",
+      "cobertura_acidentes_json": "[{\"fonte\": \"ANTT — envelope contínuo\", \"situacao\": \"período disponível no snapshot\", \"anos_solicitados\": [2024, 2025], \"anos_cobertos\": [2024, 2025], \"anos_sem_cobertura\": [], \"intervalos\": [[\"2024-01-01\", \"2024-12-31\"], [\"2025-01-01\", \"2025-12-31\"]], \"quantidade\": 3300, \"escopo\": \"BR-101/SC, km 249,900 a 448,100, margem de 2,5 km entre pontos; ambos os sentidos\", \"nota\": \"Intervalo do inventário do CSV de acidentes, sem garantia de completude. Repetições sem ID preservadas.\"}, {\"fonte\": \"PRF — trecho integral\", \"situacao\": \"período disponível no snapshot\", \"anos_solicitados\": [2024, 2025], \"anos_cobertos\": [2024, 2025], \"anos_sem_cobertura\": [], \"intervalos\": [[\"2024-01-01\", \"2024-12-31\"], [\"2025-01-01\", \"2025-12-31\"]], \"quantidade\": 1750, \"escopo\": \"BR-101/SC, km 244,680 a 465,100; ambos os sentidos; independente da seleção de pontos\", \"nota\": \"Arquivos anuais PRF 2024 e 2025. Ausência de registro não prova ausência real de acidente. Desses registros do trecho, 36 têm município Criciúma nos anos disponíveis. Não são atribuídos a um radar.\"}]"
+    }
+  },
+  {
+    "name": "sentinela_2026-10-26.1_3d68043d9f_ranking3.png",
+    "bytes": 92821,
+    "sha256": "e25d296ac437434a13b467ac5ad5630e991afc7853bff84dd2cc4216b5f62457"
+  },
+  {
+    "name": "sentinela_2026-10-26.1_3d68043d9f_ranking (2).png",
+    "bytes": 94783,
+    "sha256": "5d6b95fdbd410328c783bf82592f70bab546b3de64031dbed038b7ea6b7cff2a"
+  }
+]

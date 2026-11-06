@@ -1,0 +1,46 @@
+[
+  {
+    "url": "http://127.0.0.1:8506/media/22aa9988bba8717be553fdd0caee36a3.csv",
+    "status": 200,
+    "bytes": 34518,
+    "headers": {
+      "date": "Fri, 06 Nov 2026 21:17:49 GMT",
+      "server": "uvicorn",
+      "content-disposition": "attachment; filename=\"sentinela_2026-10-26.1_3d68043d9f.csv\"",
+      "accept-ranges": "bytes",
+      "content-length": "34518",
+      "content-type": "text/csv; charset=utf-8",
+      "vary": "Accept-Encoding",
+      "Connection": "close"
+    }
+  },
+  {
+    "url": "http://127.0.0.1:8506/media/07c3e98ccee6b01bed8234555cfcbac9.md",
+    "status": 200,
+    "bytes": 8865,
+    "headers": {
+      "date": "Fri, 06 Nov 2026 21:17:49 GMT",
+      "server": "uvicorn",
+      "content-disposition": "attachment; filename=\"sentinela_2026-10-26.1_3d68043d9f.md\"",
+      "accept-ranges": "bytes",
+      "content-length": "8865",
+      "content-type": "text/markdown; charset=utf-8",
+      "vary": "Accept-Encoding",
+      "Connection": "close"
+    }
+  },
+  {
+    "url": "http://127.0.0.1:8506/media/1a63e44ad4d2e4b4cbfb0f0a91a24288.zip",
+    "status": 200,
+    "bytes": 13653,
+    "headers": {
+      "date": "Fri, 06 Nov 2026 21:17:49 GMT",
+      "server": "uvicorn",
+      "content-disposition": "attachment; filename=\"sentinela_2026-10-26.1_3d68043d9f.zip\"",
+      "accept-ranges": "bytes",
+      "content-length": "13653",
+      "content-type": "application/zip",
+      "Connection": "close"
+    }
+  }
+]

@@ -1,0 +1,43 @@
+2026-11-06 18:24:31.931 Uvicorn server started on 127.0.0.1:8506
+
+  You can now view your Streamlit app in your browser.
+
+  URL: http://127.0.0.1:8506
+
+2026-11-06 18:24:51,017 INFO sentinela pacote_validado snapshot=2026-10-26.1 segundos=1.554
+2026-11-06 18:24:54,977 INFO sentinela etapas_consulta {"carregamento_s": 2.1678378179999527, "consulta_s": 0.4388092830004098, "conteudo_s": 2.5034252199998264, "exportacoes_e_fontes_s": 0.6891328080000676}
+2026-11-06 18:24:54,978 INFO sentinela consulta pagina=Evolução e persistência pontos=20 anos=2 snapshot=2026-10-26.1 segundos=5.870
+2026-11-06 18:27:31,977 INFO sentinela etapas_consulta {"carregamento_s": 0.6407024599998294, "consulta_s": 0.023723850999886054, "conteudo_s": 0.7928775400000632, "exportacoes_e_fontes_s": 0.13651387200025056}
+2026-11-06 18:27:31,981 INFO sentinela consulta pagina=Visão geral pontos=20 anos=2 snapshot=2026-10-26.1 segundos=1.845
+2026-11-06 18:27:39,857 INFO sentinela etapas_consulta {"carregamento_s": 0.13319849199979217, "consulta_s": 0.02455019099988931, "conteudo_s": 3.4987248669999644, "exportacoes_e_fontes_s": 1.583714093999788}
+2026-11-06 18:27:39,886 INFO sentinela consulta pagina=Visão geral pontos=20 anos=2 snapshot=2026-10-26.1 segundos=5.607
+2026-11-06 18:27:42,070 INFO sentinela etapas_consulta {"carregamento_s": 0.49834493300022586, "consulta_s": 0.028245812000022852, "conteudo_s": 4.965436905999923, "exportacoes_e_fontes_s": 2.1894748550002987}
+2026-11-06 18:27:42,076 INFO sentinela consulta pagina=Visão geral pontos=20 anos=2 snapshot=2026-10-26.1 segundos=7.792
+2026-11-06 18:27:42,443 INFO sentinela etapas_consulta {"carregamento_s": 0.6905459260001408, "consulta_s": 0.006090815999868937, "conteudo_s": 6.812007148000248, "exportacoes_e_fontes_s": 0.6271700180000153}
+2026-11-06 18:27:42,445 INFO sentinela consulta pagina=Visão geral pontos=20 anos=2 snapshot=2026-10-26.1 segundos=8.151
+2026-11-06 18:27:42,690 INFO sentinela etapas_consulta {"carregamento_s": 0.37385590399981083, "consulta_s": 0.026452049999988958, "conteudo_s": 7.623894473999826, "exportacoes_e_fontes_s": 0.35121506000041336}
+2026-11-06 18:27:42,690 INFO sentinela consulta pagina=Visão geral pontos=20 anos=2 snapshot=2026-10-26.1 segundos=8.403
+2026-11-06 18:27:42,802 INFO sentinela etapas_consulta {"carregamento_s": 0.5012754109998241, "consulta_s": 0.02744040399966252, "conteudo_s": 7.512818539999898, "exportacoes_e_fontes_s": 0.4211444389998178}
+2026-11-06 18:27:42,802 INFO sentinela consulta pagina=Visão geral pontos=20 anos=2 snapshot=2026-10-26.1 segundos=8.521
+2026-11-06 18:27:50,267 INFO sentinela etapas_consulta {"carregamento_s": 0.16054323399976056, "consulta_s": 0.04711289399983798, "conteudo_s": 2.958541528999831, "exportacoes_e_fontes_s": 1.6926697740000236}
+2026-11-06 18:27:50,281 INFO sentinela consulta pagina=Visão geral pontos=20 anos=2 snapshot=2026-10-26.1 segundos=4.928
+2026-11-06 18:27:50,512 INFO sentinela etapas_consulta {"carregamento_s": 0.12997137100001055, "consulta_s": 0.01111584300042523, "conteudo_s": 3.4384548770003676, "exportacoes_e_fontes_s": 1.5017091640002036}
+2026-11-06 18:27:50,519 INFO sentinela consulta pagina=Visão geral pontos=20 anos=2 snapshot=2026-10-26.1 segundos=5.167
+2026-11-06 18:27:50,673 INFO sentinela etapas_consulta {"carregamento_s": 0.5360621079998964, "consulta_s": 0.04856643299990537, "conteudo_s": 2.7437134880001395, "exportacoes_e_fontes_s": 1.730096099000093}
+2026-11-06 18:27:50,673 INFO sentinela consulta pagina=Visão geral pontos=20 anos=2 snapshot=2026-10-26.1 segundos=5.179
+2026-11-06 18:27:50,888 INFO sentinela etapas_consulta {"carregamento_s": 0.26263976800009914, "consulta_s": 0.024866900999768404, "conteudo_s": 3.115073320999727, "exportacoes_e_fontes_s": 1.5889259030000176}
+2026-11-06 18:27:50,896 INFO sentinela consulta pagina=Visão geral pontos=20 anos=2 snapshot=2026-10-26.1 segundos=5.416
+2026-11-06 18:27:50,891 INFO sentinela etapas_consulta {"carregamento_s": 0.19496016299990515, "consulta_s": 0.024797021999802382, "conteudo_s": 3.8391280740002003, "exportacoes_e_fontes_s": 1.2423081229999298}
+2026-11-06 18:27:50,907 INFO sentinela consulta pagina=Visão geral pontos=20 anos=2 snapshot=2026-10-26.1 segundos=5.385
+2026-11-06 18:27:50,909 INFO sentinela etapas_consulta {"carregamento_s": 0.559566311999788, "consulta_s": 0.07570247200010272, "conteudo_s": 3.3869769450002423, "exportacoes_e_fontes_s": 1.1911088910001126}
+2026-11-06 18:27:51,219 INFO sentinela consulta pagina=Visão geral pontos=20 anos=2 snapshot=2026-10-26.1 segundos=5.615
+2026-11-06 18:27:51,056 INFO sentinela etapas_consulta {"carregamento_s": 0.7729651360000389, "consulta_s": 0.023717661000318913, "conteudo_s": 3.3632104399998752, "exportacoes_e_fontes_s": 1.3458970940000654}
+2026-11-06 18:27:51,233 INFO sentinela consulta pagina=Visão geral pontos=20 anos=2 snapshot=2026-10-26.1 segundos=5.767
+2026-11-06 18:27:51,502 INFO sentinela etapas_consulta {"carregamento_s": 0.4156596160000845, "consulta_s": 0.0564420999999129, "conteudo_s": 3.6866873290000512, "exportacoes_e_fontes_s": 1.6023737929999697}
+2026-11-06 18:27:51,502 INFO sentinela consulta pagina=Visão geral pontos=20 anos=2 snapshot=2026-10-26.1 segundos=5.890
+2026-11-06 18:27:51,519 INFO sentinela etapas_consulta {"carregamento_s": 0.679779008999958, "consulta_s": 0.015406054999857588, "conteudo_s": 2.967329689000053, "exportacoes_e_fontes_s": 2.1857989179998185}
+2026-11-06 18:27:51,519 INFO sentinela consulta pagina=Visão geral pontos=20 anos=2 snapshot=2026-10-26.1 segundos=5.900
+2026-11-06 18:27:51,785 INFO sentinela etapas_consulta {"carregamento_s": 0.3035451499999908, "consulta_s": 0.01550002800013317, "conteudo_s": 3.559154511000088, "exportacoes_e_fontes_s": 1.6326626800000668}
+2026-11-06 18:27:51,785 INFO sentinela consulta pagina=Visão geral pontos=20 anos=2 snapshot=2026-10-26.1 segundos=5.547
+2026-11-06 18:28:38,373 INFO sentinela etapas_consulta {"carregamento_s": 0.1306621499998073, "consulta_s": 0.011451348999798938, "conteudo_s": 0.32874959799983117, "exportacoes_e_fontes_s": 0.12371803799987902}
+2026-11-06 18:28:38,373 INFO sentinela consulta pagina=Visão geral pontos=20 anos=2 snapshot=2026-10-26.1 segundos=0.655

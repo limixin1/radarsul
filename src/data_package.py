@@ -35,7 +35,7 @@ def generate(root=ROOT):
     manifest={'contrato':1,'versao':'2026-10-26.1','transformacao':'antt-2.0+prf-1.0','coleta_antt':'2026-10-26','coleta_prf':'2026-10-23',
       'cobertura':COVERAGE,'politica':'90% por ano calendário completo; 80% por mês para exibição; sem inferência de operação.',
       'declaracao_cobertura':'Inventário temporal dos arquivos brutos e nomes anuais PRF; não certifica completude das fontes de acidentes.',
-      'proveniencia':provenance,'arquivos':records}
+      'proveniencia':provenance,'reutilizacao':json.loads((root/'dados_brutos/condicoes_reutilizacao.json').read_text()) if (root/'dados_brutos/condicoes_reutilizacao.json').exists() else {},'arquivos':records}
     (root/MANIFEST).write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     return manifest
 

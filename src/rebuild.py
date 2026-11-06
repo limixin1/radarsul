@@ -1,8 +1,6 @@
 """Reprodução isolada; não sobrescreve o snapshot em uso."""
 import argparse
 import json
-import shutil
-import tempfile
 import zipfile
 from pathlib import Path
 import pandas as pd

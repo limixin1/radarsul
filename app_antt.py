@@ -11,7 +11,7 @@ from src.chart_locale import PT_BR
 from src.antt_charts import ranking, evolution, persistence, persistence_data, coverage_map, road_context, correlation, monthly_grid
 from src.data_package import validate, token, MANIFEST
 from src.query import PAGES, AREAS, YEARS, DIRECTIONS, POLICY, area_ids, query_tables, point_label, display_table, source_result, parse_url, url_state, br
-from src.exports import APP_VERSION, code_version, metadata, markdown_report, csv_bytes, bundle, filename
+from src.exports import APP_VERSION, metadata, markdown_report, csv_bytes, bundle, filename
 
 logging.basicConfig(level=logging.INFO,format='%(asctime)s %(levelname)s %(name)s %(message)s')
 LOG=logging.getLogger('sentinela')
@@ -73,8 +73,9 @@ def sync():
 
 def table(t,label):
     # HTML table is an accessible alternative to the interactive canvas grid.
-    st.dataframe(display_table(t),hide_index=True,width='stretch')
-    with st.expander('Tabela para leitura e teclado — '+label):st.table(display_table(t))
+    formatted=display_table(t)
+    st.dataframe(formatted,hide_index=True,width='stretch')
+    with st.expander('Tabela para leitura e teclado — '+label):st.table(formatted)
 
 def chart(fig,summary,t,label,export_name):
     st.write(summary)
@@ -231,7 +232,7 @@ def main():
     st.download_button('Baixar consulta completa em ZIP',bundle(eq[columns],cov,emeta,document,extra),filename(emeta,'zip'),'application/zip',on_click='ignore')
     with st.expander('Método, versões e fontes verificáveis'):
         st.write('Taxa possíveis infratores/tráfego bloqueada por incompatibilidade das bases. Cadastro de junho de 2026 é referência; não reconstrói limites históricos. Não calcular velocidade média por pontos médios das faixas.')
-        st.write(f'Aplicação {APP_VERSION} · código {code_version()} · dados {manifest["versao"]}. Dados históricos, sem atualização automática.')
+        st.write(f"Aplicação {APP_VERSION} · código {emeta['codigo']} · dados {manifest['versao']}. Dados históricos, sem atualização automática.")
         for name,r in manifest['cobertura'].items():st.write(f"{name}: {r['inicio']} a {r['fim']}. {r['nota']}")
         for r in manifest['proveniencia']:st.markdown(f"[{r['arquivo']}]({r['url']}) — coleta {r['acesso_utc'][:10]}. Recurso externo; disponibilidade depende do publicador.")
         st.caption('Originais completos estão no kit de reprodução do repositório; não são baixados ao abrir esta página. Manifestos comprovam identidade com a coleta, sem certificar completude.')

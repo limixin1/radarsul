@@ -20,8 +20,9 @@ def style(fig,title,note,years=None):
 def ranking(eq,years=None):
     t=eq.head(12).sort_values('por_10_mil').copy()
     t['local']=t.apply(lambda r:f'{r.municipio}<br>{r.identificador}',axis=1)
-    fig=px.bar(t,x='por_10_mil',y='local',orientation='h',text=t.por_10_mil.map(lambda v:br(v,3)),
-      color_discrete_sequence=[TEAL],labels={'por_10_mil':'Índice por 10 mil contagens','local':'Local e ponto'})
+    fig=go.Figure(go.Bar(x=t.por_10_mil,y=t.local,orientation='h',text=t.por_10_mil.map(lambda v:br(v,3)),
+      marker_color=TEAL,hovertemplate='Local e ponto=%{y}<br>Índice por 10 mil contagens=%{x}<extra></extra>'))
+    fig.update_layout(xaxis_title='Índice por 10 mil contagens',yaxis_title='Local e ponto',showlegend=False)
     fig.update_traces(textposition='outside',cliponaxis=False)
     fig.update_layout(yaxis=dict(automargin=True),xaxis=dict(automargin=True),height=max(520,len(t)*36+255))
     return style(fig,('1 ponto elegível' if len(eq)==1 else f'{min(12,len(eq))} de {len(eq)} pontos elegíveis'),'Base A · acima de 120 km/h<br>por 10 mil contagens',years)

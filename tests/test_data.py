@@ -140,3 +140,14 @@ def test_rebuild_prf_from_original_archives(tmp_path,package):
     assert digest(tmp_path/'out/ocorrencias.parquet')==digest(ROOT/'dados_tratados/ocorrencias.parquet')
     assert [row['linhas_trecho'] for row in audit]==[921,829]
     assert sum(row['soma_pessoas_divergente'] for row in audit)==46
+
+
+def test_ranking_preserves_single_point_precision(package):
+    from src.antt_charts import ranking
+    m,f,_=package
+    _,eq,_=query_tables(f['antt_diario'],f['antt_equipamentos'],['VC101-9'],[2024,2025],m['cobertura']['trafego'])
+    figure=ranking(eq,[2024,2025])
+    assert list(figure.data[0].y)==['Laguna<br>VC101-9']
+    assert float(figure.data[0].x[0])==pytest.approx(6.343146230944732,abs=1e-12)
+    assert list(figure.data[0].text)==['6,343']
+    assert figure.layout.title.text=='1 ponto elegível'

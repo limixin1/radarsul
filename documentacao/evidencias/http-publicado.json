@@ -1,0 +1,29 @@
+{
+  "https://radarsul.site/": {
+    "status": 200,
+    "url_final": "https://radarsul.site/",
+    "headers": {
+      "Content-Type": "text/html; charset=utf-8",
+      "Server": "cloudflare"
+    },
+    "health": null
+  },
+  "https://radarsul.site/_stcore/health": {
+    "status": 200,
+    "url_final": "https://radarsul.site/_stcore/health",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Server": "cloudflare"
+    },
+    "health": "ok"
+  },
+  "https://radarsul.onrender.com/_stcore/health": {
+    "status": 200,
+    "url_final": "https://radarsul.onrender.com/_stcore/health",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Server": "cloudflare"
+    },
+    "health": "ok"
+  }
+}

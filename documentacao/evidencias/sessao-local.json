@@ -1,0 +1,39 @@
+[
+  {
+    "tempo_conexao_e_servidor_s": 2.4790608809998957,
+    "tempo_execucao_e_transmissao_s": 2.440273623999019,
+    "metricas": [
+      {
+        "label": "Índice agregado por 10 mil",
+        "value": "2,520"
+      },
+      {
+        "label": "Contagens publicadas",
+        "value": "226.870.300"
+      },
+      {
+        "label": "Acima de 120 km/h",
+        "value": "57.163"
+      }
+    ],
+    "erros": [],
+    "downloads": [
+      {
+        "label": "Baixar comparação em CSV (pt-BR)",
+        "url": "/media/e2e907f055af04a5235eb4ddb989449f.csv"
+      },
+      {
+        "label": "Baixar relatório em Markdown",
+        "url": "/media/9e82d0a9aa0b89dec8b66b546e4e503a.md"
+      },
+      {
+        "label": "Baixar consulta completa em ZIP",
+        "url": "/media/fc67175b3bb3ff9e44b65e89b3b5367b.zip"
+      },
+      {
+        "label": "Baixar manifesto de dados",
+        "url": "/media/c423bc341c622794987f2ff4ad1a6737.json"
+      }
+    ]
+  }
+]

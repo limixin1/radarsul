@@ -1,0 +1,21 @@
+{
+  "consulta_local": "2026-11-05 America/Sao_Paulo",
+  "fonte": "Render MCP: list_services, list_deploys, get_metrics",
+  "servico": "radarsul",
+  "id": "srv-dbfvgi59el5s73bealsg",
+  "workspace": "TCC 371",
+  "plano": "free",
+  "regiao": "virginia",
+  "branch": "main",
+  "auto_deploy": "commit",
+  "previews": "off",
+  "deploy": "dep-dbg7476c6qcc73ei65g0",
+  "sha": "e5baed4fdab7575690a408f4ab492fd63790a00e",
+  "status": "live",
+  "memoria_maxima_amostrada_bytes": 283910140,
+  "limite_bytes": 536870900,
+  "resolucao_segundos": 600,
+  "janela": "hora anterior à consulta; instâncias distintas",
+  "metricas_http": "vazias; sem evidência para latência/contagem",
+  "acoes_mutantes": []
+}

@@ -471,3 +471,19 @@ WCAG 2.2 sobre contraste mínimo e reorganização do conteúdo.
 O ZIP SENTINELA_bases_ANTT.zip foi a fonte local dos quatro CSV e dos dois ZIP PRF. Os manifestos foram lidos e os hashes recalculados. A identidade com os manifestos comprova integridade em relação à coleta registrada; não equivale a uma nova autenticação independente dos arquivos no portal da ANTT.
 
 O regulamento integral do hackathon permanece fora da validação desta rodada. A adequação de produto e o atendimento às regras da competição devem ser avaliados separadamente. Os resultados desta auditoria não constituem uma declaração de conformidade com exigências que ainda não foram recuperadas.
+
+## Links preservados do DOCX original
+
+- https://radarsul.site/
+- https://github.com/limixin1/radarsul
+- https://github.com/limixin1/radarsul/blob/e5baed4fdab7575690a408f4ab492fd63790a00e/app_antt.py
+- https://github.com/limixin1/radarsul/blob/e5baed4fdab7575690a408f4ab492fd63790a00e/src/antt.py
+- https://github.com/limixin1/radarsul/blob/e5baed4fdab7575690a408f4ab492fd63790a00e/src/antt_charts.py
+- https://github.com/limixin1/radarsul/blob/e5baed4fdab7575690a408f4ab492fd63790a00e/src/antt_report.py
+- https://render.com/docs/free
+- https://render.com/docs/deploys
+- https://render.com/docs/health-checks
+- https://docs.streamlit.io/develop/concepts/architecture/caching
+- https://docs.streamlit.io/develop/api-reference/app-testing/st.testing.v1.apptest
+- https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html
+- https://www.w3.org/WAI/WCAG22/Understanding/reflow.html

@@ -81,15 +81,25 @@ Os PDF foram lidos via consulta web. Não se afirma que cópias oficiais dos qua
 
 ## PRF e trecho
 
-- [PRF — dados abertos](https://www.gov.br/prf/pt-br/acesso-a-informacao/dados-abertos/dados-abertos-da-prf). Extrações por ocorrência de 2024 e 2025 coletadas em 23/10/2026; manifestos e ZIP originais incluídos.
-- [PRF — dicionário](https://www.gov.br/prf/pt-br/acesso-a-informacao/dados-abertos/dicionario-acidentes). PDF oficial incluído, sem supor correspondência perfeita entre exemplos de 2017 e o formato atual.
+- [PRF — dados abertos](https://www.gov.br/prf/pt-br/acesso-a-informacao/dados-abertos/dados-abertos-da-prf). Extrações por ocorrência de 2024 e 2025 coletadas em 23/10/2026; manifestos em dados_brutos e ZIP originais no kit _contexto/SENTINELA_bases_ANTT.zip.
+- [PRF — dicionário](https://www.gov.br/prf/pt-br/acesso-a-informacao/dados-abertos/dicionario-acidentes). PDF oficial vinculado externamente, sem supor correspondência perfeita entre exemplos de 2017 e o formato atual.
 - [ANTT — ViaCosteira](https://www.gov.br/antt/pt-br/assuntos/rodovias/concessionarias/lista-de-concessoes/ccr-viacosteira/ccr-viacosteira-capa). Delimitação de referência do corredor.
 
 ## Regulamento e comparação funcional
 
-- [Hackathon TC3S](https://profgustavozanatta.vercel.app/#/hackathon-tc3s). Sete páginas verificadas em 23/10/2026. Links e exigências em REGULAMENTO_E_CONFORMIDADE.md.
+- [Hackathon TC3S](https://profgustavozanatta.vercel.app/#/hackathon-tc3s). Registro histórico de consulta em 23/10/2026; o regulamento integral e REGULAMENTO_E_CONFORMIDADE.md não estão neste repositório. Conformidade atual não verificada.
 - [ANTT — painéis interativos](https://www.gov.br/antt/pt-br/assuntos/informacoes-estrategicas/paineis_interativos).
 - [DNIT — sinistros de trânsito/SIOR](https://www.gov.br/dnit/pt-br/assuntos/infraestrutura-rodoviaria/sinistros-de-transito).
 - [INRIX — Roadway Analytics](https://inrix.com/products/roadway-analytics/). Descrição do fornecedor, sem teste do produto.
 
 Os três exemplos anteriores foram consultados em 23/10/2026 e demonstram que análise rodoviária já existe. Não demonstram demanda pelo SENTINELA, ausência de concorrência ou parceria institucional. Nenhuma cotação comercial foi obtida.
+
+## Revalidação em 05/11/2026
+
+Os quatro conjuntos ANTT foram consultados pela API CKAN `https://dados.antt.gov.br/api/3/action/package_show?id=IDENTIFICADOR`. Todos declararam `license_id=cc-by`, título Creative Commons Atribuição. Os campos consultados, URL da licença e datas de atualização dos catálogos estão em `dados_brutos/condicoes_reutilizacao.json` e no manifesto tratado. Atualização de catálogo posterior à coleta não significa atualização do snapshot.
+
+A página oficial PRF de dados abertos declara uso, reutilização e redistribuição livres e apresenta atualização mensal do BAT. O snapshot desta instalação continua limitado a 2024 e 2025; a existência atual de links de 2026 não incorpora dados automaticamente. As coletas originais e seus hashes estão em `dados_brutos/manifesto_prf.json`.
+
+Disponíveis neste repositório: os quatro CSV ANTT e dois ZIP PRF dentro de `_contexto/SENTINELA_bases_ANTT.zip`, Parquet tratados, manifestos, relatórios, prompt e auditoria. O site oferece manifesto, CSV da consulta, Markdown e ZIP da consulta; os arquivos brutos são um link externo para o kit no GitHub. Os PDF dos dicionários são links oficiais, não arquivos presentes neste repositório. As afirmações anteriores sobre PDF e regulamento pertenciam ao kit/histórico e não provam disponibilidade ou conformidade nesta entrega.
+
+Referências consultadas para a implementação: [WCAG contraste](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html), [WCAG reorganização](https://www.w3.org/WAI/WCAG22/Understanding/reflow.html), [Streamlit st.html](https://docs.streamlit.io/develop/api-reference/text/st.html), [AppTest](https://docs.streamlit.io/develop/api-reference/app-testing), [Render Free](https://render.com/docs/free), [deploys](https://render.com/docs/deploys) e [saúde](https://render.com/docs/health-checks).

@@ -1,6 +1,6 @@
 # Aceitação no navegador — 06/11/2026
 
-Esta continuação substitui o bloqueio de acesso registrado na etapa 2. Não substitui os resultados históricos de dados, reprodução ou segurança. Código corrigido: `7396d0f`, descendente de `0f789ff`, branch `correcao/sentinela-auditoria`, PR #2. O worktree existente já continha ajustes em `app_antt.py`, `src/antt_charts.py` e capturas; todos foram preservados. A ponta remota foi reconferida como `0f789ff`, sem commit posterior a sobrescrever. O diretório principal permanece em checkout separado.
+Esta continuação substitui o bloqueio de acesso registrado na etapa 2. Não substitui os resultados históricos de dados, reprodução ou segurança. Código visual corrigido em `7396d0f` e impressão em `3f531de`, descendentes de `0f789ff`, branch `correcao/sentinela-auditoria`, PR #2. O worktree existente já continha ajustes em `app_antt.py`, `src/antt_charts.py` e capturas; todos foram preservados. A ponta remota foi reconferida como `0f789ff`, sem commit posterior a sobrescrever. O diretório principal permanece em checkout separado.
 
 ## Ambiente e identidade
 

@@ -10,3 +10,5 @@
 - Após a mudança: testes test_five_pages e test_csv_roundtrip_and_bundle, 2 passed in 6,79 s; compilação/diff sem erros. A suíte integral anterior de 28 passou e a CI do novo commit deve ser registrada no PR.
 - Os PDFs finais foram extraídos por pdftotext e comparados: 20 equipamentos × dois anos, 226.870.300 contagens, 57.163 acima de 120 km/h; unidade, fontes, coleta, snapshot, versão e ressalvas presentes. Ver validacao-impressao.json.
 - Relatório em tela revalidado nas cinco larguras depois do novo contêiner: main/scroll iguais em 310/350/380/758/1056 px. Overrides foram removidos.
+
+Inventário de navegadores reconsultado ao final: Brave, navegador integrado e MCP Apps disponíveis à ferramenta; Firefox não disponibilizado. Chrome teve execução manual pelo usuário. PDFs finais de Laguna têm duas páginas; capturas intermediárias não são resultado final.

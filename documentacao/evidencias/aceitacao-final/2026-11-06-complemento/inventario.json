@@ -2,8 +2,8 @@
   "arquivos": [
     {
       "arquivo": "README.md",
-      "bytes": 2978,
-      "sha256": "160b49c6ca0ec7b3ca2f9b3d878d556faad0145b9631467587920f9e2b9c208a"
+      "bytes": 3264,
+      "sha256": "d01138fb8934001427a3faec786b1a652ae6599a0cef58e4352dbf89efbcabc2"
     },
     {
       "arquivo": "filtros-teclado.json",
@@ -92,15 +92,6 @@
       "arquivo": "print-final-laguna-2.png",
       "bytes": 78052,
       "sha256": "fab7396751004ac40f1df9a72f404a5188e10949d2eaa4088447adb6664bfaa5",
-      "dimensoes": [
-        850,
-        1200
-      ]
-    },
-    {
-      "arquivo": "print-final-laguna-3.png",
-      "bytes": 8787,
-      "sha256": "97470bfe768c8497fb7d0f7502577d4f120aec3dc91f0bee3f265e79f09e6a3e",
       "dimensoes": [
         850,
         1200

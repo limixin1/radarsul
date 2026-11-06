@@ -36,3 +36,9 @@ Revalidado em 05/11/2026, America/Sao_Paulo, sobre baseline limpa `e5baed4`, a m
 O Brave permaneceu indisponível para `cua.getState`: “Local browser use is disabled in Work settings”, mesmo após o usuário informar que o ativaria. Não foram fabricadas capturas, testes de largura/zoom, teclado, leitor de tela ou PNG. AppTest e protocolo WebSocket são evidências diferentes de navegador.
 
 Não há participantes ou aparelhos reais disponíveis. Roteiro/formulário em `ACEITACAO_PESSOAS.md`. Regulamento integral do hackathon não foi fornecido no repositório; não há declaração de conformidade. Main, domínio, plano, permissões administrativas, alertas e deploy não foram alterados, conforme escopo desta etapa. Pendências de produção não impedem a revisão do código e das evidências locais.
+
+## Continuação de aceitação no PR #2
+
+Ver [ACEITACAO_ETAPA2.md](ACEITACAO_ETAPA2.md). F20/F22 avançaram com perfil, recursos amostrados, correção do cliente de carga, cache limitado por consulta e tempos de etapas. F21 recebeu teste de isolamento/invalidação do novo cache. Dez sessões no candidato levaram até 9,977 s, ainda acima da meta; condições das rodadas diferem e não permitem atribuição causal isolada. Nenhum Parquet foi alterado.
+
+F04/F12/F13 e aceitação visual de F05–F11/F18 **continuam pendentes**: Brave ainda bloqueado por configuração do Work. Não há evidência nova de viewport, zoom, teclado, contraste efetivo ou PNG. Participantes, leitor de tela e hospedagem da nova versão continuam pendentes. Esta etapa não encerra a meta de aceitação.

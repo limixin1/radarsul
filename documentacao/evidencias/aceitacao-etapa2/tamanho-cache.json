@@ -1,0 +1,5 @@
+{
+  "consulta_maxima_serializada_bytes": 3508129,
+  "entradas_maximas_cache_consulta": 8,
+  "nota": "Tamanho serializado, n\u00e3o RSS; deserializa\u00e7\u00e3o, figuras, framework e cache do pacote usam mem\u00f3ria adicional."
+}

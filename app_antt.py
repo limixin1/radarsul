@@ -23,6 +23,13 @@ def load(package_token):
     LOG.info('pacote_validado snapshot=%s segundos=%.3f',result[0]['versao'],perf_counter()-started)
     return result
 
+@st.cache_data(show_spinner=False, max_entries=8)
+def consult(package_token, ids, years):
+    """Cache limitado e versionado; Streamlit devolve cópias por chamada."""
+    manifest, frames, _ = load(package_token)
+    return query_tables(frames['antt_diario'], frames['antt_equipamentos'],
+                        ids, years, manifest['cobertura']['trafego'])
+
 CSS='''<style>
 .block-container{padding-top:4.5rem;max-width:1480px}
 [data-testid="stCaptionContainer"]{opacity:1!important;color:#142B3C!important}
@@ -75,6 +82,7 @@ def sources_for(frames,ids,years,manifest,meta):
 
 def main():
     started=perf_counter()
+    stages={}
     st.set_page_config(page_title='SENTINELA — consulta BR-101/SC',layout='wide',menu_items={'Report a bug':'https://github.com/limixin1/radarsul/issues/new'})
     st.markdown(CSS,unsafe_allow_html=True)
     # st.html supports non-iframed, static JS in this pinned Streamlit version.
@@ -82,13 +90,16 @@ def main():
     st.html('<script>document.documentElement.lang="pt-BR";</script>',unsafe_allow_javascript=True)
     st.sidebar.title('SENTINELA')
     st.sidebar.write('Contagens históricas na BR-101/SC')
-    try:manifest,frames,summary=load(token())
+    try:
+        package_token=token()
+        manifest,frames,summary=load(package_token)
     except Exception:
         LOG.exception('falha_carregamento_pacote')
         st.title('Consulta temporariamente indisponível')
         st.error('Não foi possível validar os dados desta instalação. Tente recarregar a página. Se persistir, relate o problema à manutenção.')
         st.link_button('Relatar problema','https://github.com/limixin1/radarsul/issues/new')
         return
+    stages['carregamento_s']=perf_counter()-started
     daily=frames['antt_diario'];meta=frames['antt_equipamentos'];annual=frames['antt_anual']
     if 'initialized' not in st.session_state:
         state,notes=parse_url({k:st.query_params.get_all(k) for k in st.query_params},meta)
@@ -126,8 +137,11 @@ def main():
         st.button('Consultar esta cidade em todos os equipamentos',key='all_city',on_click=select_all_area)
         return
     if not ids:st.info('Nenhum equipamento selecionado. Selecione ao menos um ponto no painel ou restaure o padrão. Comparações e downloads ficam indisponíveis.');return
-    selected,eq,cov=query_tables(daily,meta,ids,years,manifest['cobertura']['trafego'])
+    query_started=perf_counter()
+    selected,eq,cov=consult(package_token,tuple(ids),tuple(years))
+    stages['consulta_s']=perf_counter()-query_started
     if selected.empty:st.info('Os pontos escolhidos não têm publicações de tráfego nos anos solicitados. Altere os anos ou os pontos; ausência de publicação não é zero observado.');return
+    content_started=perf_counter()
     sources=sources_for(frames,ids,years,manifest,meta)
     filters={'page':page,'years':years,'area':area,'directions':directions,'city':city,'points':ids}
     emeta=metadata(manifest,filters,ids,selected,sources)
@@ -183,6 +197,8 @@ def main():
     st.subheader('Dias publicados por ponto e ano')
     table(cov,'cobertura anual e intervalo da fonte')
     st.caption('O intervalo usa o inventário do arquivo bruto, igual para todos os pontos; 2026 de tráfego vai até 30/06. Cobertura não comprova operação contínua. O grupo histórico reúne os pontos com ≥90% de dias em cada ano de 2024 e 2025.')
+    stages['conteudo_s']=perf_counter()-content_started
+    export_started=perf_counter()
     possible=frames['antt_possiveis_diario'].loc[lambda x:x.ano.isin(years)&x.identificador.isin(ids)]
     document=markdown_report(selected,eq,cov,emeta,possible)
     if page==PAGES[4]:st.markdown(document)
@@ -205,6 +221,8 @@ def main():
             if isinstance(record,dict) and 'metadata_modified' in record:st.caption(f"Atualização do catálogo {source}: {record['metadata_modified']}. Não significa atualização deste snapshot.")
         st.download_button('Baixar manifesto de dados',(ROOT/MANIFEST).read_bytes(),'sentinela_manifesto.json','application/json',on_click='ignore')
         st.link_button('Relatar um problema','https://github.com/limixin1/radarsul/issues/new')
+    stages['exportacoes_e_fontes_s']=perf_counter()-export_started
+    LOG.info('etapas_consulta %s',json.dumps(stages,sort_keys=True))
     LOG.info('consulta pagina=%s pontos=%d anos=%d snapshot=%s segundos=%.3f',page,len(ids),len(years),manifest['versao'],perf_counter()-started)
 
 if __name__=='__main__':main()

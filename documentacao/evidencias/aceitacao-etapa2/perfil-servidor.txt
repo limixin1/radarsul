@@ -1,0 +1,45 @@
+Thu Nov  5 23:48:01 2026    /tmp/sentinela-profiles/d697fcdd01594046859f00cf884526de.prof
+
+         1206321 function calls (1148917 primitive calls) in 11.796 seconds
+
+   Ordered by: cumulative time
+   List reduced from 3803 to 35 due to restriction <35>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+      519    0.006    0.000   15.262    0.029 /tmp/sentinela-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/asyncio/events.py:86(_run)
+      296    0.022    0.000   14.489    0.049 /tmp/sentinela-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/asyncio/base_events.py:1922(_run_once)
+        5    0.000    0.000    8.092    1.618 /home/lucas/Projetos/radarsul/.venv312/lib/python3.12/site-packages/pandas/core/series.py:2344(unique)
+      105    0.005    0.000    5.437    0.052 /tmp/sentinela-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/concurrent/futures/thread.py:54(run)
+      105    0.068    0.001    5.365    0.051 /home/lucas/Projetos/radarsul/.venv312/lib/python3.12/site-packages/streamlit/watcher/polling_path_watcher.py:89(task)
+        5    0.001    0.000    5.028    1.006 /home/lucas/Projetos/radarsul/.venv312/lib/python3.12/site-packages/pandas/core/base.py:1019(unique)
+      297    3.630    0.012    4.676    0.016 /tmp/sentinela-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/selectors.py:451(select)
+        2    0.001    0.000    4.534    2.267 /home/lucas/Projetos/radarsul/src/antt.py:61(annual_table)
+        1    0.001    0.001    4.506    4.506 /home/lucas/Projetos/radarsul/src/query.py:34(coverage_rows)
+        7    0.001    0.000    4.163    0.595 /home/lucas/Projetos/radarsul/.venv312/lib/python3.12/site-packages/pandas/core/groupby/generic.py:1420(aggregate)
+        7    0.000    0.000    4.045    0.578 /home/lucas/Projetos/radarsul/.venv312/lib/python3.12/site-packages/pandas/core/apply.py:172(agg)
+        7    0.000    0.000    4.045    0.578 /home/lucas/Projetos/radarsul/.venv312/lib/python3.12/site-packages/pandas/core/apply.py:415(agg_dict_like)
+        7    0.000    0.000    4.045    0.578 /home/lucas/Projetos/radarsul/.venv312/lib/python3.12/site-packages/pandas/core/apply.py:1575(agg_or_apply_dict_like)
+      519    0.015    0.000    4.026    0.008 {method 'run' of '_contextvars.Context' objects}
+        7    0.001    0.000    4.014    0.573 /home/lucas/Projetos/radarsul/.venv312/lib/python3.12/site-packages/pandas/core/apply.py:425(compute_dict_like)
+    40/20    0.002    0.000    3.997    0.200 /home/lucas/Projetos/radarsul/.venv312/lib/python3.12/site-packages/pandas/core/groupby/generic.py:232(aggregate)
+       20    0.003    0.000    3.990    0.200 /home/lucas/Projetos/radarsul/.venv312/lib/python3.12/site-packages/pandas/core/groupby/generic.py:331(_aggregate_multiple_funcs)
+  106/100    0.004    0.000    3.969    0.040 /home/lucas/Projetos/radarsul/.venv312/lib/python3.12/site-packages/streamlit/watcher/polling_path_watcher.py:95(_check_if_path_changed)
+       13    0.000    0.000    3.881    0.299 /home/lucas/Projetos/radarsul/.venv312/lib/python3.12/site-packages/pandas/core/groupby/groupby.py:1896(_agg_general)
+       13    0.001    0.000    3.880    0.298 /home/lucas/Projetos/radarsul/.venv312/lib/python3.12/site-packages/pandas/core/groupby/groupby.py:1957(_cython_agg_general)
+       13    0.000    0.000    3.878    0.298 /home/lucas/Projetos/radarsul/.venv312/lib/python3.12/site-packages/pandas/core/internals/base.py:365(grouped_reduce)
+       13    0.000    0.000    3.877    0.298 /home/lucas/Projetos/radarsul/.venv312/lib/python3.12/site-packages/pandas/core/groupby/groupby.py:1971(array_func)
+       13    0.001    0.000    3.876    0.298 /home/lucas/Projetos/radarsul/.venv312/lib/python3.12/site-packages/pandas/core/groupby/ops.py:812(_cython_operation)
+       10    0.000    0.000    3.866    0.387 /home/lucas/Projetos/radarsul/.venv312/lib/python3.12/site-packages/pandas/core/groupby/groupby.py:3082(sum)
+        7    0.000    0.000    3.855    0.551 /home/lucas/Projetos/radarsul/.venv312/lib/python3.12/site-packages/pandas/core/groupby/ops.py:743(group_info)
+        7    0.000    0.000    3.855    0.551 /home/lucas/Projetos/radarsul/.venv312/lib/python3.12/site-packages/pandas/core/groupby/ops.py:758(_get_compressed_codes)
+        7    0.000    0.000    3.855    0.551 /home/lucas/Projetos/radarsul/.venv312/lib/python3.12/site-packages/pandas/core/groupby/ops.py:735(has_dropped_na)
+       22    0.000    0.000    3.784    0.172 /home/lucas/Projetos/radarsul/.venv312/lib/python3.12/site-packages/pandas/core/groupby/grouper.py:689(codes)
+       10    0.000    0.000    3.784    0.378 /home/lucas/Projetos/radarsul/.venv312/lib/python3.12/site-packages/pandas/core/groupby/grouper.py:777(_codes_and_uniques)
+        9    0.000    0.000    3.770    0.419 /home/lucas/Projetos/radarsul/.venv312/lib/python3.12/site-packages/pandas/core/groupby/ops.py:687(codes)
+      106    0.001    0.000    3.642    0.034 /home/lucas/Projetos/radarsul/.venv312/lib/python3.12/site-packages/streamlit/watcher/polling_path_watcher.py:88(_schedule)
+      106    0.004    0.000    3.641    0.034 /tmp/sentinela-python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/concurrent/futures/thread.py:165(submit)
+        1    0.000    0.000    2.678    2.678 /home/lucas/Projetos/radarsul/.venv312/lib/python3.12/site-packages/streamlit/runtime/caching/cache_utils.py:735(__call__)
+        1    0.000    0.000    2.678    2.678 /home/lucas/Projetos/radarsul/.venv312/lib/python3.12/site-packages/streamlit/runtime/caching/cache_utils.py:759(_get_or_create_cached_value)
+        1    0.000    0.000    2.675    2.675 /home/lucas/Projetos/radarsul/.venv312/lib/python3.12/site-packages/streamlit/runtime/caching/cache_utils.py:829(_handle_cache_miss)
+
+

@@ -1,6 +1,7 @@
 """SENTINELA: consulta histórica de contagens publicadas, com cobertura explícita."""
 import json
 import logging
+from dataclasses import replace
 from time import perf_counter
 import pandas as pd
 import streamlit as st
@@ -53,6 +54,8 @@ def table(t,label):
 
 def chart(fig,summary,t,label,export_name):
     st.write(summary)
+    fig.add_annotation(text='Snapshot '+export_name.split('_')[1]+' · consulta '+export_name.split('_')[2],x=0,y=-.34,xref='paper',yref='paper',showarrow=False,xanchor='left',font=dict(size=12,color='#142B3C'))
+    fig.update_layout(margin_b=120)
     st.plotly_chart(fig,width='stretch',config={'locale':'pt-BR','displaylogo':False,'toImageButtonOptions':{'format':'png','filename':export_name,'width':1100,'height':650,'scale':1}})
     with st.expander('Dados e resumo do gráfico — '+label):st.table(display_table(t))
 
@@ -62,7 +65,12 @@ def sources_for(frames,ids,years,manifest,meta):
     right=min(KM_MAX,float(points.max())+2.5) if len(points) else KM_MAX
     a=frames['antt_acidentes'].loc[lambda x:x.km.between(left,right)]
     sources=[source_result('ANTT — envelope contínuo',a,years,manifest['cobertura']['antt'],f'BR-101/SC, km {br(left,3)} a {br(right,3)}, margem de 2,5 km entre pontos; ambos os sentidos')]
-    sources.append(source_result('PRF — trecho integral',frames.get('ocorrencias'),years,manifest['cobertura']['prf'],f'BR-101/SC, km {br(KM_MIN,3)} a {br(KM_MAX,3)}; ambos os sentidos; independente da seleção de pontos'))
+    prf=frames.get('ocorrencias')
+    prf_result=source_result('PRF — trecho integral',prf,years,manifest['cobertura']['prf'],f'BR-101/SC, km {br(KM_MIN,3)} a {br(KM_MAX,3)}; ambos os sentidos; independente da seleção de pontos')
+    if prf_result.quantidade is not None:
+        city_count=len(prf.loc[prf.ano.isin(prf_result.anos_cobertos)&prf.municipio.eq('CRICIUMA')])
+        prf_result=replace(prf_result,nota=prf_result.nota+f' Desses registros do trecho, {br(city_count)} têm município Criciúma nos anos disponíveis. Não são atribuídos a um radar.')
+    sources.append(prf_result)
     return sources
 
 def main():

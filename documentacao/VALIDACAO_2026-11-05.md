@@ -87,3 +87,5 @@ Ver a seção de novas tentativas em [ACEITACAO_ETAPA2.md](ACEITACAO_ETAPA2.md) 
 ## Continuação em 06/11 — navegador disponível
 
 O relato anterior de indisponibilidade é histórico. Ver [aceitação no navegador](ACEITACAO_NAVEGADOR_2026-11-06.md) e matriz atualizada: cenários reais, correções visuais, 28 regressões finais, evidências e desempenho. Downloads finais CSV/MD/ZIP bloqueados pela organização no Brave; PNG recebido e inspecionado. Zoom equivalente emulado, sem confirmação de zoom nativo. Pessoas/leitor de tela/aparelhos/hospedagem permanecem sem aprovação.
+
+Atualização de downloads: o usuário concluiu CSV/Markdown/ZIP manualmente no Chrome; captura fornecida e arquivos efetivamente recebidos inspecionados (20 pontos, totais e metadados coerentes, ZIP íntegro). F18 atualizado no relatório/matriz. O bloqueio do Brave permanece como resultado específico, sem alteração de políticas.

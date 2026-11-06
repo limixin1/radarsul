@@ -489,6 +489,40 @@
       "arquivo": "identidade-final.json",
       "bytes": 463,
       "sha256": "ab3d6b234193663467a77c7d46703e5aad126871528ccb263f1cd1ec58bd33e0"
+    },
+    {
+      "arquivo": "chrome-downloads-concluidos-usuario.png",
+      "bytes": 28047,
+      "sha256": "192bcbbd878d6c19b932072d610a3f0040a5b7b3f11603737187dd6b56d38a9a",
+      "dimensoes": [
+        321,
+        384
+      ]
+    },
+    {
+      "arquivo": "chrome-manual-relatorio.md",
+      "bytes": 8865,
+      "sha256": "6168fddd26e477c557a101e661e5d02d86f87271695af7241ef0386624289eb6"
+    },
+    {
+      "arquivo": "downloads-chrome-manuais.json",
+      "bytes": 22894,
+      "sha256": "d30b6b5c19e43223d5b4a3dc292acc7ad7e5045a887f5e6ca9bc6aea496aa3b4"
+    },
+    {
+      "arquivo": "chrome-manual-comparacao.csv",
+      "bytes": 34518,
+      "sha256": "d1561ecb3f5e2d3d7715879d26178a52a31c8afa02c8d7901dbfcba4e77f5fab"
+    },
+    {
+      "arquivo": "validacao-downloads-chrome.json",
+      "bytes": 509,
+      "sha256": "08eb22750887ec6a6c1892bf3f513ac04469bba0f4715458781f413a27be3985"
+    },
+    {
+      "arquivo": "chrome-manual-consulta.zip",
+      "bytes": 13652,
+      "sha256": "0d3a926a6d3721c26c129f0d90980cb2be811dbcc01905e51d3fb7073982c0e7"
     }
   ]
 }

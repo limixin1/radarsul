@@ -1,0 +1,1488 @@
+{
+  "snapshot": "2026-10-26.1",
+  "cobertura_declarada": {
+    "trafego": {
+      "inicio": "2022-01-01",
+      "fim": "2026-06-30",
+      "nota": "Dias com publicação; não comprova operação contínua nem completude de faixas. 2026 parcial até 30/06."
+    },
+    "possiveis": {
+      "inicio": "2022-12-30",
+      "fim": "2026-06-02",
+      "nota": "Base B separada. Intervalo do inventário bruto; ausência de linhas não comprova zero infrações. Taxa B/A bloqueada."
+    },
+    "antt": {
+      "inicio": "2021-05-01",
+      "fim": "2025-12-31",
+      "nota": "Intervalo do inventário do CSV de acidentes, sem garantia de completude. Repetições sem ID preservadas."
+    },
+    "prf": {
+      "inicio": "2024-01-01",
+      "fim": "2025-12-31",
+      "nota": "Arquivos anuais PRF 2024 e 2025. Ausência de registro não prova ausência real de acidente."
+    }
+  },
+  "eixo": {
+    "segmentos": 23,
+    "arestas": 12898
+  },
+  "equipamentos_antt_por_estado": {
+    "Coordenada compatível com o eixo SNV": 30,
+    "Coordenada ambígua · referência por km": 12
+  },
+  "prf_por_estado": {
+    "Coordenada compatível com o eixo SNV": 660,
+    "Coordenada ambígua · referência por km": 1090
+  },
+  "equipamentos_antt": [
+    {
+      "codigo": "VC101-1",
+      "municipio": "Paulo Lopes",
+      "km": 259.7,
+      "sentido": "Crescente",
+      "latitude": -28.020139,
+      "longitude": -48.698833,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 137.1
+    },
+    {
+      "codigo": "VC101-10",
+      "municipio": "Imbituba",
+      "km": 289.5,
+      "sentido": "Decrescente",
+      "latitude": -28.278111,
+      "longitude": -48.70025,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 14.4
+    },
+    {
+      "codigo": "VC101-11",
+      "municipio": "Tubarão",
+      "km": 334.7,
+      "sentido": "Crescente",
+      "latitude": null,
+      "longitude": null,
+      "precisao": "Coordenada ambígua · referência por km",
+      "motivo_localizacao": "Posição sem concordância espacial com o km no eixo disponível",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 693.6
+    },
+    {
+      "codigo": "VC101-12",
+      "municipio": "Tubarão",
+      "km": 334.9,
+      "sentido": "Decrescente",
+      "latitude": null,
+      "longitude": null,
+      "precisao": "Coordenada ambígua · referência por km",
+      "motivo_localizacao": "Posição sem concordância espacial com o km no eixo disponível",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 675.4
+    },
+    {
+      "codigo": "VC101-13",
+      "municipio": "Capivari de Baixo",
+      "km": 325.4,
+      "sentido": "Decrescente",
+      "latitude": null,
+      "longitude": null,
+      "precisao": "Coordenada ambígua · referência por km",
+      "motivo_localizacao": "Posição sem concordância espacial com o km no eixo disponível",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 703.9
+    },
+    {
+      "codigo": "VC101-14",
+      "municipio": "Capivari de Baixo",
+      "km": 324.9,
+      "sentido": "Decrescente",
+      "latitude": null,
+      "longitude": null,
+      "precisao": "Coordenada ambígua · referência por km",
+      "motivo_localizacao": "Posição sem concordância espacial com o km no eixo disponível",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 742.9
+    },
+    {
+      "codigo": "VC101-15",
+      "municipio": "Pescaria Brava",
+      "km": 318.4,
+      "sentido": "Decrescente",
+      "latitude": null,
+      "longitude": null,
+      "precisao": "Coordenada ambígua · referência por km",
+      "motivo_localizacao": "Posição sem concordância espacial com o km no eixo disponível",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 974.1
+    },
+    {
+      "codigo": "VC101-16",
+      "municipio": "Sangão",
+      "km": 360.6,
+      "sentido": "Crescente",
+      "latitude": -28.669472,
+      "longitude": -49.120139,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 10.5
+    },
+    {
+      "codigo": "VC101-17",
+      "municipio": "Sangão",
+      "km": 367.5,
+      "sentido": "Decrescente",
+      "latitude": -28.697694,
+      "longitude": -49.181528,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 5.2
+    },
+    {
+      "codigo": "VC101-18",
+      "municipio": "Sangão",
+      "km": 363.4,
+      "sentido": "Crescente",
+      "latitude": -28.681222,
+      "longitude": -49.144361,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 6.9
+    },
+    {
+      "codigo": "VC101-19",
+      "municipio": "Sangão",
+      "km": 361.9,
+      "sentido": "Decrescente",
+      "latitude": -28.676472,
+      "longitude": -49.130083,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 8.2
+    },
+    {
+      "codigo": "VC101-2",
+      "municipio": "Garopaba",
+      "km": 264.6,
+      "sentido": "Decrescente",
+      "latitude": -28.059667,
+      "longitude": -48.716944,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 6.1
+    },
+    {
+      "codigo": "VC101-20",
+      "municipio": "Paulo Lopes",
+      "km": 252.0,
+      "sentido": "Crescente",
+      "latitude": -27.95825,
+      "longitude": -48.678,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 26.6
+    },
+    {
+      "codigo": "VC101-21",
+      "municipio": "Imbituba",
+      "km": 269.032,
+      "sentido": "Decrescente",
+      "latitude": -28.0975,
+      "longitude": -48.705667,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 32.4
+    },
+    {
+      "codigo": "VC101-22",
+      "municipio": "Pescaria Brava",
+      "km": 324.0,
+      "sentido": "Crescente",
+      "latitude": null,
+      "longitude": null,
+      "precisao": "Coordenada ambígua · referência por km",
+      "motivo_localizacao": "Posição sem concordância espacial com o km no eixo disponível",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 750.5
+    },
+    {
+      "codigo": "VC101-23",
+      "municipio": "Tubarão",
+      "km": 336.8,
+      "sentido": "Decrescente",
+      "latitude": null,
+      "longitude": null,
+      "precisao": "Coordenada ambígua · referência por km",
+      "motivo_localizacao": "Posição sem concordância espacial com o km no eixo disponível",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 464.0
+    },
+    {
+      "codigo": "VC101-24",
+      "municipio": "Jaguaruna",
+      "km": 347.28,
+      "sentido": "Crescente",
+      "latitude": -28.577374,
+      "longitude": -49.052481,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 36.6
+    },
+    {
+      "codigo": "VC101-25",
+      "municipio": "Jaguaruna",
+      "km": 347.84,
+      "sentido": "Decrescente",
+      "latitude": -28.582194,
+      "longitude": -49.050361,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 9.1
+    },
+    {
+      "codigo": "VC101-26",
+      "municipio": "Sangão",
+      "km": 355.3,
+      "sentido": "Crescente",
+      "latitude": -28.630889,
+      "longitude": -49.089667,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 28.0
+    },
+    {
+      "codigo": "VC101-27",
+      "municipio": "Içara",
+      "km": 371.9,
+      "sentido": "Decrescente",
+      "latitude": -28.714556,
+      "longitude": -49.221417,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 30.9
+    },
+    {
+      "codigo": "VC101-28",
+      "municipio": "Içara",
+      "km": 373.0,
+      "sentido": "Crescente",
+      "latitude": -28.717139,
+      "longitude": -49.232194,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 4.1
+    },
+    {
+      "codigo": "VC101-29",
+      "municipio": "Içara",
+      "km": 387.7,
+      "sentido": "Decrescente",
+      "latitude": -28.793556,
+      "longitude": -49.351972,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 17.8
+    },
+    {
+      "codigo": "VC101-3",
+      "municipio": "Paulo Lopes",
+      "km": 255.6,
+      "sentido": "Decrescente",
+      "latitude": -27.990306,
+      "longitude": -48.680028,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 6.7
+    },
+    {
+      "codigo": "VC101-30",
+      "municipio": "Criciúma",
+      "km": 391.94,
+      "sentido": "Crescente",
+      "latitude": -28.813111,
+      "longitude": -49.389139,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 16.2
+    },
+    {
+      "codigo": "VC101-31",
+      "municipio": "Maracajá",
+      "km": 400.7,
+      "sentido": "Crescente",
+      "latitude": -28.869556,
+      "longitude": -49.450889,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 4.9
+    },
+    {
+      "codigo": "VC101-32",
+      "municipio": "Araranguá",
+      "km": 407.5,
+      "sentido": "Decrescente",
+      "latitude": -28.920083,
+      "longitude": -49.490417,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 9.4
+    },
+    {
+      "codigo": "VC101-33",
+      "municipio": "Araranguá",
+      "km": 410.8,
+      "sentido": "Crescente",
+      "latitude": null,
+      "longitude": null,
+      "precisao": "Coordenada ambígua · referência por km",
+      "motivo_localizacao": "Posição sem concordância espacial com o km no eixo disponível",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 281.5
+    },
+    {
+      "codigo": "VC101-34",
+      "municipio": "Araranguá",
+      "km": 411.0,
+      "sentido": "Decrescente",
+      "latitude": -28.936222,
+      "longitude": -49.519306,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 87.5
+    },
+    {
+      "codigo": "VC101-35",
+      "municipio": "Araranguá",
+      "km": 412.2,
+      "sentido": "Crescente",
+      "latitude": -28.944,
+      "longitude": -49.527806,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 18.3
+    },
+    {
+      "codigo": "VC101-36",
+      "municipio": "Araranguá",
+      "km": 412.2,
+      "sentido": "Decrescente",
+      "latitude": -28.944,
+      "longitude": -49.527806,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 18.3
+    },
+    {
+      "codigo": "VC101-37",
+      "municipio": "Araranguá",
+      "km": 416.0,
+      "sentido": "Crescente",
+      "latitude": -28.972333,
+      "longitude": -49.528861,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 6.2
+    },
+    {
+      "codigo": "VC101-38",
+      "municipio": "Araranguá",
+      "km": 416.0,
+      "sentido": "Decrescente",
+      "latitude": -28.972333,
+      "longitude": -49.528861,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 6.2
+    },
+    {
+      "codigo": "VC101-39",
+      "municipio": "Sombrio",
+      "km": 432.5,
+      "sentido": "Crescente",
+      "latitude": null,
+      "longitude": null,
+      "precisao": "Coordenada ambígua · referência por km",
+      "motivo_localizacao": "Posição sem concordância espacial com o km no eixo disponível",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 908.4
+    },
+    {
+      "codigo": "VC101-4",
+      "municipio": "Paulo Lopes",
+      "km": 252.4,
+      "sentido": "Decrescente",
+      "latitude": -27.961722,
+      "longitude": -48.679278,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 10.0
+    },
+    {
+      "codigo": "VC101-40",
+      "municipio": "Sombrio",
+      "km": 432.5,
+      "sentido": "Decrescente",
+      "latitude": null,
+      "longitude": null,
+      "precisao": "Coordenada ambígua · referência por km",
+      "motivo_localizacao": "Posição sem concordância espacial com o km no eixo disponível",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 908.4
+    },
+    {
+      "codigo": "VC101-41",
+      "municipio": "Santa Rosa do Sul",
+      "km": 445.6,
+      "sentido": "Crescente",
+      "latitude": null,
+      "longitude": null,
+      "precisao": "Coordenada ambígua · referência por km",
+      "motivo_localizacao": "Posição sem concordância espacial com o km no eixo disponível",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 928.9
+    },
+    {
+      "codigo": "VC101-42",
+      "municipio": "Santa Rosa do Sul",
+      "km": 445.6,
+      "sentido": "Decrescente",
+      "latitude": null,
+      "longitude": null,
+      "precisao": "Coordenada ambígua · referência por km",
+      "motivo_localizacao": "Posição sem concordância espacial com o km no eixo disponível",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 928.9
+    },
+    {
+      "codigo": "VC101-5",
+      "municipio": "Imbituba",
+      "km": 275.9,
+      "sentido": "Crescente",
+      "latitude": -28.157222,
+      "longitude": -48.692972,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 2.0
+    },
+    {
+      "codigo": "VC101-6",
+      "municipio": "Imbituba",
+      "km": 277.3,
+      "sentido": "Crescente",
+      "latitude": -28.170194,
+      "longitude": -48.694306,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 19.1
+    },
+    {
+      "codigo": "VC101-7",
+      "municipio": "Imbituba",
+      "km": 287.1,
+      "sentido": "Crescente",
+      "latitude": -28.257278,
+      "longitude": -48.704083,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 3.5
+    },
+    {
+      "codigo": "VC101-8",
+      "municipio": "Imbituba",
+      "km": 277.3,
+      "sentido": "Decrescente",
+      "latitude": -28.170194,
+      "longitude": -48.694306,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 19.1
+    },
+    {
+      "codigo": "VC101-9",
+      "municipio": "Laguna",
+      "km": 304.0,
+      "sentido": "Decrescente",
+      "latitude": -28.388028,
+      "longitude": -48.774389,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 12.7
+    }
+  ],
+  "antt_trafego_por_municipio_ano": [
+    {
+      "municipio": "Araranguá",
+      "ano": 2022,
+      "pontos": 7,
+      "dias_com_publicacao": 362,
+      "contagens": 17153823
+    },
+    {
+      "municipio": "Araranguá",
+      "ano": 2023,
+      "pontos": 7,
+      "dias_com_publicacao": 364,
+      "contagens": 23527882
+    },
+    {
+      "municipio": "Araranguá",
+      "ano": 2024,
+      "pontos": 7,
+      "dias_com_publicacao": 366,
+      "contagens": 27122084
+    },
+    {
+      "municipio": "Araranguá",
+      "ano": 2025,
+      "pontos": 7,
+      "dias_com_publicacao": 365,
+      "contagens": 22694407
+    },
+    {
+      "municipio": "Araranguá",
+      "ano": 2026,
+      "pontos": 7,
+      "dias_com_publicacao": 181,
+      "contagens": 14632570
+    },
+    {
+      "municipio": "Capivari de Baixo",
+      "ano": 2022,
+      "pontos": 2,
+      "dias_com_publicacao": 357,
+      "contagens": 8134662
+    },
+    {
+      "municipio": "Capivari de Baixo",
+      "ano": 2023,
+      "pontos": 2,
+      "dias_com_publicacao": 364,
+      "contagens": 11485207
+    },
+    {
+      "municipio": "Capivari de Baixo",
+      "ano": 2024,
+      "pontos": 2,
+      "dias_com_publicacao": 366,
+      "contagens": 15567253
+    },
+    {
+      "municipio": "Capivari de Baixo",
+      "ano": 2025,
+      "pontos": 2,
+      "dias_com_publicacao": 361,
+      "contagens": 13328445
+    },
+    {
+      "municipio": "Capivari de Baixo",
+      "ano": 2026,
+      "pontos": 2,
+      "dias_com_publicacao": 181,
+      "contagens": 6483669
+    },
+    {
+      "municipio": "Criciúma",
+      "ano": 2022,
+      "pontos": 1,
+      "dias_com_publicacao": 137,
+      "contagens": 1364467
+    },
+    {
+      "municipio": "Criciúma",
+      "ano": 2023,
+      "pontos": 1,
+      "dias_com_publicacao": 308,
+      "contagens": 3538497
+    },
+    {
+      "municipio": "Criciúma",
+      "ano": 2024,
+      "pontos": 1,
+      "dias_com_publicacao": 306,
+      "contagens": 4549086
+    },
+    {
+      "municipio": "Criciúma",
+      "ano": 2025,
+      "pontos": 1,
+      "dias_com_publicacao": 332,
+      "contagens": 5011647
+    },
+    {
+      "municipio": "Criciúma",
+      "ano": 2026,
+      "pontos": 1,
+      "dias_com_publicacao": 181,
+      "contagens": 2363431
+    },
+    {
+      "municipio": "Garopaba",
+      "ano": 2022,
+      "pontos": 1,
+      "dias_com_publicacao": 165,
+      "contagens": 1548668
+    },
+    {
+      "municipio": "Garopaba",
+      "ano": 2023,
+      "pontos": 1,
+      "dias_com_publicacao": 323,
+      "contagens": 4196173
+    },
+    {
+      "municipio": "Garopaba",
+      "ano": 2024,
+      "pontos": 1,
+      "dias_com_publicacao": 187,
+      "contagens": 2826042
+    },
+    {
+      "municipio": "Garopaba",
+      "ano": 2025,
+      "pontos": 1,
+      "dias_com_publicacao": 277,
+      "contagens": 4310596
+    },
+    {
+      "municipio": "Garopaba",
+      "ano": 2026,
+      "pontos": 1,
+      "dias_com_publicacao": 90,
+      "contagens": 1293349
+    },
+    {
+      "municipio": "Imbituba",
+      "ano": 2022,
+      "pontos": 6,
+      "dias_com_publicacao": 361,
+      "contagens": 18908621
+    },
+    {
+      "municipio": "Imbituba",
+      "ano": 2023,
+      "pontos": 6,
+      "dias_com_publicacao": 364,
+      "contagens": 27258376
+    },
+    {
+      "municipio": "Imbituba",
+      "ano": 2024,
+      "pontos": 6,
+      "dias_com_publicacao": 366,
+      "contagens": 29290642
+    },
+    {
+      "municipio": "Imbituba",
+      "ano": 2025,
+      "pontos": 6,
+      "dias_com_publicacao": 365,
+      "contagens": 32618617
+    },
+    {
+      "municipio": "Imbituba",
+      "ano": 2026,
+      "pontos": 6,
+      "dias_com_publicacao": 181,
+      "contagens": 15710770
+    },
+    {
+      "municipio": "Içara",
+      "ano": 2022,
+      "pontos": 3,
+      "dias_com_publicacao": 203,
+      "contagens": 1515712
+    },
+    {
+      "municipio": "Içara",
+      "ano": 2023,
+      "pontos": 3,
+      "dias_com_publicacao": 353,
+      "contagens": 8362247
+    },
+    {
+      "municipio": "Içara",
+      "ano": 2024,
+      "pontos": 3,
+      "dias_com_publicacao": 366,
+      "contagens": 13933852
+    },
+    {
+      "municipio": "Içara",
+      "ano": 2025,
+      "pontos": 3,
+      "dias_com_publicacao": 363,
+      "contagens": 12188924
+    },
+    {
+      "municipio": "Içara",
+      "ano": 2026,
+      "pontos": 3,
+      "dias_com_publicacao": 181,
+      "contagens": 8303686
+    },
+    {
+      "municipio": "Jaguaruna",
+      "ano": 2022,
+      "pontos": 2,
+      "dias_com_publicacao": 358,
+      "contagens": 8432300
+    },
+    {
+      "municipio": "Jaguaruna",
+      "ano": 2023,
+      "pontos": 2,
+      "dias_com_publicacao": 364,
+      "contagens": 10510691
+    },
+    {
+      "municipio": "Jaguaruna",
+      "ano": 2024,
+      "pontos": 2,
+      "dias_com_publicacao": 366,
+      "contagens": 10993175
+    },
+    {
+      "municipio": "Jaguaruna",
+      "ano": 2025,
+      "pontos": 2,
+      "dias_com_publicacao": 365,
+      "contagens": 11510637
+    },
+    {
+      "municipio": "Jaguaruna",
+      "ano": 2026,
+      "pontos": 2,
+      "dias_com_publicacao": 181,
+      "contagens": 6198630
+    },
+    {
+      "municipio": "Laguna",
+      "ano": 2022,
+      "pontos": 1,
+      "dias_com_publicacao": 349,
+      "contagens": 3652339
+    },
+    {
+      "municipio": "Laguna",
+      "ano": 2023,
+      "pontos": 1,
+      "dias_com_publicacao": 283,
+      "contagens": 2668432
+    },
+    {
+      "municipio": "Laguna",
+      "ano": 2024,
+      "pontos": 1,
+      "dias_com_publicacao": 361,
+      "contagens": 5322924
+    },
+    {
+      "municipio": "Laguna",
+      "ano": 2025,
+      "pontos": 1,
+      "dias_com_publicacao": 365,
+      "contagens": 5856071
+    },
+    {
+      "municipio": "Laguna",
+      "ano": 2026,
+      "pontos": 1,
+      "dias_com_publicacao": 181,
+      "contagens": 3002851
+    },
+    {
+      "municipio": "Maracajá",
+      "ano": 2022,
+      "pontos": 1,
+      "dias_com_publicacao": 347,
+      "contagens": 3032210
+    },
+    {
+      "municipio": "Maracajá",
+      "ano": 2023,
+      "pontos": 1,
+      "dias_com_publicacao": 346,
+      "contagens": 3829426
+    },
+    {
+      "municipio": "Maracajá",
+      "ano": 2024,
+      "pontos": 1,
+      "dias_com_publicacao": 342,
+      "contagens": 3810039
+    },
+    {
+      "municipio": "Maracajá",
+      "ano": 2025,
+      "pontos": 1,
+      "dias_com_publicacao": 339,
+      "contagens": 4335238
+    },
+    {
+      "municipio": "Maracajá",
+      "ano": 2026,
+      "pontos": 1,
+      "dias_com_publicacao": 181,
+      "contagens": 2583946
+    },
+    {
+      "municipio": "Paulo Lopes",
+      "ano": 2022,
+      "pontos": 4,
+      "dias_com_publicacao": 357,
+      "contagens": 12993726
+    },
+    {
+      "municipio": "Paulo Lopes",
+      "ano": 2023,
+      "pontos": 4,
+      "dias_com_publicacao": 364,
+      "contagens": 19360350
+    },
+    {
+      "municipio": "Paulo Lopes",
+      "ano": 2024,
+      "pontos": 4,
+      "dias_com_publicacao": 366,
+      "contagens": 20927823
+    },
+    {
+      "municipio": "Paulo Lopes",
+      "ano": 2025,
+      "pontos": 4,
+      "dias_com_publicacao": 364,
+      "contagens": 17197494
+    },
+    {
+      "municipio": "Paulo Lopes",
+      "ano": 2026,
+      "pontos": 4,
+      "dias_com_publicacao": 181,
+      "contagens": 8216160
+    },
+    {
+      "municipio": "Pescaria Brava",
+      "ano": 2022,
+      "pontos": 2,
+      "dias_com_publicacao": 353,
+      "contagens": 9987725
+    },
+    {
+      "municipio": "Pescaria Brava",
+      "ano": 2023,
+      "pontos": 2,
+      "dias_com_publicacao": 364,
+      "contagens": 12388495
+    },
+    {
+      "municipio": "Pescaria Brava",
+      "ano": 2024,
+      "pontos": 2,
+      "dias_com_publicacao": 366,
+      "contagens": 13511788
+    },
+    {
+      "municipio": "Pescaria Brava",
+      "ano": 2025,
+      "pontos": 2,
+      "dias_com_publicacao": 361,
+      "contagens": 13289586
+    },
+    {
+      "municipio": "Pescaria Brava",
+      "ano": 2026,
+      "pontos": 2,
+      "dias_com_publicacao": 181,
+      "contagens": 7856237
+    },
+    {
+      "municipio": "Sangão",
+      "ano": 2022,
+      "pontos": 5,
+      "dias_com_publicacao": 363,
+      "contagens": 14244535
+    },
+    {
+      "municipio": "Sangão",
+      "ano": 2023,
+      "pontos": 5,
+      "dias_com_publicacao": 364,
+      "contagens": 18154106
+    },
+    {
+      "municipio": "Sangão",
+      "ano": 2024,
+      "pontos": 5,
+      "dias_com_publicacao": 366,
+      "contagens": 20275423
+    },
+    {
+      "municipio": "Sangão",
+      "ano": 2025,
+      "pontos": 5,
+      "dias_com_publicacao": 365,
+      "contagens": 23878303
+    },
+    {
+      "municipio": "Sangão",
+      "ano": 2026,
+      "pontos": 5,
+      "dias_com_publicacao": 181,
+      "contagens": 12865836
+    },
+    {
+      "municipio": "Santa Rosa do Sul",
+      "ano": 2022,
+      "pontos": 2,
+      "dias_com_publicacao": 360,
+      "contagens": 5149754
+    },
+    {
+      "municipio": "Santa Rosa do Sul",
+      "ano": 2023,
+      "pontos": 2,
+      "dias_com_publicacao": 364,
+      "contagens": 6396176
+    },
+    {
+      "municipio": "Santa Rosa do Sul",
+      "ano": 2024,
+      "pontos": 2,
+      "dias_com_publicacao": 366,
+      "contagens": 8998156
+    },
+    {
+      "municipio": "Santa Rosa do Sul",
+      "ano": 2025,
+      "pontos": 2,
+      "dias_com_publicacao": 365,
+      "contagens": 8444632
+    },
+    {
+      "municipio": "Santa Rosa do Sul",
+      "ano": 2026,
+      "pontos": 2,
+      "dias_com_publicacao": 181,
+      "contagens": 4814178
+    },
+    {
+      "municipio": "Sombrio",
+      "ano": 2022,
+      "pontos": 2,
+      "dias_com_publicacao": 357,
+      "contagens": 6884915
+    },
+    {
+      "municipio": "Sombrio",
+      "ano": 2023,
+      "pontos": 2,
+      "dias_com_publicacao": 348,
+      "contagens": 7185670
+    },
+    {
+      "municipio": "Sombrio",
+      "ano": 2024,
+      "pontos": 2,
+      "dias_com_publicacao": 362,
+      "contagens": 8794767
+    },
+    {
+      "municipio": "Sombrio",
+      "ano": 2025,
+      "pontos": 2,
+      "dias_com_publicacao": 365,
+      "contagens": 9422108
+    },
+    {
+      "municipio": "Sombrio",
+      "ano": 2026,
+      "pontos": 2,
+      "dias_com_publicacao": 181,
+      "contagens": 4809261
+    },
+    {
+      "municipio": "Tubarão",
+      "ano": 2022,
+      "pontos": 3,
+      "dias_com_publicacao": 360,
+      "contagens": 14487680
+    },
+    {
+      "municipio": "Tubarão",
+      "ano": 2023,
+      "pontos": 3,
+      "dias_com_publicacao": 364,
+      "contagens": 16770462
+    },
+    {
+      "municipio": "Tubarão",
+      "ano": 2024,
+      "pontos": 3,
+      "dias_com_publicacao": 366,
+      "contagens": 20213096
+    },
+    {
+      "municipio": "Tubarão",
+      "ano": 2025,
+      "pontos": 3,
+      "dias_com_publicacao": 365,
+      "contagens": 20590680
+    },
+    {
+      "municipio": "Tubarão",
+      "ano": 2026,
+      "pontos": 3,
+      "dias_com_publicacao": 181,
+      "contagens": 11800643
+    }
+  ],
+  "prf_por_municipio_ano_estado": [
+    {
+      "municipio": "ARARANGUA",
+      "ano": 2024,
+      "precisao": "Coordenada ambígua · referência por km",
+      "registros": 45
+    },
+    {
+      "municipio": "ARARANGUA",
+      "ano": 2024,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "registros": 40
+    },
+    {
+      "municipio": "ARARANGUA",
+      "ano": 2025,
+      "precisao": "Coordenada ambígua · referência por km",
+      "registros": 32
+    },
+    {
+      "municipio": "ARARANGUA",
+      "ano": 2025,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "registros": 44
+    },
+    {
+      "municipio": "CAPIVARI DE BAIXO",
+      "ano": 2024,
+      "precisao": "Coordenada ambígua · referência por km",
+      "registros": 31
+    },
+    {
+      "municipio": "CAPIVARI DE BAIXO",
+      "ano": 2024,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "registros": 2
+    },
+    {
+      "municipio": "CAPIVARI DE BAIXO",
+      "ano": 2025,
+      "precisao": "Coordenada ambígua · referência por km",
+      "registros": 32
+    },
+    {
+      "municipio": "CAPIVARI DE BAIXO",
+      "ano": 2025,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "registros": 6
+    },
+    {
+      "municipio": "CRICIUMA",
+      "ano": 2024,
+      "precisao": "Coordenada ambígua · referência por km",
+      "registros": 12
+    },
+    {
+      "municipio": "CRICIUMA",
+      "ano": 2024,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "registros": 12
+    },
+    {
+      "municipio": "CRICIUMA",
+      "ano": 2025,
+      "precisao": "Coordenada ambígua · referência por km",
+      "registros": 2
+    },
+    {
+      "municipio": "CRICIUMA",
+      "ano": 2025,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "registros": 10
+    },
+    {
+      "municipio": "GAROPABA",
+      "ano": 2024,
+      "precisao": "Coordenada ambígua · referência por km",
+      "registros": 2
+    },
+    {
+      "municipio": "GAROPABA",
+      "ano": 2024,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "registros": 5
+    },
+    {
+      "municipio": "GAROPABA",
+      "ano": 2025,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "registros": 7
+    },
+    {
+      "municipio": "ICARA",
+      "ano": 2024,
+      "precisao": "Coordenada ambígua · referência por km",
+      "registros": 46
+    },
+    {
+      "municipio": "ICARA",
+      "ano": 2024,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "registros": 32
+    },
+    {
+      "municipio": "ICARA",
+      "ano": 2025,
+      "precisao": "Coordenada ambígua · referência por km",
+      "registros": 22
+    },
+    {
+      "municipio": "ICARA",
+      "ano": 2025,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "registros": 51
+    },
+    {
+      "municipio": "IMBITUBA",
+      "ano": 2024,
+      "precisao": "Coordenada ambígua · referência por km",
+      "registros": 77
+    },
+    {
+      "municipio": "IMBITUBA",
+      "ano": 2024,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "registros": 74
+    },
+    {
+      "municipio": "IMBITUBA",
+      "ano": 2025,
+      "precisao": "Coordenada ambígua · referência por km",
+      "registros": 20
+    },
+    {
+      "municipio": "IMBITUBA",
+      "ano": 2025,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "registros": 90
+    },
+    {
+      "municipio": "JAGUARUNA",
+      "ano": 2024,
+      "precisao": "Coordenada ambígua · referência por km",
+      "registros": 19
+    },
+    {
+      "municipio": "JAGUARUNA",
+      "ano": 2024,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "registros": 5
+    },
+    {
+      "municipio": "JAGUARUNA",
+      "ano": 2025,
+      "precisao": "Coordenada ambígua · referência por km",
+      "registros": 13
+    },
+    {
+      "municipio": "JAGUARUNA",
+      "ano": 2025,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "registros": 23
+    },
+    {
+      "municipio": "LAGUNA",
+      "ano": 2024,
+      "precisao": "Coordenada ambígua · referência por km",
+      "registros": 49
+    },
+    {
+      "municipio": "LAGUNA",
+      "ano": 2024,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "registros": 12
+    },
+    {
+      "municipio": "LAGUNA",
+      "ano": 2025,
+      "precisao": "Coordenada ambígua · referência por km",
+      "registros": 35
+    },
+    {
+      "municipio": "LAGUNA",
+      "ano": 2025,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "registros": 24
+    },
+    {
+      "municipio": "MARACAJA",
+      "ano": 2024,
+      "precisao": "Coordenada ambígua · referência por km",
+      "registros": 20
+    },
+    {
+      "municipio": "MARACAJA",
+      "ano": 2024,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "registros": 12
+    },
+    {
+      "municipio": "MARACAJA",
+      "ano": 2025,
+      "precisao": "Coordenada ambígua · referência por km",
+      "registros": 11
+    },
+    {
+      "municipio": "MARACAJA",
+      "ano": 2025,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "registros": 24
+    },
+    {
+      "municipio": "PASSO DE TORRES",
+      "ano": 2024,
+      "precisao": "Coordenada ambígua · referência por km",
+      "registros": 9
+    },
+    {
+      "municipio": "PASSO DE TORRES",
+      "ano": 2025,
+      "precisao": "Coordenada ambígua · referência por km",
+      "registros": 9
+    },
+    {
+      "municipio": "PASSO DE TORRES",
+      "ano": 2025,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "registros": 1
+    },
+    {
+      "municipio": "PAULO LOPES",
+      "ano": 2024,
+      "precisao": "Coordenada ambígua · referência por km",
+      "registros": 8
+    },
+    {
+      "municipio": "PAULO LOPES",
+      "ano": 2024,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "registros": 45
+    },
+    {
+      "municipio": "PAULO LOPES",
+      "ano": 2025,
+      "precisao": "Coordenada ambígua · referência por km",
+      "registros": 15
+    },
+    {
+      "municipio": "PAULO LOPES",
+      "ano": 2025,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "registros": 22
+    },
+    {
+      "municipio": "PESCARIA BRAVA",
+      "ano": 2024,
+      "precisao": "Coordenada ambígua · referência por km",
+      "registros": 31
+    },
+    {
+      "municipio": "PESCARIA BRAVA",
+      "ano": 2025,
+      "precisao": "Coordenada ambígua · referência por km",
+      "registros": 38
+    },
+    {
+      "municipio": "PESCARIA BRAVA",
+      "ano": 2025,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "registros": 2
+    },
+    {
+      "municipio": "SANGAO",
+      "ano": 2024,
+      "precisao": "Coordenada ambígua · referência por km",
+      "registros": 29
+    },
+    {
+      "municipio": "SANGAO",
+      "ano": 2024,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "registros": 20
+    },
+    {
+      "municipio": "SANGAO",
+      "ano": 2025,
+      "precisao": "Coordenada ambígua · referência por km",
+      "registros": 17
+    },
+    {
+      "municipio": "SANGAO",
+      "ano": 2025,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "registros": 37
+    },
+    {
+      "municipio": "SANTA ROSA DO SUL",
+      "ano": 2024,
+      "precisao": "Coordenada ambígua · referência por km",
+      "registros": 25
+    },
+    {
+      "municipio": "SANTA ROSA DO SUL",
+      "ano": 2024,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "registros": 1
+    },
+    {
+      "municipio": "SANTA ROSA DO SUL",
+      "ano": 2025,
+      "precisao": "Coordenada ambígua · referência por km",
+      "registros": 32
+    },
+    {
+      "municipio": "SANTA ROSA DO SUL",
+      "ano": 2025,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "registros": 1
+    },
+    {
+      "municipio": "SAO JOAO DO SUL",
+      "ano": 2024,
+      "precisao": "Coordenada ambígua · referência por km",
+      "registros": 16
+    },
+    {
+      "municipio": "SAO JOAO DO SUL",
+      "ano": 2025,
+      "precisao": "Coordenada ambígua · referência por km",
+      "registros": 12
+    },
+    {
+      "municipio": "SOMBRIO",
+      "ano": 2024,
+      "precisao": "Coordenada ambígua · referência por km",
+      "registros": 52
+    },
+    {
+      "municipio": "SOMBRIO",
+      "ano": 2025,
+      "precisao": "Coordenada ambígua · referência por km",
+      "registros": 50
+    },
+    {
+      "municipio": "SOMBRIO",
+      "ano": 2025,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "registros": 4
+    },
+    {
+      "municipio": "TREZE DE MAIO",
+      "ano": 2024,
+      "precisao": "Coordenada ambígua · referência por km",
+      "registros": 1
+    },
+    {
+      "municipio": "TREZE DE MAIO",
+      "ano": 2024,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "registros": 1
+    },
+    {
+      "municipio": "TUBARAO",
+      "ano": 2024,
+      "precisao": "Coordenada ambígua · referência por km",
+      "registros": 171
+    },
+    {
+      "municipio": "TUBARAO",
+      "ano": 2024,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "registros": 17
+    },
+    {
+      "municipio": "TUBARAO",
+      "ano": 2025,
+      "precisao": "Coordenada ambígua · referência por km",
+      "registros": 107
+    },
+    {
+      "municipio": "TUBARAO",
+      "ano": 2025,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "registros": 36
+    }
+  ],
+  "antt_acidentes_por_ano": {
+    "2021": {
+      "registros": 1445,
+      "km_min": 245.0,
+      "km_max": 464.0,
+      "referencia": "km publicado. Município e coordenada ausentes."
+    },
+    "2022": {
+      "registros": 1933,
+      "km_min": 244.6,
+      "km_max": 465.0,
+      "referencia": "km publicado. Município e coordenada ausentes."
+    },
+    "2023": {
+      "registros": 1964,
+      "km_min": 245.0,
+      "km_max": 465.0,
+      "referencia": "km publicado. Município e coordenada ausentes."
+    },
+    "2024": {
+      "registros": 2028,
+      "km_min": 245.0,
+      "km_max": 464.0,
+      "referencia": "km publicado. Município e coordenada ausentes."
+    },
+    "2025": {
+      "registros": 1471,
+      "km_min": 246.0,
+      "km_max": 464.0,
+      "referencia": "km publicado. Município e coordenada ausentes."
+    }
+  }
+}

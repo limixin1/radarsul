@@ -1,0 +1,47 @@
+# Mapa e apoio preventivo do SENTINELA
+
+A primeira entrega parte de `b200ea801b02be48c33ef511dc7ee96aff471c05`, que incorpora o PR #2. O candidato é a aplicação 2.2.0 com o snapshot `2026-10-26.1`. O site público e o deploy 2.1.0 documentado servem de referência histórica. A branch é `codex/sentinela-mapa-preventivo`.
+
+## Consulta e exportação
+
+Na Visão geral, busque município, km, km com metros ou código. O mapa e a lista usam os pontos do filtro atual. A lista permite escolher cada sentido quando dois equipamentos compartilham uma posição. Um município fora do grupo pode ser recuperado em Todos os equipamentos. Um km seleciona um intervalo disjunto de 5 km, limitado ao corredor. Municípios que aparecem só na PRF oferecem uma ficha territorial. Um nome que não consta nas bases recebe aviso próprio.
+
+Abrir a ficha reduz a seleção aos pontos do local escolhidos na consulta. A URL mantém o foco, o ano e os demais filtros. Links anteriores continuam válidos. A ficha exibe primeiro o próximo passo, o motivo e a informação faltante. O mesmo texto está no relatório Markdown e no ZIP. O ZIP inclui uma tabela adicional de localizações e metadados da ficha. Os nomes, colunas e precisão dos CSVs existentes são preservados. Uma ficha territorial sem tráfego pode ser baixada separadamente em Markdown.
+
+## Geometria e precisão
+
+O eixo é o recorte de 23 linhas principais da BR-101/SC do SNV de 25/07/2024, servido pelo Ibama. A consulta, a data de coleta e o SHA-256 da resposta constam no GeoJSON. `scripts/preparar_eixo_snv.py` normaliza a resposta e registra proveniência. A geometria consultada termina no km 462,300. A consulta histórica continua até o km 465,100 e mantém referências textuais onde faltam linhas. O eixo tem atribuição visível no mapa e no PNG. A base é distribuída no portal de dados abertos do DNIT, no escopo da política aberta do órgão. O espelho consultado tem o campo de copyright vazio. [Camada SNV via Ibama](https://pamgia.ibama.gov.br/server/rest/services/BasesSincronizadas/line_rodovias_federais_dnit_l/MapServer/0/iteminfo) · [Portal SNV](https://www.gov.br/dnit/pt-br/assuntos/atlas-e-mapas/pnv-e-snv/capa-snv/) · [Plano de dados abertos do DNIT](https://www.gov.br/dnit/pt-br/central-de-conteudos/atos-normativos/tipo/portarias/portaria-no-3145-2024)
+
+A triagem verifica BR, UF, km do corredor, município informado, conflitos de km e sentido no equipamento e flag de qualidade PRF. A coordenada original precisa estar a até 150 m do eixo em posição com até 1 km de diferença da referência publicada. O km estimado usa a proporção da distância ao longo de cada linha entre os marcos do SNV. Os limites servem à visualização e evitam aceitar apenas uma coordenada no estado. Eles não certificam faixa, sentido, município por limite administrativo ou posição operacional. Traçados novos, pistas separadas e diferenças entre marcos podem impedir a triagem. Casos ambíguos mantêm km e motivo, com coordenadas omitidas da interface e do arquivo de localizações.
+
+| Fonte | Estado neste snapshot |
+|---|---|
+| Tráfego ANTT | 42 pontos. 30 compatíveis com o eixo, 12 com posição ambígua e referência por km. Identificadores, municípios e sentidos vêm dos metadados. |
+| Ocorrências PRF | 1.750 registros de 2024 e 2025. 660 posições passam pela triagem e 1.090 ficam por km. A camada opcional usa o município publicado, o segmento selecionado ou o corredor conforme o foco, com recorte explícito. |
+| Acidentes ANTT | 8.841 registros entre 2021 e 2025. A fonte informa km, trecho e data. A lista preserva as repetições e exibe referência quilométrica, sem atribuir município ou equipamento. |
+
+O mapa usa Plotly e Streamlit já instalados, com eixo local e sem tiles, chave ou geocodificação. A lista, a ficha e a exportação continuam úteis quando falta geometria. O inventário com município, ano, fonte, cobertura, estado e motivo é reproduzível com `PYTHONPATH=. python scripts/inventario_espacial.py`. [Inventário](evidencias/mapa-preventivo/inventario.json)
+
+## Regras locais de apoio preventivo
+
+As regras `apoio-preventivo-1` usam as contagens e a elegibilidade já calculadas pelo painel. Quando o ano é parcial, a cobertura é insuficiente ou o denominador não permite comparação, a ficha orienta conferir coleta e disponibilidade. Para contagens históricas com cobertura comparável, orienta medir velocidades atuais e confirmar em campo o limite aplicável, a sinalização e as condições da via. Com zero observado em um recorte comparável, descreve as faixas publicadas. Com ausência de contagens e registros de acidente disponíveis, orienta revisar ocorrências e gravidade por fonte e validar os locais. A ordem do ranking não é uma escala de gravidade.
+
+A avaliação de fiscalização de velocidade requer medições atuais em relação ao limite aplicável. A avaliação de blitz requer evidência recente de um problema que essa medida possa enfrentar. Ambas precisam de avaliação de alternativas e validação da autoridade competente. A ficha não usa o cadastro de 2026 como confirmação retroativa de limite ou atividade. O contexto de acidentes do ponto é um intervalo de 5 km em ambos os sentidos, independente do equipamento. A consulta municipal usa apenas o município publicado pela PRF. Os contextos legados ANTT e PRF aparecem em seção separada do relatório. As bases A, B, ANTT e PRF mantêm seus denominadores e recortes.
+
+## Fontes candidatas
+
+A PRF lista o ZIP por ocorrência de 2026 sob sua política de dados abertos. O arquivo baixado tem SHA-256 `d77d3db24602bb2a70131082eff5b7806c6ce21602880acb2d7f7790e5defccb`. O CSV tem 54.895 linhas nacionais e datas de 01/01 a 30/09. No recorte SC, BR-101 e km 244,680–465,100 há 525 linhas, sem IDs vazios ou repetidos no recorte, e uma posição fora da faixa plausível ou ausente. O esquema contém data, município, km, BR, UF, coordenadas, sentido e campos de gravidade. Isso é um diagnóstico de candidato. A incorporação exige revisão versionada da cobertura e da consistência espacial, incluindo compatibilidade com os arquivos anteriores. [Dados abertos PRF](https://www.gov.br/prf/pt-br/acesso-a-informacao/dados-abertos/dados-abertos-da-prf)
+
+Congestionamento, eventos em andamento e lacunas operacionais de fiscalização exigem fontes contemporâneas com localização, vigência e atraso conhecidos. O inventário desta entrega não estabelece essas condições. A recomendação local usa regras determinísticas e texto parametrizado.
+
+## Verificação
+
+- SHA de código exercitado: `47956ab7441964d3e87fa9933ab52dfda8633e75`. Python 3.12.14, contrato de 12 arquivos, compilação e 34 testes locais aprovados. Os Parquet, os manifestos originais, as dependências e a configuração de implantação estão preservados.
+- Brave local controlado com `mcp__cua_repl`. A abertura padrão, a busca Laguna e km 304+000, o clique no marcador, a seleção pela lista, a ficha, o reload e a troca de camadas foram exercitados. Criciúma foi recuperada fora do grupo e apareceu como exploratória. Imbituba exibiu os sentidos separados e o marcador agrupado. Passo de Torres ofereceu ficha territorial sem ponto de tráfego.
+- As larguras CSS 320, 360, 390, 768 e 1366 não produziram rolagem horizontal da página. A largura de 683 px foi verificada como reflow equivalente à metade de 1366 px. A lista e a camada PRF receberam comandos de teclado. O contraste nominal no fundo do mapa foi 6,46:1 para o radar, 5,41:1 para a ocorrência e 4,42:1 para a linha do eixo. As medições não são teste com aparelho real ou leitor de tela.
+- A impressão da ficha de Laguna no motor do Brave foi renderizada e inspecionada em duas páginas A4. O primeiro teste com três páginas mostrou uma quebra pouco aproveitada. O ajuste de espaçamento manteve as duas linhas anuais, os números, o próximo passo e a proveniência.
+- O usuário baixou CSV, Markdown e ZIP no reteste manual. A primeira inspeção detectou uma colisão entre o identificador do equipamento e o campo de versão. A regressão de interface agora verifica as duas colunas. O ZIP final tem seis membros, um ponto, duas linhas de cobertura e o mesmo CSV e Markdown dos arquivos avulsos. O CSV técnico preserva `6.343146230944732` por 10 mil. O controle do Chrome devolveu `Browser is not available: chrome`; os links locais foram entregues para o reteste manual.
+- Em ambiente local, a referência e o candidato retornaram `2,520`, `226.870.300` e `57.163` na consulta padrão. Um servidor por vez, Python 3.12.14, uma sessão e sem downloads. O tempo frio de execução e transmissão foi 7,185 s e 2,826 s em uma observação por versão. As medianas aquecidas foram 0,696 s e 0,765 s, em três amostras por versão. O tráfego da sessão WebSocket passou de 59.789 para 350.944 bytes com a geometria. O clique em Laguna foi observado em cerca de 2,4 s no Brave, incluindo automação, rerun e resposta. As medidas locais não estimam latência de rede externa, renderização isolada ou capacidade sob carga.
+- Pendências de aceitação externa: zoom nativo de 200%, aparelhos reais, Firefox, leitor de tela e avaliação com participantes leigos. Roteiro para participantes: localizar Laguna por município ou km, explicar o que 6,34 por 10 mil descreve, abrir a ficha e dizer qual ação vem antes de fiscalizar, baixar o ZIP, repetir em Criciúma e descrever o que a cobertura muda. Registrar erros, tempo de tarefa e dúvidas sem instruir a resposta.
+
+[Evidências de navegador, exportação e medição](evidencias/mapa-preventivo/) · [Matriz F01–F24](MATRIZ_F01_F24.md)

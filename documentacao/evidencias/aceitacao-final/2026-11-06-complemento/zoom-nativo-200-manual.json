@@ -1,0 +1,11 @@
+{
+  "registrado_utc": "2026-11-06T21:51:37.889806+00:00",
+  "navegador": "Chrome",
+  "url": "http://127.0.0.1:8506",
+  "zoom": "200% nativo, menu do navegador",
+  "metodo": "teste manual pelo usuário; resposta textual nesta conversa",
+  "pergunta": "Qual foi o resultado do teste no Chrome com zoom nativo de 200%? Registrei sua intenção de testar; ainda preciso saber se as cinco páginas ficaram legíveis e se foi possível abrir e usar os filtros.",
+  "resposta": "Cinco páginas e filtros funcionaram a 200%",
+  "escopo": "cinco páginas legíveis e filtros acessíveis segundo o usuário",
+  "limites": "sem captura específica desse teste; não executado por automação; não equivale a aparelho real ou leitor de tela"
+}

@@ -4,7 +4,7 @@ services:
     runtime: python
     plan: free
     region: virginia
-    buildCommand: python -m pip install -r requirements.txt
+    buildCommand: python -m pip install -r requirements.txt && python -m src.data_package validate
     startCommand: python -m streamlit run app.py --server.address=0.0.0.0 --server.port=$PORT --server.headless=true --browser.gatherUsageStats=false
     healthCheckPath: /_stcore/health
     domains:

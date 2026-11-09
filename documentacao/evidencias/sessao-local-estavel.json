@@ -1,0 +1,67 @@
+[
+  {
+    "tempo_conexao_e_servidor_s": 3.4121127590005926,
+    "tempo_execucao_e_transmissao_s": 3.2586899810012255,
+    "metricas": [
+      {
+        "label": "Índice agregado por 10 mil",
+        "value": "2,520"
+      },
+      {
+        "label": "Contagens publicadas",
+        "value": "226.870.300"
+      },
+      {
+        "label": "Acima de 120 km/h",
+        "value": "57.163"
+      }
+    ],
+    "erros": [],
+    "downloads": [
+      {
+        "label": "Baixar comparação em CSV (pt-BR)",
+        "url": "/media/2d9757bb0a00dfd255e1bc190a153d56.csv",
+        "status": 200,
+        "bytes": 32238,
+        "sha256": "abe02289e927199b557539a776562246812d76fd376567d485de7b38f010459a",
+        "content_type": "text/csv; charset=utf-8"
+      },
+      {
+        "label": "Baixar relatório em Markdown",
+        "url": "/media/f8fda41e7531f04059dd450b76ad4aa1.md",
+        "status": 200,
+        "bytes": 8751,
+        "sha256": "98edd442e61415d329673834c3e3cd7b150936b35f35d237f77077d05ea93274",
+        "content_type": "text/markdown; charset=utf-8"
+      },
+      {
+        "label": "Baixar consulta completa em ZIP",
+        "url": "/media/b67c368b8d0924e327b0c3d5f1e4d4a7.zip",
+        "status": 200,
+        "bytes": 13162,
+        "sha256": "a95ae8d123bf5a87f34c3114f5edb0f069404a79215b0810293644973845c393",
+        "content_type": "application/zip",
+        "arquivos": [
+          "comparacao_pt-BR.csv",
+          "comparacao_tecnica.csv",
+          "cobertura_pt-BR.csv",
+          "metadados.json",
+          "relatorio.md"
+        ],
+        "snapshot": "2026-10-26.1",
+        "anos_solicitados": [
+          2024,
+          2025
+        ]
+      },
+      {
+        "label": "Baixar manifesto de dados",
+        "url": "/media/23f8b67696cd4ca7934d7529c06eb6b6.json",
+        "status": 200,
+        "bytes": 12989,
+        "sha256": "d4579c67426b449f5d4d8d90a936da832bca16ea1c1cbb01e7b0f02e2fb834e4",
+        "content_type": "application/json"
+      }
+    ]
+  }
+]

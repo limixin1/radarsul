@@ -1,0 +1,13 @@
+{
+  "metodo": "Usuário clicou manualmente no Chrome; captura mostra concluído. Agente inspecionou os arquivos efetivamente recebidos. Não é controle automatizado do Chrome.",
+  "zip_crc": "íntegro",
+  "linhas_csv_pt_e_tecnico": 20,
+  "cobertura_linhas": 40,
+  "altas": 57163,
+  "passagens": 226870300,
+  "indice": 2.519633464583068,
+  "snapshot": "2026-10-26.1",
+  "codigo_zip": "7396d0f8cbce6ec29c3107a0ab97bda31e592127+alterações-locais",
+  "coerencia_interna_zip": true,
+  "diferenca_max_csv": 0.0
+}

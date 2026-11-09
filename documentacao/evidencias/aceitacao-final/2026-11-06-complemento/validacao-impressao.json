@@ -1,0 +1,12 @@
+{
+  "metodo": "Page.printToPDF via CDP em navegador real; A4; não teste de impressora física",
+  "paginas": 3,
+  "linhas_cobertura": 40,
+  "pontos": 20,
+  "passagens": 226870300,
+  "altas": 57163,
+  "rotulos_numeros_sem_quebra": true,
+  "todas_paginas_renderizadas_e_inspecionadas": true,
+  "fonte_coleta_snapshot_codigo_limites": "presentes",
+  "grade_interativa_controles": "omitidos na impressão; relatório completo preservado"
+}

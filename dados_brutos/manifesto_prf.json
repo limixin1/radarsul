@@ -1,0 +1,28 @@
+[
+  {
+    "ano": 2024,
+    "url": "https://drive.google.com/uc?export=download&id=14lB0vqMFkaZj8HZ44b0njYgxs9nAN8KO",
+    "fonte_oficial": "https://www.gov.br/prf/pt-br/acesso-a-informacao/dados-abertos/dados-abertos-da-prf",
+    "acesso_utc": "2026-10-23T14:09:08.732335+00:00",
+    "status_http": 200,
+    "bytes": 3783609,
+    "sha256": "905dac836867297b261e4edefff6cdb470809814e7e1796b3f2f57517099d165",
+    "content_type": "application/octet-stream",
+    "url_final": "https://drive.usercontent.google.com/download?id=14lB0vqMFkaZj8HZ44b0njYgxs9nAN8KO&export=download",
+    "arquivo": "datatran2024.zip",
+    "estado": "obtido"
+  },
+  {
+    "ano": 2025,
+    "url": "https://drive.google.com/uc?export=download&id=1-G3MdmHBt6CprDwcW99xxC4BZ2DU5ryR",
+    "fonte_oficial": "https://www.gov.br/prf/pt-br/acesso-a-informacao/dados-abertos/dados-abertos-da-prf",
+    "acesso_utc": "2026-10-23T14:09:08.732686+00:00",
+    "status_http": 200,
+    "bytes": 3727148,
+    "sha256": "52c8a631ac9d428bf845e2fa996b8c61f66b219f7014a61d292f9d95d186bb0f",
+    "content_type": "application/octet-stream",
+    "url_final": "https://drive.usercontent.google.com/download?id=1-G3MdmHBt6CprDwcW99xxC4BZ2DU5ryR&export=download",
+    "arquivo": "datatran2025.zip",
+    "estado": "obtido"
+  }
+]

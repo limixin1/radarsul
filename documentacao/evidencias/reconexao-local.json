@@ -1,0 +1,67 @@
+{
+  "tempo_conexao_e_servidor_s": 1.8134168719989248,
+  "tempo_execucao_e_transmissao_s": 1.8092212619994825,
+  "tempo_total_com_downloads_s": 1.8276064919991768,
+  "metricas": [
+    {
+      "label": "Índice agregado por 10 mil",
+      "value": "2,520"
+    },
+    {
+      "label": "Contagens publicadas",
+      "value": "226.870.300"
+    },
+    {
+      "label": "Acima de 120 km/h",
+      "value": "57.163"
+    }
+  ],
+  "erros": [],
+  "downloads": [
+    {
+      "label": "Baixar comparação em CSV (pt-BR)",
+      "url": "/media/bf3a350fa8572f7b8dded552999738ac.csv",
+      "status": 200,
+      "bytes": 32238,
+      "sha256": "eed9f93d2ee47163407981da6373f80bf5be039599f75bc632f992a6c840be6d",
+      "content_type": "text/csv; charset=utf-8"
+    },
+    {
+      "label": "Baixar relatório em Markdown",
+      "url": "/media/b8c8b754d0afc917dbbd7a600f0868ee.md",
+      "status": 200,
+      "bytes": 8751,
+      "sha256": "5b50fdebd6e0af8c97c8d8a55b52848ba2ca766d06d5a81ef3512889e09de0bd",
+      "content_type": "text/markdown; charset=utf-8"
+    },
+    {
+      "label": "Baixar consulta completa em ZIP",
+      "url": "/media/3c7a8d54761d49955f73c6645b3cda55.zip",
+      "status": 200,
+      "bytes": 13158,
+      "sha256": "ed3721a0bfc4fafa37e2eee36f44ccb70a1e25feca64c1e6326aca06d768dd9a",
+      "content_type": "application/zip",
+      "arquivos": [
+        "comparacao_pt-BR.csv",
+        "comparacao_tecnica.csv",
+        "cobertura_pt-BR.csv",
+        "metadados.json",
+        "relatorio.md"
+      ],
+      "snapshot": "2026-10-26.1",
+      "anos_solicitados": [
+        2024,
+        2025
+      ]
+    },
+    {
+      "label": "Baixar manifesto de dados",
+      "url": "/media/23f8b67696cd4ca7934d7529c06eb6b6.json",
+      "status": 200,
+      "bytes": 12989,
+      "sha256": "d4579c67426b449f5d4d8d90a936da832bca16ea1c1cbb01e7b0f02e2fb834e4",
+      "content_type": "application/json"
+    }
+  ],
+  "mesma_sessao_confirmada": true
+}

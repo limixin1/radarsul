@@ -1,0 +1,80 @@
+[
+  {
+    "focusVisible": true,
+    "label": null,
+    "outline": "rgb(7, 94, 104) solid 3px",
+    "role": null,
+    "tag": "BUTTON",
+    "text": "Baixar relatório em Markdown"
+  },
+  {
+    "focusVisible": true,
+    "label": null,
+    "outline": "rgb(7, 94, 104) solid 3px",
+    "role": null,
+    "tag": "BUTTON",
+    "text": "Baixar consulta completa em ZIP"
+  },
+  {
+    "focusVisible": true,
+    "label": null,
+    "outline": "rgb(20, 43, 60) none 3px",
+    "role": null,
+    "tag": "SUMMARY",
+    "text": "keyboard_arrow_rightMétodo, versões e fontes verificáveis"
+  },
+  {
+    "focusVisible": false,
+    "label": null,
+    "outline": "rgb(20, 43, 60) none 3px",
+    "role": null,
+    "tag": "BODY",
+    "text": "\n    You need to enable JavaScript to run this app.\n    Skip to m"
+  },
+  {
+    "focusVisible": true,
+    "label": null,
+    "outline": "rgb(7, 94, 104) solid 3px",
+    "role": null,
+    "tag": "A",
+    "text": "Skip to main content"
+  },
+  {
+    "focusVisible": true,
+    "label": null,
+    "outline": "rgb(7, 94, 104) solid 3px",
+    "role": null,
+    "tag": "INPUT",
+    "text": ""
+  },
+  {
+    "focusVisible": true,
+    "label": "2024",
+    "outline": "rgb(255, 255, 255) none 3px",
+    "role": null,
+    "tag": "SPAN",
+    "text": "2024"
+  },
+  {
+    "focusVisible": true,
+    "label": "Anos solicitados",
+    "outline": "rgb(7, 94, 104) solid 3px",
+    "role": "combobox",
+    "tag": "INPUT",
+    "text": ""
+  },
+  {
+    "case": "summary_após_correção",
+    "outline": "rgb(7, 94, 104) solid 3px",
+    "tag": "SUMMARY",
+    "text": "keyboard_arrow_rightMétodo, versões e fontes verificáveis",
+    "visible": true
+  },
+  {
+    "case": "sequência_final",
+    "outline": "rgb(7, 94, 104) solid 3px",
+    "tag": "SPAN",
+    "text": "2024",
+    "visible": true
+  }
+]

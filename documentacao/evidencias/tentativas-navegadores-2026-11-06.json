@@ -1,0 +1,78 @@
+{
+  "data_local": "2026-11-06",
+  "fuso": "America/Sao_Paulo",
+  "git_branch": "correcao/sentinela-auditoria",
+  "git_head_antes_do_registro": "42dec2424379062144e710be4da8d2125a23c067",
+  "tentativas": [
+    {
+      "ferramenta": "mcp__cua_repl.js",
+      "chamada": "cua.getState()",
+      "resultado": {
+        "apps": [],
+        "browsers": [],
+        "errors": [
+          "Browsers: Error: Local browser use is disabled in Work settings"
+        ]
+      }
+    },
+    {
+      "ferramenta": "mcp__cua_repl.js",
+      "chamada": "cua.createBrowserTab('chrome', 'http://127.0.0.1:8506', {sessionName:'🔎 SENTINELA'})",
+      "resultado": "Local browser use is disabled in Work settings"
+    },
+    {
+      "ferramenta": "mcp__cua_repl.js",
+      "chamada": "cua.createBrowserTab('brave', 'http://127.0.0.1:8506', {sessionName:'🔎 SENTINELA'})",
+      "resultado": "Local browser use is disabled in Work settings"
+    },
+    {
+      "ferramenta": "mcp__cua_repl.js",
+      "chamada": "cua.createBrowserTab('iab', 'http://127.0.0.1:8506', {visible:true})",
+      "resultado": "Local browser use is disabled in Work settings"
+    }
+  ],
+  "local": {
+    "health": "ok",
+    "codigo_local_exportado": "42dec2424379062144e710be4da8d2125a23c067",
+    "snapshot": "2026-10-26.1",
+    "script_concluido": true,
+    "erros": [],
+    "metricas": [
+      {
+        "label": "Índice agregado por 10 mil",
+        "value": "2,520"
+      },
+      {
+        "label": "Contagens publicadas",
+        "value": "226.870.300"
+      },
+      {
+        "label": "Acima de 120 km/h",
+        "value": "57.163"
+      }
+    ],
+    "downloads_status": [
+      200,
+      200,
+      200,
+      200
+    ]
+  },
+  "render": {
+    "servico": "radarsul",
+    "commit_publicado": "e5baed4fdab7575690a408f4ab492fd63790a00e",
+    "deploy": "dep-dbg7476c6qcc73ei65g0",
+    "estado": "live"
+  },
+  "ci_anterior": {
+    "commit": "42dec2424379062144e710be4da8d2125a23c067",
+    "run": 42153357635,
+    "conclusao": "success"
+  },
+  "validacao_visual_realizada": false,
+  "capturas_realizadas": false,
+  "png_gerado_inspecionado": false,
+  "viewports_validados": [],
+  "zoom_200_validado": false,
+  "teclado_foco_contraste_efetivo_validados": false
+}

@@ -121,9 +121,9 @@ def display_table(t):
 
 def parse_url(params, meta):
     """Entradas são listas para detectar repetição. Não descarta seleções vazias."""
-    out = {'page':PAGES[0], 'years':[2024,2025], 'area':AREAS[0], 'directions':DIRECTIONS.copy(), 'city':'Todas as cidades', 'points':None}
+    out = {'page':PAGES[0], 'years':[2024,2025], 'area':AREAS[0], 'directions':DIRECTIONS.copy(), 'city':'Todas as cidades', 'points':None, 'focus':None}
     notes=[]
-    known={'pagina','anos','area','sentidos','cidade','pontos','v'}
+    known={'pagina','anos','area','sentidos','cidade','pontos','v','foco'}
     if set(params)-known: notes.append('Parâmetros desconhecidos foram ignorados: '+', '.join(sorted(set(params)-known)))
     if 'v' in params and params['v'] != ['1']: notes.append('Versão de URL não reconhecida; os filtros foram validados novamente.')
     cities=['Todas as cidades',*sorted(meta.municipio.unique())]
@@ -141,7 +141,15 @@ def parse_url(params, meta):
         if len(set(values))!=len(values): notes.append(f'Valores repetidos em {key} foram consolidados.')
         if any(v and v not in valid for v in values): notes.append(f'Valores de {key} incompatíveis com o snapshot foram removidos; confira a seleção.')
         out[field]=list(map(int,clean)) if field=='years' else clean
+    focus = params.get('foco', [])
+    if len(focus) == 1 and 0 < len(focus[0]) <= 80:
+        out['focus'] = focus[0]
+    elif 'foco' in params:
+        notes.append('Foco da consulta inválido ou repetido.')
     return out,notes
 
-def url_state(page, years, area, directions, city, points):
-    return {'v':'1','pagina':page,'anos':list(map(str,years)) or [''], 'area':area,'sentidos':directions or [''], 'cidade':city,'pontos':points or ['']}
+def url_state(page, years, area, directions, city, points, focus=None):
+    params = {'v':'1','pagina':page,'anos':list(map(str,years)) or [''], 'area':area,'sentidos':directions or [''], 'cidade':city,'pontos':points or ['']}
+    if focus:
+        params['foco'] = focus
+    return params

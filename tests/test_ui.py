@@ -129,3 +129,50 @@ def test_missing_prf_block_remains_visible(monkeypatch,package):
     assert not a.exception
     text='\n'.join(x.value for x in a.markdown)
     assert 'PRF' in text and 'fonte indisponível' in text
+
+
+def test_map_search_card_and_url(app, monkeypatch):
+    import csv
+    import io
+    import zipfile
+    import app_antt
+
+    generated = {}
+    bundle = app_antt.bundle
+
+    def capture(*args, **kwargs):
+        generated["zip"] = bundle(*args, **kwargs)
+        return generated["zip"]
+
+    monkeypatch.setattr(app_antt, "bundle", capture)
+    app.text_input(key="map_search").set_value("km 304+000").run()
+    assert not app.exception
+    app.selectbox(key="map_focus_choice").set_value("VC101-9").run()
+    assert not app.exception
+    assert app.query_params["foco"] == "VC101-9"
+    app.button(key="open_preventive").click().run()
+    assert app.radio(key="page").value == PAGES[4]
+    assert app.multiselect(key="points").value == ["VC101-9"]
+    assert "7.091 de 11.178.995" in "\n".join(x.value for x in app.markdown)
+    assert app.get("download_button")
+    shared = AppTest.from_file(str(ROOT/'app.py'), default_timeout=60)
+    shared.query_params = dict(app.query_params)
+    shared.run()
+    assert not shared.exception
+    assert "Ficha preventiva · Laguna" in "\n".join(x.value for x in shared.markdown)
+    with zipfile.ZipFile(io.BytesIO(generated["zip"])) as archive:
+        text = archive.read("localizacao_pt-BR.csv").decode("utf-8-sig")
+        location = list(csv.DictReader(io.StringIO(text), delimiter=";"))
+        assert len(location) == 1
+        assert location[0]["identificador"] == "VC101-9"
+        assert location[0]["codigo"] != location[0]["identificador"]
+
+
+def test_map_uses_list_when_road_is_unavailable(app, monkeypatch):
+    import app_antt
+    monkeypatch.setattr(app_antt, "road", lambda: None)
+    app.text_input(key="map_search").set_value("Laguna").run()
+    assert "Eixo cartográfico indisponível" in "\n".join(x.value for x in app.info)
+    app.selectbox(key="map_focus_choice").set_value("VC101-9").run()
+    assert "Referência por km" in "\n".join(x.value for x in app.caption)
+    assert app.button(key="open_preventive")

@@ -1,5 +1,7 @@
 # Matriz F01–F24
 
+**Publicação do piloto em 09/11.** O [registro da publicação](PUBLICACAO_2026-11-09.md) atualiza as evidências de produção para cobertura (F01), seleção e estados vazios (F02/F10), URL (F11), operação e contrato (F14/F15/F24), exportação (F18), CI (F21) e medição (F20/F22). O histórico e os testes de interface local abaixo foram preservados. A meta de desempenho sob concorrência e a homologação com participantes, aparelhos reais, Firefox e leitor de tela continuam pendentes.
+
 **Estado atual em 06/11:** acesso Brave recuperado; esta tabela incorpora a [aceitação real no navegador](ACEITACAO_NAVEGADOR_2026-11-06.md). Os relatos de bloqueio de acesso abaixo são históricos. O Brave bloqueou CSV/MD/ZIP pela organização; o usuário depois concluiu esses downloads manualmente no Chrome, com captura e arquivos inspecionados. Nenhuma política foi alterada. Zoom nativo de 200% foi confirmado manualmente pelo usuário no Chrome; pessoas, leitor de tela e aparelhos continuam pendentes.
 
 Revalidado em 05/11/2026, America/Sao_Paulo, sobre baseline limpa `e5baed4`, a mesma da auditoria. Branch: `correcao/sentinela-auditoria`. Etapas: contrato/reprodução; consultas/interface/exportações; regressões/operação/PR. Prompt integral em `_contexto`. Main e implantação permanecem inalteradas.

@@ -1,0 +1,126 @@
+{
+  "opening": {
+    "after24sStillRunning": true,
+    "firstMetricsObservedMs": 28843,
+    "identity": [
+      "  - paragraph: Aplicação 2.1.0 · dados 2026-10-26.1",
+      "  - paragraph: Aplicação 2.1.0 · código 38987b05baf99faaca2d3f7bafed0271969ee281 · dados 2026-10-26.1. Dados históricos, sem atualização automática.",
+      "  - paragraph: \"trafego: 2022-01-01 a 2026-06-30. Dias com publicação; não comprova operação contínua nem completude de faixas. 2026 parcial até 30/06.\""
+    ]
+  },
+  "pages": {
+    "Comparador de equipamentos": [
+      "  - heading \"SENTINELA\" [level=1]",
+      "  - heading \"Comparador de equipamentos\" [level=1]:",
+      "    - link \"Link to heading\":",
+      "  - paragraph: \"Spearman 0,962: semelhança na ordenação de 20 pontos selecionados entre 2024 e 2025. Não é previsão nem causalidade.\"",
+      "  - 'heading \"Possíveis infratores: base B separada\" [level=3]':",
+      "    - text: \"Possíveis infratores: base B separada\"",
+      "    - link \"Link to heading\":",
+      "  - generic \"Tabela para leitura e teclado — base B\":",
+      "    - paragraph: Tabela para leitura e teclado — base B",
+      "  - paragraph: \"Intervalo da base B: 2022-12-30 a 2026-06-02. Base B separada. Intervalo do inventário bruto; ausência de linhas não comprova zero infrações. Taxa B/A bloqueada.\"",
+      "  - heading \"Dias publicados por ponto e ano\" [level=3]:"
+    ],
+    "Evolução e persistência": [
+      "    - radio \"Evolução e persistência\" [checked] [active]",
+      "    - paragraph: Evolução e persistência",
+      "  - paragraph: Snapshot histórico. Coleta ANTT 26/10/2026; PRF 23/10/2026. Tráfego até junho de 2026. Sem monitoramento em tempo real.",
+      "  - heading \"Evolução e persistência\" [level=1]:",
+      "    - text: Evolução e persistência",
+      "  - paragraph: As curvas incluem somente os pontos selecionados. Índices mensais exigem 80% dos dias publicados; lacunas não são zeros.",
+      "  - generic \"Dados e resumo do gráfico — histórico\":",
+      "    - paragraph: Dados e resumo do gráfico — histórico",
+      "  - paragraph: O intervalo usa o inventário do arquivo bruto, igual para todos os pontos; 2026 de tráfego vai até 30/06. Cobertura não comprova operação contínua. O grupo histórico reúne os pontos com ≥90% de dias em cada ano de 2024 e 2025."
+    ],
+    "Contexto rodoviário": [
+      "    - radio \"Contexto rodoviário\" [checked] [active]",
+      "    - paragraph: Contexto rodoviário",
+      "  - paragraph: Snapshot histórico. Coleta ANTT 26/10/2026; PRF 23/10/2026. Tráfego até junho de 2026. Sem monitoramento em tempo real.",
+      "  - heading \"Contexto rodoviário\" [level=1]:",
+      "    - text: Contexto rodoviário",
+      "  - 'heading \"ANTT: segmentos disjuntos de 5 km\" [level=3]':",
+      "    - text: \"ANTT: segmentos disjuntos de 5 km\"",
+      "      - /url: \"#antt-segmentos-disjuntos-de-5-km\"",
+      "    - paragraph: Não há segmentos suficientes com pontos selecionados elegíveis para a análise de associação.",
+      "  - heading \"ANTT — envelope contínuo\" [level=3]:",
+      "    - text: ANTT — envelope contínuo",
+      "  - paragraph: \"ANTT — envelope contínuo: 45 registros publicados — período disponível no snapshot. Anos solicitados: 2024, 2025; com dados da fonte: 2024, 2025. Área: BR-101/SC, km 301,500 a 306,500, margem de 2,5 km entre pontos; ambos os sentidos. Intervalo do inventário do CSV de acidentes, sem garantia de completude. Repetições sem ID preservadas.\""
+    ],
+    "Relatório preventivo": [
+      "    - radio \"Relatório preventivo\" [checked] [active]",
+      "    - paragraph: Relatório preventivo",
+      "  - combobox \"Buscar cidade\": Laguna",
+      "  - generic: Laguna · BR-101/SC · km 304,000 · Decrescente · VC101-9",
+      "    - generic \"Laguna · BR-101/SC · km 304,000 · Decrescente · VC101-9\":",
+      "      - generic \"Laguna · BR-101/SC · km 304,000 · Decrescente · VC101-9\"",
+      "      - button \"Remove Laguna · BR-101/SC · km 304,000 · Decrescente · VC101-9\":",
+      "  - heading \"Relatório preventivo\" [level=1]:",
+      "    - text: Relatório preventivo",
+      "  - paragraph: \"1 ponto solicitado · Grupo com boa cobertura em 2024–2025 · Laguna · anos: 2024, 2025 · sentidos: Crescente, Decrescente. Comparação: ≥90% dos dias de cada ano calendário solicitado, denominador positivo e período anual completo no snapshot. Demais consultas são exploratórias.\"",
+      "  - paragraph: \"Área: Grupo com boa cobertura em 2024–2025. Cidade: Laguna.\"",
+      "  - heading \"Fontes e rastreabilidade\" [level=2]:",
+      "    - text: Fontes e rastreabilidade",
+      "      - /url: https://radarsul.site/?v=1&pagina=Relat%C3%B3rio+preventivo&anos=2024&anos=2025&area=Grupo+com+boa+cobertura+em+2024%E2%80%932025&sentidos=Crescente&sentidos=Decrescente&cidade=Laguna&pontos=VC101-9",
+      "  - heading \"Exportar esta consulta\" [level=3]:",
+      "    - text: Exportar esta consulta"
+    ],
+    "Visão geral": [
+      "Consulte um ponto da BR-101/SC",
+      "2,520",
+      "226.870.300",
+      "57.163"
+    ]
+  },
+  "laguna": {
+    "url": "https://radarsul.site/?v=1&pagina=Comparador+de+equipamentos&anos=2024&anos=2025&area=Grupo+com+boa+cobertura+em+2024%E2%80%932025&sentidos=Crescente&sentidos=Decrescente&cidade=Laguna&pontos=VC101-9",
+    "lines": [
+      "  - generic: Laguna · BR-101/SC · km 304,000 · Decrescente · VC101-9",
+      "    - generic \"Laguna · BR-101/SC · km 304,000 · Decrescente · VC101-9\":",
+      "      - generic \"Laguna · BR-101/SC · km 304,000 · Decrescente · VC101-9\"",
+      "      - button \"Remove Laguna · BR-101/SC · km 304,000 · Decrescente · VC101-9\":",
+      "  - paragraph: \"1 ponto solicitado · Grupo com boa cobertura em 2024–2025 · Laguna · anos: 2024, 2025 · sentidos: Crescente, Decrescente. Comparação: ≥90% dos dias de cada ano calendário solicitado, denominador positivo e período anual completo no snapshot. Demais consultas são exploratórias.\"",
+      "    - paragraph: A comparação da ordenação entre pontos exige pelo menos dois pontos selecionados elegíveis e os anos 2024 e 2025. Com um ponto não há correlação entre pontos."
+    ]
+  },
+  "reload": {
+    "ms": 3779,
+    "urlPreserved": true,
+    "selection": [
+      "  - paragraph: \"1 ponto solicitado · Grupo com boa cobertura em 2024–2025 · Laguna · anos: 2024, 2025 · sentidos: Crescente, Decrescente. Comparação: ≥90% dos dias de cada ano calendário solicitado, denominador positivo e período anual completo no snapshot. Demais consultas são exploratórias.\""
+    ]
+  },
+  "mixed": [
+    "  - paragraph: Snapshot histórico. Coleta ANTT 26/10/2026; PRF 23/10/2026. Tráfego até junho de 2026. Sem monitoramento em tempo real.",
+    "  - paragraph: Aplicação 2.1.0 · dados 2026-10-26.1",
+    "  - paragraph: \"1 ponto solicitado · Grupo com boa cobertura em 2024–2025 · Laguna · anos: 2024, 2025, 2026 · sentidos: Crescente, Decrescente. Comparação: ≥90% dos dias de cada ano calendário solicitado, denominador positivo e período anual completo no snapshot. Demais consultas são exploratórias.\"",
+    "    - paragraph: \"1 ponto com tráfego é exploratório neste período: cobertura anual insuficiente ou ano parcial. Os índices permanecem disponíveis na tabela, sem disputar o ranking.\"",
+    "  - paragraph: \"ANTT — envelope contínuo: 45 registros publicados — cobertura parcial. Anos solicitados: 2024, 2025, 2026; com dados da fonte: 2024, 2025. Área: BR-101/SC, km 301,500 a 306,500, margem de 2,5 km entre pontos; ambos os sentidos. Intervalo do inventário do CSV de acidentes, sem garantia de completude. Repetições sem ID preservadas.\"",
+    "  - paragraph: \"PRF — trecho integral: 1.750 registros publicados — cobertura parcial. Anos solicitados: 2024, 2025, 2026; com dados da fonte: 2024, 2025. Área: BR-101/SC, km 244,680 a 465,100; ambos os sentidos; independente da seleção de pontos. Arquivos anuais PRF 2024 e 2025. Ausência de registro não prova ausência real de acidente. Desses registros do trecho, 36 têm município Criciúma nos anos disponíveis. Não são atribuídos a um radar.\"",
+    "  - paragraph: O intervalo usa o inventário do arquivo bruto, igual para todos os pontos; 2026 de tráfego vai até 30/06. Cobertura não comprova operação contínua. O grupo histórico reúne os pontos com ≥90% de dias em cada ano de 2024 e 2025."
+  ],
+  "only2026": [
+    "  - paragraph: \"1 ponto solicitado · Grupo com boa cobertura em 2024–2025 · Laguna · anos: 2026 · sentidos: Crescente, Decrescente. Comparação: ≥90% dos dias de cada ano calendário solicitado, denominador positivo e período anual completo no snapshot. Demais consultas são exploratórias.\"",
+    "    - paragraph: \"1 ponto com tráfego é exploratório neste período: cobertura anual insuficiente ou ano parcial. Os índices permanecem disponíveis na tabela, sem disputar o ranking.\"",
+    "  - paragraph: \"ANTT — envelope contínuo: Indisponível — sem cobertura do período. Anos solicitados: 2026; com dados da fonte: nenhum. Área: BR-101/SC, km 301,500 a 306,500, margem de 2,5 km entre pontos; ambos os sentidos. Intervalo do inventário do CSV de acidentes, sem garantia de completude. Repetições sem ID preservadas.\"",
+    "  - paragraph: \"PRF — trecho integral: Indisponível — sem cobertura do período. Anos solicitados: 2026; com dados da fonte: nenhum. Área: BR-101/SC, km 244,680 a 465,100; ambos os sentidos; independente da seleção de pontos. Arquivos anuais PRF 2024 e 2025. Ausência de registro não prova ausência real de acidente.\"",
+    "  - paragraph: O intervalo usa o inventário do arquivo bruto, igual para todos os pontos; 2026 de tráfego vai até 30/06. Cobertura não comprova operação contínua. O grupo histórico reúne os pontos com ≥90% de dias em cada ano de 2024 e 2025."
+  ],
+  "emptyPoints": {
+    "message": "    - paragraph: Nenhum equipamento selecionado. Selecione ao menos um ponto no painel ou restaure o padrão. Comparações e downloads ficam indisponíveis.",
+    "exports": 0
+  },
+  "emptyYears": {
+    "message": "    - paragraph: Nenhum ano selecionado. Escolha ao menos um ano ou restaure a consulta padrão.",
+    "exports": 0
+  },
+  "reconnect": {
+    "offlineSocketClosed": false,
+    "events": [],
+    "elapsedMs": 7745
+  },
+  "tool": "mcp__cua_repl / Brave Pessoal",
+  "snapshot": "2026-10-26.1",
+  "application": "2.1.0",
+  "tested": "2026-11-09T20:57:36.062Z"
+}

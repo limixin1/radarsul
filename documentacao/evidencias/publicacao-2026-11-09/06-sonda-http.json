@@ -1,0 +1,57 @@
+{
+  "sessao": "uma conexão WebSocket",
+  "conclusao_script_s": 4.825,
+  "metricas": [
+    "2,520",
+    "226.870.300",
+    "57.163"
+  ],
+  "http": [
+    {
+      "botao": "Baixar comparação em CSV (pt-BR)",
+      "status": 200,
+      "mime": "text/csv; charset=utf-8",
+      "bytes": 34118,
+      "sha256": "f803643597623e92434f947dd48c2c5b918472c94ac8bfcdf885a04fc2bed510",
+      "segundos": 0.89,
+      "linhas": 20,
+      "codigo": [
+        "38987b05baf99faaca2d3f7bafed0271969ee281"
+      ],
+      "snapshot": [
+        "2026-10-26.1"
+      ],
+      "contagens": 226870300,
+      "excedencias": 57163
+    },
+    {
+      "botao": "Baixar relatório em Markdown",
+      "status": 200,
+      "mime": "text/markdown; charset=utf-8",
+      "bytes": 8845,
+      "sha256": "1e1ad952388e66d5c252afc9588a8403809a9a09af855df37e2afd3d5150c788",
+      "segundos": 0.261,
+      "codigo": "38987b05baf99faaca2d3f7bafed0271969ee281",
+      "snapshot": "2026-10-26.1",
+      "texto_conferido": true
+    },
+    {
+      "botao": "Baixar consulta completa em ZIP",
+      "status": 200,
+      "mime": "application/zip",
+      "bytes": 13617,
+      "sha256": "1e3519ba5d7644a07c941bd2d5f6970e1bbdecc83330c781c049cf028eb0ffc7",
+      "segundos": 0.256,
+      "codigo": "38987b05baf99faaca2d3f7bafed0271969ee281",
+      "snapshot": "2026-10-26.1",
+      "arquivos": [
+        "comparacao_pt-BR.csv",
+        "comparacao_tecnica.csv",
+        "cobertura_pt-BR.csv",
+        "metadados.json",
+        "relatorio.md"
+      ],
+      "linhas_cobertura": 40
+    }
+  ]
+}

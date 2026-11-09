@@ -49,6 +49,13 @@ def coverage_rows(daily, ids, years, registry):
     t['cobertura_intervalo'] = t.dias / t.dias_intervalo.replace(0, float('nan'))
     return t[columns]
 
+def comparable_years(coverage):
+    """Cada linha representa um ponto e um ano na grade de cobertura publicada."""
+    return (coverage.cobertura_dias.ge(.9)
+            & coverage.passagens.gt(0)
+            & coverage.dias_intervalo.eq(coverage.dias_calendario)).fillna(False)
+
+
 def query_tables(daily, meta, ids, years, registry):
     selected = daily.loc[daily.identificador.isin(ids) & daily.ano.isin(years)].copy()
     cov = coverage_rows(daily, ids, years, registry)
@@ -57,10 +64,9 @@ def query_tables(daily, meta, ids, years, registry):
         eq['elegivel'] = pd.Series(dtype=bool)
         eq['cobertura_minima'] = pd.Series(dtype=float)
         return selected, eq, cov
-    stats = cov.groupby('identificador').agg(cobertura_minima=('cobertura_dias','min'), anos=('ano','nunique'), menor_total=('passagens','min'))
-    # Ano parcial nunca disputa destaque anual; cobertura do intervalo permanece consultável.
-    complete = all(pd.Timestamp(registry['inicio']) <= pd.Timestamp(y,1,1) and pd.Timestamp(registry['fim']) >= pd.Timestamp(y,12,31) for y in years)
-    stats['elegivel'] = stats.cobertura_minima.ge(.9) & stats.anos.eq(len(years)) & stats.menor_total.gt(0) & complete
+    stats = cov.assign(comparavel=comparable_years(cov)).groupby('identificador').agg(
+        cobertura_minima=('cobertura_dias','min'), elegivel=('comparavel','all'),
+    )
     eq = eq.merge(stats[['cobertura_minima','elegivel']], on='identificador', validate='one_to_one')
     return selected, eq, cov
 

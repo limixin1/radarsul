@@ -136,15 +136,23 @@ def test_map_search_card_and_url(app, monkeypatch):
     import io
     import zipfile
     import app_antt
+    from src.preventive import CHECK_FIELD
 
     generated = {}
     bundle = app_antt.bundle
+    download = app_antt.st.download_button
 
     def capture(*args, **kwargs):
         generated["zip"] = bundle(*args, **kwargs)
         return generated["zip"]
 
+    def capture_download(label, data, *args, **kwargs):
+        if label == "Baixar relatório em Markdown":
+            generated["markdown"] = data.decode()
+        return download(label, data, *args, **kwargs)
+
     monkeypatch.setattr(app_antt, "bundle", capture)
+    monkeypatch.setattr(app_antt.st, "download_button", capture_download)
     app.text_input(key="map_search").set_value("km 304+000").run()
     assert not app.exception
     app.selectbox(key="map_focus_choice").set_value("VC101-9").run()
@@ -166,6 +174,20 @@ def test_map_search_card_and_url(app, monkeypatch):
         assert len(location) == 1
         assert location[0]["identificador"] == "VC101-9"
         assert location[0]["codigo"] != location[0]["identificador"]
+        exported = archive.read("relatorio.md").decode()
+        assert CHECK_FIELD in exported
+        assert exported == generated["markdown"]
+        assert exported.strip() in [x.value for x in shared.markdown]
+
+    shared.multiselect(key="years").set_value([2024]).run()
+    assert not shared.exception
+    with zipfile.ZipFile(io.BytesIO(generated["zip"])) as archive:
+        exported = archive.read("relatorio.md").decode()
+        assert "Registrar o observado e reavaliar" in exported
+        assert "não sustentam uma prioridade de verificação em campo" in exported
+        assert CHECK_FIELD not in exported
+        assert exported == generated["markdown"]
+        assert exported.strip() in [x.value for x in shared.markdown]
 
 
 def test_map_uses_list_when_road_is_unavailable(app, monkeypatch):

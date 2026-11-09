@@ -71,9 +71,11 @@ def test_card_and_exports_use_same_facts_and_preserve_history(package):
         assert json.loads(archive.read("metadados.json"))["ficha_preventiva"]["evidencia"] == card.evidencia
         assert "foco=VC101-9" in meta["consulta_relativa"]
     zero = eq.assign(altas=0, por_10_mil=0)
-    assert "Nenhuma contagem" in build_card(ids[0], points, zero, cov, frames, manifest, years, positions).achado
-    partial = eq.assign(elegivel=False)
-    assert "exploratório" in build_card(ids[0], points, partial, cov, frames, manifest, [2026], positions).achado
+    assert "Nenhuma contagem" in build_card(ids[0], points, zero, cov.assign(altas=0), frames, manifest, years, positions).achado
+    _, partial, partial_cov = query_tables(
+        frames["antt_diario"], points, ids, [2026], manifest["cobertura"]["trafego"],
+    )
+    assert "exploratório" in build_card(ids[0], points, partial, partial_cov, frames, manifest, [2026], positions).achado
     empty = build_card("cidade:Passo de Torres", points, eq.iloc[:0], cov.iloc[:0],
                        frames, manifest, [2026], positions)
     assert "Indisponível" in empty.contexto[0]
@@ -81,3 +83,38 @@ def test_card_and_exports_use_same_facts_and_preserve_history(package):
     segment = build_card("km:300", points, eq, cov, frames, manifest, years, positions)
     assert "7.091 de 11.178.995" in segment.evidencia
     assert segment.localizacao["precisao"] == KM_ONLY
+
+
+
+def test_preventive_recurrence_requires_two_comparable_years_at_same_point(package):
+    manifest, frames, _ = package
+    points = frames["antt_equipamentos"]
+    ids = ["VC101-6", "VC101-8"]
+    years = [2024, 2025, 2026]
+    positions = spatial_records(points, "ANTT", road())
+    # Two complete years and one officially partial year for each point.
+    dates = pd.date_range("2024-01-01", "2026-06-30")
+    daily = pd.MultiIndex.from_product([ids, dates], names=["identificador", "data"]).to_frame(index=False)
+    daily["ano"] = daily.data.dt.year
+    daily["passagens"] = 100
+    daily["altas"] = 0
+
+    def card_with_counts(*records):
+        example = daily.copy()
+        for point, date in records:
+            example.loc[example.identificador.eq(point) & example.data.eq(date), "altas"] = 1
+        _, eq, cov = query_tables(example, points, ids, years, manifest["cobertura"]["trafego"])
+        return build_card("cidade:Imbituba", points, eq, cov, frames, manifest, years, positions)
+
+    isolated = ("VC101-6", "2024-05-01")
+    partial = ("VC101-6", "2026-05-01")
+    other_point = ("VC101-8", "2025-05-01")
+    descriptive = card_with_counts(isolated, partial, other_point)
+    assert descriptive.proximo_passo != CHECK_FIELD
+    assert "não sustenta uma prioridade" in descriptive.motivo
+
+    repeated = card_with_counts(isolated, ("VC101-6", "2025-05-01"), partial)
+    assert repeated.proximo_passo == CHECK_FIELD
+    assert "VC101-6 em 2024, 2025" in repeated.evidencia
+    assert "exploratória" in repeated.cobertura
+    assert "não sustentam uma prioridade operacional" in repeated.motivo

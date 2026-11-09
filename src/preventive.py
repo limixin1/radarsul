@@ -4,10 +4,10 @@ from dataclasses import asdict, dataclass
 import pandas as pd
 
 from src.antt import weighted_index
-from src.query import br, plain, point_label, source_result
+from src.query import br, comparable_years, plain, point_label, source_result
 from src.spatial import KM_ONLY, segment_label, segment_mask
 
-RULE_VERSION = "apoio-preventivo-1"
+RULE_VERSION = "apoio-preventivo-2"
 CHECK_FIELD = (
     "Medir velocidades atuais no trecho e conferir em campo o limite aplicável, "
     "a sinalização e as condições da via."
@@ -15,7 +15,7 @@ CHECK_FIELD = (
 INTERVENTIONS = (
     "Para avaliar fiscalização de velocidade, reúna medições recentes frente ao limite aplicável. "
     "Para avaliar blitz, documente um problema atual que essa abordagem possa enfrentar. "
-    "Em ambos os casos, compare alternativas e submeta a avaliação à autoridade competente."
+    "Em ambos os casos, confirme a evidência em campo, compare alternativas e submeta a avaliação à autoridade competente."
 )
 
 
@@ -139,20 +139,35 @@ def build_card(focus, points, eq, cov, frames, manifest, years, positions):
     high, total = rows.altas.sum(), rows.passagens.sum()
     evidence = (f"ANTT, base A. {br(high)} de {br(total)} contagens nas faixas acima de 120 km/h{days}. "
                 f"Índice {br(weighted_index(high, total), 3)} por 10 mil.")
-    if not rows.elegivel.all():
+    annual_signal = coverage_rows.loc[comparable_years(coverage_rows) & coverage_rows.altas.gt(0)]
+    years_per_point = annual_signal.groupby("identificador").ano.transform("nunique")
+    recurring = annual_signal.loc[years_per_point.ge(2)]
+    if not recurring.empty:
+        years_by_point = [
+            f"{point} em {', '.join(map(str, sorted(annual.ano)))}"
+            for point, annual in recurring.groupby("identificador")
+        ]
+        evidence += " Contagens em anos comparáveis no mesmo ponto. " + " · ".join(years_by_point) + "."
+        finding = "O sinal histórico se repete no mesmo ponto em anos comparáveis."
+        step = CHECK_FIELD
+        reason = "A repetição orienta o que verificar em campo. Os dados históricos não sustentam uma prioridade operacional."
+        if not rows.elegivel.all():
+            coverage += " A comparação do recorte completo é exploratória. O sinal usa apenas os anos comparáveis de cada ponto."
+    elif not rows.elegivel.all():
         finding = "Resultado exploratório pela cobertura, denominador ou período incompleto."
         step = "Conferir os dias de coleta e obter dados que cubram o período necessário."
-        reason = "A cobertura disponível limita a comparação anual."
-        gap = "Confirmar coleta e publicação com a fonte. Para avaliar medidas, obter evidência atual do trecho."
+        reason = "A cobertura disponível limita a comparação anual. A base permite descrever o observado e não sustenta uma prioridade."
     elif high == 0:
         finding = "Nenhuma contagem nas faixas acima de 120 km/h na base publicada deste recorte."
         step = "Se houver uma demanda atual, verificar as velocidades e o limite em campo."
         reason = "As faixas publicadas descrevem apenas o período observado."
-        gap = INTERVENTIONS
     else:
-        finding = "Há contagens históricas nas faixas acima de 120 km/h."
-        step = CHECK_FIELD
-        reason = "A faixa publicada permite investigar um padrão histórico. Infrações dependem do limite regulamentado e das condições do trecho."
-        gap = INTERVENTIONS
-    return Card(title, period, coverage, finding, evidence, step, reason, gap, team,
+        finding = "Há contagens históricas acima de 120 km/h."
+        if len(years) == 1:
+            finding += " A seleção contém um único ano comparável."
+        else:
+            finding += " O sinal não se repetiu no mesmo ponto nos anos comparáveis selecionados."
+        step = "Registrar o observado e reavaliar quando houver outros períodos comparáveis ou evidência atual do trecho."
+        reason = "Os dados permitem descrever o observado e não sustentam uma prioridade de verificação em campo."
+    return Card(title, period, coverage, finding, evidence, step, reason, INTERVENTIONS, team,
                 "Com dados recentes e a validação de campo do trecho e período.", context, location)

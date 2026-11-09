@@ -166,7 +166,7 @@ def main():
         st.info('Não há pontos para esta combinação de área, cidade e sentidos. Escolha Todos os equipamentos, outra cidade ou ambos os sentidos.')
         st.button('Consultar esta cidade em todos os equipamentos',key='all_city',on_click=select_all_area)
     elif not ids:
-        st.info('Nenhum equipamento selecionado. Selecione ao menos um ponto no painel ou restaure o padrão. Comparações e downloads ficam indisponíveis.')
+        st.info('Nenhum equipamento selecionado. Selecione um ponto no painel ou restaure o padrão para comparar contagens de tráfego.')
     query_started=perf_counter()
     selected,eq,cov=consult(package_token,tuple(ids),tuple(years))
     stages['consulta_s']=perf_counter()-query_started

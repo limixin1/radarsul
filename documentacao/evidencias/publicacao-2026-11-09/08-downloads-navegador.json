@@ -1,0 +1,36 @@
+{
+  "codigo": "38987b05baf99faaca2d3f7bafed0271969ee281",
+  "snapshot": "2026-10-26.1",
+  "arquivos": {
+    "csv": {
+      "nome": "sentinela_2026-10-26.1_3d68043d9f (3).csv",
+      "bytes": 34118,
+      "sha256": "28cc6c39df7504561624a78f08204fbf0edb3b65d2e31fa66063167256d3ca62"
+    },
+    "md": {
+      "nome": "sentinela_2026-10-26.1_3d68043d9f (3).md",
+      "bytes": 8845,
+      "sha256": "7bdb9bcebabb05cb283d85a41ef55b728ff11559ec926b5d583a694150502c9a"
+    },
+    "zip": {
+      "nome": "sentinela_2026-10-26.1_3d68043d9f (2).zip",
+      "bytes": 13618,
+      "sha256": "cacba21f416f98b91e18dd6ea4a413c8f17298d3d9616770eea582fa1d5b25d1"
+    }
+  },
+  "membros_zip": [
+    "comparacao_pt-BR.csv",
+    "comparacao_tecnica.csv",
+    "cobertura_pt-BR.csv",
+    "metadados.json",
+    "relatorio.md"
+  ],
+  "linhas_comparacao": 20,
+  "linhas_cobertura": 40,
+  "totais": {
+    "contagens": 226870300,
+    "excedencias": 57163
+  },
+  "markdown_igual_ao_zip": true,
+  "csv_e_indices_reconciliados": true
+}

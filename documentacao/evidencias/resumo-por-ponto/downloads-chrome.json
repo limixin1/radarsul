@@ -1,0 +1,59 @@
+{
+  "navegador": "Chrome",
+  "snapshot": "2026-10-26.1",
+  "filtros": {
+    "page": "Relatório preventivo",
+    "years": [
+      2025
+    ],
+    "area": "Todos os equipamentos",
+    "directions": [
+      "Crescente",
+      "Decrescente"
+    ],
+    "city": "Garopaba",
+    "points": [
+      "VC101-2"
+    ],
+    "focus": "VC101-2"
+  },
+  "markdown_identico_ao_zip": true,
+  "ordem_do_resumo_e_proximo_passo_verificados": true,
+  "arquivos_no_zip": [
+    "comparacao_pt-BR.csv",
+    "comparacao_tecnica.csv",
+    "cobertura_pt-BR.csv",
+    "metadados.json",
+    "relatorio.md",
+    "localizacao_pt-BR.csv"
+  ],
+  "arquivos": {
+    "sentinela_2026-10-26.1_a6a5e4ddb2.md": {
+      "bytes": 8057,
+      "sha256": "4f4637446f900b957339c156dbc95be2a116898dce2d065bfe1caa42c65aa715"
+    },
+    "sentinela_2026-10-26.1_a6a5e4ddb2.zip": {
+      "bytes": 11421,
+      "sha256": "c200442601d52ef70ade2c48443f7c635cd17ec321f10868e8c5b10784743899"
+    },
+    "sentinela_mapa_br101_sc (2).png": {
+      "bytes": 51367,
+      "sha256": "c9c461c2e45c88df084aa78e8af937df18db1ac78eb0d85a29ddb4e98e0a9db0"
+    }
+  },
+  "png_largura_altura": [
+    1038,
+    832
+  ],
+  "ficha_territorial": {
+    "nome": "sentinela_ficha_preventiva.zip",
+    "bytes": 5223,
+    "sha256": "8a1a97bddb1ccf64d8f392179c4669dded809ef693ee33ac7e47d3f287851436",
+    "foco": "cidade:Passo de Torres",
+    "anos": [
+      2022
+    ],
+    "estado": "sem_dados",
+    "zip_integro": true
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "snapshot": "2026-10-26.1",
+  "plano": {
+    "modelos": {
+      "gemini": "gemini-3.1-flash-lite"
+    },
+    "modo": "free_tier",
+    "chamadas_maximas": 5,
+    "chamadas_realizadas": 0,
+    "saida_maxima_por_chamada_tokens": 256,
+    "teto_planejado_usd": 0
+  },
+  "casos": [
+    {
+      "caso": "Velocidade recorrente",
+      "foco": "VC101-9",
+      "anos": [
+        2024,
+        2025
+      ],
+      "estado": "recorrente",
+      "local": {
+        "text": "**Local e período.** Laguna · BR-101/SC · km 304,000 · Decrescente. Anos solicitados 2024, 2025.\n\n**O que mais apareceu aqui.** **ANTT** · 35 registros de acidente em 2024, 2025, no trecho BR-101/SC · km 300,000 a 305,000 (ambos os sentidos). A fonte não publica o tipo. Os registros se distribuem pelo trecho; nenhuma faixa de 1 km reuniu a maioria.\n\n**PRF** · 16 registros de acidente em 2024, 2025, no trecho BR-101/SC · km 300,000 a 305,000 (ambos os sentidos). Tipo mais registrado: colisão traseira (6 de 16). Os registros se distribuem pelo trecho; nenhuma faixa de 1 km reuniu a maioria.\n\n**Contagens de velocidade.** **Velocidade · ANTT, base A.** 7.091 de 11.178.995 contagens ficaram nas faixas acima de 120 km/h. O ponto registrou contagens nessa faixa em mais de um ano com dados suficientes para comparação. A faixa publicada, sozinha, não identifica uma infração.\n\n**Ocorrências nos anos selecionados.** **2024**\n- **ANTT** · 18 registros de acidente\n- **PRF** · 6 registros de acidente\n- **Velocidade · km 304,000 · Decrescente** · 3.324 acima de 120 km/h de 5.322.924 contagens · 6,245 por 10 mil\n\n**2025**\n- **ANTT** · 17 registros de acidente\n- **PRF** · 10 registros de acidente · colisão traseira (5)\n- **Velocidade · km 304,000 · Decrescente** · 3.767 acima de 120 km/h de 5.856.071 contagens · 6,433 por 10 mil\n\n**O que vale verificar agora.** Medir velocidades atuais no km 304,000 e conferir em campo o limite e a sinalização. A repetição orienta o que verificar em campo. Os dados históricos não sustentam uma prioridade operacional. Contagens acima de 120 km/h nos pontos e anos que sustentam a repetição: 2024: 3.324 · 2025: 3.767.\n\n**Cobertura.** 2024: 361/366 dias publicados · 2025: 365/365 dias publicados\n\n**Registros por fonte.** ANTT: 35 registros publicados — período disponível no snapshot. Anos solicitados: 2024, 2025; com dados da fonte: 2024, 2025. Área: BR-101/SC · km 300,000 a 305,000. Ambos os sentidos. Trecho de referência independente do radar. Intervalo do inventário do CSV de acidentes, sem garantia de completude. Repetições sem ID preservadas.\n\nPRF: 16 registros publicados — período disponível no snapshot. Anos solicitados: 2024, 2025; com dados da fonte: 2024, 2025. Área: BR-101/SC · km 300,000 a 305,000. Ambos os sentidos. Trecho de referência independente do radar. Arquivos anuais PRF 2024 e 2025. Ausência de registro não prova ausência real de acidente.\n\n**Como o local foi identificado.** Coordenada compatível com o eixo SNV. Posição publicada passa pela triagem de km e distância. Origem: Tráfego ANTT · metadados do equipamento\n\n**O que ainda precisa ser confirmado.** Para avaliar fiscalização de velocidade, reúna medições recentes frente ao limite aplicável. Para avaliar blitz, documente um problema atual que essa abordagem possa enfrentar. Em ambos os casos, confirme a evidência em campo, compare alternativas e submeta a avaliação à autoridade competente. Equipe técnica de segurança viária e responsável pelos dados do trecho.",
+        "status": "local",
+        "provider": "local",
+        "input_tokens": null,
+        "output_tokens": null,
+        "cache": false,
+        "chamadas": 0,
+        "latency_ms": 0.322,
+        "cost_usd": 0
+      },
+      "openai": {
+        "model": "gpt-5.4-mini",
+        "status": "não executado",
+        "reason": "provedor fora desta rodada",
+        "chamadas": 0,
+        "text": null,
+        "latency_ms": null,
+        "cost_usd_estimated": null
+      },
+      "gemini": {
+        "model": "gemini-3.1-flash-lite",
+        "status": "não executado",
+        "reason": "GEMINI_API_KEY ausente",
+        "chamadas": 0,
+        "text": null,
+        "latency_ms": null,
+        "cost_usd_estimated": null
+      }
+    },
+    {
+      "caso": "Registro isolado",
+      "foco": "VC101-9",
+      "anos": [
+        2024
+      ],
+      "estado": "isolado",
+      "local": {
+        "text": "**Local e período.** Laguna · BR-101/SC · km 304,000 · Decrescente. Anos solicitados 2024.\n\n**O que mais apareceu aqui.** **ANTT** · 18 registros de acidente em 2024, no trecho BR-101/SC · km 300,000 a 305,000 (ambos os sentidos). A fonte não publica o tipo. Os registros se distribuem pelo trecho; nenhuma faixa de 1 km reuniu a maioria.\n\n**PRF** · 6 registros de acidente em 2024, no trecho BR-101/SC · km 300,000 a 305,000 (ambos os sentidos). Os tipos mais registrados estão empatados. Os registros se distribuem pelo trecho; nenhuma faixa de 1 km reuniu a maioria.\n\n**Contagens de velocidade.** **Velocidade · ANTT, base A.** 3.324 de 5.322.924 contagens ficaram nas faixas acima de 120 km/h. Os dados permitem descrever o observado sem indicar repetição. A faixa publicada, sozinha, não identifica uma infração.\n\n**Ocorrências nos anos selecionados.** **2024**\n- **ANTT** · 18 registros de acidente\n- **PRF** · 6 registros de acidente\n- **Velocidade · km 304,000 · Decrescente** · 3.324 acima de 120 km/h de 5.322.924 contagens · 6,245 por 10 mil\n\n**O que vale verificar agora.** Registrar o observado e reavaliar quando houver outros períodos comparáveis ou evidência atual do trecho. Os dados permitem descrever o observado e não sustentam uma prioridade de verificação em campo.\n\n**Cobertura.** 2024: 361/366 dias publicados\n\n**Registros por fonte.** ANTT: 18 registros publicados — período disponível no snapshot. Anos solicitados: 2024; com dados da fonte: 2024. Área: BR-101/SC · km 300,000 a 305,000. Ambos os sentidos. Trecho de referência independente do radar. Intervalo do inventário do CSV de acidentes, sem garantia de completude. Repetições sem ID preservadas.\n\nPRF: 6 registros publicados — período disponível no snapshot. Anos solicitados: 2024; com dados da fonte: 2024. Área: BR-101/SC · km 300,000 a 305,000. Ambos os sentidos. Trecho de referência independente do radar. Arquivos anuais PRF 2024 e 2025. Ausência de registro não prova ausência real de acidente.\n\n**Como o local foi identificado.** Coordenada compatível com o eixo SNV. Posição publicada passa pela triagem de km e distância. Origem: Tráfego ANTT · metadados do equipamento\n\n**O que ainda precisa ser confirmado.** Para avaliar fiscalização de velocidade, reúna medições recentes frente ao limite aplicável. Para avaliar blitz, documente um problema atual que essa abordagem possa enfrentar. Em ambos os casos, confirme a evidência em campo, compare alternativas e submeta a avaliação à autoridade competente. Equipe técnica de segurança viária e responsável pelos dados do trecho.",
+        "status": "local",
+        "provider": "local",
+        "input_tokens": null,
+        "output_tokens": null,
+        "cache": false,
+        "chamadas": 0,
+        "latency_ms": 0.1,
+        "cost_usd": 0
+      },
+      "openai": {
+        "model": "gpt-5.4-mini",
+        "status": "não executado",
+        "reason": "provedor fora desta rodada",
+        "chamadas": 0,
+        "text": null,
+        "latency_ms": null,
+        "cost_usd_estimated": null
+      },
+      "gemini": {
+        "model": "gemini-3.1-flash-lite",
+        "status": "não executado",
+        "reason": "GEMINI_API_KEY ausente",
+        "chamadas": 0,
+        "text": null,
+        "latency_ms": null,
+        "cost_usd_estimated": null
+      }
+    },
+    {
+      "caso": "Ano parcial",
+      "foco": "VC101-9",
+      "anos": [
+        2026
+      ],
+      "estado": "exploratorio",
+      "local": {
+        "text": "**Local e período.** Laguna · BR-101/SC · km 304,000 · Decrescente. Anos solicitados 2026.\n\n**O que mais apareceu aqui.** **ANTT** · Sem publicação para esta consulta.\n\n**PRF** · Sem publicação para esta consulta.\n\n**Contagens de velocidade.** **Velocidade · ANTT, base A.** 2.183 de 3.002.851 contagens ficaram nas faixas acima de 120 km/h. A publicação disponível limita a comparação entre anos. A faixa publicada, sozinha, não identifica uma infração.\n\n**Ocorrências nos anos selecionados.** **2026**\n- **ANTT** · sem publicação\n- **PRF** · sem publicação\n- **Velocidade · km 304,000 · Decrescente** · 2.183 acima de 120 km/h de 3.002.851 contagens (ano parcial)\n\n**O que vale verificar agora.** Conferir quando termina a publicação do ano e reavaliar após completar o período. A cobertura disponível limita a comparação anual. A base permite descrever o observado e não sustenta uma prioridade.\n\n**Cobertura.** 2026: 181/365 dias publicados\n\n**Registros por fonte.** ANTT: Indisponível — sem cobertura do período. Anos solicitados: 2026; com dados da fonte: nenhum. Área: BR-101/SC · km 300,000 a 305,000. Ambos os sentidos. Trecho de referência independente do radar. Intervalo do inventário do CSV de acidentes, sem garantia de completude. Repetições sem ID preservadas.\n\nPRF: Indisponível — sem cobertura do período. Anos solicitados: 2026; com dados da fonte: nenhum. Área: BR-101/SC · km 300,000 a 305,000. Ambos os sentidos. Trecho de referência independente do radar. Arquivos anuais PRF 2024 e 2025. Ausência de registro não prova ausência real de acidente.\n\n**Como o local foi identificado.** Coordenada compatível com o eixo SNV. Posição publicada passa pela triagem de km e distância. Origem: Tráfego ANTT · metadados do equipamento\n\n**O que ainda precisa ser confirmado.** Para avaliar fiscalização de velocidade, reúna medições recentes frente ao limite aplicável. Para avaliar blitz, documente um problema atual que essa abordagem possa enfrentar. Em ambos os casos, confirme a evidência em campo, compare alternativas e submeta a avaliação à autoridade competente. Equipe técnica de segurança viária e responsável pelos dados do trecho.",
+        "status": "local",
+        "provider": "local",
+        "input_tokens": null,
+        "output_tokens": null,
+        "cache": false,
+        "chamadas": 0,
+        "latency_ms": 0.065,
+        "cost_usd": 0
+      },
+      "openai": {
+        "model": "gpt-5.4-mini",
+        "status": "não executado",
+        "reason": "provedor fora desta rodada",
+        "chamadas": 0,
+        "text": null,
+        "latency_ms": null,
+        "cost_usd_estimated": null
+      },
+      "gemini": {
+        "model": "gemini-3.1-flash-lite",
+        "status": "não executado",
+        "reason": "GEMINI_API_KEY ausente",
+        "chamadas": 0,
+        "text": null,
+        "latency_ms": null,
+        "cost_usd_estimated": null
+      }
+    },
+    {
+      "caso": "Acidentes em município sem radar",
+      "foco": "cidade:Passo de Torres",
+      "anos": [
+        2024,
+        2025
+      ],
+      "estado": "acidentes_sem_velocidade",
+      "local": {
+        "text": "**Local e período.** Passo de Torres · BR-101/SC · sentido não informado. Anos solicitados 2024, 2025.\n\n**O que mais apareceu aqui.** **PRF** · 19 registros de acidente em 2024, 2025, no município informado (ambos os sentidos). Tipo mais registrado: saída de leito carroçável (7 de 19). 6 sem referência por km no eixo disponível; a distribuição não sustenta apontar uma faixa.\n\n**Contagens de velocidade.** Sem contagens de velocidade dos equipamentos neste recorte.\n\n**Ocorrências nos anos selecionados.** **2024**\n- **PRF** · 9 registros de acidente · saída de leito carroçável (5) · 2 sem referência no eixo\n\n**2025**\n- **PRF** · 10 registros de acidente · 4 sem referência no eixo\n\n**O que vale verificar agora.** Confirmar com a PRF a posição de 5 registros entre os km 463 e 464, antes de escolher um trecho para vistoria. A ausência de contagens deixa o padrão de velocidade em aberto.\n\n**Cobertura.** Ficha territorial. Cobertura de acidentes por fonte abaixo.\n\n**Registros por fonte.** PRF: 19 registros publicados — período disponível no snapshot. Anos solicitados: 2024, 2025; com dados da fonte: 2024, 2025. Área: BR-101/SC no corredor, município informado pela PRF: Passo de Torres. Ambos os sentidos. Arquivos anuais PRF 2024 e 2025. Ausência de registro não prova ausência real de acidente.\n\n**Como o local foi identificado.** Município informado pela PRF. A localização usa a referência publicada pela fonte. Ocorrências não são atribuídas a um equipamento.\n\n**O que ainda precisa ser confirmado.** Dias de coleta, vigência dos registros e medições recentes do trecho. Para avaliar fiscalização de velocidade, reúna medições recentes frente ao limite aplicável. Para avaliar blitz, documente um problema atual que essa abordagem possa enfrentar. Em ambos os casos, confirme a evidência em campo, compare alternativas e submeta a avaliação à autoridade competente. Equipe técnica de segurança viária e responsável pelos dados do trecho.",
+        "status": "local",
+        "provider": "local",
+        "input_tokens": null,
+        "output_tokens": null,
+        "cache": false,
+        "chamadas": 0,
+        "latency_ms": 0.083,
+        "cost_usd": 0
+      },
+      "openai": {
+        "model": "gpt-5.4-mini",
+        "status": "não executado",
+        "reason": "provedor fora desta rodada",
+        "chamadas": 0,
+        "text": null,
+        "latency_ms": null,
+        "cost_usd_estimated": null
+      },
+      "gemini": {
+        "model": "gemini-3.1-flash-lite",
+        "status": "não executado",
+        "reason": "GEMINI_API_KEY ausente",
+        "chamadas": 0,
+        "text": null,
+        "latency_ms": null,
+        "cost_usd_estimated": null
+      }
+    },
+    {
+      "caso": "Recorte sem dados publicados",
+      "foco": "cidade:Passo de Torres",
+      "anos": [
+        2022
+      ],
+      "estado": "sem_dados",
+      "local": {
+        "text": "**Local e período.** Passo de Torres · BR-101/SC · sentido não informado. Anos solicitados 2022.\n\n**O que mais apareceu aqui.** **PRF** · Sem publicação para esta consulta.\n\n**Contagens de velocidade.** Sem contagens de velocidade dos equipamentos neste recorte.\n\n**Ocorrências nos anos selecionados.** **2022**\n- **PRF** · sem publicação\n\n**O que vale verificar agora.** Conferir a cobertura com a fonte e reavaliar quando houver dados do local. A ausência de contagens deixa o padrão de velocidade em aberto.\n\n**Cobertura.** Ficha territorial. Cobertura de acidentes por fonte abaixo.\n\n**Registros por fonte.** PRF: Indisponível — sem cobertura do período. Anos solicitados: 2022; com dados da fonte: nenhum. Área: BR-101/SC no corredor, município informado pela PRF: Passo de Torres. Ambos os sentidos. Arquivos anuais PRF 2024 e 2025. Ausência de registro não prova ausência real de acidente.\n\n**Como o local foi identificado.** Município informado pela PRF. A localização usa a referência publicada pela fonte. Ocorrências não são atribuídas a um equipamento.\n\n**O que ainda precisa ser confirmado.** Dias de coleta, vigência dos registros e medições recentes do trecho. Para avaliar fiscalização de velocidade, reúna medições recentes frente ao limite aplicável. Para avaliar blitz, documente um problema atual que essa abordagem possa enfrentar. Em ambos os casos, confirme a evidência em campo, compare alternativas e submeta a avaliação à autoridade competente. Equipe técnica de segurança viária e responsável pelos dados do trecho.",
+        "status": "local",
+        "provider": "local",
+        "input_tokens": null,
+        "output_tokens": null,
+        "cache": false,
+        "chamadas": 0,
+        "latency_ms": 0.037,
+        "cost_usd": 0
+      },
+      "openai": {
+        "model": "gpt-5.4-mini",
+        "status": "não executado",
+        "reason": "provedor fora desta rodada",
+        "chamadas": 0,
+        "text": null,
+        "latency_ms": null,
+        "cost_usd_estimated": null
+      },
+      "gemini": {
+        "model": "gemini-3.1-flash-lite",
+        "status": "não executado",
+        "reason": "GEMINI_API_KEY ausente",
+        "chamadas": 0,
+        "text": null,
+        "latency_ms": null,
+        "cost_usd_estimated": null
+      }
+    }
+  ]
+}

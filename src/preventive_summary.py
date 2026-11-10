@@ -148,7 +148,11 @@ def speed_text(traffic, state):
     total = br(traffic["contagens"])
     text = f"**Velocidade · ANTT, base A.** {count} de {total} contagens ficaram nas faixas acima de 120 km/h."
     if state == "recorrente":
-        text += " O mesmo ponto registrou essas contagens em mais de um ano com dados suficientes para comparação."
+        points = {row["ponto"] for row in traffic["cobertura_por_ponto_ano"] if row["contagens"] is not None}
+        if len(points) == 1:
+            text += " O ponto registrou contagens nessa faixa em mais de um ano com dados suficientes para comparação."
+        else:
+            text += " A repetição foi verificada por equipamento, em anos com dados suficientes para comparação."
     elif state == "isolado":
         text += " Os dados permitem descrever o observado sem indicar repetição."
     elif state == "exploratorio":

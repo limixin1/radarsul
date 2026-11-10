@@ -1,5 +1,7 @@
 # Prova de conceito de explicação
 
+A [rodada seguinte](ACEITACAO_RESUMO_POR_PONTO.md) reorganiza o texto local, acrescenta avaliação isolada do Gemini no Free Tier e publica os cinco pacotes para comparação manual. Este registro mantém a referência da etapa anterior.
+
 Cinco recortes do snapshot `2026-10-26.1` foram executados localmente. As [respostas integrais lado a lado](evidencias/mapa-compartilhado/respostas-lado-a-lado.md) e a [saída JSON](evidencias/mapa-compartilhado/comparacao-local.json) registram o texto, o tempo de composição e o estado de cada provedor.
 
 | Caso | Texto local, fatos principais | GPT-5.4 mini | Gemini 3.1 Flash-Lite |

@@ -1,5 +1,7 @@
 # Matriz F01–F24
 
+**Resumo por ponto no PR #3.** A [aceitação do resumo e da avaliação gratuita](ACEITACAO_RESUMO_POR_PONTO.md) atualiza F01, F05–F08, F10–F13, F17–F19 com o antes/depois do km 330–335, séries separadas por fonte e ano, ficha territorial exportável e downloads confirmados no Chrome. A comparação Gemini real depende de chave nova e projeto Free Tier verificado.
+
 **Ampliação do PR #3.** A [matriz de aceitação dos mapas e da explicação](ACEITACAO_MAPAS_E_EXPLICACAO.md) atualiza F01, F04–F08, F10–F14, F17–F19 com inventário completo, mapa compartilhado, busca, Satélite, fallback, PNG e a prova de conceito local. A validação remota da IA e a homologação externa continuam pendentes.
 
 **Evolução do mapa e da ficha.** O [registro da entrega](MAPA_APOIO_PREVENTIVO.md) atualiza F01, F05–F08, F10–F13, F17–F19 e F22 com precisão espacial, busca, regras preventivas, exportação e medições. O histórico de publicação abaixo permanece como referência do piloto anterior.

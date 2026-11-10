@@ -53,7 +53,7 @@ O Render iniciou automaticamente `dep-dbp32gi9lscs73anoulg` pelo commit e enfile
 
 | Item | Evidência e estado |
 |---|---|
-| Identidade e Visão geral | O Brave real, controlado por `mcp__cua_repl`, exibiu o SHA completo, 2.1.0, snapshot e totais padrão 2,520, 226.870.300 e 57.163. |
+| Identidade e Visão geral | O Brave exibiu o SHA completo, 2.1.0, snapshot e totais padrão 2,520, 226.870.300 e 57.163. |
 | Páginas e filtros | Comparador, Evolução, Contexto e Relatório foram abertos. O Comparador padrão exibiu Spearman 0,962 e base B separada. A busca por Laguna selecionou VC101-9; a URL e os filtros foram recuperados no reload. A consulta padrão voltou após restaurar. |
 | Cobertura e vazios | Em 2026, as fontes de acidentes ANTT e PRF apareceram como indisponíveis. No período misto 2024–2026 apareceram como parciais. O tráfego de 2026 é exploratório e o inventário vai até 30/06. Remover todos os pontos ou anos exibiu orientação e nenhum botão de exportação. |
 | CSV e PNG | Ambos chegaram à pasta de downloads no Brave. O CSV reaberto tinha 20 linhas, o SHA e snapshot implantados e somas 226.870.300 e 57.163. O PNG de 1100 × 650, gerado pelo teclado, foi aberto e inspecionado; mostra unidade, anos, origem, snapshot e chave de consulta. |

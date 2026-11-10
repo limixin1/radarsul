@@ -1,8 +1,6 @@
 # SENTINELA — Correção integral orientada pela auditoria de produto
 
-Você é responsável por corrigir e preparar para uso o SENTINELA, uma aplicação de consulta a dados rodoviários da BR-101/SC. Trabalhe como um engenheiro de software experiente, com atenção a qualidade de dados, estatística descritiva, design, acessibilidade, testes e operação.
-
-Sua missão é IMPLEMENTAR as correções, verificar o comportamento resultante e entregar evidências. Execute o trabalho até concluir tudo que estiver ao alcance das ferramentas e acessos disponíveis. Uma nova lista de recomendações, sem implementação, não satisfaz esta solicitação.
+Esta especificação reúne as correções do SENTINELA, uma aplicação de consulta a dados rodoviários da BR-101/SC. O trabalho abrange qualidade de dados, estatística descritiva, design, acessibilidade, testes e operação. Cada correção precisa de evidência sobre o comportamento resultante.
 
 ## 1. Contexto, materiais e versão de referência
 
@@ -66,7 +64,7 @@ Não grave esses resultados como constantes da interface. O agregado deve usar a
 
 Resolva decisões rotineiras de implementação usando a auditoria e bom julgamento. Peça esclarecimento apenas quando houver ambiguidade que altere substancialmente o resultado, falta de acesso indispensável, gasto ou ação irreversível. Não repita autorizações já concedidas. Se uma tarefa bloquear, prossiga nas demais.
 
-Não contrate serviços, altere plano pago, crie cobranças, mude público autorizado, migre domínio ou apague recursos sem autorização específica. Push e merge na branch de produção podem disparar deploy: prepare e valide primeiro. Para publicação, siga a autorização explícita existente; se ela faltar, apresente a versão pronta e faça uma única solicitação objetiva. Não trate este prompt de correção como autorização para novos gastos.
+Não contrate serviços, altere plano pago, crie cobranças, mude público autorizado, migre domínio ou apague recursos sem autorização específica. Push e merge na branch de produção podem disparar deploy: prepare e valide primeiro. Para publicação, siga a autorização explícita existente; se ela faltar, apresente a versão pronta e faça uma única solicitação objetiva. Não trate estes requisitos de correção como autorização para novos gastos.
 
 ## 4. Correções obrigatórias F01–F24
 
@@ -273,6 +271,4 @@ Se a publicação depender de acesso, aprovação ou custo ainda não disponíve
 
 O regulamento do hackathon deve ser verificado quando estiver disponível. Sua ausência não deve paralisar correções independentes nem justificar declaração de conformidade com regras desconhecidas.
 
-Na resposta final, informe diretamente o que mudou, quais F01–F24 foram resolvidos, o que foi testado, a versão entregue ou publicada e os bloqueios restantes. Separe implementação de validação. Não declare o sistema completamente aprovado enquanto critérios relevantes permanecerem sem teste.
-
-Comece pela leitura do material, inspeção do estado atual e preparação da branch; em seguida implemente as correções e mantenha o trabalho em andamento até concluir o escopo executável.
+No relatório de entrega, registre as alterações, o estado dos requisitos F01–F24, os testes executados, a versão entregue ou publicada e os bloqueios restantes. Separe implementação de validação. Não declare o sistema completamente aprovado enquanto critérios relevantes permanecerem sem teste.

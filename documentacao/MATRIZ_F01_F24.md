@@ -4,7 +4,7 @@
 
 **Estado atual em 06/11:** acesso Brave recuperado; esta tabela incorpora a [aceitação real no navegador](ACEITACAO_NAVEGADOR_2026-11-06.md). Os relatos de bloqueio de acesso abaixo são históricos. O Brave bloqueou CSV/MD/ZIP pela organização; o usuário depois concluiu esses downloads manualmente no Chrome, com captura e arquivos inspecionados. Nenhuma política foi alterada. Zoom nativo de 200% foi confirmado manualmente pelo usuário no Chrome; pessoas, leitor de tela e aparelhos continuam pendentes.
 
-Revalidado em 05/11/2026, America/Sao_Paulo, sobre baseline limpa `e5baed4`, a mesma da auditoria. Branch: `correcao/sentinela-auditoria`. Etapas: contrato/reprodução; consultas/interface/exportações; regressões/operação/PR. Prompt integral em `_contexto`. Main e implantação permanecem inalteradas.
+Revalidado em 05/11/2026, America/Sao_Paulo, sobre baseline limpa `e5baed4`, a mesma da auditoria. Branch: `correcao/sentinela-auditoria`. Etapas: contrato/reprodução; consultas/interface/exportações; regressões/operação/PR. Requisitos de correção em `_contexto`. Main e implantação permanecem inalteradas.
 
 “Testado localmente” significa Python 3.12.14, pandas 2.2.3 e dependências fixadas, com pytest/AppTest ou sessão Streamlit sintética conforme evidência. Não significa aprovação visual, humana, de acessibilidade integral ou do ambiente de produção. Detalhes e cenários: [registro de validação](VALIDACAO_2026-11-05.md).
 
@@ -37,7 +37,7 @@ Revalidado em 05/11/2026, America/Sao_Paulo, sobre baseline limpa `e5baed4`, a m
 
 ## Bloqueios e exclusões registrados na etapa histórica
 
-O Brave permaneceu indisponível para `cua.getState`: “Local browser use is disabled in Work settings”, mesmo após o usuário informar que o ativaria. Não foram fabricadas capturas, testes de largura/zoom, teclado, leitor de tela ou PNG. AppTest e protocolo WebSocket são evidências diferentes de navegador.
+O ambiente continuou a bloquear o acesso ao Brave após a tentativa de habilitá-lo. Não foram fabricadas capturas, testes de largura/zoom, teclado, leitor de tela ou PNG. AppTest e protocolo WebSocket são evidências diferentes de navegador.
 
 Não há participantes ou aparelhos reais disponíveis. Roteiro/formulário em `ACEITACAO_PESSOAS.md`. Regulamento integral do hackathon não foi fornecido no repositório; não há declaração de conformidade. Main, domínio, plano, permissões administrativas, alertas e deploy não foram alterados, conforme escopo desta etapa. Pendências de produção não impedem a revisão do código e das evidências locais.
 
@@ -45,11 +45,11 @@ Não há participantes ou aparelhos reais disponíveis. Roteiro/formulário em `
 
 Ver [ACEITACAO_ETAPA2.md](ACEITACAO_ETAPA2.md). F20/F22 avançaram com perfil, recursos amostrados, correção do cliente de carga, cache limitado por consulta e tempos de etapas. F21 recebeu teste de isolamento/invalidação do novo cache. Dez sessões no candidato levaram até 9,977 s, ainda acima da meta; condições das rodadas diferem e não permitem atribuição causal isolada. Nenhum Parquet foi alterado.
 
-F04/F12/F13 e aceitação visual de F05–F11/F18 **continuam pendentes**: Brave ainda bloqueado por configuração do Work. Não há evidência nova de viewport, zoom, teclado, contraste efetivo ou PNG. Participantes, leitor de tela e hospedagem da nova versão continuam pendentes. Esta etapa não encerra a meta de aceitação.
+F04/F12/F13 e aceitação visual de F05–F11/F18 **continuam pendentes**: O ambiente ainda bloqueava o acesso ao Brave. Não há evidência nova de viewport, zoom, teclado, contraste efetivo ou PNG. Participantes, leitor de tela e hospedagem da nova versão continuam pendentes. Esta etapa não encerra a meta de aceitação.
 
 ## Revalidação de acesso inicialmente bloqueada em 06/11/2026 (histórico)
 
-Chrome, Brave e navegador integrado foram tentados **separadamente** pela ferramenta `mcp__cua_repl.js`; as três tentativas diretas falharam com “Local browser use is disabled in Work settings”. Ver `evidencias/tentativas-navegadores-2026-11-06.json` e a nova seção de `ACEITACAO_ETAPA2.md`. A aplicação local 8506 e a identidade de seu ZIP foram reconfirmadas em `42dec24`, distintas do Render público em `e5baed4`; PR #2/CI anterior foram reconferidos.
+Chrome, Brave e navegador integrado foram tentados separadamente. O ambiente bloqueou o acesso nas três tentativas. Ver `evidencias/tentativas-navegadores-2026-11-06.json` e a nova seção de `ACEITACAO_ETAPA2.md`. A aplicação local 8506 e a identidade de seu ZIP foram reconfirmadas em `42dec24`, distintas do Render público em `e5baed4`; PR #2/CI anterior foram reconferidos.
 
 Nenhum estado de aceite visual F01–F19 foi promovido nesta rodada. F04/F12/F13 e os percursos visuais, URLs/reload e PNG permanecem pendentes, assim como pessoas, leitor de tela e aparelhos reais. Esta evidência atualiza o bloqueio para incluir os resultados efetivamente observados no Chrome e no navegador integrado, sem presumir configuração idêntica a partir do Brave.
 

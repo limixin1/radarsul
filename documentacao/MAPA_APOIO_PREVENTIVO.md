@@ -1,5 +1,8 @@
 # Mapa e apoio preventivo do SENTINELA
 
+A [ampliação do PR #3](ACEITACAO_MAPAS_E_EXPLICACAO.md) substitui o mapa inicial pelo componente compartilhado nas quatro páginas espaciais. O inventário de precisão, as condições de uso do Satélite, a explicação local e as novas evidências constam nessa aceitação. O registro a seguir preserva a etapa inicial.
+
+
 A primeira entrega parte de `b200ea801b02be48c33ef511dc7ee96aff471c05`, que incorpora o PR #2. O candidato é a aplicação 2.2.0 com o snapshot `2026-10-26.1`. O site público e o deploy 2.1.0 documentado servem de referência histórica. A branch é `codex/sentinela-mapa-preventivo`.
 
 ## Consulta e exportação

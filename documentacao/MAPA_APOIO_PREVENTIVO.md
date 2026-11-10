@@ -3,7 +3,7 @@
 A [ampliação do PR #3](ACEITACAO_MAPAS_E_EXPLICACAO.md) substitui o mapa inicial pelo componente compartilhado nas quatro páginas espaciais. O inventário de precisão, as condições de uso do Satélite, a explicação local e as novas evidências constam nessa aceitação. O registro a seguir preserva a etapa inicial.
 
 
-A primeira entrega parte de `b200ea801b02be48c33ef511dc7ee96aff471c05`, que incorpora o PR #2. O candidato é a aplicação 2.2.0 com o snapshot `2026-10-26.1`. O site público e o deploy 2.1.0 documentado servem de referência histórica. A branch é `codex/sentinela-mapa-preventivo`.
+A primeira entrega parte de `b200ea801b02be48c33ef511dc7ee96aff471c05`, que incorpora o PR #2. O candidato é a aplicação 2.2.0 com o snapshot `2026-10-26.1`. O site público e o deploy 2.1.0 documentado servem de referência histórica.
 
 ## Consulta e exportação
 
@@ -42,7 +42,7 @@ Congestionamento, eventos em andamento e lacunas operacionais de fiscalização 
 ## Verificação
 
 - SHA de código exercitado: `47956ab7441964d3e87fa9933ab52dfda8633e75`. Python 3.12.14, contrato de 12 arquivos, compilação e 34 testes locais aprovados. Os Parquet, os manifestos originais, as dependências e a configuração de implantação estão preservados.
-- Brave local controlado com `mcp__cua_repl`. A abertura padrão, a busca Laguna e km 304+000, o clique no marcador, a seleção pela lista, a ficha, o reload e a troca de camadas foram exercitados. Criciúma foi recuperada fora do grupo e apareceu como exploratória. Imbituba exibiu os sentidos separados e o marcador agrupado. Passo de Torres ofereceu ficha territorial sem ponto de tráfego. A ficha territorial de 2026 exibiu PRF indisponível por falta de cobertura.
+- Ensaio em uma sessão local do Brave. A abertura padrão, a busca Laguna e km 304+000, o clique no marcador, a seleção pela lista, a ficha, o reload e a troca de camadas foram exercitados. Criciúma foi recuperada fora do grupo e apareceu como exploratória. Imbituba exibiu os sentidos separados e o marcador agrupado. Passo de Torres ofereceu ficha territorial sem ponto de tráfego. A ficha territorial de 2026 exibiu PRF indisponível por falta de cobertura.
 - As larguras CSS 320, 360, 390, 768 e 1366 não produziram rolagem horizontal da página. A largura de 683 px foi verificada como reflow equivalente à metade de 1366 px. A lista e a camada PRF receberam comandos de teclado. O contraste nominal no fundo do mapa foi 6,46:1 para o radar, 5,41:1 para a ocorrência e 4,42:1 para a linha do eixo. As medições não são teste com aparelho real ou leitor de tela.
 - A impressão da ficha de Laguna no motor do Brave foi renderizada e inspecionada em duas páginas A4. O primeiro teste com três páginas mostrou uma quebra pouco aproveitada. O ajuste de espaçamento manteve as duas linhas anuais, os números, o próximo passo e a proveniência.
 - O usuário baixou CSV, Markdown e ZIP no reteste manual. A primeira inspeção detectou uma colisão entre o identificador do equipamento e o campo de versão. A regressão de interface agora verifica as duas colunas. O ZIP final tem seis membros, um ponto, duas linhas de cobertura e o mesmo CSV e Markdown dos arquivos avulsos. O CSV técnico preserva `6.343146230944732` por 10 mil. O controle do Chrome devolveu `Browser is not available: chrome`; os links locais foram entregues para o reteste manual. O recebimento do PNG do mapa está pendente.

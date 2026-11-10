@@ -149,51 +149,17 @@ def test_entire_catalog_and_road_gaps(package):
             assert segment_for(row.km, shapes)
 
 
-def test_explanation_checks_facts_caches_and_keeps_a_local_fallback(package, monkeypatch):
-    import src.explain as module
-
+def test_explanation_uses_the_facts_and_guidance_from_the_card(package):
     manifest, frames, _ = package
     points = frames["antt_equipamentos"]
     focus, years = "VC101-9", [2024, 2025]
     _, eq, cov = query_tables(frames["antt_diario"], points, [focus], years, manifest["cobertura"]["trafego"])
     card = build_card(focus, points, eq, cov, frames, manifest, years, spatial_records(points, "ANTT", road()))
-    local = explain(card)["text"]
-    packet = module.facts(card)
-    assert packet["dados"]["trafego"]["acima_de_120"] == 7091
-    assert "latitude" not in packet["localizacao"]
-    monkeypatch.delenv("OPENAI_API_KEY", raising=False)
-    assert explain(card, "openai")["text"] == local
-    monkeypatch.setenv("OPENAI_API_KEY", "key-for-mock")
-    monkeypatch.setenv("GEMINI_API_KEY", "key-for-mock")
-    monkeypatch.setenv("SENTINELA_ENABLE_PAID_AI", "1")
-    for index, raw in enumerate((
-        '{"ordem":"direto","abertura":0,"estado":"recorrente","numeros":"99.999 em 2026"}',
-        '{"ordem":"direto","abertura":0,"estado":"recorrente","acao":"Realizar blitz agora"}',
-        '{"ordem":"por_fontes","abertura":1,"estado":"sem_dados"}',
-        'texto livre',
-    )):
-        monkeypatch.setattr(module, "request_presentation", lambda *_: (raw, 500, 12))
-        result = explain(card, "openai", version="teste", query=f"invalido-{index}")
-        assert result["status"] == "fallback" and result["text"] == local
 
-    calls = []
-
-    def valid(provider, prompt):
-        calls.append((provider, prompt))
-        return '{"ordem":"por_cobertura","abertura":1,"estado":"recorrente"}', 500, 12
-
-    monkeypatch.setattr(module, "request_presentation", valid)
-    first = explain(card, "openai", version="teste-v1", query=focus)
-    repeat = explain(card, "openai", version="teste-v1", query=focus)
-    updated = explain(card, "openai", version="teste-v2", query=focus)
-    gemini = explain(card, "gemini", version="teste-v2", query=focus)
-    assert [row["status"] for row in (first, repeat, updated, gemini)] == ["validado"] * 4
-    assert repeat["cache"] and len(calls) == 3 and calls[1][1] == calls[2][1]
-    assert set(first["text"].split("\n\n")[1:]) == set(local.split("\n\n"))
-    assert first["text"].index("**Cobertura.**") < first["text"].index("**O que mais apareceu aqui.**")
-    monkeypatch.setattr(module, "MAX_CALLS_PER_HOUR", 0)
-    capped = explain(card, "gemini", version="teste-v3", query=focus)
-    assert capped["text"] == local and "limite horário" in capped["reason"]
+    text = explain(card)
+    assert "7.091" in text and "11.178.995" in text
+    assert card.periodo in text and card.proximo_passo in text and card.cobertura in text
+    assert text.index("**O que mais apareceu aqui.**") < text.index("**Cobertura.**")
 
 
 def test_summary_preserves_separate_sources_years_and_passos_location_limit(package):
@@ -250,47 +216,3 @@ def test_geographic_rule_requires_a_majority_and_does_not_promote_bad_locations(
     assert km_distribution(base.iloc[:4], valid)["estado"] == "poucos registros"
     assert leading_type(base.assign(tipo_acidente=["A"] * 4 + ["B"] * 4))["estado"] == "empate"
     assert leading_type(base.assign(tipo_acidente=["A"] * 7 + [None]))["estado"] == "campo incompleto"
-
-
-def test_free_gemini_does_not_use_openai_or_unverified_billing(monkeypatch):
-    from collections import OrderedDict, deque
-    from urllib.error import HTTPError
-    import scripts.compare_explanations as cli
-    import src.explain as module
-
-    monkeypatch.setattr(module, "_cache", OrderedDict())
-    monkeypatch.setattr(module, "_calls", deque())
-    monkeypatch.delenv("OPENAI_API_KEY", raising=False)
-    monkeypatch.setenv("GEMINI_API_KEY", "key-for-mock")
-    monkeypatch.delenv("SENTINELA_ENABLE_PAID_AI", raising=False)
-    monkeypatch.delenv("SENTINELA_GEMINI_FREE_TIER_VERIFIED", raising=False)
-    calls = []
-
-    def remote(provider, prompt):
-        calls.append(provider)
-        state = json.loads(prompt)["estado"]
-        return json.dumps({"ordem": "por_fontes", "abertura": 0, "estado": state}), 600, 20
-
-    monkeypatch.setattr(module, "request_presentation", remote)
-    cases = cli.load_cases()
-    unverified = cli.evaluate(cases, live=True, approved_max_usd=None, provider="gemini")
-    assert not calls and unverified["plano"]["chamadas_realizadas"] == 0
-    assert "Cloud Billing" in unverified["casos"][0]["gemini"]["reason"]
-    monkeypatch.setenv("SENTINELA_GEMINI_FREE_TIER_VERIFIED", "1")
-    simulation = cli.evaluate(cases, live=True, approved_max_usd=None, provider="gemini")
-    assert calls == ["gemini"] * 5
-    assert simulation["plano"]["chamadas_realizadas"] == 5
-    assert all(row["gemini"]["status"] == "validado" and row["openai"]["chamadas"] == 0
-               for row in simulation["casos"])
-    assert simulation["casos"][0]["gemini"]["apresentacao"]["abertura"] == 0
-
-    def quota(provider, prompt):
-        calls.append(provider)
-        raise HTTPError("https://example.invalid", 429, "", {}, None)
-
-    monkeypatch.setattr(module, "request_presentation", quota)
-    snapshot, _, cards = cases
-    blocked = cli.evaluate((snapshot, "quota", cards), live=True, approved_max_usd=None, provider="gemini")
-    assert blocked["plano"]["chamadas_realizadas"] == 1
-    assert blocked["casos"][0]["gemini"]["text"] == blocked["casos"][0]["local"]["text"]
-    assert "rodada interrompida" in blocked["casos"][1]["gemini"]["reason"]

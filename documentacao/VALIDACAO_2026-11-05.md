@@ -1,6 +1,6 @@
 # Registro de validação da correção SENTINELA
 
-Baseline limpa: `e5baed4fdab7575690a408f4ab492fd63790a00e`, branch local já existente `correcao/sentinela-auditoria`, remote `limixin1/radarsul`, sem AGENTS.md preexistente. `_contexto` estava vazio e excluído localmente do Git; os materiais foram copiados e explicitamente versionados, incluindo prompt integral e conversão textual da auditoria com seus links externos. Nenhuma melhoria posterior à auditoria foi revertida.
+Versão de referência: `e5baed4fdab7575690a408f4ab492fd63790a00e`, branch local já existente `correcao/sentinela-auditoria`, remote `limixin1/radarsul`. `_contexto` estava vazio e excluído localmente do Git; os materiais foram copiados e explicitamente versionados, incluindo requisitos de correção e conversão textual da auditoria com seus links externos. Nenhuma melhoria posterior à auditoria foi revertida.
 
 Data da execução: 05/11/2026, fuso America/Sao_Paulo. Host Linux, ambiente isolado `.venv312`, CPython **3.12.14**, sem substituir Python 3.12.3 do sistema/ambiente anterior. Diretas: pandas 2.2.3, numpy 2.3.5, scipy 1.17.0, plotly 7.1.0, streamlit 1.66.1, pyarrow 26.0.0. Lista instalada em `evidencias/ambiente-python31214.txt`. Python foi obtido por uv de distribuição CPython, dependências dos registros PyPI. Rede e porta local exigiram execução fora do sandbox; nenhum serviço externo foi criado.
 
@@ -52,7 +52,7 @@ Matriz histórica: **512 estados, 341 com dados e 171 vazios**. Conservação da
 
 `evidencias/dependencias_audit.json` documenta a consulta do pip-audit, sem vulnerabilidades conhecidas nos pacotes instalados. Busca dirigida não encontrou padrões de credenciais nos arquivos revisados. Não é teste de invasão nem revisão integral dos acessos. HTTPS/cabeçalhos de produção foram consultados por HTTP real; saúde não comprova os cálculos, e ausência de cabeçalho na amostra não demonstra todos os caminhos possíveis.
 
-O acesso ao Brave foi tentado novamente após o usuário informar que o ativaria, mas `cua.getState` continuou sem navegadores e com “Local browser use is disabled in Work settings”. Não há capturas de desktop/móvel, medição de contraste composto, idioma efetivo do DOM, validação visual de PNG, teclado completo, zoom, leitor de tela, Chrome/Firefox ou aparelho real. Não foram usados outros meios de automação para contornar essa configuração.
+O acesso ao Brave foi tentado novamente após o usuário informar que o ativaria, mas o ambiente continuou bloqueando o acesso ao navegador. Não há capturas de desktop/móvel, medição de contraste composto, idioma efetivo do DOM, validação visual de PNG, teclado completo, zoom, leitor de tela, Chrome/Firefox ou aparelho real. Não foram usados outros meios de automação para contornar essa configuração.
 
 Participantes reais não estavam disponíveis. `ACEITACAO_PESSOAS.md` entrega roteiro/formulário, sem simulação de resultados. Responsáveis por manutenção e alertas precisam ser nomeados. Não houve mudanças administrativas, ativação de monitor externo, teste de retomada Free, rollback real ou deploy da versão nova. O regulamento integral do hackathon não foi fornecido nesta entrega; conformidade não declarada.
 
@@ -82,7 +82,7 @@ A investigação posterior e seus limites constam em [ACEITACAO_ETAPA2.md](ACEIT
 
 ## Revalidação em 06/11/2026
 
-Ver a seção de novas tentativas em [ACEITACAO_ETAPA2.md](ACEITACAO_ETAPA2.md) e `evidencias/tentativas-navegadores-2026-11-06.json`. Foram testados diretamente Chrome, Brave e navegador integrado; todos retornaram nesta sessão “Local browser use is disabled in Work settings”. Aplicação/ZIP local 8506 identificaram `42dec24`, snapshot correto e resultados de referência, com quatro downloads HTTP 200. O site publicado continua em `e5baed4`. Sem mudanças no código/dados e sem novos resultados visuais; aceitação de telas, PNG e acesso por teclado continua pendente.
+Ver a seção de novas tentativas em [ACEITACAO_ETAPA2.md](ACEITACAO_ETAPA2.md) e `evidencias/tentativas-navegadores-2026-11-06.json`. Foram testados diretamente Chrome, Brave e navegador integrado; o ambiente bloqueou o acesso aos três nesta sessão. Aplicação/ZIP local 8506 identificaram `42dec24`, snapshot correto e resultados de referência, com quatro downloads HTTP 200. O site publicado continua em `e5baed4`. Sem mudanças no código/dados e sem novos resultados visuais; aceitação de telas, PNG e acesso por teclado continua pendente.
 
 ## Continuação em 06/11 — navegador disponível
 

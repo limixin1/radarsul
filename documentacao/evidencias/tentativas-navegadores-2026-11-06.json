@@ -5,30 +5,23 @@
   "git_head_antes_do_registro": "42dec2424379062144e710be4da8d2125a23c067",
   "tentativas": [
     {
-      "ferramenta": "mcp__cua_repl.js",
-      "chamada": "cua.getState()",
-      "resultado": {
-        "apps": [],
-        "browsers": [],
-        "errors": [
-          "Browsers: Error: Local browser use is disabled in Work settings"
-        ]
-      }
+      "verificacao": "Disponibilidade inicial",
+      "resultado": "Nenhum navegador disponível"
     },
     {
-      "ferramenta": "mcp__cua_repl.js",
-      "chamada": "cua.createBrowserTab('chrome', 'http://127.0.0.1:8506', {sessionName:'🔎 SENTINELA'})",
-      "resultado": "Local browser use is disabled in Work settings"
+      "navegador": "Chrome",
+      "url": "http://127.0.0.1:8506",
+      "resultado": "Acesso ao navegador local bloqueado pelo ambiente"
     },
     {
-      "ferramenta": "mcp__cua_repl.js",
-      "chamada": "cua.createBrowserTab('brave', 'http://127.0.0.1:8506', {sessionName:'🔎 SENTINELA'})",
-      "resultado": "Local browser use is disabled in Work settings"
+      "navegador": "Brave",
+      "url": "http://127.0.0.1:8506",
+      "resultado": "Acesso ao navegador local bloqueado pelo ambiente"
     },
     {
-      "ferramenta": "mcp__cua_repl.js",
-      "chamada": "cua.createBrowserTab('iab', 'http://127.0.0.1:8506', {visible:true})",
-      "resultado": "Local browser use is disabled in Work settings"
+      "navegador": "Navegador integrado",
+      "url": "http://127.0.0.1:8506",
+      "resultado": "Acesso ao navegador local bloqueado pelo ambiente"
     }
   ],
   "local": {

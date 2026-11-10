@@ -12,7 +12,7 @@ from src.antt_charts import ranking, evolution, persistence, persistence_data, c
 from src.data_package import validate, token, MANIFEST
 from src.query import PAGES, AREAS, YEARS, DIRECTIONS, POLICY, area_ids, query_tables, point_label, display_table, source_result, parse_url, url_state, br
 from src.exports import APP_VERSION, metadata, markdown_report, csv_bytes, bundle, filename, code_version
-from src.map_view import focus_list, normalize_focus, positions, render_locator
+from src.map_view import normalize_focus, positions, render_locator
 from src.preventive import build_card
 from src.spatial import ROAD_SOURCE, city_options, road
 
@@ -107,8 +107,10 @@ def main():
     st.set_page_config(page_title='SENTINELA — consulta BR-101/SC',layout='wide',menu_items={'Report a bug':'https://github.com/limixin1/radarsul/issues/new'})
     st.markdown(CSS,unsafe_allow_html=True)
     # st.html supports non-iframed, static JS in this pinned Streamlit version.
-    # Standard DOM language attribute; no private frontend selectors or untrusted interpolation.
-    st.html('<script>document.documentElement.lang="pt-BR";</script>',unsafe_allow_javascript=True)
+    # Keep localized labels and numerical punctuation as published.
+    st.html('<script>document.documentElement.lang="pt-BR";'
+            'document.documentElement.translate=false;'
+            'document.documentElement.classList.add("notranslate");</script>',unsafe_allow_javascript=True)
     st.sidebar.title('SENTINELA')
     st.sidebar.write('Contagens históricas na BR-101/SC')
     try:
@@ -186,7 +188,7 @@ def main():
             st.write(f'{location_phrase}, no recorte de {period_label}, cerca de '
                      f'**{br(weighted_index(high, total), 2)} por 10 mil contagens** ficaram nas faixas acima de 120 km/h.')
             st.caption(f'{br(high)} de {br(total)} contagens publicadas. Use o mapa ou a lista para consultar um local.')
-        render_locator(meta, frames, ids, years, package_token, reference, radar_positions, card)
+        render_locator(meta, frames, ids, years, package_token, reference, radar_positions, card, page)
         st.subheader('O que merece atenção')
         if 2026 in years:
             st.write('**Cobertura parcial de 2026.** O inventário de tráfego vai até 30/06. '
@@ -201,10 +203,8 @@ def main():
                      'Selecione o ponto para ver a ficha e as verificações de campo.')
         elif 2026 not in years:
             st.write('O recorte não sustenta destaque comparável. Consulte a cobertura antes de interpretar os resultados.')
-    elif page == PAGES[4] and ids:
-        focus_list(list(dict.fromkeys([*ids, *([focus] if focus else [])])), labels, "report_focus_choice")
-        if not card:
-            st.caption("Selecione uma localização para abrir a ficha. O relatório da consulta completa está abaixo.")
+    elif page in (PAGES[1], PAGES[3], PAGES[4]):
+        render_locator(meta, frames, ids, years, package_token, reference, radar_positions, card, page)
     if selected.empty:
         if page == PAGES[4] and card:
             with st.container(key="print_report"):

@@ -1,82 +1,139 @@
-"""Mapa local, com seleção de equipamentos e eixo de referência sem mapa-base remoto."""
-from collections import defaultdict
+"""Dados espaciais do mapa compartilhado. O km não vira coordenada de ocorrência."""
+from functools import lru_cache
+from pathlib import Path
+from urllib.parse import urlencode
 
-import plotly.graph_objects as go
+import numpy as np
+import streamlit as st
 
-from src.query import br
-from src.spatial import ANCHOR, CHECKED, ROAD_SOURCE, SCALE
+from config import KM_MAX, KM_MIN
+from src.query import br, plain
+from src.spatial import ANCHOR, CHECKED, ROAD_SOURCE, SCALE, UNAVAILABLE, road, segment_label
+
+SATELLITE_URL = (
+    "https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/"
+    "GoogleMapsCompatible/{z}/{y}/{x}.jpg"
+)
+SATELLITE_CREDIT = "EOX IT Services GmbH · Sentinel-2 cloudless 2016 · dados Copernicus modificados · CC BY 4.0"
+ASSETS = Path(__file__).with_name("map_assets")
 
 
-def corridor_figure(reference, points, prf, focus=None, zoom=False):
-    figure = go.Figure()
-    lons, lats = [], []
-    if reference is not None:
-        for path in reference.paths:
-            lons.extend([*path[:, 0], None])
-            lats.extend([*path[:, 1], None])
-        figure.add_scatter(x=lons, y=lats, mode="lines", hoverinfo="skip",
-                           name="BR-101/SC · eixo SNV", line={"color": "#597182", "width": 2})
-
-    if not prf.empty:
-        figure.add_scatter(
-            x=prf.longitude.tolist(), y=prf.latitude.tolist(), mode="markers",
-            name="Ocorrência PRF", marker={"symbol": "diamond", "color": "#885517", "size": 7, "opacity": .7},
-            text=[f"PRF · {row.municipio} · km {br(row.km, 3)}<br>{row.data} · {CHECKED}"
-                  for row in prf.itertuples(index=False)],
-            hovertemplate="%{text}<extra></extra>",
-        )
-
-    groups = defaultdict(list)
-    for row in points.loc[points.precisao.eq(CHECKED)].itertuples(index=False):
-        groups[row.longitude, row.latitude].append(row)
-    if groups:
-        highlighted = [any(row.codigo == focus for row in group) for group in groups.values()]
-        figure.add_scatter(
-            x=[lon for lon, _ in groups], y=[lat for _, lat in groups], mode="markers+text",
-            name="Equipamento ANTT", text=[str(len(group)) if len(group) > 1 else "" for group in groups.values()],
-            textfont={"color": "#FFFFFF", "size": 11},
-            marker={"color": ["#143047" if flag else "#075E68" for flag in highlighted],
-                    "size": [24 if flag or len(group) > 1 else 13
-                             for flag, group in zip(highlighted, groups.values())],
-                    "line": {"color": "#FFFFFF", "width": 2}},
-            customdata=[next((r.codigo for r in group if r.codigo == focus), group[0].codigo)
-                        for group in groups.values()],
-            hovertext=["<br>".join(f"{r.municipio} · km {br(r.km, 3)} · {r.sentido} · {r.codigo}"
-                                  for r in group) for group in groups.values()],
-            hovertemplate="%{hovertext}<br>" + CHECKED + "<extra></extra>",
-            selected={"marker": {"opacity": 1}}, unselected={"marker": {"opacity": .85}},
-        )
-    if zoom:
-        active = points.loc[points.codigo.eq(focus) & points.precisao.eq(CHECKED)]
-        if not active.empty:
-            lon, lat = active[["longitude", "latitude"]].iloc[0]
-            figure.update_xaxes(range=[lon - .065, lon + .065])
-            figure.update_yaxes(range=[lat - .06, lat + .06])
-        elif reference is not None and focus and focus.startswith("km:"):
-            start = int(focus[3:])
-            vertices = reference.vertices[(reference.start_km >= start) & (reference.start_km <= start + 5)]
-            if len(vertices):
-                coords = vertices / SCALE + ANCHOR
-                mins, maxs = coords.min(axis=0) - .035, coords.max(axis=0) + .035
-                figure.update_xaxes(range=[mins[0], maxs[0]])
-                figure.update_yaxes(range=[mins[1], maxs[1]])
-        elif groups:
-            xs, ys = zip(*groups)
-            figure.update_xaxes(range=[min(xs) - .055, max(xs) + .055])
-            figure.update_yaxes(range=[min(ys) - .055, max(ys) + .055])
-    figure.update_layout(
-        height=395, margin={"t": 14, "b": 42, "l": 12, "r": 12},
-        paper_bgcolor="#F5F8F8", plot_bgcolor="#E8F0F1",
-        hoverlabel={"bgcolor": "#FFFFFF", "font_color": "#142B3C"},
-        font={"color": "#142B3C"}, showlegend=False, clickmode="event+select",
-        dragmode="pan",
+@lru_cache(maxsize=1)
+def map_component():
+    leaflet = (ASSETS / "leaflet-1.9.4.js").read_text(encoding="utf-8").split("//# sourceMappingURL=")[0]
+    js = ("const L = (() => { const module = {exports:{}}; const exports = module.exports;\n"
+          + leaflet + "\nreturn module.exports; })();\n")
+    return st.components.v2.component(
+        "sentinela_corredor",
+        html=(ASSETS / "map.html").read_text(encoding="utf-8"),
+        css="\n".join((ASSETS / file).read_text(encoding="utf-8") for file in ("leaflet-1.9.4.css", "map.css")),
+        js=js + (ASSETS / "map.js").read_text(encoding="utf-8"),
     )
-    figure.add_annotation(xref="paper", yref="paper", x=0, y=0, yshift=-12,
-                          text=ROAD_SOURCE, showarrow=False, xanchor="left", yanchor="top",
-                          font={"size": 10, "color": "#142B3C"})
-    figure.add_annotation(xref="paper", yref="paper", x=1, y=1,
-                          text="↑ N", showarrow=False, xanchor="right", yanchor="top")
-    figure.update_xaxes(visible=False, constrain="domain")
-    figure.update_yaxes(visible=False, scaleanchor="x", scaleratio=float(SCALE[1] / SCALE[0]),
-                        constrain="domain")
-    return figure
+
+
+def km_bucket(km):
+    return int(km // 5 * 5)
+
+
+@lru_cache(maxsize=4)
+def segment_shapes():
+    """Interpola limites de intervalos sobre os vértices SNV. Conserva lacunas."""
+    reference = road()
+    if reference is None:
+        return {}
+    shapes = {}
+    for bucket in range(km_bucket(KM_MIN), km_bucket(KM_MAX) + 1, 5):
+        lo, hi = max(bucket, KM_MIN), min(bucket + 5, KM_MAX)
+        starts = reference.start_km
+        ends = starts + reference.delta_km
+        overlap = (starts < hi) & (ends > lo)
+        if not overlap.any():
+            continue
+        clipped = np.column_stack([np.maximum(starts[overlap], lo), np.minimum(ends[overlap], hi)])
+        fractions = (clipped - starts[overlap, None]) / reference.delta_km[overlap, None]
+        edges = reference.vertices[overlap, None, :] + fractions[:, :, None] * reference.vectors[overlap, None, :]
+        paths = []
+        for a, b in ((edges / SCALE + ANCHOR)[:, :, ::-1]).round(6).tolist():
+            if paths and paths[-1][-1] == a:
+                paths[-1].append(b)
+            else:
+                paths.append([a, b])
+        ranges = []
+        for start, end in sorted(clipped.tolist()):
+            if ranges and start <= ranges[-1][1] + 1e-8:
+                ranges[-1][1] = max(ranges[-1][1], end)
+            else:
+                ranges.append([start, end])
+        shapes[str(bucket)] = {"paths": paths, "ranges": ranges, "label": segment_label(bucket)}
+    return shapes
+
+
+def segment_for(km, shapes):
+    if km is None or not np.isfinite(km) or not KM_MIN <= km <= KM_MAX:
+        return None
+    key = str(km_bucket(km))
+    shape = shapes.get(key)
+    if shape and any(lo <= km <= hi for lo, hi in shape["ranges"]):
+        return key
+    return None
+
+
+def location_precision(record, shapes):
+    if record.precisao == CHECKED:
+        return "marcador"
+    if record.precisao != UNAVAILABLE and segment_for(record.km, shapes):
+        return "trecho"
+    return "texto"
+
+
+def google_maps_url(focus, positions, cities):
+    """Só coordenadas triadas entram em URLs. Trechos usam busca textual."""
+    if focus.startswith("km:"):
+        query = segment_label(int(focus[3:])).replace(" · ", " ")
+    elif focus.startswith("cidade:"):
+        city = cities.get(plain(focus[7:]))
+        if not city:
+            return None, False
+        query = f"BR-101, {city}, SC"
+    else:
+        found = positions.loc[positions.codigo.eq(focus)]
+        if found.empty or found.iloc[0].precisao == UNAVAILABLE:
+            return None, False
+        row = found.iloc[0]
+        if row.precisao == CHECKED:
+            query = f"{row.latitude:.6f},{row.longitude:.6f}"
+            return "https://www.google.com/maps/search/?" + urlencode({"api": 1, "query": query}), True
+        query = f"BR-101 km {br(row.km, 3)}, {row.municipio}, SC"
+    return "https://www.google.com/maps/search/?" + urlencode({"api": 1, "query": query}), False
+
+
+def map_records(frame, active=(), prf=False, shapes=None):
+    shapes = shapes if shapes is not None else segment_shapes()
+    records = []
+    for row in frame.itertuples(index=False):
+        city = row.municipio if isinstance(row.municipio, str) else "Município não informado"
+        precision = location_precision(row, shapes)
+        segment = segment_for(row.km, shapes) if row.precisao != UNAVAILABLE else None
+        point = [row.latitude, row.longitude] if precision == "marcador" else None
+        if prf:
+            detail = f"{city} · km {br(row.km, 3)} · {row.data} · {row.sentido}"
+        else:
+            detail = f"{city} · km {br(row.km, 3)} · {row.sentido} · {row.codigo}"
+        records.append({"id": row.codigo, "city": city, "cityKey": plain(city), "point": point,
+                        "segment": segment, "precision": precision, "detail": detail,
+                        "note": row.motivo_localizacao, "active": row.codigo in active})
+    return records
+
+
+def corridor_payload(shapes, shown, catalog, prf, prf_anchors, ant, active, focus, search, show_radar):
+    incidents = {}
+    for km in ant.km:
+        key = segment_for(km, shapes)
+        if key is not None:
+            incidents[key] = incidents.get(key, 0) + 1
+    return {"segments": shapes, "radars": map_records(shown, active, shapes=shapes) if show_radar else [],
+            "places": map_records(catalog, active, shapes=shapes),
+            "prf": map_records(prf, prf=True, shapes=shapes), "antt": incidents, "focus": focus,
+            "anchors": map_records(prf_anchors, prf=True, shapes=shapes),
+            "search": search, "axisCredit": ROAD_SOURCE, "satelliteUrl": SATELLITE_URL,
+            "satelliteCredit": SATELLITE_CREDIT}

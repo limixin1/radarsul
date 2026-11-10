@@ -142,17 +142,24 @@ def city_options(points, prf):
     return cities
 
 
+def parse_km(value):
+    match = re.fullmatch(r"(?:km\s*)?(\d{1,3})(?:([,.+])(\d{1,3}))?", plain(value).strip())
+    if not match:
+        return None
+    integer, separator, fraction = match.groups()
+    km = int(integer)
+    if fraction:
+        km += int(fraction) / (1000 if separator == "+" else 10 ** len(fraction))
+    return km
+
+
 def lookup(text, points, prf):
     """Reconhece município, identificador e referência km com vírgula, ponto ou +."""
     value = plain(text).strip()
     if not value:
         return None, None
-    match = re.fullmatch(r"(?:km\s*)?(\d{1,3})(?:([,.+])(\d{1,3}))?", value)
-    if match:
-        integer, separator, fraction = match.groups()
-        km = int(integer)
-        if fraction:
-            km += int(fraction) / (1000 if separator == "+" else 10 ** len(fraction))
+    km = parse_km(value)
+    if km is not None:
         return ("trecho", int(km // 5 * 5)) if KM_MIN <= km <= KM_MAX else ("fora", km)
     direct = points.loc[points.identificador.map(plain).eq(value)]
     if not direct.empty:

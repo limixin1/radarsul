@@ -4,7 +4,8 @@ import zipfile
 
 import pandas as pd
 
-from src.corridor_map import corridor_figure
+from src.corridor_map import google_maps_url, location_precision, map_records, segment_for, segment_shapes
+from src.explain import explain
 from src.exports import bundle, markdown_report, metadata
 from src.map_view import normalize_focus
 from src.preventive import CHECK_FIELD, build_card
@@ -20,10 +21,11 @@ def test_spatial_validation_uses_reference_and_preserves_colocated_senses(packag
     twins = classified.loc[classified.codigo.isin(["VC101-6", "VC101-8"])]
     assert len(twins) == 2 and twins.precisao.eq(CHECKED).all()
     assert set(twins.sentido) == {"Crescente", "Decrescente"}
-    figure = corridor_figure(reference, twins, pd.DataFrame(), focus="VC101-8")
-    assert list(figure.data[-1].text) == ["2"]
-    assert list(figure.data[-1].customdata) == ["VC101-8"]
-    assert "Crescente" in figure.data[-1].hovertext[0] and "Decrescente" in figure.data[-1].hovertext[0]
+    records = map_records(twins, active=["VC101-8"])
+    assert len(records) == 2 and records[0]["point"] == records[1]["point"]
+    assert {row["id"] for row in records} == {"VC101-6", "VC101-8"}
+    assert [row["id"] for row in records if row["active"]] == ["VC101-8"]
+    assert {"Crescente", "Decrescente"} == {row["detail"].split(" · ")[2] for row in records}
     point = radar.loc[radar.identificador.eq("VC101-9")].copy()
     assert spatial_records(point, "ANTT", None).iloc[0].precisao == KM_ONLY
     point["lat"] = -28.8
@@ -118,3 +120,77 @@ def test_preventive_recurrence_requires_two_comparable_years_at_same_point(packa
     assert "VC101-6 em 2024, 2025" in repeated.evidencia
     assert "exploratória" in repeated.cobertura
     assert "não sustentam uma prioridade operacional" in repeated.motivo
+
+
+def test_entire_catalog_and_road_gaps(package):
+    _, frames, _ = package
+    devices, prf = frames["antt_equipamentos"], frames["ocorrencias"]
+    cities = city_options(devices, prf)
+    shapes = segment_shapes()
+    for city in cities.values():
+        assert lookup(city, devices, prf) == ("cidade", city)
+    for km in range(245, 466, 5):
+        result = lookup(f"km {min(km, 465)}", devices, prf)
+        assert result == ("trecho", km)
+    assert segment_for(462.3, shapes) == "460"
+    assert segment_for(462.301, shapes) is None
+    assert segment_for(301.5, {"300": {"ranges": [[300, 301], [302, 305]]}}) is None
+    radar = spatial_records(devices, "ANTT", road())
+    for row in radar.itertuples(index=False):
+        assert lookup(row.codigo.lower(), devices, prf) == ("ponto", row.codigo)
+        precision = location_precision(row, shapes)
+        url, exact = google_maps_url(row.codigo, radar, cities)
+        assert exact == (row.precisao == CHECKED)
+        assert (precision == "marcador") == exact
+        if not exact:
+            assert pd.isna(row.latitude) and pd.isna(row.longitude)
+            assert url is None or "BR-101" in url
+        if precision == "trecho":
+            assert segment_for(row.km, shapes)
+
+
+def test_explanation_checks_facts_caches_and_keeps_a_local_fallback(package, monkeypatch):
+    import src.explain as module
+
+    manifest, frames, _ = package
+    points = frames["antt_equipamentos"]
+    focus, years = "VC101-9", [2024, 2025]
+    _, eq, cov = query_tables(frames["antt_diario"], points, [focus], years, manifest["cobertura"]["trafego"])
+    card = build_card(focus, points, eq, cov, frames, manifest, years, spatial_records(points, "ANTT", road()))
+    local = explain(card)["text"]
+    packet = module.facts(card)
+    assert packet["dados"]["trafego"]["acima_de_120"] == 7091
+    assert "latitude" not in packet["localizacao"]
+    monkeypatch.delenv("OPENAI_API_KEY", raising=False)
+    assert explain(card, "openai")["text"] == local
+    monkeypatch.setenv("OPENAI_API_KEY", "key-for-mock")
+    monkeypatch.setenv("GEMINI_API_KEY", "key-for-mock")
+    monkeypatch.setenv("SENTINELA_ENABLE_PAID_AI", "1")
+    for index, raw in enumerate((
+        '{"ordem":"direto","abertura":0,"estado":"recorrente","numeros":"99.999 em 2026"}',
+        '{"ordem":"direto","abertura":0,"estado":"recorrente","acao":"Realizar blitz agora"}',
+        '{"ordem":"por_fontes","abertura":1,"estado":"sem_dados"}',
+        'texto livre',
+    )):
+        monkeypatch.setattr(module, "request_presentation", lambda *_: (raw, 500, 12))
+        result = explain(card, "openai", version="teste", query=f"invalido-{index}")
+        assert result["status"] == "fallback" and result["text"] == local
+
+    calls = []
+
+    def valid(provider, prompt):
+        calls.append((provider, prompt))
+        return '{"ordem":"por_cobertura","abertura":1,"estado":"recorrente"}', 500, 12
+
+    monkeypatch.setattr(module, "request_presentation", valid)
+    first = explain(card, "openai", version="teste-v1", query=focus)
+    repeat = explain(card, "openai", version="teste-v1", query=focus)
+    updated = explain(card, "openai", version="teste-v2", query=focus)
+    gemini = explain(card, "gemini", version="teste-v2", query=focus)
+    assert [row["status"] for row in (first, repeat, updated, gemini)] == ["validado"] * 4
+    assert repeat["cache"] and len(calls) == 3 and calls[1][1] == calls[2][1]
+    assert set(first["text"].split("\n\n")[1:]) == set(local.split("\n\n"))
+    assert first["text"].index("**Cobertura.**") < first["text"].index("**O que foi observado.**")
+    monkeypatch.setattr(module, "MAX_CALLS_PER_HOUR", 0)
+    capped = explain(card, "gemini", version="teste-v3", query=focus)
+    assert capped["text"] == local and "limite horário" in capped["reason"]

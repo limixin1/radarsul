@@ -198,3 +198,20 @@ def test_map_uses_list_when_road_is_unavailable(app, monkeypatch):
     app.selectbox(key="map_focus_choice").set_value("VC101-9").run()
     assert "Referência por km" in "\n".join(x.value for x in app.caption)
     assert app.button(key="open_preventive")
+
+
+def test_search_switches_existing_point_to_other_city_and_municipality_without_radar(app):
+    search = app.text_input(key="map_search")
+    search.set_value("VC101-9").run()
+    assert app.query_params["foco"] == "VC101-9"
+    search = app.text_input(key="map_search")
+    search.set_value("Garopaba").run()
+    assert not app.exception and app.query_params["foco"] == "cidade:Garopaba"
+    assert "VC101-2" in app.multiselect(key="points").value
+    app.text_input(key="map_search").set_value("Passo de Torres").run()
+    assert not app.exception and app.query_params["foco"] == "cidade:Passo de Torres"
+    assert app.multiselect(key="points").value == []
+    app.button(key="open_preventive").click().run()
+    assert app.radio(key="page").value == PAGES[4]
+    assert "19 registros publicados" in "\n".join(item.value for item in app.markdown)
+    assert app.get("download_button")

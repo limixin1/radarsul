@@ -7,7 +7,7 @@ from src.antt import weighted_index
 from src.query import br, comparable_years, plain, point_label, source_result
 from src.spatial import KM_ONLY, segment_label, segment_mask
 
-RULE_VERSION = "apoio-preventivo-2"
+RULE_VERSION = "apoio-preventivo-3"
 CHECK_FIELD = (
     "Medir velocidades atuais no trecho e conferir em campo o limite aplicável, "
     "a sinalização e as condições da via."
@@ -33,6 +33,8 @@ class Card:
     reavaliar: str
     contexto: tuple
     localizacao: dict
+    estado: str
+    dados: dict
 
     def metadata(self):
         return {"regras": RULE_VERSION, **asdict(self)}
@@ -88,6 +90,7 @@ def build_card(focus, points, eq, cov, frames, manifest, years, positions):
         for s in sources
     )
     period = "Anos solicitados " + ", ".join(map(str, years))
+    data = {"anos_solicitados": list(years), "acidentes": [source.to_dict() for source in sources], "trafego": None}
     location = {"precisao": KM_ONLY, "motivo_localizacao":
                 "A localização usa a referência publicada pela fonte. Ocorrências não são atribuídas a um equipamento."}
     if focus.startswith("cidade:"):
@@ -122,8 +125,9 @@ def build_card(focus, points, eq, cov, frames, manifest, years, positions):
             "Os registros de acidentes disponíveis estão descritos por fonte e recorte abaixo.",
             step,
             "A ausência de contagens deixa o padrão de velocidade em aberto.",
-            "Dias de coleta, vigência dos registros e medições recentes do trecho.",
+            "Dias de coleta, vigência dos registros e medições recentes do trecho. " + INTERVENTIONS,
             team, "Quando houver dados confirmados para o local e período.", context, location,
+            "acidentes_sem_velocidade" if published else "sem_dados", data,
         )
 
     coverage_rows = cov.loc[cov.identificador.isin(rows.identificador)]
@@ -142,7 +146,17 @@ def build_card(focus, points, eq, cov, frames, manifest, years, positions):
     annual_signal = coverage_rows.loc[comparable_years(coverage_rows) & coverage_rows.altas.gt(0)]
     years_per_point = annual_signal.groupby("identificador").ano.transform("nunique")
     recurring = annual_signal.loc[years_per_point.ge(2)]
+    data["trafego"] = {
+        "fonte": "ANTT, base A", "contagens": int(total), "acima_de_120": int(high),
+        "indice_por_10_mil": float(weighted_index(high, total)) if total else None,
+        "cobertura_por_ponto_ano": [
+            {"ponto": r.identificador, "ano": int(r.ano), "dias_publicados": int(r.dias),
+             "dias_calendario": int(r.dias_calendario)}
+            for r in coverage_rows.itertuples(index=False)
+        ],
+    }
     if not recurring.empty:
+        state = "recorrente"
         years_by_point = [
             f"{point} em {', '.join(map(str, sorted(annual.ano)))}"
             for point, annual in recurring.groupby("identificador")
@@ -154,14 +168,17 @@ def build_card(focus, points, eq, cov, frames, manifest, years, positions):
         if not rows.elegivel.all():
             coverage += " A comparação do recorte completo é exploratória. O sinal usa apenas os anos comparáveis de cada ponto."
     elif not rows.elegivel.all():
+        state = "exploratorio"
         finding = "Resultado exploratório pela cobertura, denominador ou período incompleto."
         step = "Conferir os dias de coleta e obter dados que cubram o período necessário."
         reason = "A cobertura disponível limita a comparação anual. A base permite descrever o observado e não sustenta uma prioridade."
     elif high == 0:
+        state = "zero_observado"
         finding = "Nenhuma contagem nas faixas acima de 120 km/h na base publicada deste recorte."
         step = "Se houver uma demanda atual, verificar as velocidades e o limite em campo."
         reason = "As faixas publicadas descrevem apenas o período observado."
     else:
+        state = "isolado"
         finding = "Há contagens históricas acima de 120 km/h."
         if len(years) == 1:
             finding += " A seleção contém um único ano comparável."
@@ -170,4 +187,4 @@ def build_card(focus, points, eq, cov, frames, manifest, years, positions):
         step = "Registrar o observado e reavaliar quando houver outros períodos comparáveis ou evidência atual do trecho."
         reason = "Os dados permitem descrever o observado e não sustentam uma prioridade de verificação em campo."
     return Card(title, period, coverage, finding, evidence, step, reason, INTERVENTIONS, team,
-                "Com dados recentes e a validação de campo do trecho e período.", context, location)
+                "Com dados recentes e a validação de campo do trecho e período.", context, location, state, data)

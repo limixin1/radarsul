@@ -1,6 +1,6 @@
 # Plano técnico de correções do SENTINELA
 
-Referência: auditoria Work de 27/10/2026, código-base `e5baed4fdab7575690a408f4ab492fd63790a00e`. Trabalho na branch `fix/sentinela-validacao`; sem deploy, alteração de produção, migração ou troca de framework.
+Referência: auditoria de 27/10/2026, código-base `e5baed4fdab7575690a408f4ab492fd63790a00e`. Trabalho na branch `fix/sentinela-validacao`; sem deploy, alteração de produção, migração ou troca de framework.
 
 O inventário confirmou `app.py` → `app_antt.main()`, cinco estados de navegação Streamlit, dados Parquet locais, cálculos em `src/antt.py`, gráficos Plotly e relatório Markdown. Não existem API própria, banco, front-end separado ou atualização automática das fontes. Não havia testes na árvore de referência. As dependências de runtime permanecem fixadas em `requirements.txt`.
 

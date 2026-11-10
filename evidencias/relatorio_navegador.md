@@ -484,7 +484,7 @@ Este painel usa arquivos tratados locais. Os hashes dos CSV abaixo são os decla
 
 [Página oficial](https://dados.antt.gov.br/dataset/volume-radar/resource/2af017dc-edde-4501-9c10-ae1f0da461f6) · [CSV oficial](https://dados.antt.gov.br/dataset/269aebaa-05e7-4d76-a105-408f12bf4094/resource/2af017dc-edde-4501-9c10-ae1f0da461f6/download/volume-radar-viacosteira.csv) · [Dicionário](https://dados.antt.gov.br/dataset/269aebaa-05e7-4d76-a105-408f12bf4094/resource/7d32f5d1-7a5d-403b-8db5-09e7e11addf1/download/dicionario_de_dados_volume_radar.pdf)
 
-Período: 2022-01-01 a 2026-06-30. Coleta declarada (UTC): 2026-10-26T22:46:35.184423+00:00. Atualização do recurso relatada: 2026-07-28. Data de atualização relatada pela auditoria Work em 27/10/2026; não revalidada nesta execução.
+Período: 2022-01-01 a 2026-06-30. Coleta declarada (UTC): 2026-10-26T22:46:35.184423+00:00. Atualização do recurso relatada: 2026-07-28. Data de atualização relatada pela auditoria em 27/10/2026; não revalidada nesta execução.
 
 SHA-256 declarado: `d2a0b20ba6fa0fc2dcd69a11cd87e2248982327e908e4161a3d617271372c0f0`. Estado: **snapshot; novo download não confirmado**.
 
@@ -494,7 +494,7 @@ Unidade: Contagens publicadas por equipamento/data e faixas; não são veículos
 
 [Página oficial](https://dados.antt.gov.br/dataset/quantidade-possiveis-infratores/resource/121be806-df31-4ebb-aa2d-8caa5f102226) · [CSV oficial](https://dados.antt.gov.br/dataset/c3844135-55c4-43b3-88a0-247f6ff9ca67/resource/121be806-df31-4ebb-aa2d-8caa5f102226/download/quantidade-possiveis-infratores-viacosteira.csv) · [Dicionário](https://dados.antt.gov.br/dataset/c3844135-55c4-43b3-88a0-247f6ff9ca67/resource/d69fc6e3-c693-47b2-b1cc-aa0c05e734a9/download/dicionario_dados_surod_quantidade_possiveis_infratores.pdf)
 
-Período: 2022-12-30 a 2026-06-02. Coleta declarada (UTC): 2026-10-26T22:48:01.082448+00:00. Atualização do recurso relatada: 2026-07-28. Data de atualização relatada pela auditoria Work em 27/10/2026; não revalidada nesta execução.
+Período: 2022-12-30 a 2026-06-02. Coleta declarada (UTC): 2026-10-26T22:48:01.082448+00:00. Atualização do recurso relatada: 2026-07-28. Data de atualização relatada pela auditoria em 27/10/2026; não revalidada nesta execução.
 
 SHA-256 declarado: `3dd3b9bb37834e80fc4d94de22170aa85d7013224a5b8f56397967ede8c4aa93`. Estado: **snapshot; novo download não confirmado**.
 
@@ -504,7 +504,7 @@ Unidade: Contagens publicadas de possíveis infratores; não são autuações co
 
 [Página oficial](https://dados.antt.gov.br/dataset/acidentes-quilometro-rodovias/resource/05e0cbd2-2acb-4b81-8124-3c28a3030234) · [CSV oficial](https://dados.antt.gov.br/dataset/8a57b663-2302-405a-bf5a-cbece12c13d1/resource/05e0cbd2-2acb-4b81-8124-3c28a3030234/download/demostrativo_acidentes_viacosteira.csv) · [Dicionário](https://dados.antt.gov.br/dataset/8a57b663-2302-405a-bf5a-cbece12c13d1/resource/3d9e26ca-5d8f-4854-9744-836e8bcb088e/download/dicionario_dados_surod_acidentes_km.pdf)
 
-Período: 2021-05-01 a 2025-12-31. Coleta declarada (UTC): 2026-10-26T22:48:42.786818+00:00. Atualização do recurso relatada: 2026-01-28. Data de atualização relatada pela auditoria Work em 27/10/2026; não revalidada nesta execução.
+Período: 2021-05-01 a 2025-12-31. Coleta declarada (UTC): 2026-10-26T22:48:42.786818+00:00. Atualização do recurso relatada: 2026-01-28. Data de atualização relatada pela auditoria em 27/10/2026; não revalidada nesta execução.
 
 SHA-256 declarado: `a798c5ca821f8f6905102c60c5c9300da454729b6f5ef06d5cd429d684b3e00e`. Estado: **snapshot; novo download não confirmado**.
 
@@ -514,7 +514,7 @@ Unidade: Linhas administrativas por data/km; sem identificador único de ocorrê
 
 [Página oficial](https://dados.antt.gov.br/dataset/radar/resource/64044fcf-756e-4fd1-9cb2-a6037785829d) · [CSV oficial](https://dados.antt.gov.br/dataset/79d287f4-f5ca-4385-a17c-f61f53831f17/resource/64044fcf-756e-4fd1-9cb2-a6037785829d/download/dados-dos-radares6_2026.csv) · [Dicionário](https://dados.antt.gov.br/dataset/79d287f4-f5ca-4385-a17c-f61f53831f17/resource/b10de933-f8fa-4f13-8a40-a87759b0b4c9/download/radar_dicionario_dados.pdf)
 
-Período: Referência cadastral junho/2026. Coleta declarada (UTC): 2026-10-26T22:48:55.149473+00:00. Atualização do recurso relatada: 2026-07-28. Data de atualização relatada pela auditoria Work em 27/10/2026; não revalidada nesta execução.
+Período: Referência cadastral junho/2026. Coleta declarada (UTC): 2026-10-26T22:48:55.149473+00:00. Atualização do recurso relatada: 2026-07-28. Data de atualização relatada pela auditoria em 27/10/2026; não revalidada nesta execução.
 
 SHA-256 declarado: `a5d2b6facc9eed86a88c94bfa7870a31576db2b832daf0f664802497e60cf17d`. Estado: **snapshot; novo download não confirmado**.
 

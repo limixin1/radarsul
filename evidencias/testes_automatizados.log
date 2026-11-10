@@ -39,13 +39,13 @@ Traceback (most recent call last):
   File "/workspace/radarsul/app_antt.py", line 196, in main
     frames, summary = load()
                       ^^^^^^
-  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1139, in __call__
+  File "python3.12/unittest/mock.py", line 1139, in __call__
     return self._mock_call(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1143, in _mock_call
+  File "python3.12/unittest/mock.py", line 1143, in _mock_call
     return self._execute_mock_call(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1198, in _execute_mock_call
+  File "python3.12/unittest/mock.py", line 1198, in _execute_mock_call
     raise effect
 ValueError: sensitive internal detail
 ok
@@ -81,10 +81,10 @@ test_corrupt_manifest_does_not_crash_module_identification (test_report.SourceTe
 test_format_number_does_not_hide_missing (test_report.SourceTests.test_format_number_does_not_hide_missing) ... ok
 test_snapshot_uses_data_hashes (test_report.SourceTests.test_snapshot_uses_data_hashes) ... ok
 test_version_reads_render_commit_without_assuming_deploy (test_report.SourceTests.test_version_reads_render_commit_without_assuming_deploy) ... ok
-test_all_annual_equipment_values (test_work_reference.WorkReferenceTests.test_all_annual_equipment_values) ... ok
-test_all_monthly_equipment_values (test_work_reference.WorkReferenceTests.test_all_monthly_equipment_values) ... ok
-test_common_date_accident_counts (test_work_reference.WorkReferenceTests.test_common_date_accident_counts) ... ok
-test_ranking_fixed_reference (test_work_reference.WorkReferenceTests.test_ranking_fixed_reference) ... ok
+test_all_annual_equipment_values (test_audit_reference.AuditReferenceTests.test_all_annual_equipment_values) ... ok
+test_all_monthly_equipment_values (test_audit_reference.AuditReferenceTests.test_all_monthly_equipment_values) ... ok
+test_common_date_accident_counts (test_audit_reference.AuditReferenceTests.test_common_date_accident_counts) ... ok
+test_ranking_fixed_reference (test_audit_reference.AuditReferenceTests.test_ranking_fixed_reference) ... ok
 
 ----------------------------------------------------------------------
 Ran 62 tests in 51.909s

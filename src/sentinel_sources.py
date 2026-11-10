@@ -92,7 +92,7 @@ def source_catalog():
                            csv_url=r['url'], dictionary_url=f'{dataset_root}/resource/{dictionary}',
                            collected_at_utc=r['acesso_utc'], sha256=r['sha256'], period=period,
                            resource_updated_at=updated,
-                           metadata_status='Data de atualização relatada pela auditoria Work em 27/10/2026; não revalidada nesta execução.',
+                           metadata_status='Data de atualização relatada pela auditoria em 27/10/2026; não revalidada nesta execução.',
                            status='snapshot; novo download não confirmado', unit=unit, limitations=limitations))
     return result
 

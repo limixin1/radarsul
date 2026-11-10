@@ -35,10 +35,10 @@ A configuração existente declara `PYTHON_VERSION=3.12.14`, `PYTHONUNBUFFERED=1
 
 Se houver regressão, usar o mecanismo do provedor para retornar ao último commit anteriormente validado, preservando as evidências do erro e a identificação do snapshot. Não modificar dados em produção para compensar falhas de código.
 
-## Roteiro para o modo Work
+## Roteiro de validação
 
-Comparar a revisão recebida com o código-base auditado e ler os SEN/CT em [VALIDACAO_SENTINELA.md](VALIDACAO_SENTINELA.md). Reproduzir os números a partir do snapshot, testar controles em navegador e confrontar os downloads com a tela. Diferenciar “implementado e validado localmente”, “publicado” e “validado em produção”. A auditoria recebida está preservada em [documentacao/auditoria_work/](documentacao/auditoria_work/); seus resultados são históricos, não aprovação automática da versão corrigida.
+Comparar a revisão recebida com o código-base auditado e ler os SEN/CT em [VALIDACAO_SENTINELA.md](VALIDACAO_SENTINELA.md). Reproduzir os números a partir do snapshot, testar controles em navegador e confrontar os downloads com a tela. Diferenciar “implementado e validado localmente”, “publicado” e “validado em produção”. A auditoria recebida está preservada em [documentacao/auditoria/](documentacao/auditoria/); seus resultados são históricos, não aprovação automática da versão corrigida.
 
 ## Histórico de domínio e provedor
 
-`VERIFICACAO_PUBLICACAO.json` registra a implantação anterior e uma pendência de domínio daquele momento. A auditoria Work de 27/10/2026 posteriormente observou `https://radarsul.site/` servindo o painel. Isso supera a antiga pendência como observação de disponibilidade, sem comprovar titularidade, acesso ao DNS, configuração atual do provedor, identidade exata do commit de produção ou funcionamento futuro. O histórico não foi reescrito como se fosse uma nova implantação.
+`VERIFICACAO_PUBLICACAO.json` registra a implantação anterior e uma pendência de domínio daquele momento. A auditoria de 27/10/2026 posteriormente observou `https://radarsul.site/` servindo o painel. Isso supera a antiga pendência como observação de disponibilidade, sem comprovar titularidade, acesso ao DNS, configuração atual do provedor, identidade exata do commit de produção ou funcionamento futuro. O histórico não foi reescrito como se fosse uma nova implantação.

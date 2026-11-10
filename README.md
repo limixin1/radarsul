@@ -9,9 +9,9 @@ A medida disponível é `10.000 × soma das contagens A nas faixas acima de 120 
 Requer Python **3.12.14**, conforme `render.yaml`. Não há banco de dados, serviço externo, chave de API ou migração para iniciar o painel. Use o checkout existente; uma tarefa em nuvem já é isolada e não precisa de um worktree adicional.
 
 ```bash
-cd /workspace/radarsul
+cd radarsul
 python3.12 -m venv .venv
-PIP_CACHE_DIR=/workspace/.cache/pip .venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python -m pip install -r requirements.txt
 .venv/bin/python -m pip check
 OPENBLAS_NUM_THREADS=1 .venv/bin/python -m streamlit run app.py --server.address=0.0.0.0 --server.port=8501 --server.headless=true --browser.gatherUsageStats=false
 ```
@@ -32,7 +32,7 @@ O ensaio opcional em navegador usa Node, Playwright e Chromium já disponíveis 
 
 O repositório inclui nove Parquet: snapshot ANTT tratado e contexto PRF independente. A aplicação lê arquivos locais; não atualiza fontes oficiais a cada visita. O manifesto de coleta, as fontes e os hashes históricos estão em `dados_brutos/coleta_20261026T224903Z.json` e [documentacao/FONTES_OFICIAIS.md](documentacao/FONTES_OFICIAIS.md).
 
-Os quatro CSV originais ANTT, os ZIP originais PRF, notebooks e PDFs não estão neste checkout. A auditoria Work entregue em 27/10/2026 registra sua própria inspeção desses insumos; esse registro não equivale a uma nova inspeção dos originais nesta implementação. As novas tentativas de obtenção dos CSV foram negadas pelo proxy da rede. Os testes locais verificam integridade do snapshot, contratos e reconciliação dos agregados a partir dos Parquet.
+Os quatro CSV originais ANTT, os ZIP originais PRF, notebooks e PDFs não estão neste checkout. A auditoria entregue em 27/10/2026 registra sua própria inspeção desses insumos; esse registro não equivale a uma nova inspeção dos originais nesta implementação. As novas tentativas de obtenção dos CSV foram negadas pelo proxy da rede. Os testes locais verificam integridade do snapshot, contratos e reconciliação dos agregados a partir dos Parquet.
 
 `python -m src.antt` é a rotina de ETL e **exige os quatro CSV originais com os hashes do manifesto**. Não a execute como preparação do servidor nem sobre o snapshot versionado: ela escreve saídas. Para reproduzir todo o ETL, use uma cópia descartável com esses insumos e compare as saídas, sem substituir silenciosamente dados oficiais por respostas HTML ou snapshots novos.
 
@@ -43,7 +43,7 @@ Os quatro CSV originais ANTT, os ZIP originais PRF, notebooks e PDFs não estão
 - [Validação](VALIDACAO_SENTINELA.md): situação dos SEN-001–018 e CT-01–26, evidências e limites.
 - [Pendências](PENDENCIAS_SENTINELA.md): somente o trabalho ainda não concluído.
 - [Publicação](PUBLICACAO_SENTINELA.md): procedimento para a versão revisada, sem deploy automático.
-- [Auditoria recebida](documentacao/auditoria_work/AUDITORIA_SENTINELA.md), [backlog](documentacao/auditoria_work/BACKLOG_SENTINELA.md), [especificação](documentacao/auditoria_work/ESPECIFICACAO_SENTINELA.md) e [fontes da auditoria](documentacao/auditoria_work/FONTES_E_VALIDACOES.md): entradas preservadas; recomendações foram confrontadas com código e dados disponíveis.
+- [Auditoria recebida](documentacao/auditoria/AUDITORIA_SENTINELA.md), [backlog](documentacao/auditoria/BACKLOG_SENTINELA.md), [especificação](documentacao/auditoria/ESPECIFICACAO_SENTINELA.md) e [fontes da auditoria](documentacao/auditoria/FONTES_E_VALIDACOES.md): entradas preservadas; recomendações foram confrontadas com código e dados disponíveis.
 
 ## Publicação e histórico
 

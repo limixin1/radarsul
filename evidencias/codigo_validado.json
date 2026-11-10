@@ -1,7 +1,7 @@
 {
   "commit_codigo_validado": "daf7356cbb830eb2879c032bb1f47c666fdee382",
   "baseline": "e5baed4fdab7575690a408f4ab492fd63790a00e",
-  "observacao": "Testes executados na árvore antes de criar os commits, com estes mesmos bytes. Documentação/evidências podem ter commit posterior.",
+  "observacao": "Testes executados na árvore antes de criar os commits, com estes mesmos bytes. Os hashes são históricos e correspondem ao commit informado. Os caminhos acompanham os nomes atuais dos arquivos.",
   "arquivos": [
     {
       "caminho": "MANIFESTO_PUBLICACAO.json",
@@ -60,19 +60,19 @@
       "sha256": "47c155930918640098ec29d8692d23d6ac5bc2e50594d0c342ac870189892af3"
     },
     {
-      "caminho": "tests/fixtures/work_2026-10-27/anual_recalculado.csv",
+      "caminho": "tests/fixtures/auditoria_2026-10-27/anual_recalculado.csv",
       "sha256": "d6709646ae27cb2ff5329e1fee5e351e5aca6d84a79250c28659f0375ae77097"
     },
     {
-      "caminho": "tests/fixtures/work_2026-10-27/contexto_5km.csv",
+      "caminho": "tests/fixtures/auditoria_2026-10-27/contexto_5km.csv",
       "sha256": "d71d85fb2cf66e277eb8527d4b6cb6431a0ad7697d41c7d578f860c23767b7f7"
     },
     {
-      "caminho": "tests/fixtures/work_2026-10-27/mensal_recalculado.csv",
+      "caminho": "tests/fixtures/auditoria_2026-10-27/mensal_recalculado.csv",
       "sha256": "7c34565d33d0d0ccb287ffb1de3909640a30e864156bd0abcfd9617dc0644e70"
     },
     {
-      "caminho": "tests/fixtures/work_2026-10-27/ranking_coorte.csv",
+      "caminho": "tests/fixtures/auditoria_2026-10-27/ranking_coorte.csv",
       "sha256": "1efbe3215dbc145fd9bd4fe67211ae9684a33993a39a994a266848ef6c0a1cd3"
     },
     {
@@ -92,7 +92,7 @@
       "sha256": "e36c34a472fc0b3149c355299896057c73372cdff8297dad8e2f8d6294e2c9ac"
     },
     {
-      "caminho": "tests/test_work_reference.py",
+      "caminho": "tests/test_audit_reference.py",
       "sha256": "1227eaf4f5cc704bc6d16ef1b5dc177e5097175468ffbdfff4f4e65ca0c7d457"
     }
   ]

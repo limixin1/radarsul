@@ -374,4 +374,4 @@ Os cenários CT abaixo são **testes futuros**. Seu texto não significa que ten
 
 ## 15. Entrega e revisão
 
-O Codex deve apresentar alterações, motivos, números reconciliados e testes concluídos. Itens inviáveis por falta de dado permanecem indisponíveis com explicação. Suspeitas só mudam de status quando houver evidência. As correções devem tornar o MVP mais verificável e compreensível, preservando seu objetivo preventivo e a capacidade real das fontes.
+O relatório de entrega deve apresentar alterações, motivos, números reconciliados e testes concluídos. Itens inviáveis por falta de dado permanecem indisponíveis com explicação. Suspeitas só mudam de status quando houver evidência. As correções devem tornar o MVP mais verificável e compreensível, preservando seu objetivo preventivo e a capacidade real das fontes.

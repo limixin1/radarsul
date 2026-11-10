@@ -1,4 +1,4 @@
-"""Regressões contra recálculos independentes recebidos no ZIP Work.
+"""Regressões contra recálculos independentes recebidos no ZIP da auditoria.
 
 Fixtures copiadas sem alteração; não são resultados gerados por src.antt.
 Os CSV brutos não estão disponíveis: estas verificações cobrem o snapshot tratado.
@@ -9,10 +9,10 @@ import pandas as pd
 from src.antt import annual_table, monthly_table, equipment_table, cohort_ids, context_table
 from src.sentinel_data import load_snapshot
 
-FIXTURES = Path(__file__).parent/'fixtures/work_2026-10-27'
+FIXTURES = Path(__file__).parent/'fixtures/auditoria_2026-10-27'
 
 
-class WorkReferenceTests(unittest.TestCase):
+class AuditReferenceTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.frames, _ = load_snapshot()

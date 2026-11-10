@@ -136,7 +136,6 @@ def test_map_search_card_and_url(app, monkeypatch):
     import io
     import zipfile
     import app_antt
-    from src.preventive import CHECK_FIELD
 
     generated = {}
     bundle = app_antt.bundle
@@ -175,7 +174,7 @@ def test_map_search_card_and_url(app, monkeypatch):
         assert location[0]["identificador"] == "VC101-9"
         assert location[0]["codigo"] != location[0]["identificador"]
         exported = archive.read("relatorio.md").decode()
-        assert CHECK_FIELD in exported
+        assert "Medir velocidades atuais no km 304,000" in exported
         assert exported == generated["markdown"]
         assert exported.strip() in [x.value for x in shared.markdown]
 
@@ -185,7 +184,7 @@ def test_map_search_card_and_url(app, monkeypatch):
         exported = archive.read("relatorio.md").decode()
         assert "Registrar o observado e reavaliar" in exported
         assert "não sustentam uma prioridade de verificação em campo" in exported
-        assert CHECK_FIELD not in exported
+        assert "Medir velocidades atuais no km 304,000" not in exported
         assert exported == generated["markdown"]
         assert exported.strip() in [x.value for x in shared.markdown]
 
@@ -196,7 +195,7 @@ def test_map_uses_list_when_road_is_unavailable(app, monkeypatch):
     app.text_input(key="map_search").set_value("Laguna").run()
     assert "Eixo cartográfico indisponível" in "\n".join(x.value for x in app.info)
     app.selectbox(key="map_focus_choice").set_value("VC101-9").run()
-    assert "Referência por km" in "\n".join(x.value for x in app.caption)
+    assert "Localização aproximada." in "\n".join(x.value for x in app.markdown)
     assert app.button(key="open_preventive")
 
 
@@ -213,5 +212,5 @@ def test_search_switches_existing_point_to_other_city_and_municipality_without_r
     assert app.multiselect(key="points").value == []
     app.button(key="open_preventive").click().run()
     assert app.radio(key="page").value == PAGES[4]
-    assert "19 registros publicados" in "\n".join(item.value for item in app.markdown)
+    assert "19 registros de acidente" in "\n".join(item.value for item in app.markdown)
     assert app.get("download_button")

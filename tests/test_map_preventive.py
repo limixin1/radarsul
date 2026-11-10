@@ -61,7 +61,7 @@ def test_card_and_exports_use_same_facts_and_preserve_history(package):
     positions = spatial_records(points, "ANTT", road())
     card = build_card(ids[0], points, eq, cov, frames, manifest, years, positions)
     assert "7.091 de 11.178.995" in card.evidencia and "6,343" in card.evidencia
-    assert card.proximo_passo == CHECK_FIELD
+    assert card.proximo_passo.startswith("Medir velocidades atuais no km 304,000")
     assert "Para avaliar blitz, documente um problema atual" in card.falta
     assert all("independente do radar" in line for line in card.contexto)
     meta = metadata(manifest, dict(page=PAGES[4], years=years, area=AREAS[0], city="Laguna",
@@ -190,7 +190,107 @@ def test_explanation_checks_facts_caches_and_keeps_a_local_fallback(package, mon
     assert [row["status"] for row in (first, repeat, updated, gemini)] == ["validado"] * 4
     assert repeat["cache"] and len(calls) == 3 and calls[1][1] == calls[2][1]
     assert set(first["text"].split("\n\n")[1:]) == set(local.split("\n\n"))
-    assert first["text"].index("**Cobertura.**") < first["text"].index("**O que foi observado.**")
+    assert first["text"].index("**Cobertura.**") < first["text"].index("**O que mais apareceu aqui.**")
     monkeypatch.setattr(module, "MAX_CALLS_PER_HOUR", 0)
     capped = explain(card, "gemini", version="teste-v3", query=focus)
     assert capped["text"] == local and "limite horário" in capped["reason"]
+
+
+def test_summary_preserves_separate_sources_years_and_passos_location_limit(package):
+    manifest, frames, _ = package
+    points = frames["antt_equipamentos"]
+    positions = spatial_records(points, "ANTT", road())
+
+    def card_at(focus, ids, years):
+        _, eq, cov = query_tables(frames["antt_diario"], points, ids, years, manifest["cobertura"]["trafego"])
+        return build_card(focus, points, eq, cov, frames, manifest, years, positions)
+
+    trecho = card_at("km:330", ["VC101-11", "VC101-12"], [2024, 2025])
+    antt, prf = trecho.dados["acidentes"]
+    assert (antt["quantidade"], prf["quantidade"]) == (223, 172)
+    assert [r["quantidade"] for r in prf["por_ano"]] == [93, 79]
+    assert [r["quantidade"] for r in antt["por_ano"]] == [133, 90]
+    assert prf["tipo"]["tipo"] == "Colisão transversal" and prf["tipo"]["quantidade"] == 43
+    assert antt["tipo"]["estado"] == "campo ausente"
+    assert prf["distribuicao_km"]["estado"] == antt["distribuicao_km"]["estado"] == "dispersos"
+    assert "O que mais apareceu aqui" in trecho.markdown()
+    assert trecho.markdown().index("Ocorrências nos anos") < trecho.markdown().index("Próximo passo")
+    assert trecho.summary_markdown(compact=True).index("223 registros") < trecho.summary_markdown(compact=True).index("Próximo passo")
+    partial = card_at("km:330", ["VC101-11", "VC101-12"], [2025, 2026])
+    assert [r["quantidade"] for r in partial.dados["acidentes"][1]["por_ano"]] == [79, None]
+    assert "(ano parcial)" in partial.summary_markdown() and "sem publicação" in partial.summary_markdown()
+    for row in partial.dados["trafego"]["cobertura_por_ponto_ano"]:
+        if row["ano"] == 2026:
+            assert row["parcial"] and row["indice_por_10_mil"] is None
+    passo = card_at("cidade:Passo de Torres", [], [2024, 2025])
+    prf = passo.dados["acidentes"][0]
+    assert prf["quantidade"] == 19 and passo.dados["trafego"] is None
+    assert prf["distribuicao_km"]["sem_eixo"] == 6
+    assert "5 registros entre os km 463 e 464" in passo.proximo_passo
+    empty = card_at("cidade:Passo de Torres", [], [2022])
+    assert "Sem publicação" in empty.summary_markdown() and "19 registros" not in empty.summary_markdown()
+    zero = card_at("km:305", [], [2022])
+    assert zero.dados["acidentes"][1]["quantidade"] is None
+
+
+def test_geographic_rule_requires_a_majority_and_does_not_promote_bad_locations():
+    from src.preventive import accident_next_step
+    from src.preventive_summary import km_distribution, leading_type
+
+    valid = {"330": {"ranges": [[330, 335]]}}
+    base = pd.DataFrame({"km": [331.2] * 5 + [332.1, 332.2, 333.0], "ano": [2024, 2025] * 4})
+    concentrated = km_distribution(base, valid)
+    assert concentrated["estado"] == "concentrados"
+    assert concentrated["quantidade"] == 5 and concentrated["anos"] == [2024, 2025]
+    assert "331 e 332" in accident_next_step([{
+        "fonte": "PRF", "quantidade": 8, "distribuicao_km": concentrated,
+    }], 330)
+    assert km_distribution(base.assign(km=[330.2] * 4 + [332.2] * 4), valid)["estado"] == "dispersos"
+    assert km_distribution(base.assign(km=463), valid)["estado"] == "localização insuficiente"
+    assert km_distribution(base.iloc[:4], valid)["estado"] == "poucos registros"
+    assert leading_type(base.assign(tipo_acidente=["A"] * 4 + ["B"] * 4))["estado"] == "empate"
+    assert leading_type(base.assign(tipo_acidente=["A"] * 7 + [None]))["estado"] == "campo incompleto"
+
+
+def test_free_gemini_does_not_use_openai_or_unverified_billing(monkeypatch):
+    from collections import OrderedDict, deque
+    from urllib.error import HTTPError
+    import scripts.compare_explanations as cli
+    import src.explain as module
+
+    monkeypatch.setattr(module, "_cache", OrderedDict())
+    monkeypatch.setattr(module, "_calls", deque())
+    monkeypatch.delenv("OPENAI_API_KEY", raising=False)
+    monkeypatch.setenv("GEMINI_API_KEY", "key-for-mock")
+    monkeypatch.delenv("SENTINELA_ENABLE_PAID_AI", raising=False)
+    monkeypatch.delenv("SENTINELA_GEMINI_FREE_TIER_VERIFIED", raising=False)
+    calls = []
+
+    def remote(provider, prompt):
+        calls.append(provider)
+        state = json.loads(prompt)["estado"]
+        return json.dumps({"ordem": "por_fontes", "abertura": 0, "estado": state}), 600, 20
+
+    monkeypatch.setattr(module, "request_presentation", remote)
+    cases = cli.load_cases()
+    unverified = cli.evaluate(cases, live=True, approved_max_usd=None, provider="gemini")
+    assert not calls and unverified["plano"]["chamadas_realizadas"] == 0
+    assert "Cloud Billing" in unverified["casos"][0]["gemini"]["reason"]
+    monkeypatch.setenv("SENTINELA_GEMINI_FREE_TIER_VERIFIED", "1")
+    simulation = cli.evaluate(cases, live=True, approved_max_usd=None, provider="gemini")
+    assert calls == ["gemini"] * 5
+    assert simulation["plano"]["chamadas_realizadas"] == 5
+    assert all(row["gemini"]["status"] == "validado" and row["openai"]["chamadas"] == 0
+               for row in simulation["casos"])
+    assert simulation["casos"][0]["gemini"]["apresentacao"]["abertura"] == 0
+
+    def quota(provider, prompt):
+        calls.append(provider)
+        raise HTTPError("https://example.invalid", 429, "", {}, None)
+
+    monkeypatch.setattr(module, "request_presentation", quota)
+    snapshot, _, cards = cases
+    blocked = cli.evaluate((snapshot, "quota", cards), live=True, approved_max_usd=None, provider="gemini")
+    assert blocked["plano"]["chamadas_realizadas"] == 1
+    assert blocked["casos"][0]["gemini"]["text"] == blocked["casos"][0]["local"]["text"]
+    assert "rodada interrompida" in blocked["casos"][1]["gemini"]["reason"]

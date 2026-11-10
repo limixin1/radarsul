@@ -5,7 +5,7 @@ import json
 
 from src.data_package import token, validate
 from src.explain import (
-    MAX_INPUT_BYTES, MAX_OUTPUT_TOKENS, MODELS, estimate_cost, explain, facts, make_prompt, provider_block,
+    MAX_INPUT_BYTES, MAX_OUTPUT_TOKENS, MODELS, SCHEMA, SYSTEM_PROMPT, estimate_cost, explain, facts, make_prompt, provider_block,
 )
 from src.preventive import build_card
 from src.query import query_tables
@@ -20,7 +20,11 @@ CASES = (
 )
 
 
-def compare(live=False, approved_max_usd=None):
+def compare(live=False, approved_max_usd=None, provider="both"):
+    return evaluate(load_cases(), live=live, approved_max_usd=approved_max_usd, provider=provider)
+
+
+def load_cases():
     manifest, frames, _ = validate()
     points = frames["antt_equipamentos"]
     positions = spatial_records(points, "ANTT", road())
@@ -32,42 +36,58 @@ def compare(live=False, approved_max_usd=None):
         if card.estado != expected:
             raise ValueError(f"Caso {title} mudou de estado. Revise a evidência antes de comparar.")
         cases.append((title, focus, years, card))
-    # Usa bytes UTF-8 como estimativa conservadora de tokens de entrada, mais margem
-    # para instruções do provedor e schema. Não é um teto do faturamento do projeto.
-    ceiling = sum(
-        estimate_cost(provider, len(make_prompt(facts(card)).encode()) + 1024, MAX_OUTPUT_TOKENS)
-        for provider in MODELS for _, _, _, card in cases
-    )
-    ceiling = round(ceiling + 0.000001, 6)
-    plan = {"modelos": MODELS, "chamadas_maximas": len(MODELS) * len(cases),
-            "saida_maxima_por_chamada_tokens": MAX_OUTPUT_TOKENS, "teto_planejado_usd": ceiling}
-    if live:
-        if approved_max_usd is None or not approved_max_usd.is_finite() or approved_max_usd < Decimal(str(ceiling)):
+    return manifest["versao"], version, cases
+
+
+def evaluate(loaded, *, live, approved_max_usd, provider):
+    snapshot, version, cases = loaded
+    providers = list(MODELS) if provider == "both" else [provider]
+    free_tier = provider == "gemini"
+    ceiling = 0
+    if not free_tier:
+        ceiling = sum(
+            estimate_cost(name, len((SYSTEM_PROMPT + make_prompt(facts(card))).encode()) + 1024, MAX_OUTPUT_TOKENS)
+            for name in providers for _, _, _, card in cases
+        )
+        ceiling = round(ceiling + 0.000001, 6)
+        if live and (approved_max_usd is None or not approved_max_usd.is_finite()
+                     or approved_max_usd < Decimal(str(ceiling))):
             raise ValueError(f"A execução exige teto aprovado de pelo menos US$ {ceiling:.6f}.")
-        blocked = [reason for provider in MODELS if (reason := provider_block(provider))]
-        if blocked:
-            raise ValueError("Comparação real indisponível. " + "; ".join(blocked))
-        if any(len(make_prompt(facts(card)).encode()) > MAX_INPUT_BYTES for _, _, _, card in cases):
-            raise ValueError("Pelo menos um caso excede o limite de entrada.")
+    plan = {"modelos": {name: MODELS[name] for name in providers}, "modo": "free_tier" if free_tier else "pago",
+            "chamadas_maximas": len(providers) * len(cases), "chamadas_realizadas": 0,
+            "saida_maxima_por_chamada_tokens": MAX_OUTPUT_TOKENS, "teto_planejado_usd": ceiling}
+    blocked = {name: provider_block(name, free_tier=free_tier) for name in providers}
     results = []
     for title, focus, years, card in cases:
         local = explain(card)
         local["cost_usd"] = 0
         record = {"caso": title, "foco": focus, "anos": years, "estado": card.estado, "local": local}
-        for provider, model in MODELS.items():
-            if live:
-                result = explain(card, provider, version=version, query=focus)
+        for name, model in MODELS.items():
+            if live and name in providers and not blocked[name]:
+                result = explain(card, name, version=version, query=focus, free_tier=free_tier)
+                plan["chamadas_realizadas"] += result["chamadas"]
+                if result.get("reason") == "cota ou limite da API":
+                    blocked[name] = "rodada interrompida após erro de cota ou limite da API"
                 count_in, count_out = result["input_tokens"], result["output_tokens"]
                 result["cost_usd_estimated"] = (
-                    round(estimate_cost(provider, count_in, count_out), 8)
+                    0 if free_tier and result["chamadas"] else
+                    round(estimate_cost(name, count_in, count_out), 8)
                     if count_in is not None and count_out is not None else None
                 )
             else:
-                result = {"status": "não executado", "reason": provider_block(provider) or "execute com --live",
+                reason = (blocked[name] or "execute com --live") if name in providers else "provedor fora desta rodada"
+                result = {"status": "não executado", "reason": reason, "chamadas": 0,
                           "text": None, "latency_ms": None, "cost_usd_estimated": None}
-            record[provider] = {"model": model, **result}
+            record[name] = {"model": model, **result}
         results.append(record)
-    return {"snapshot": manifest["versao"], "plano": plan, "casos": results}
+    return {"snapshot": snapshot, "plano": plan, "casos": results}
+
+
+def manual_packets(loaded):
+    snapshot, _, cases = loaded
+    return {"snapshot": snapshot, "instrucoes": SYSTEM_PROMPT, "esquema": SCHEMA, "casos": [
+        {"caso": title, "fatos": facts(card)} for title, _, _, card in cases
+    ]}
 
 
 def markdown(result):
@@ -88,14 +108,27 @@ def markdown(result):
     return "\n".join(lines)
 
 
-if __name__ == "__main__":
+def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--live", action="store_true", help="Consulta as duas APIs quando autorizado.")
+    parser.add_argument("--provider", choices=("both", "gemini", "openai"), default="both",
+                        help="Gemini isolado só usa projeto confirmado no Free Tier.")
+    parser.add_argument("--live", action="store_true", help="Consulta o provedor selecionado quando autorizado.")
+    parser.add_argument("--manual", action="store_true", help="Emite fatos públicos e instruções para ChatGPT ou Claude.")
     parser.add_argument("--approved-max-usd", type=Decimal, help="Teto explícito da rodada autorizada.")
     parser.add_argument("--markdown", action="store_true", help="Emite as cinco respostas lado a lado.")
     args = parser.parse_args()
     try:
-        result = compare(args.live, args.approved_max_usd)
+        if args.manual:
+            if args.live or args.markdown:
+                parser.error("--manual gera apenas JSON local.")
+            print(json.dumps(manual_packets(load_cases()), ensure_ascii=False, indent=2))
+            return
+        result = compare(args.live, args.approved_max_usd, args.provider)
     except ValueError as exc:
         parser.error(str(exc))
     print(markdown(result) if args.markdown else json.dumps(result, ensure_ascii=False, indent=2))
+
+
+
+if __name__ == "__main__":
+    main()

@@ -235,23 +235,13 @@ def render_locator(meta, frames, ids, years, package_token, reference, radar_pos
                        "A lista distingue a referência por km da localização apenas textual.")
     with detail_col:
         if card:
-            st.markdown(f"**{card.local}**")
-            st.write(card.achado)
-            st.caption(card.cobertura)
-            st.caption(card.localizacao["precisao"] + ". " + card.localizacao["motivo_localizacao"])
-            if focus.startswith("km:"):
-                shape = shapes.get(focus[3:])
-                if shape:
-                    ranges = "; ".join(f"{br(start, 3)} a {br(end, 3)}" for start, end in shape["ranges"])
-                    st.caption(f"Traçado disponível no intervalo: km {ranges}. As lacunas ficam por referência textual.")
-                else:
-                    st.caption("Este intervalo tem apenas referência textual: sem geometria no eixo disponível.")
-            st.write(card.proximo_passo)
-            maps_url, precise = google_maps_url(focus, radar_positions, cities)
-            if maps_url:
-                if not precise:
-                    st.caption("O Google Maps receberá uma busca textual aproximada por BR, município ou km.")
-                st.link_button("Abrir no Google Maps" if precise else "Buscar referência no Google Maps", maps_url)
+            with st.container(key="point_summary"):
+                st.markdown(card.summary_markdown(compact=True))
+                maps_url, precise = google_maps_url(focus, radar_positions, cities)
+                if maps_url:
+                    st.link_button("Abrir no Google Maps" if precise else "Google Maps · Busca aproximada", maps_url)
+                with st.expander("Ver dados e fontes"):
+                    st.markdown(card.technical_markdown(include_annual=True))
             render_explanation(card, package_token, focus)
             scope_points = meta.loc[meta.identificador.isin(ids)]
             if focus.startswith("km:"):

@@ -1,6 +1,6 @@
 {
   "consulta_local": "2026-11-05 America/Sao_Paulo",
-  "fonte": "Render MCP: list_services, list_deploys, get_metrics",
+  "fonte": "Render: serviços, deploys e métricas",
   "servico": "radarsul",
   "id": "srv-dbfvgi59el5s73bealsg",
   "workspace": "TCC 371",

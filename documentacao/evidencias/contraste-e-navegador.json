@@ -9,8 +9,8 @@
   ],
   "navegador": {
     "solicitado":"Brave",
-    "ferramenta":"cua.getState",
-    "resultado":"Local browser use is disabled in Work settings",
+    "verificacao":"Disponibilidade do navegador local",
+    "resultado":"Acesso ao navegador local bloqueado pelo ambiente",
     "inventario_browsers":[],
     "tentativas":"repetidas após usuário informar que ativaria; mesmo bloqueio",
     "capturas_realizadas":false,

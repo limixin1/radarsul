@@ -2,7 +2,7 @@
 
 ## Estado confirmado e limites
 
-Em 05/11/2026 o Render MCP confirmou `radarsul`, serviço `srv-dbfvgi59el5s73bealsg`, workspace TCC 371, região Virginia, uma instância Free. A branch acompanhada é `main`, com autoDeploy por commit e previews desligados. Deploy `dep-dbg7476c6qcc73ei65g0` live no SHA `e5baed4fdab7575690a408f4ab492fd63790a00e`. O YAML configura Python 3.12.14; o ambiente real do processo remoto não foi aberto por SSH nesta rodada.
+Em 05/11/2026 o Render confirmou `radarsul`, serviço `srv-dbfvgi59el5s73bealsg`, workspace TCC 371, região Virginia, uma instância Free. A branch acompanhada é `main`, com autoDeploy por commit e previews desligados. Deploy `dep-dbg7476c6qcc73ei65g0` live no SHA `e5baed4fdab7575690a408f4ab492fd63790a00e`. O YAML configura Python 3.12.14; o ambiente real do processo remoto não foi aberto por SSH nesta rodada.
 
 HTTPS no domínio próprio e saúde no domínio e onrender retornaram 200/ok nesta rodada. Isso verifica a versão publicada histórica. Nenhuma alteração do PR foi publicada. Os JSON de publicação na raiz são registros históricos, não a validação desta entrega. Ver `documentacao/evidencias/http-publicado.json` e a matriz.
 

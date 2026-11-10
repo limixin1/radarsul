@@ -5,8 +5,8 @@ Escopo: objetivo de continuação do PR #2, incluindo leitura da matriz, valida�
 | Requisito do objetivo | Evidência autoritativa | Resultado e limite |
 |---|---|---|
 | Preservar branch/commits/correções | Git da branch correcao/sentinela-auditoria; 2a2c703 → 42dec24 → 0f789ff → 7396d0f → aefaac0 → 7dbdd27; diff desta continuação | Sem reset, force push ou reversão. Worktree existente preservado; diretório principal separado. Ponta remota reconferida antes do envio. |
-| Ler instruções e configuração | AGENTS.md, requirements, .python-version, render.yaml, prompt/auditoria em _contexto e relatórios | Python 3.12.14 e ambiente preservados. Alteração final restrita a apresentação/impressão; nenhum Parquet/fórmula alterado. |
-| Navegador e local diferentes do publicado | Brave pelo mcp__cua_repl; servidor 127.0.0.1:8506; identidade no PDF/exportações; Render list_deploys | Acesso real disponível; versão corrigida local. Último Render reconfirmado em e5baed4. |
+| Ler instruções e configuração | Guia de desenvolvimento, requirements, .python-version, render.yaml, requisitos, auditoria e relatórios | Python 3.12.14 e ambiente preservados. Alteração final restrita a apresentação/impressão; nenhum Parquet/fórmula alterado. |
+| Navegador e local diferentes do publicado | Brave local; servidor 127.0.0.1:8506; identidade no PDF/exportações; consulta de deploys no Render | Acesso real disponível; versão corrigida local. Último Render reconfirmado em e5baed4. |
 | Cinco páginas | paginas.json, paginas-teclado.json, capturas e test_five_pages | Percurso visual e navegação por setas preservando Laguna; sem erro. |
 | Filtros, cidade e vazios | consultas.json, filtros-teclado.json, captura sem-pontos; AppTest | Laguna, Criciúma e recuperação; anos/sentidos/pontos; vazio orientado e sem downloads; reset. |
 | URL, reload, nova sessão, isolamento | consultas.json, laguna-url-reload.jpg, test_shared_url_new_session_isolation | Reload e nova aba reais, isolamento e entradas inválidas cobertos por AppTest. |

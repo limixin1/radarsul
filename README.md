@@ -41,7 +41,7 @@ O último comando exige o servidor local em 8502 e verifica uma sessão WebSocke
 
 ## Reprodução e restauração
 
-O [kit bruto fornecido](_contexto/SENTINELA_bases_ANTT.zip) contém quatro CSV ANTT, dois ZIP PRF e manifestos. O [especificação de correção](_contexto/Requisitos_Correcao_SENTINELA_2026-11-05.md) e a [auditoria histórica convertida](_contexto/Auditoria_Produto_SENTINELA_2026-11-02.md) permanecem no contexto. Os comandos de trabalho e os critérios de integridade estão no [guia de desenvolvimento](documentacao/GUIA_DESENVOLVIMENTO.md).
+O [kit bruto fornecido](_contexto/SENTINELA_bases_ANTT.zip) contém quatro CSV ANTT, dois ZIP PRF e manifestos. A [especificação de correção](_contexto/Requisitos_Correcao_SENTINELA_2026-11-05.md) e a [auditoria histórica convertida](_contexto/Auditoria_Produto_SENTINELA_2026-11-02.md) permanecem no contexto. Os comandos de trabalho e os critérios de integridade estão no [guia de desenvolvimento](documentacao/GUIA_DESENVOLVIMENTO.md).
 
 ```bash
 python -m src.rebuild --raw-zip _contexto/SENTINELA_bases_ANTT.zip --output /tmp/sentinela-rebuild

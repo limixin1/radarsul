@@ -4,7 +4,7 @@ Branch limpa conferida em `2a2c703`, PR #2 aberto/rascunho, base main `e5baed4`.
 
 ## Navegador e escopo de aceitação
 
-Nesta continuação `cua.getState` retornou novamente `browsers=[]` e “Local browser use is disabled in Work settings”, inclusive após o usuário informar que habilitaria o Brave. A configuração continua impedindo a aceitação visual. Não se verificaram as larguras 320/360/390/768/1366, zoom 200%, teclado/foco real, contraste composto, legibilidade, URL/reload no navegador ou download PNG. As cinco páginas, filtros, busca, vazios, estado URL e arquivos continuam com evidência AppTest/protocolo, sem substituir as verificações de navegador solicitadas.
+Nesta continuação, o ambiente voltou a bloquear o acesso ao navegador local, inclusive após a tentativa de habilitar o Brave. A configuração continua impedindo a aceitação visual. Não se verificaram as larguras 320/360/390/768/1366, zoom 200%, teclado/foco real, contraste composto, legibilidade, URL/reload no navegador ou download PNG. As cinco páginas, filtros, busca, vazios, estado URL e arquivos continuam com evidência AppTest/protocolo, sem substituir as verificações de navegador solicitadas.
 
 Participantes, leitor de tela real e ambiente de hospedagem da versão nova permanecem pendentes. A meta de aceitação continua aberta; este registro documenta progresso, não aprovação final.
 
@@ -46,11 +46,11 @@ A maior parte do tempo residual da instância candidata ocorre em conteúdo e ex
 
 ## Nova tentativa com Chrome, Brave e navegador integrado em 06/11/2026
 
-A pedido do usuário, o acesso foi revalidado do zero pela ferramenta `mcp__cua_repl.js`, sem estender ao Chrome uma conclusão anterior sobre o Brave. `cua.getState()` retornou inventário vazio e erro de acesso. Em seguida foram tentadas separadamente as chamadas documentadas `cua.createBrowserTab('chrome', ...)`, `cua.createBrowserTab('brave', ...)` e `cua.createBrowserTab('iab', ...)`, todas com a URL local 8506. **Cada chamada retornou “Local browser use is disabled in Work settings”.** Nenhuma aba foi disponibilizada à ferramenta. Trata-se do resultado desta sessão, mesmo que o controle tenha funcionado em outro momento.
+Chrome, Brave e o navegador integrado foram tentados separadamente na porta local 8506. O ambiente bloqueou o acesso nas três tentativas e nenhuma aba abriu nessa sessão.
 
-O Git local estava limpo na branch solicitada e no commit `42dec24`. O PR remoto #2 confirmou a mesma ponta, continuando em rascunho, sem commits posteriores a preservar nesta consulta. Foram lidos integralmente AGENTS.md, matriz F01–F24, validação de 05/11 e este relatório.
+O Git local estava limpo na branch solicitada e no commit `42dec24`. O PR remoto #2 confirmou a mesma ponta, continuando em rascunho, sem commits posteriores a preservar nesta consulta. A conferência usou o guia de desenvolvimento, a matriz F01–F24, a validação de 05/11 e este relatório.
 
-A aplicação em `http://127.0.0.1:8506` continuava ativa: saúde `ok`, sessão concluída sem exceções, quatro downloads HTTP 200, agregado 2,520 por 10 mil, 226.870.300 contagens e 57.163 acima de 120 km/h. O ZIP exportado identificou exatamente `42dec2424379062144e710be4da8d2125a23c067` e snapshot `2026-10-26.1`. Essas verificações são de protocolo/arquivo, não de interface. O Render MCP confirmou o deploy publicado antigo `dep-dbg7476c6qcc73ei65g0`, em `e5baed4`, estado live; portanto o site público não foi usado para validar a branch corrigida. A CI do commit `42dec24`, run 42153357635, foi reconferida como success.
+A aplicação em `http://127.0.0.1:8506` continuava ativa: saúde `ok`, sessão concluída sem exceções, quatro downloads HTTP 200, agregado 2,520 por 10 mil, 226.870.300 contagens e 57.163 acima de 120 km/h. O ZIP exportado identificou exatamente `42dec2424379062144e710be4da8d2125a23c067` e snapshot `2026-10-26.1`. Essas verificações são de protocolo/arquivo, não de interface. O Render confirmou o deploy publicado antigo `dep-dbg7476c6qcc73ei65g0`, em `e5baed4`, estado live; portanto o site público não foi usado para validar a branch corrigida. A CI do commit `42dec24`, run 42153357635, foi reconferida como success.
 
 Evidência estruturada: `evidencias/tentativas-navegadores-2026-11-06.json`. Sem alteração do código ou dos dados nesta rodada, não se repetiu a carga ou a suíte local sem motivo novo. Os resultados de desempenho da seção anterior permanecem válidos dentro de seus limites; não há nova evidência para atribuir a lentidão a infraestrutura nem propor contratação.
 

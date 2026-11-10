@@ -6,7 +6,7 @@ Esta continuação substitui o bloqueio de acesso registrado na etapa 2. Não su
 
 CPython 3.12.14 restaurado no ambiente `.venv312`, dependências do projeto preservadas. Servidor de aceitação: `http://127.0.0.1:8506`, iniciado no worktree da branch com `python -m streamlit run app.py --server.address=127.0.0.1 --server.port=8506 --server.headless=true --browser.gatherUsageStats=false`. Foi reiniciado após alterações de módulos para carregar efetivamente o código novo; URLs de mídia de uma instância encerrada não são persistentes. Snapshot `2026-10-26.1`; exports identificam `0f789ff+alterações-locais` antes do commit desta etapa.
 
-Controle real por `mcp__cua_repl.js`, Brave, extensão/perfil disponível no inventário (browser 3). A sessão foi recuperada após as tentativas históricas bloqueadas. Não foi presumida indisponibilidade do Chrome a partir do Brave; o navegador efetivamente usado nesta aceitação foi o Brave. O servidor local é diferente do site público: deploy público reconfirmado via Render MCP nesta entrega em `e5baed4`, sem publicação desta branch. Nenhuma ação de merge, deploy, plano, DNS ou administração foi executada.
+Ensaio em uma sessão real do Brave. A sessão foi recuperada após as tentativas históricas bloqueadas. Não foi presumida indisponibilidade do Chrome a partir do Brave; o navegador efetivamente usado nesta aceitação foi o Brave. O servidor local é diferente do site público: deploy público reconfirmado no Render nesta entrega em `e5baed4`, sem publicação desta branch. Nenhuma ação de merge, deploy, plano, DNS ou administração foi executada.
 
 ## Correções verificadas
 

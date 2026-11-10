@@ -19,7 +19,7 @@
 
 ## Entrega e validação
 
-- Prompt integral e auditoria histórica em `_contexto`; revalidar achados na versão atual.
+- Requisitos de correção e auditoria histórica em `_contexto`; revalidar achados na versão atual.
 - Manter `documentacao/MATRIZ_F01_F24.md` e evidências de execução. Distinguir implementação, testes executados e validações pendentes.
 - Usar AppTest para comportamento; navegador real para interface, teclado e downloads. Teste de viewport não comprova teste em celular ou leitor de tela.
 - Mensagens públicas sem stack traces e caminhos; erros técnicos somente no log. Validar entradas URL e invalidar cache pela identidade do pacote.

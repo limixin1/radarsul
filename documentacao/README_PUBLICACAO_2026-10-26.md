@@ -6,8 +6,6 @@ Este pacote mantém o aplicativo Python/Streamlit e os mesmos indicadores do SEN
 
 ## 1. Enviar os arquivos para o GitHub (reprodução da instalação)
 
-Se a publicação for conduzida pela integração Render no ChatGPT, conecte sua conta e siga o fluxo disponível. O procedimento manual abaixo também pode ser usado.
-
 1. Entre em https://github.com e crie um repositório chamado `radarsul`. O nome é uma sugestão; a conta pode usar outro nome de repositório.
 2. Extraia este ZIP. Envie o conteúdo da pasta extraída para a raiz do repositório, mantendo as subpastas.
 3. Confirme que `app.py`, `requirements.txt` e `render.yaml` aparecem na raiz. As pastas `src`, `dados_tratados`, `relatorios` e `.streamlit` devem acompanhar o envio. Envie os arquivos extraídos, em vez do ZIP fechado.

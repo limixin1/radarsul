@@ -2,9 +2,9 @@
 
 O SENTINELA permite localizar pontos por cidade, quilômetro e sentido, consultar contagens publicadas nas faixas de velocidade, verificar cobertura e exportar uma consulta rastreável. O índice é a razão entre contagens acima de 120 km/h e todas as contagens da **mesma base de tráfego**, multiplicada por 10.000. Não estima risco de acidente, veículos únicos ou autuações.
 
-A `main` contém o piloto **2.1.0**, com o snapshot `2026-10-26.1`. O [site público](https://radarsul.site/) usa o commit `38987b0`, publicado em 09/11/2026. O [registro da publicação](documentacao/PUBLICACAO_2026-11-09.md) descreve o que foi verificado e os limites do piloto. A [matriz F01–F24](documentacao/MATRIZ_F01_F24.md) reúne as evidências e pendências.
+A versão **2.2.0** inclui mapa interativo em 2D e Satélite, busca por município ou trecho e fichas preventivas. O snapshot é `2026-10-26.1`. A versão em uso aparece no rodapé do [painel público](https://radarsul.site/).
 
-O mapa interativo, o modo Satélite e as fichas preventivas da versão 2.2.0 estão em revisão no [PR #3](https://github.com/limixin1/radarsul/pull/3).
+A [matriz F01–F24](documentacao/MATRIZ_F01_F24.md) reúne evidências e pendências. O [registro do piloto 2.1.0](documentacao/PUBLICACAO_2026-11-09.md) documenta a publicação anterior.
 
 ## Executar e validar
 

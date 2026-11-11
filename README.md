@@ -6,7 +6,7 @@ A medida disponível é `10.000 × soma das contagens A nas faixas acima de 120 
 
 ## Desenvolvimento local
 
-Requer Python **3.12.14**, conforme `render.yaml`. Não há banco de dados, serviço externo, chave de API ou migração para iniciar o painel. Use o checkout existente; uma tarefa em nuvem já é isolada e não precisa de um worktree adicional.
+Use Python **3.12.14**, conforme `render.yaml`. O painel inicia com os arquivos de dados locais e as dependências abaixo.
 
 ```bash
 cd radarsul

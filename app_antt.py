@@ -252,7 +252,7 @@ def main():
                       f'Índice de faixas acima de 120 km/h por 10 mil contagens ANTT em {period_label}. '
                       f'O gráfico mostra {min(12,len(eligible))} de {len(eligible)} pontos elegíveis. {POLICY}',
                       eligible.head(12)[columns],'ranking',export_name+'_ranking')
-        else:st.info('Nenhum ponto tem cobertura suficiente para entrar na comparação anual neste período. Veja os valores observados e os dias com dados na tabela.')
+        else:st.info('Nenhum ponto atende aos critérios da comparação anual neste período. Veja na tabela os dias com dados e o total de contagens.')
         table(eq[columns],'todos os pontos com publicação')
     elif page==PAGES[1]:
         table(eq[columns],'comparação da seleção')

@@ -60,14 +60,14 @@ def markdown_report(daily, eq, cov, meta, possible=None):
       '## Cobertura por ponto e ano',
       'Dias publicados não comprovam operação ou completude de faixas. A cobertura do intervalo usa o período declarado da fonte; a cobertura anual usa o calendário completo.',
       table_markdown(display_table(cov)),
-      '## Contextos de acidentes independentes']
+      '## Registros de acidentes por fonte']
     for s in meta['fontes_acidentes']:
         rows.append(f"{s['fonte']}: {'indisponível' if s['quantidade'] is None else br(s['quantidade'])+' registros publicados'}; {s['situacao']}. Anos solicitados {s['anos_solicitados']}; cobertos {s['anos_cobertos']}; intervalos {s['intervalos']}. Área: {s['escopo']}. {s['nota']}")
     if possible is not None:
-        rows+=['## Base B separada',f'{br(possible.possiveis.sum())} contagens em {br(possible.data.nunique())} datas publicadas.' if not possible.empty else 'Sem linhas publicadas neste recorte; não comprova zero infrações.', 'Taxa possíveis infratores/tráfego bloqueada por incompatibilidade de faixas e classificação.']
+        rows+=['## Possíveis infratores na base B',f'{br(possible.possiveis.sum())} contagens em {br(possible.data.nunique())} datas publicadas.' if not possible.empty else 'Sem linhas publicadas neste recorte; não comprova zero infrações.', 'Taxa possíveis infratores/tráfego bloqueada por incompatibilidade de faixas e classificação.']
     rows+=['## Fontes e rastreabilidade',f"Aplicação {meta['versao_aplicacao']}; código {meta['codigo']}; snapshot {meta['snapshot']}; geração UTC {meta['gerado_utc']}.",f"[Reproduzir após publicação]({meta['consulta_publica_apos_publicacao']}) — {meta['aviso_url']}"]
     rows += [f"- [{r['arquivo']}]({r['url']}), coleta {r['acesso_utc']}, SHA-256 {r['sha256']}" for r in meta['proveniencia']]
-    rows+=['120 km/h é limiar dos intervalos publicados, sem inferir infração regulamentada. Cadastro de junho de 2026 não reconstrói limites históricos. Repetições ANTT sem ID preservadas. Correlação e persistência não validam previsão ou causalidade. Associação negativa não significa proteção pela velocidade.']
+    rows+=['A faixa publicada acima de 120 km/h não identifica infrações. O cadastro de junho de 2026 não informa os limites de velocidade de períodos anteriores. Os registros repetidos da ANTT foram mantidos quando não havia identificador inequívoco. Correlação e repetição ao longo do tempo não demonstram causa nem validam previsões. Uma associação negativa não demonstra que a velocidade protege contra acidentes.']
     return '\n\n'.join(rows)+'\n'
 
 def table_markdown(t):

@@ -1,0 +1,61 @@
+{
+  "versao": "2.2.0",
+  "snapshot": "2026-10-26.1",
+  "codigo": "47956ab7441964d3e87fa9933ab52dfda8633e75+alterações-locais",
+  "filtros": {
+    "page": "Relatório preventivo",
+    "years": [
+      2024,
+      2025
+    ],
+    "area": "Grupo com boa cobertura em 2024–2025",
+    "directions": [
+      "Crescente",
+      "Decrescente"
+    ],
+    "city": "Laguna",
+    "points": [
+      "VC101-9"
+    ],
+    "focus": "VC101-9"
+  },
+  "membros": [
+    "comparacao_pt-BR.csv",
+    "comparacao_tecnica.csv",
+    "cobertura_pt-BR.csv",
+    "metadados.json",
+    "relatorio.md",
+    "localizacao_pt-BR.csv"
+  ],
+  "localizacao": [
+    {
+      "identificador": "VC101-9",
+      "codigo": "47956ab7441964d3e87fa9933ab52dfda8633e75+alterações-locais",
+      "precisao": "Coordenada compatível com o eixo SNV"
+    }
+  ],
+  "csv_linhas": 1,
+  "cobertura_linhas": 2,
+  "markdown_igual": true,
+  "csv_igual": true,
+  "indices_iguais": true,
+  "arquivos": {
+    "csv": {
+      "nome": "sentinela_2026-10-26.1_07a6fa6352.csv",
+      "bytes": 1762,
+      "sha256": "f056ca20fb55f0f3d2c527a9e5afff234cee459256a5e874d7ad68f0cf69fd28"
+    },
+    "md": {
+      "nome": "sentinela_2026-10-26.1_07a6fa6352.md",
+      "bytes": 7247,
+      "sha256": "ce2263cdf036538cc8acd091743432e4ee74d7c9abcf0bab61fd56aba7ec7eb6"
+    },
+    "zip": {
+      "nome": "sentinela_2026-10-26.1_07a6fa6352.zip",
+      "bytes": 10880,
+      "sha256": "990aa9223be446517b4ca7b701b27099f6e93b442bb8e3243003d0d4b602972c"
+    }
+  },
+  "contagens": 11178995,
+  "acima_de_120": 7091
+}

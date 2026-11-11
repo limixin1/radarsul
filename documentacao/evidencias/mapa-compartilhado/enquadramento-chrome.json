@@ -1,0 +1,74 @@
+{
+  "desktop2d": {
+    "loaded": 0,
+    "map": [
+      381,
+      130,
+      520,
+      350
+    ],
+    "mode": "Mapa 2D",
+    "pin": [
+      238,
+      153
+    ],
+    "viewport": [
+      1366,
+      591
+    ]
+  },
+  "desktopSatelite": {
+    "loaded": 6,
+    "map": [
+      381,
+      130,
+      520,
+      350
+    ],
+    "mode": "Satélite",
+    "pin": [
+      238,
+      153
+    ],
+    "viewport": [
+      1366,
+      591
+    ]
+  },
+  "celular2d": {
+    "loaded": 0,
+    "map": [
+      17,
+      185,
+      346,
+      439
+    ],
+    "mode": "Mapa 2D",
+    "pin": [
+      151,
+      198
+    ],
+    "viewport": [
+      390,
+      844
+    ]
+  },
+  "celularSatelite": {
+    "loaded": 9,
+    "map": [
+      17,
+      185,
+      346,
+      439
+    ],
+    "mode": "Satélite",
+    "pin": [
+      151,
+      198
+    ],
+    "viewport": [
+      390,
+      844
+    ]
+  }
+}

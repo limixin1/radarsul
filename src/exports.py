@@ -12,7 +12,7 @@ from config import ROOT
 from src.antt import weighted_index
 from src.query import br, display_table, POLICY, url_state
 
-APP_VERSION='2.1.0'
+APP_VERSION='2.2.0'
 
 def code_version():
     value=os.environ.get('RENDER_GIT_COMMIT')
@@ -24,7 +24,7 @@ def code_version():
     except (OSError,subprocess.SubprocessError):return 'SHA não disponível nesta instalação'
 
 def metadata(manifest, filters, ids, daily, sources):
-    params=url_state(filters['page'],filters['years'],filters['area'],filters['directions'],filters['city'],ids)
+    params=url_state(filters['page'],filters['years'],filters['area'],filters['directions'],filters['city'],ids,filters.get('focus'))
     return {'aplicacao':'SENTINELA','versao_aplicacao':APP_VERSION,'codigo':code_version(),'snapshot':manifest['versao'],
       'gerado_utc':datetime.now(timezone.utc).isoformat(),'filtros_solicitados':filters,
       'efetivo':{'equipamentos':sorted(daily.identificador.unique().tolist()),'anos_com_trafego':sorted(map(int,daily.ano.unique())),
@@ -46,9 +46,12 @@ def csv_bytes(table,meta,brazil=True):
     t['cobertura_acidentes_json']=json.dumps(meta['fontes_acidentes'],ensure_ascii=False)
     return t.to_csv(index=False,sep=';' if brazil else ',',decimal=',' if brazil else '.',lineterminator='\n').encode('utf-8-sig')
 
-def markdown_report(daily, eq, cov, meta, possible=None):
+def markdown_report(daily, eq, cov, meta, possible=None, card=None):
     total=daily.passagens.sum(); high=daily.altas.sum()
-    rows=['# SENTINELA — Consulta verificável',
+    rows=['# SENTINELA — Consulta verificável']
+    if card:
+        rows += [card.markdown(), '## Dados da consulta completa']
+    rows += [
       f"Área: {meta['filtros_solicitados']['area']}. Cidade: {meta['filtros_solicitados']['city']}.",
       f"Anos solicitados: {', '.join(map(str,meta['filtros_solicitados']['years']))}. Anos com tráfego: {', '.join(map(str,meta['efetivo']['anos_com_trafego']))}.",
       'Pontos solicitados: '+', '.join(meta['filtros_solicitados']['points'])+'.',

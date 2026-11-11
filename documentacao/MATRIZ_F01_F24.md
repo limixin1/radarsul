@@ -1,5 +1,11 @@
 # Matriz F01–F24
 
+**Resumo por ponto no PR #3.** A [aceitação do resumo](ACEITACAO_RESUMO_POR_PONTO.md) atualiza F01, F05–F08, F10–F13, F17–F19 com o antes/depois do km 330–335, séries separadas por fonte e ano, ficha territorial exportável e downloads confirmados no Chrome.
+
+**Ampliação do PR #3.** A [matriz de aceitação dos mapas e da explicação](ACEITACAO_MAPAS_E_EXPLICACAO.md) atualiza F01, F04–F08, F10–F14, F17–F19 com inventário completo, mapa compartilhado, busca, Satélite, fallback, PNG e a prova de conceito local. A homologação externa continua pendente.
+
+**Evolução do mapa e da ficha.** O [registro da entrega](MAPA_APOIO_PREVENTIVO.md) atualiza F01, F05–F08, F10–F13, F17–F19 e F22 com precisão espacial, busca, regras preventivas, exportação e medições. O histórico de publicação abaixo permanece como referência do piloto anterior.
+
 **Publicação do piloto em 09/11.** O [registro da publicação](PUBLICACAO_2026-11-09.md) atualiza as evidências de produção para cobertura (F01), seleção e estados vazios (F02/F10), URL (F11), operação e contrato (F14/F15/F24), exportação (F18), CI (F21) e medição (F20/F22). O histórico e os testes de interface local abaixo foram preservados. O reteste manual de F18 em produção deixou CSV, Markdown e ZIP salvos e inspecionados. O PNG público foi gerado no Brave e aberto. A meta de desempenho sob concorrência e a homologação com participantes, aparelhos reais, Firefox e leitor de tela continuam pendentes.
 
 **Estado atual em 06/11:** acesso Brave recuperado; esta tabela incorpora a [aceitação real no navegador](ACEITACAO_NAVEGADOR_2026-11-06.md). Os relatos de bloqueio de acesso abaixo são históricos. O Brave bloqueou CSV/MD/ZIP pela organização; o usuário depois concluiu esses downloads manualmente no Chrome, com captura e arquivos inspecionados. Nenhuma política foi alterada. Zoom nativo de 200% foi confirmado manualmente pelo usuário no Chrome; pessoas, leitor de tela e aparelhos continuam pendentes.

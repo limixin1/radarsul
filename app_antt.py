@@ -181,7 +181,7 @@ def main():
             winner=eligible.iloc[0]
             st.write(f'Maior índice da comparação ({len(eligible)} {"ponto elegível" if len(eligible)==1 else "pontos elegíveis"}): {labels[winner.identificador]} — {br(winner.por_10_mil,3)} por 10 mil; menor cobertura anual {br(winner.cobertura_minima*100,1)}%.')
             chart(ranking(eligible,years),f'O ranking mostra {min(12,len(eligible))} de {len(eligible)} {"ponto elegível" if len(eligible)==1 else "pontos elegíveis"}. A lista completa inclui também os pontos exploratórios.',eligible.head(12)[columns],'ranking',export_name+'_ranking')
-        else:st.info('Nenhum ponto tem cobertura suficiente para entrar na comparação anual neste período. Veja os valores observados e os dias com dados na tabela.')
+        else:st.info('Nenhum ponto atende aos critérios da comparação anual neste período. Veja na tabela os dias com dados e o total de contagens.')
         table(eq[columns],'todos os pontos com publicação')
     elif page==PAGES[1]:
         table(eq[columns],'comparação da seleção')

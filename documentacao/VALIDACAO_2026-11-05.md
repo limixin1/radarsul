@@ -52,7 +52,7 @@ Matriz histórica: **512 estados, 341 com dados e 171 vazios**. Conservação da
 
 `evidencias/dependencias_audit.json` documenta a consulta do pip-audit, sem vulnerabilidades conhecidas nos pacotes instalados. Busca dirigida não encontrou padrões de credenciais nos arquivos revisados. Não é teste de invasão nem revisão integral dos acessos. HTTPS/cabeçalhos de produção foram consultados por HTTP real; saúde não comprova os cálculos, e ausência de cabeçalho na amostra não demonstra todos os caminhos possíveis.
 
-O acesso ao Brave foi tentado novamente após o usuário informar que o ativaria, mas o ambiente continuou bloqueando o acesso ao navegador. Não há capturas de desktop/móvel, medição de contraste composto, idioma efetivo do DOM, validação visual de PNG, teclado completo, zoom, leitor de tela, Chrome/Firefox ou aparelho real. Não foram usados outros meios de automação para contornar essa configuração.
+O ambiente de teste bloqueou novamente o acesso ao Brave. Não há capturas de desktop/móvel, medição de contraste composto, idioma efetivo do DOM, validação visual de PNG, teclado completo, zoom, leitor de tela, Chrome/Firefox ou aparelho real. Não foram usados outros meios de automação para contornar essa configuração.
 
 Participantes reais não estavam disponíveis. `ACEITACAO_PESSOAS.md` entrega roteiro/formulário, sem simulação de resultados. Responsáveis por manutenção e alertas precisam ser nomeados. Não houve mudanças administrativas, ativação de monitor externo, teste de retomada Free, rollback real ou deploy da versão nova. O regulamento integral do hackathon não foi fornecido nesta entrega; conformidade não declarada.
 

@@ -14,9 +14,7 @@ Esta especificação reúne as correções do SENTINELA, uma aplicação de cons
 - Implementação examinada: Python, Streamlit, pandas, NumPy, SciPy, Plotly e PyArrow.
 - Arquivos principais de referência: `app.py`, `app_antt.py`, `config.py`, `src/antt.py`, `src/antt_charts.py`, `src/antt_report.py`, `.streamlit/config.toml`, `render.yaml`, `requirements.txt`, dados tratados e documentação.
 
-Leia integralmente o relatório disponível. Revalide o estado atual do código, dos dados e da implantação: a auditoria descreve uma versão histórica. Não reverta melhorias posteriores para reproduzir a versão antiga. Localize funções pelo comportamento, pois linhas e nomes podem ter mudado.
-
-Use arquivos e acessos já disponíveis antes de pedir materiais novamente. Se algum acesso ou anexo essencial estiver ausente, identifique exatamente qual e continue as tarefas independentes. Não invente que leu um arquivo ou executou um teste.
+A validação deve confrontar os achados históricos com a versão atual do código, dos dados e da implantação, preservando as melhorias posteriores. Registre os materiais consultados, os testes executados e os arquivos ou acessos que impediram alguma verificação.
 
 ## 2. Objetivo do produto e limites científicos
 
@@ -52,7 +50,7 @@ Valores de referência do snapshot auditado, para testes de regressão:
 
 Não grave esses resultados como constantes da interface. O agregado deve usar a razão entre as somas, sem substituição pela média simples dos índices. Compare valores decimais com tolerância documentada. Se o snapshot ou tratamento mudar legitimamente, explique e versione as diferenças; não altere dados para fazer os testes passarem.
 
-## 3. Método de execução e autonomia
+## 3. Desenvolvimento e revisão
 
 1. Inspecione o repositório, instruções locais, alterações existentes, versão publicada e materiais da auditoria.
 2. Crie uma branch de trabalho. Preserve alterações legítimas de outras pessoas. Registre código, configuração e dados usados na referência inicial.
@@ -60,11 +58,9 @@ Não grave esses resultados como constantes da interface. O agregado deve usar a
 4. Implemente primeiro correções de cobertura e coerência dos filtros; depois experiência de uso e acessibilidade; em seguida operação e manutenção. Adicione a infraestrutura mínima de testes cedo, para validar as correções seguintes.
 5. Preserve a arquitetura atual quando ela comportar as correções. Refatore o necessário para isolar filtros, cobertura, indicadores, apresentação e exportação. Justifique migrações ou novas dependências pelo requisito que resolvem.
 6. Execute verificações proporcionais ao risco e repita os cenários afetados. Registre limitações reais de execução.
-7. Prepare uma entrega revisável com código, testes, documentação e evidências. Abra PR quando o acesso permitir.
+7. Reúna código, testes, documentação e evidências no PR. Registre as etapas de revisão impedidas por falta de acesso.
 
-Resolva decisões rotineiras de implementação usando a auditoria e bom julgamento. Peça esclarecimento apenas quando houver ambiguidade que altere substancialmente o resultado, falta de acesso indispensável, gasto ou ação irreversível. Não repita autorizações já concedidas. Se uma tarefa bloquear, prossiga nas demais.
-
-Não contrate serviços, altere plano pago, crie cobranças, mude público autorizado, migre domínio ou apague recursos sem autorização específica. Push e merge na branch de produção podem disparar deploy: prepare e valide primeiro. Para publicação, siga a autorização explícita existente; se ela faltar, apresente a versão pronta e faça uma única solicitação objetiva. Não trate estes requisitos de correção como autorização para novos gastos.
+Contratação, alteração de plano ou cobrança, mudanças de público ou domínio e exclusão de recursos exigem autorização específica. Valide a revisão antes de atualizar a branch de produção, pois a atualização pode disparar um deploy.
 
 ## 4. Correções obrigatórias F01–F24
 
@@ -265,9 +261,7 @@ Entregue:
 5. Documentação operacional, fontes, versões e procedimentos de reprodução e restauração.
 6. Pendências reais de pessoas, aparelhos, acessos, infraestrutura ou regulamento, acompanhadas do que falta para concluí-las.
 
-Antes de publicar, confirme a autorização, a identidade do serviço, o commit, o pacote de dados, os testes e o procedimento de retorno. Reutilize autorizações já concedidas. Com deploy automático ativo, evite um segundo disparo desnecessário após o push. Acompanhe a implantação até estado final e confira a aplicação publicada, seus filtros e uma exportação.
-
-Se a publicação depender de acesso, aprovação ou custo ainda não disponível, entregue a versão corrigida e testada, pronta para esse passo. Não deixe a implementação por fazer à espera da aprovação de produção.
+Antes de publicar, confirme autorização, serviço, commit, pacote de dados, testes e procedimento de retorno. Se a atualização disparar o deploy automático, acompanhe essa implantação até o fim. Confira a versão pública, os filtros e uma exportação. Se faltar acesso ou autorização, registre a pendência junto à revisão já validada.
 
 O regulamento do hackathon deve ser verificado quando estiver disponível. Sua ausência não deve paralisar correções independentes nem justificar declaração de conformidade com regras desconhecidas.
 

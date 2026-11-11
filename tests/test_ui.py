@@ -90,7 +90,7 @@ def test_city_search_and_insufficient_coverage(app):
     app.multiselect(key='points').set_value(['VC101-28']).run()
     assert not app.exception
     text='\n'.join(i.value for i in app.info)
-    assert 'Nenhum ponto elegível' in text
+    assert 'Nenhum ponto tem cobertura suficiente' in text
     assert app.dataframe[0].value['Dias publicados'].iloc[0]=='3'
     assert app.dataframe[0].value['Índice por 10 mil contagens'].iloc[0]=='80,466'
 

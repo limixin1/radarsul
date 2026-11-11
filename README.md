@@ -2,7 +2,9 @@
 
 O SENTINELA permite localizar pontos por cidade, quilômetro e sentido, consultar contagens publicadas nas faixas de velocidade, verificar cobertura e exportar uma consulta rastreável. O índice é a razão entre contagens acima de 120 km/h e todas as contagens da **mesma base de tráfego**, multiplicada por 10.000. Não estima risco de acidente, veículos únicos ou autuações.
 
-Esta entrega prepara a versão 2.1.0 na branch `correcao/sentinela-auditoria`, com snapshot `2026-10-26.1`. A versão publicada permanece histórica (`e5baed4`): não houve merge, deploy, mudança de domínio, plano ou permissões. Consulte a [matriz F01–F24](documentacao/MATRIZ_F01_F24.md) e o [registro de validação](documentacao/VALIDACAO_2026-11-05.md) para distinguir implementação e aceitação pendente. O [README anterior](documentacao/README_PUBLICACAO_2026-10-26.md) preserva as instruções e evidências históricas de publicação.
+A `main` contém o piloto **2.1.0**, com o snapshot `2026-10-26.1`. O [site público](https://radarsul.site/) usa o commit `38987b0`, publicado em 09/11/2026. O [registro da publicação](documentacao/PUBLICACAO_2026-11-09.md) descreve o que foi verificado e os limites do piloto. A [matriz F01–F24](documentacao/MATRIZ_F01_F24.md) reúne as evidências e pendências.
+
+O mapa interativo, o modo Satélite e as fichas preventivas da versão 2.2.0 estão em revisão no [PR #3](https://github.com/limixin1/radarsul/pull/3).
 
 ## Executar e validar
 
@@ -17,7 +19,7 @@ python -m pytest -q
 python -m streamlit run app.py --server.address=127.0.0.1 --server.port=8502 --server.headless=true
 ```
 
-O executável `python3.12` deve reportar 3.12.14; a versão do sistema pode ser diferente. Nesta entrega foi criado `.venv312` com CPython 3.12.14 via uv e as dependências fixadas, sem substituir o Python do sistema. Em produção bastam `requirements.txt`; `requirements-dev.txt` acrescenta testes e análise de dependências.
+Confira a versão com `python --version` no ambiente virtual. Em produção, use `requirements.txt`. O arquivo `requirements-dev.txt` inclui também as ferramentas de teste e de análise de dependências.
 
 ```bash
 python -m compileall -q app.py app_antt.py src tests
@@ -49,7 +51,7 @@ cat /tmp/sentinela-rebuild/comparacao.json
 python -m src.data_package validate --root /tmp/sentinela-rebuild
 ```
 
-Use saída nova e vazia. Não reconstrua sobre o conjunto em uso. O comando verifica os hashes brutos, executa `src.antt.build`, reconstrói PRF e compara os nove Parquet com a referência. `python -m src.antt` continua válido quando os quatro CSV e `coleta_20261026T224903Z.json` estão em `dados_brutos`, mas grava produtos e relatórios locais; prefira a reprodução isolada. Não existe `analisar.py`.
+Use saída nova e vazia. Não reconstrua sobre o conjunto em uso. O comando verifica os hashes brutos, executa `src.antt.build`, reconstrói PRF e compara os nove Parquet com a referência. A rotina `python -m src.antt` exige os quatro CSV e `coleta_20261026T224903Z.json` em `dados_brutos` e grava produtos e relatórios locais. O comando de reprodução acima mantém essas saídas fora do conjunto em uso.
 
 Uma mudança legítima de dados requer revisão, nova versão e manifesto gerado **depois** da comparação. `python -m src.data_package manifest --root DIRETORIO` é uma ação de manutenção, não uma forma de ignorar corrupção. O build valida o manifesto já versionado; não gera hashes novos para aceitar arquivos desconhecidos.
 
@@ -61,6 +63,6 @@ A restauração usa o conjunto inteiro de uma revisão conhecida: código, `dado
 
 `dados_tratados/manifesto.json` inclui hashes, esquemas, proveniência, períodos e condições consultadas. Os [recursos oficiais e condições de reutilização](documentacao/FONTES_OFICIAIS.md) distinguem coleta do snapshot e atualização atual do catálogo. CSV brasileiro usa UTF-8 BOM, `;` e vírgula decimal; o ZIP oferece também CSV técnico, relatório e metadados. Precisão numérica é preservada. As URLs exportadas identificam uma consulta; conferir versão antes de comparar arquivos.
 
-A CI em `.github/workflows/validacao.yml` valida Python, pacote, regressões e dependências. Ativação de proteção da main e condicionamento de deploy no Render dependem de uma etapa posterior de administração; não foram ativados por este PR.
+A [CI](.github/workflows/validacao.yml) valida o pacote, compila os módulos Python, executa os testes e verifica as dependências. O [procedimento de publicação](documentacao/OPERACAO.md#procedimento-de-publicação) reúne as verificações antes de incorporar ou implantar uma revisão.
 
-Relatos: [issues do repositório](https://github.com/limixin1/radarsul/issues/new), com página, filtros e versão, evitando dados pessoais ou segredos. O proprietário do repositório é `limixin1`; responsáveis por atualização periódica, atendimento e disponibilidade ainda precisam ser designados pelo projeto. Nenhum contato operacional foi inventado.
+Ao relatar um problema, informe página, filtros e versão. Omita dados pessoais e credenciais. O repositório pertence a `limixin1`. O projeto ainda precisa definir responsáveis por atualização, atendimento e disponibilidade. [Relatar um problema](https://github.com/limixin1/radarsul/issues/new)

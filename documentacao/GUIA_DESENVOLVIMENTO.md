@@ -1,4 +1,4 @@
-# Instruções do SENTINELA
+# Guia de desenvolvimento do SENTINELA
 
 ## Escopo e ambiente
 
@@ -6,7 +6,7 @@
 - Iniciar: `python -m streamlit run app.py --server.port=8501 --server.headless=true`.
 - Validar: `python -m src.data_package validate`, `python -m pytest -q`, `python -m compileall -q app.py app_antt.py src tests`. Ensaios locais: `python scripts/validate_local.py` (servidor em 127.0.0.1:8502) e `PYTHONPATH=. python scripts/benchmark.py`; não executar carga em produção.
 - Reconstruir em diretório isolado: `python -m src.rebuild --raw-zip _contexto/SENTINELA_bases_ANTT.zip --output /tmp/sentinela-rebuild`. Nunca reconstruir sobre o snapshot de referência sem comparação e revisão.
-- Trabalhar na branch `correcao/sentinela-auditoria`. Preparar PR para main. Merge e deploy exigem autorização explícita da sessão e CI no SHA final; acompanhar o deploy existente e verificar a versão pública. DNS, plano, novos gastos e recursos externos exigem autorização própria. Preservar registros históricos das etapas sem publicação.
+- Abra uma branch por revisão e proponha a incorporação à `main` por PR. Merge e deploy exigem autorização e CI aprovada no commit final. Acompanhe o deploy e verifique a versão pública conforme o [procedimento de publicação](OPERACAO.md#procedimento-de-publicação). DNS, plano, gastos e recursos externos exigem autorização específica. Preserve os registros das etapas anteriores.
 
 ## Integridade e significado
 

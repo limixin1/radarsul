@@ -136,7 +136,7 @@ def main():
     if st.session_state.points is None:st.session_state.points=available
     invalid=set(st.session_state.points)-set(available)
     if invalid:
-        st.warning('Pontos incompatíveis com área/cidade/sentidos foram removidos: '+', '.join(sorted(invalid))+'. Confira os filtros ou restaure o padrão.')
+        st.warning('Os filtros atuais não incluem estes pontos: '+', '.join(sorted(invalid))+'. Confira os filtros ou restaure o padrão.')
         st.session_state.points=[x for x in st.session_state.points if x in available]
     st.session_state['scope']=scope
     labels={r.identificador:point_label(r) for r in meta.itertuples()}
@@ -176,12 +176,12 @@ def main():
     if page==PAGES[0]:
         st.subheader('Resultado agregado da seleção')
         for col,label,value in zip(st.columns(3),['Índice agregado por 10 mil','Contagens publicadas','Acima de 120 km/h'],[br(weighted_index(selected.altas.sum(),selected.passagens.sum()),3),br(selected.passagens.sum()),br(selected.altas.sum())]):col.metric(label,value)
-        st.caption('Agregado = razão entre somas, ponderada pelas contagens. A cobertura detalhada por ponto e ano está abaixo.')
+        st.caption('O índice da seleção usa o total de contagens e o total acima de 120 km/h nos pontos selecionados. Veja abaixo a cobertura de cada ponto e ano.')
         if len(eligible):
             winner=eligible.iloc[0]
             st.write(f'Maior índice da comparação ({len(eligible)} {"ponto elegível" if len(eligible)==1 else "pontos elegíveis"}): {labels[winner.identificador]} — {br(winner.por_10_mil,3)} por 10 mil; menor cobertura anual {br(winner.cobertura_minima*100,1)}%.')
             chart(ranking(eligible,years),f'O ranking mostra {min(12,len(eligible))} de {len(eligible)} {"ponto elegível" if len(eligible)==1 else "pontos elegíveis"}. A lista completa inclui também os pontos exploratórios.',eligible.head(12)[columns],'ranking',export_name+'_ranking')
-        else:st.info('Nenhum ponto elegível para comparação anual neste período. Consulte os valores exploratórios e sua cobertura; não há destaque comparável.')
+        else:st.info('Nenhum ponto tem cobertura suficiente para entrar na comparação anual neste período. Veja os valores observados e os dias com dados na tabela.')
         table(eq[columns],'todos os pontos com publicação')
     elif page==PAGES[1]:
         table(eq[columns],'comparação da seleção')

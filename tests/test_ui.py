@@ -129,3 +129,88 @@ def test_missing_prf_block_remains_visible(monkeypatch,package):
     assert not a.exception
     text='\n'.join(x.value for x in a.markdown)
     assert 'PRF' in text and 'fonte indisponível' in text
+
+
+def test_map_search_card_and_url(app, monkeypatch):
+    import csv
+    import io
+    import zipfile
+    import app_antt
+
+    generated = {}
+    bundle = app_antt.bundle
+    download = app_antt.st.download_button
+
+    def capture(*args, **kwargs):
+        generated["zip"] = bundle(*args, **kwargs)
+        return generated["zip"]
+
+    def capture_download(label, data, *args, **kwargs):
+        if label == "Baixar relatório em Markdown":
+            generated["markdown"] = data.decode()
+        return download(label, data, *args, **kwargs)
+
+    monkeypatch.setattr(app_antt, "bundle", capture)
+    monkeypatch.setattr(app_antt.st, "download_button", capture_download)
+    app.text_input(key="map_search").set_value("km 304+000").run()
+    assert not app.exception
+    app.selectbox(key="map_focus_choice").set_value("VC101-9").run()
+    assert not app.exception
+    assert app.query_params["foco"] == "VC101-9"
+    app.button(key="open_preventive").click().run()
+    assert app.radio(key="page").value == PAGES[4]
+    assert app.multiselect(key="points").value == ["VC101-9"]
+    assert "7.091 de 11.178.995" in "\n".join(x.value for x in app.markdown)
+    assert app.get("download_button")
+    shared = AppTest.from_file(str(ROOT/'app.py'), default_timeout=60)
+    shared.query_params = dict(app.query_params)
+    shared.run()
+    assert not shared.exception
+    assert "Ficha preventiva · Laguna" in "\n".join(x.value for x in shared.markdown)
+    with zipfile.ZipFile(io.BytesIO(generated["zip"])) as archive:
+        text = archive.read("localizacao_pt-BR.csv").decode("utf-8-sig")
+        location = list(csv.DictReader(io.StringIO(text), delimiter=";"))
+        assert len(location) == 1
+        assert location[0]["identificador"] == "VC101-9"
+        assert location[0]["codigo"] != location[0]["identificador"]
+        exported = archive.read("relatorio.md").decode()
+        assert "Medir velocidades atuais no km 304,000" in exported
+        assert exported == generated["markdown"]
+        assert exported.strip() in [x.value for x in shared.markdown]
+
+    shared.multiselect(key="years").set_value([2024]).run()
+    assert not shared.exception
+    with zipfile.ZipFile(io.BytesIO(generated["zip"])) as archive:
+        exported = archive.read("relatorio.md").decode()
+        assert "Registrar o observado e reavaliar" in exported
+        assert "não sustentam uma prioridade de verificação em campo" in exported
+        assert "Medir velocidades atuais no km 304,000" not in exported
+        assert exported == generated["markdown"]
+        assert exported.strip() in [x.value for x in shared.markdown]
+
+
+def test_map_uses_list_when_road_is_unavailable(app, monkeypatch):
+    import app_antt
+    monkeypatch.setattr(app_antt, "road", lambda: None)
+    app.text_input(key="map_search").set_value("Laguna").run()
+    assert "Eixo cartográfico indisponível" in "\n".join(x.value for x in app.info)
+    app.selectbox(key="map_focus_choice").set_value("VC101-9").run()
+    assert "Localização aproximada." in "\n".join(x.value for x in app.markdown)
+    assert app.button(key="open_preventive")
+
+
+def test_search_switches_existing_point_to_other_city_and_municipality_without_radar(app):
+    search = app.text_input(key="map_search")
+    search.set_value("VC101-9").run()
+    assert app.query_params["foco"] == "VC101-9"
+    search = app.text_input(key="map_search")
+    search.set_value("Garopaba").run()
+    assert not app.exception and app.query_params["foco"] == "cidade:Garopaba"
+    assert "VC101-2" in app.multiselect(key="points").value
+    app.text_input(key="map_search").set_value("Passo de Torres").run()
+    assert not app.exception and app.query_params["foco"] == "cidade:Passo de Torres"
+    assert app.multiselect(key="points").value == []
+    app.button(key="open_preventive").click().run()
+    assert app.radio(key="page").value == PAGES[4]
+    assert "19 registros de acidente" in "\n".join(item.value for item in app.markdown)
+    assert app.get("download_button")

@@ -1,0 +1,997 @@
+{
+  "snapshot": "2026-10-26.1",
+  "representacao_mapa": {
+    "equipamentos_antt": {
+      "marcador": 30,
+      "trecho": 12
+    },
+    "ocorrencias_prf": {
+      "marcador": 660,
+      "trecho": 1084,
+      "texto": 6
+    },
+    "acidentes_antt": {
+      "trecho": 8756,
+      "texto": 85
+    },
+    "municipios": {
+      "Araranguá": {
+        "equipamentos_antt": {
+          "marcador": 6,
+          "trecho": 1
+        },
+        "ocorrencias_prf": {
+          "trecho": 77,
+          "marcador": 84
+        }
+      },
+      "Capivari de Baixo": {
+        "equipamentos_antt": {
+          "trecho": 2
+        },
+        "ocorrencias_prf": {
+          "marcador": 8,
+          "trecho": 63
+        }
+      },
+      "Criciúma": {
+        "equipamentos_antt": {
+          "marcador": 1
+        },
+        "ocorrencias_prf": {
+          "trecho": 14,
+          "marcador": 22
+        }
+      },
+      "Garopaba": {
+        "equipamentos_antt": {
+          "marcador": 1
+        },
+        "ocorrencias_prf": {
+          "marcador": 12,
+          "trecho": 2
+        }
+      },
+      "Imbituba": {
+        "equipamentos_antt": {
+          "marcador": 6
+        },
+        "ocorrencias_prf": {
+          "marcador": 164,
+          "trecho": 97
+        }
+      },
+      "Içara": {
+        "equipamentos_antt": {
+          "marcador": 3
+        },
+        "ocorrencias_prf": {
+          "marcador": 83,
+          "trecho": 68
+        }
+      },
+      "Jaguaruna": {
+        "equipamentos_antt": {
+          "marcador": 2
+        },
+        "ocorrencias_prf": {
+          "trecho": 32,
+          "marcador": 28
+        }
+      },
+      "Laguna": {
+        "equipamentos_antt": {
+          "marcador": 1
+        },
+        "ocorrencias_prf": {
+          "trecho": 84,
+          "marcador": 36
+        }
+      },
+      "Maracajá": {
+        "equipamentos_antt": {
+          "marcador": 1
+        },
+        "ocorrencias_prf": {
+          "trecho": 31,
+          "marcador": 36
+        }
+      },
+      "Passo de Torres": {
+        "equipamentos_antt": {},
+        "ocorrencias_prf": {
+          "trecho": 12,
+          "texto": 6,
+          "marcador": 1
+        }
+      },
+      "Paulo Lopes": {
+        "equipamentos_antt": {
+          "marcador": 4
+        },
+        "ocorrencias_prf": {
+          "marcador": 67,
+          "trecho": 23
+        }
+      },
+      "Pescaria Brava": {
+        "equipamentos_antt": {
+          "trecho": 2
+        },
+        "ocorrencias_prf": {
+          "trecho": 69,
+          "marcador": 2
+        }
+      },
+      "Sangão": {
+        "equipamentos_antt": {
+          "marcador": 5
+        },
+        "ocorrencias_prf": {
+          "trecho": 46,
+          "marcador": 57
+        }
+      },
+      "Santa Rosa do Sul": {
+        "equipamentos_antt": {
+          "trecho": 2
+        },
+        "ocorrencias_prf": {
+          "trecho": 57,
+          "marcador": 2
+        }
+      },
+      "Sao Joao do Sul": {
+        "equipamentos_antt": {},
+        "ocorrencias_prf": {
+          "trecho": 28
+        }
+      },
+      "Sombrio": {
+        "equipamentos_antt": {
+          "trecho": 2
+        },
+        "ocorrencias_prf": {
+          "trecho": 102,
+          "marcador": 4
+        }
+      },
+      "Treze de Maio": {
+        "equipamentos_antt": {},
+        "ocorrencias_prf": {
+          "marcador": 1,
+          "trecho": 1
+        }
+      },
+      "Tubarão": {
+        "equipamentos_antt": {
+          "trecho": 3
+        },
+        "ocorrencias_prf": {
+          "marcador": 53,
+          "trecho": 278
+        }
+      }
+    },
+    "intervalos_do_eixo": {
+      "240": [
+        [
+          244.68,
+          245.0
+        ]
+      ],
+      "245": [
+        [
+          245.0,
+          250.0
+        ]
+      ],
+      "250": [
+        [
+          250.0,
+          255.0
+        ]
+      ],
+      "255": [
+        [
+          255.0,
+          260.0
+        ]
+      ],
+      "260": [
+        [
+          260.0,
+          265.0
+        ]
+      ],
+      "265": [
+        [
+          265.0,
+          270.0
+        ]
+      ],
+      "270": [
+        [
+          270.0,
+          275.0
+        ]
+      ],
+      "275": [
+        [
+          275.0,
+          280.0
+        ]
+      ],
+      "280": [
+        [
+          280.0,
+          285.0
+        ]
+      ],
+      "285": [
+        [
+          285.0,
+          290.0
+        ]
+      ],
+      "290": [
+        [
+          290.0,
+          295.0
+        ]
+      ],
+      "295": [
+        [
+          295.0,
+          300.0
+        ]
+      ],
+      "300": [
+        [
+          300.0,
+          305.0
+        ]
+      ],
+      "305": [
+        [
+          305.0,
+          310.0
+        ]
+      ],
+      "310": [
+        [
+          310.0,
+          315.0
+        ]
+      ],
+      "315": [
+        [
+          315.0,
+          320.0
+        ]
+      ],
+      "320": [
+        [
+          320.0,
+          325.0
+        ]
+      ],
+      "325": [
+        [
+          325.0,
+          330.0
+        ]
+      ],
+      "330": [
+        [
+          330.0,
+          335.0
+        ]
+      ],
+      "335": [
+        [
+          335.0,
+          340.0
+        ]
+      ],
+      "340": [
+        [
+          340.0,
+          345.0
+        ]
+      ],
+      "345": [
+        [
+          345.0,
+          350.0
+        ]
+      ],
+      "350": [
+        [
+          350.0,
+          355.0
+        ]
+      ],
+      "355": [
+        [
+          355.0,
+          360.0
+        ]
+      ],
+      "360": [
+        [
+          360.0,
+          365.0
+        ]
+      ],
+      "365": [
+        [
+          365.0,
+          370.0
+        ]
+      ],
+      "370": [
+        [
+          370.0,
+          375.0
+        ]
+      ],
+      "375": [
+        [
+          375.0,
+          380.0
+        ]
+      ],
+      "380": [
+        [
+          380.0,
+          385.0
+        ]
+      ],
+      "385": [
+        [
+          385.0,
+          390.0
+        ]
+      ],
+      "390": [
+        [
+          390.0,
+          395.0
+        ]
+      ],
+      "395": [
+        [
+          395.0,
+          400.0
+        ]
+      ],
+      "400": [
+        [
+          400.0,
+          405.0
+        ]
+      ],
+      "405": [
+        [
+          405.0,
+          410.0
+        ]
+      ],
+      "410": [
+        [
+          410.0,
+          415.0
+        ]
+      ],
+      "415": [
+        [
+          415.0,
+          420.0
+        ]
+      ],
+      "420": [
+        [
+          420.0,
+          425.0
+        ]
+      ],
+      "425": [
+        [
+          425.0,
+          430.0
+        ]
+      ],
+      "430": [
+        [
+          430.0,
+          435.0
+        ]
+      ],
+      "435": [
+        [
+          435.0,
+          440.0
+        ]
+      ],
+      "440": [
+        [
+          440.0,
+          445.0
+        ]
+      ],
+      "445": [
+        [
+          445.0,
+          450.0
+        ]
+      ],
+      "450": [
+        [
+          450.0,
+          455.0
+        ]
+      ],
+      "455": [
+        [
+          455.0,
+          460.0
+        ]
+      ],
+      "460": [
+        [
+          460.0,
+          462.3
+        ]
+      ]
+    }
+  },
+  "equipamentos_antt": [
+    {
+      "codigo": "VC101-1",
+      "municipio": "Paulo Lopes",
+      "km": 259.7,
+      "sentido": "Crescente",
+      "latitude": -28.020139,
+      "longitude": -48.698833,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 137.1,
+      "representacao_mapa": "marcador"
+    },
+    {
+      "codigo": "VC101-10",
+      "municipio": "Imbituba",
+      "km": 289.5,
+      "sentido": "Decrescente",
+      "latitude": -28.278111,
+      "longitude": -48.70025,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 14.4,
+      "representacao_mapa": "marcador"
+    },
+    {
+      "codigo": "VC101-11",
+      "municipio": "Tubarão",
+      "km": 334.7,
+      "sentido": "Crescente",
+      "latitude": null,
+      "longitude": null,
+      "precisao": "Coordenada ambígua · referência por km",
+      "motivo_localizacao": "Posição sem concordância espacial com o km no eixo disponível",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 693.6,
+      "representacao_mapa": "trecho"
+    },
+    {
+      "codigo": "VC101-12",
+      "municipio": "Tubarão",
+      "km": 334.9,
+      "sentido": "Decrescente",
+      "latitude": null,
+      "longitude": null,
+      "precisao": "Coordenada ambígua · referência por km",
+      "motivo_localizacao": "Posição sem concordância espacial com o km no eixo disponível",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 675.4,
+      "representacao_mapa": "trecho"
+    },
+    {
+      "codigo": "VC101-13",
+      "municipio": "Capivari de Baixo",
+      "km": 325.4,
+      "sentido": "Decrescente",
+      "latitude": null,
+      "longitude": null,
+      "precisao": "Coordenada ambígua · referência por km",
+      "motivo_localizacao": "Posição sem concordância espacial com o km no eixo disponível",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 703.9,
+      "representacao_mapa": "trecho"
+    },
+    {
+      "codigo": "VC101-14",
+      "municipio": "Capivari de Baixo",
+      "km": 324.9,
+      "sentido": "Decrescente",
+      "latitude": null,
+      "longitude": null,
+      "precisao": "Coordenada ambígua · referência por km",
+      "motivo_localizacao": "Posição sem concordância espacial com o km no eixo disponível",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 742.9,
+      "representacao_mapa": "trecho"
+    },
+    {
+      "codigo": "VC101-15",
+      "municipio": "Pescaria Brava",
+      "km": 318.4,
+      "sentido": "Decrescente",
+      "latitude": null,
+      "longitude": null,
+      "precisao": "Coordenada ambígua · referência por km",
+      "motivo_localizacao": "Posição sem concordância espacial com o km no eixo disponível",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 974.1,
+      "representacao_mapa": "trecho"
+    },
+    {
+      "codigo": "VC101-16",
+      "municipio": "Sangão",
+      "km": 360.6,
+      "sentido": "Crescente",
+      "latitude": -28.669472,
+      "longitude": -49.120139,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 10.5,
+      "representacao_mapa": "marcador"
+    },
+    {
+      "codigo": "VC101-17",
+      "municipio": "Sangão",
+      "km": 367.5,
+      "sentido": "Decrescente",
+      "latitude": -28.697694,
+      "longitude": -49.181528,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 5.2,
+      "representacao_mapa": "marcador"
+    },
+    {
+      "codigo": "VC101-18",
+      "municipio": "Sangão",
+      "km": 363.4,
+      "sentido": "Crescente",
+      "latitude": -28.681222,
+      "longitude": -49.144361,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 6.9,
+      "representacao_mapa": "marcador"
+    },
+    {
+      "codigo": "VC101-19",
+      "municipio": "Sangão",
+      "km": 361.9,
+      "sentido": "Decrescente",
+      "latitude": -28.676472,
+      "longitude": -49.130083,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 8.2,
+      "representacao_mapa": "marcador"
+    },
+    {
+      "codigo": "VC101-2",
+      "municipio": "Garopaba",
+      "km": 264.6,
+      "sentido": "Decrescente",
+      "latitude": -28.059667,
+      "longitude": -48.716944,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 6.1,
+      "representacao_mapa": "marcador"
+    },
+    {
+      "codigo": "VC101-20",
+      "municipio": "Paulo Lopes",
+      "km": 252.0,
+      "sentido": "Crescente",
+      "latitude": -27.95825,
+      "longitude": -48.678,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 26.6,
+      "representacao_mapa": "marcador"
+    },
+    {
+      "codigo": "VC101-21",
+      "municipio": "Imbituba",
+      "km": 269.032,
+      "sentido": "Decrescente",
+      "latitude": -28.0975,
+      "longitude": -48.705667,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 32.4,
+      "representacao_mapa": "marcador"
+    },
+    {
+      "codigo": "VC101-22",
+      "municipio": "Pescaria Brava",
+      "km": 324.0,
+      "sentido": "Crescente",
+      "latitude": null,
+      "longitude": null,
+      "precisao": "Coordenada ambígua · referência por km",
+      "motivo_localizacao": "Posição sem concordância espacial com o km no eixo disponível",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 750.5,
+      "representacao_mapa": "trecho"
+    },
+    {
+      "codigo": "VC101-23",
+      "municipio": "Tubarão",
+      "km": 336.8,
+      "sentido": "Decrescente",
+      "latitude": null,
+      "longitude": null,
+      "precisao": "Coordenada ambígua · referência por km",
+      "motivo_localizacao": "Posição sem concordância espacial com o km no eixo disponível",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 464.0,
+      "representacao_mapa": "trecho"
+    },
+    {
+      "codigo": "VC101-24",
+      "municipio": "Jaguaruna",
+      "km": 347.28,
+      "sentido": "Crescente",
+      "latitude": -28.577374,
+      "longitude": -49.052481,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 36.6,
+      "representacao_mapa": "marcador"
+    },
+    {
+      "codigo": "VC101-25",
+      "municipio": "Jaguaruna",
+      "km": 347.84,
+      "sentido": "Decrescente",
+      "latitude": -28.582194,
+      "longitude": -49.050361,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 9.1,
+      "representacao_mapa": "marcador"
+    },
+    {
+      "codigo": "VC101-26",
+      "municipio": "Sangão",
+      "km": 355.3,
+      "sentido": "Crescente",
+      "latitude": -28.630889,
+      "longitude": -49.089667,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 28.0,
+      "representacao_mapa": "marcador"
+    },
+    {
+      "codigo": "VC101-27",
+      "municipio": "Içara",
+      "km": 371.9,
+      "sentido": "Decrescente",
+      "latitude": -28.714556,
+      "longitude": -49.221417,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 30.9,
+      "representacao_mapa": "marcador"
+    },
+    {
+      "codigo": "VC101-28",
+      "municipio": "Içara",
+      "km": 373.0,
+      "sentido": "Crescente",
+      "latitude": -28.717139,
+      "longitude": -49.232194,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 4.1,
+      "representacao_mapa": "marcador"
+    },
+    {
+      "codigo": "VC101-29",
+      "municipio": "Içara",
+      "km": 387.7,
+      "sentido": "Decrescente",
+      "latitude": -28.793556,
+      "longitude": -49.351972,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 17.8,
+      "representacao_mapa": "marcador"
+    },
+    {
+      "codigo": "VC101-3",
+      "municipio": "Paulo Lopes",
+      "km": 255.6,
+      "sentido": "Decrescente",
+      "latitude": -27.990306,
+      "longitude": -48.680028,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 6.7,
+      "representacao_mapa": "marcador"
+    },
+    {
+      "codigo": "VC101-30",
+      "municipio": "Criciúma",
+      "km": 391.94,
+      "sentido": "Crescente",
+      "latitude": -28.813111,
+      "longitude": -49.389139,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 16.2,
+      "representacao_mapa": "marcador"
+    },
+    {
+      "codigo": "VC101-31",
+      "municipio": "Maracajá",
+      "km": 400.7,
+      "sentido": "Crescente",
+      "latitude": -28.869556,
+      "longitude": -49.450889,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 4.9,
+      "representacao_mapa": "marcador"
+    },
+    {
+      "codigo": "VC101-32",
+      "municipio": "Araranguá",
+      "km": 407.5,
+      "sentido": "Decrescente",
+      "latitude": -28.920083,
+      "longitude": -49.490417,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 9.4,
+      "representacao_mapa": "marcador"
+    },
+    {
+      "codigo": "VC101-33",
+      "municipio": "Araranguá",
+      "km": 410.8,
+      "sentido": "Crescente",
+      "latitude": null,
+      "longitude": null,
+      "precisao": "Coordenada ambígua · referência por km",
+      "motivo_localizacao": "Posição sem concordância espacial com o km no eixo disponível",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 281.5,
+      "representacao_mapa": "trecho"
+    },
+    {
+      "codigo": "VC101-34",
+      "municipio": "Araranguá",
+      "km": 411.0,
+      "sentido": "Decrescente",
+      "latitude": -28.936222,
+      "longitude": -49.519306,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 87.5,
+      "representacao_mapa": "marcador"
+    },
+    {
+      "codigo": "VC101-35",
+      "municipio": "Araranguá",
+      "km": 412.2,
+      "sentido": "Crescente",
+      "latitude": -28.944,
+      "longitude": -49.527806,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 18.3,
+      "representacao_mapa": "marcador"
+    },
+    {
+      "codigo": "VC101-36",
+      "municipio": "Araranguá",
+      "km": 412.2,
+      "sentido": "Decrescente",
+      "latitude": -28.944,
+      "longitude": -49.527806,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 18.3,
+      "representacao_mapa": "marcador"
+    },
+    {
+      "codigo": "VC101-37",
+      "municipio": "Araranguá",
+      "km": 416.0,
+      "sentido": "Crescente",
+      "latitude": -28.972333,
+      "longitude": -49.528861,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 6.2,
+      "representacao_mapa": "marcador"
+    },
+    {
+      "codigo": "VC101-38",
+      "municipio": "Araranguá",
+      "km": 416.0,
+      "sentido": "Decrescente",
+      "latitude": -28.972333,
+      "longitude": -49.528861,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 6.2,
+      "representacao_mapa": "marcador"
+    },
+    {
+      "codigo": "VC101-39",
+      "municipio": "Sombrio",
+      "km": 432.5,
+      "sentido": "Crescente",
+      "latitude": null,
+      "longitude": null,
+      "precisao": "Coordenada ambígua · referência por km",
+      "motivo_localizacao": "Posição sem concordância espacial com o km no eixo disponível",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 908.4,
+      "representacao_mapa": "trecho"
+    },
+    {
+      "codigo": "VC101-4",
+      "municipio": "Paulo Lopes",
+      "km": 252.4,
+      "sentido": "Decrescente",
+      "latitude": -27.961722,
+      "longitude": -48.679278,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 10.0,
+      "representacao_mapa": "marcador"
+    },
+    {
+      "codigo": "VC101-40",
+      "municipio": "Sombrio",
+      "km": 432.5,
+      "sentido": "Decrescente",
+      "latitude": null,
+      "longitude": null,
+      "precisao": "Coordenada ambígua · referência por km",
+      "motivo_localizacao": "Posição sem concordância espacial com o km no eixo disponível",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 908.4,
+      "representacao_mapa": "trecho"
+    },
+    {
+      "codigo": "VC101-41",
+      "municipio": "Santa Rosa do Sul",
+      "km": 445.6,
+      "sentido": "Crescente",
+      "latitude": null,
+      "longitude": null,
+      "precisao": "Coordenada ambígua · referência por km",
+      "motivo_localizacao": "Posição sem concordância espacial com o km no eixo disponível",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 928.9,
+      "representacao_mapa": "trecho"
+    },
+    {
+      "codigo": "VC101-42",
+      "municipio": "Santa Rosa do Sul",
+      "km": 445.6,
+      "sentido": "Decrescente",
+      "latitude": null,
+      "longitude": null,
+      "precisao": "Coordenada ambígua · referência por km",
+      "motivo_localizacao": "Posição sem concordância espacial com o km no eixo disponível",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 928.9,
+      "representacao_mapa": "trecho"
+    },
+    {
+      "codigo": "VC101-5",
+      "municipio": "Imbituba",
+      "km": 275.9,
+      "sentido": "Crescente",
+      "latitude": -28.157222,
+      "longitude": -48.692972,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 2.0,
+      "representacao_mapa": "marcador"
+    },
+    {
+      "codigo": "VC101-6",
+      "municipio": "Imbituba",
+      "km": 277.3,
+      "sentido": "Crescente",
+      "latitude": -28.170194,
+      "longitude": -48.694306,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 19.1,
+      "representacao_mapa": "marcador"
+    },
+    {
+      "codigo": "VC101-7",
+      "municipio": "Imbituba",
+      "km": 287.1,
+      "sentido": "Crescente",
+      "latitude": -28.257278,
+      "longitude": -48.704083,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 3.5,
+      "representacao_mapa": "marcador"
+    },
+    {
+      "codigo": "VC101-8",
+      "municipio": "Imbituba",
+      "km": 277.3,
+      "sentido": "Decrescente",
+      "latitude": -28.170194,
+      "longitude": -48.694306,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 19.1,
+      "representacao_mapa": "marcador"
+    },
+    {
+      "codigo": "VC101-9",
+      "municipio": "Laguna",
+      "km": 304.0,
+      "sentido": "Decrescente",
+      "latitude": -28.388028,
+      "longitude": -48.774389,
+      "precisao": "Coordenada compatível com o eixo SNV",
+      "motivo_localizacao": "Posição publicada passa pela triagem de km e distância",
+      "origem_coordenada": "Tráfego ANTT · metadados do equipamento",
+      "distancia_eixo_m": 12.7,
+      "representacao_mapa": "marcador"
+    }
+  ]
+}

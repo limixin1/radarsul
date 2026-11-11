@@ -1,0 +1,94 @@
+{
+  "b200ea801b02be48c33ef511dc7ee96aff471c05": [
+    {
+      "fase": "fria",
+      "metricas": [
+        "2,520",
+        "226.870.300",
+        "57.163"
+      ],
+      "script_s": 7.185,
+      "conexao_e_script_s": 7.227,
+      "bytes_ws": 59789
+    },
+    {
+      "fase": "aquecida",
+      "metricas": [
+        "2,520",
+        "226.870.300",
+        "57.163"
+      ],
+      "script_s": 0.696,
+      "conexao_e_script_s": 0.703,
+      "bytes_ws": 59789
+    },
+    {
+      "fase": "aquecida",
+      "metricas": [
+        "2,520",
+        "226.870.300",
+        "57.163"
+      ],
+      "script_s": 0.739,
+      "conexao_e_script_s": 0.743,
+      "bytes_ws": 59789
+    },
+    {
+      "fase": "aquecida",
+      "metricas": [
+        "2,520",
+        "226.870.300",
+        "57.163"
+      ],
+      "script_s": 0.543,
+      "conexao_e_script_s": 0.553,
+      "bytes_ws": 59789
+    }
+  ],
+  "47956ab7441964d3e87fa9933ab52dfda8633e75": [
+    {
+      "fase": "fria",
+      "metricas": [
+        "2,520",
+        "226.870.300",
+        "57.163"
+      ],
+      "script_s": 2.826,
+      "conexao_e_script_s": 2.829,
+      "bytes_ws": 350944
+    },
+    {
+      "fase": "aquecida",
+      "metricas": [
+        "2,520",
+        "226.870.300",
+        "57.163"
+      ],
+      "script_s": 0.804,
+      "conexao_e_script_s": 0.808,
+      "bytes_ws": 350944
+    },
+    {
+      "fase": "aquecida",
+      "metricas": [
+        "2,520",
+        "226.870.300",
+        "57.163"
+      ],
+      "script_s": 0.765,
+      "conexao_e_script_s": 0.769,
+      "bytes_ws": 350944
+    },
+    {
+      "fase": "aquecida",
+      "metricas": [
+        "2,520",
+        "226.870.300",
+        "57.163"
+      ],
+      "script_s": 0.7,
+      "conexao_e_script_s": 0.703,
+      "bytes_ws": 350944
+    }
+  ]
+}

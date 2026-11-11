@@ -11,7 +11,11 @@ from src.chart_locale import PT_BR
 from src.antt_charts import ranking, evolution, persistence, persistence_data, coverage_map, road_context, correlation, monthly_grid
 from src.data_package import validate, token, MANIFEST
 from src.query import PAGES, AREAS, YEARS, DIRECTIONS, POLICY, area_ids, query_tables, point_label, display_table, source_result, parse_url, url_state, br
-from src.exports import APP_VERSION, metadata, markdown_report, csv_bytes, bundle, filename
+from src.corridor_map import segment_shapes
+from src.exports import APP_VERSION, metadata, markdown_report, csv_bytes, bundle, filename, code_version
+from src.map_view import normalize_focus, positions, render_locator
+from src.preventive import build_card
+from src.spatial import ROAD_SOURCE, city_options, road
 
 logging.basicConfig(level=logging.INFO,format='%(asctime)s %(levelname)s %(name)s %(message)s')
 LOG=logging.getLogger('sentinela')
@@ -47,8 +51,8 @@ p,li,h1,h2,h3{overflow-wrap:anywhere}
 .st-key-print_report [data-testid="stMarkdownContainer"] table{display:table;width:100%;table-layout:auto;overflow:visible}
 .st-key-print_report th,.st-key-print_report td{overflow-wrap:normal;font-size:9pt;padding:4px}
 .st-key-print_report td{white-space:nowrap}
-.st-key-print_report p,.st-key-print_report li{font-size:10pt;line-height:1.4;orphans:3;widows:3}
-.st-key-print_report p{margin:0 0 8pt}
+.st-key-print_report p,.st-key-print_report li{font-size:9.5pt;line-height:1.35;orphans:3;widows:3}
+.st-key-print_report p{margin:0 0 6pt}
 .st-key-print_report h1{font-size:22pt}
 .st-key-print_report h2{font-size:15pt}
 .st-key-print_report thead{display:table-header-group}
@@ -69,7 +73,7 @@ def select_all_area():
 def sync():
     s=st.session_state
     if all(k in s for k in ['page','years','area','directions','city','points']):
-        st.query_params.from_dict(url_state(s.page,s.years,s.area,s.directions,s.city,s.points))
+        st.query_params.from_dict(url_state(s.page,s.years,s.area,s.directions,s.city,s.points,s.get("focus")))
 
 def table(t,label):
     # HTML table is an accessible alternative to the interactive canvas grid.
@@ -104,8 +108,10 @@ def main():
     st.set_page_config(page_title='SENTINELA — consulta BR-101/SC',layout='wide',menu_items={'Report a bug':'https://github.com/limixin1/radarsul/issues/new'})
     st.markdown(CSS,unsafe_allow_html=True)
     # st.html supports non-iframed, static JS in this pinned Streamlit version.
-    # Standard DOM language attribute; no private frontend selectors or untrusted interpolation.
-    st.html('<script>document.documentElement.lang="pt-BR";</script>',unsafe_allow_javascript=True)
+    # Keep localized labels and numerical punctuation as published.
+    st.html('<script>document.documentElement.lang="pt-BR";'
+            'document.documentElement.translate=false;'
+            'document.documentElement.classList.add("notranslate");</script>',unsafe_allow_javascript=True)
     st.sidebar.title('SENTINELA')
     st.sidebar.write('Contagens históricas na BR-101/SC')
     try:
@@ -142,27 +148,88 @@ def main():
     labels={r.identificador:point_label(r) for r in meta.itertuples()}
     ids=st.sidebar.multiselect('Buscar e selecionar pontos',available,key='points',format_func=labels.get,on_change=sync,help='Digite cidade, km ou código. Remova pontos para comparar somente os locais desejados.')
     st.sidebar.button('Restaurar consulta padrão',on_click=reset)
+    cities = city_options(meta, frames.get("ocorrencias"))
+    old_focus = st.session_state.focus
+    focus = normalize_focus(old_focus, ids, cities)
+    if old_focus and not focus:
+        st.caption("A localização em foco ficou fora da seleção atual.")
+    st.session_state.focus = focus
     sync()
-    st.sidebar.caption('Snapshot histórico. Coleta ANTT 26/10/2026; PRF 23/10/2026. Tráfego até junho de 2026. Sem monitoramento em tempo real.')
+    st.sidebar.caption('Snapshot histórico. Coleta ANTT 26/10/2026 e PRF 23/10/2026. Tráfego até junho de 2026.')
     st.sidebar.caption(f'Aplicação {APP_VERSION} · dados {manifest["versao"]}')
-    st.title(page if page!=PAGES[0] else 'Consulte um ponto da BR-101/SC')
-    st.write('Escolha uma cidade e os pontos no painel de filtros. Consulte contagens publicadas de velocidade, confira os dias disponíveis e exporte a consulta com suas fontes.')
-    st.caption(f'{len(ids)} {"ponto solicitado" if len(ids)==1 else "pontos solicitados"} · {area} · {city} · anos: {", ".join(map(str,years)) or "nenhum"} · sentidos: {", ".join(directions) or "nenhum"}. {POLICY}')
+    st.title(page if page != PAGES[0] else 'Consulte um ponto da BR-101/SC')
+    area_label = 'Corredor BR-101/SC' if city == 'Todas as cidades' else f'{city}, BR-101/SC'
+    location_phrase = 'No corredor da BR-101/SC' if city == 'Todas as cidades' else f'Em {city}, na BR-101/SC'
+    point_count = f'{len(ids)} ' + ('ponto selecionado' if len(ids) == 1 else 'pontos selecionados')
+    period_label = ', '.join(map(str, years)) or 'nenhum ano'
+    st.caption(f'{area_label} · {period_label} · {point_count} · {", ".join(directions) or "sem sentido"}')
     if not years:st.info('Nenhum ano selecionado. Escolha ao menos um ano ou restaure a consulta padrão.');return
     if not directions:st.info('Nenhum sentido selecionado. Escolha crescente ou decrescente ou restaure o padrão.');return
     if not available:
         st.info('Não há pontos para esta combinação de área, cidade e sentidos. Escolha Todos os equipamentos, outra cidade ou ambos os sentidos.')
         st.button('Consultar esta cidade em todos os equipamentos',key='all_city',on_click=select_all_area)
-        return
-    if not ids:st.info('Nenhum equipamento selecionado. Selecione ao menos um ponto no painel ou restaure o padrão. Comparações e downloads ficam indisponíveis.');return
+    elif not ids:
+        st.info('Nenhum equipamento selecionado. Selecione um ponto no painel ou restaure o padrão para comparar contagens de tráfego.')
     query_started=perf_counter()
     selected,eq,cov=consult(package_token,tuple(ids),tuple(years))
     stages['consulta_s']=perf_counter()-query_started
-    if selected.empty:st.info('Os pontos escolhidos não têm publicações de tráfego nos anos solicitados. Altere os anos ou os pontos; ausência de publicação não é zero observado.');return
+    if selected.empty and ids:
+        st.info('Os pontos escolhidos não têm publicações de tráfego nos anos solicitados. Altere os anos ou os pontos. Ausência de publicação não é zero observado.')
+
+    reference = road()
+    radar_positions = positions(package_token, "ANTT", reference is not None, meta, reference)
+    shapes = segment_shapes() if reference is not None else {}
+    card = build_card(focus, meta, eq, cov, frames, manifest, years, radar_positions, shapes=shapes)
+    if page == PAGES[0]:
+        if not card:
+            if selected.empty:
+                st.write(f'{location_phrase}, a seleção de {period_label} está sem contagens disponíveis.')
+            else:
+                high, total = selected.altas.sum(), selected.passagens.sum()
+                st.write(f'{location_phrase}, no recorte de {period_label}, cerca de '
+                         f'**{br(weighted_index(high, total), 2)} por 10 mil contagens** ficaram nas faixas acima de 120 km/h.')
+                st.caption(f'{br(high)} de {br(total)} contagens publicadas. Use o mapa ou a lista para consultar um local.')
+        render_locator(meta, frames, ids, years, package_token, reference, radar_positions, card, page)
+        if not card:
+            st.subheader('O que merece atenção')
+            if 2026 in years:
+                st.write('**Cobertura parcial de 2026.** O inventário de tráfego vai até 30/06. '
+                         'Confira os dias publicados do ponto e a disponibilidade de acidentes por fonte.')
+            if not selected.empty and eq.elegivel.any():
+                example = eq.loc[eq.elegivel].iloc[0]
+                st.write(f'**{example.municipio}, km {br(example.km, 3)}.** Entre os pontos elegíveis da seleção, '
+                         f'esse ponto tem {br(example.por_10_mil, 3)} por 10 mil contagens ANTT no período {period_label}. '
+                         'Selecione o ponto para ver os dias com dados e as verificações de campo.')
+            elif 2026 not in years:
+                st.write('Os dias com dados deste recorte limitam a comparação. Consulte a cobertura antes de interpretar os resultados.')
+    elif page in (PAGES[1], PAGES[3], PAGES[4]):
+        render_locator(meta, frames, ids, years, package_token, reference, radar_positions, card, page)
+    if selected.empty:
+        if page == PAGES[4] and card:
+            filters = {'page': page, 'years': years, 'area': area, 'directions': directions,
+                       'city': city, 'points': ids, 'focus': focus}
+            emeta = metadata(manifest, filters, ids, selected, [])
+            emeta["ficha_preventiva"] = card.metadata()
+            document = card.markdown() + f'\n\nSnapshot {manifest["versao"]} · código {code_version()}\n'
+            with st.container(key="print_report"):
+                st.markdown(document)
+            st.subheader("Exportar esta consulta")
+            st.download_button("Baixar ficha preventiva em Markdown", document,
+                               "sentinela_ficha_preventiva.md", "text/markdown", on_click="ignore")
+            st.download_button("Baixar ficha preventiva em ZIP", bundle(eq, cov, emeta, document),
+                               "sentinela_ficha_preventiva.zip", "application/zip", on_click="ignore")
+        return
     content_started=perf_counter()
     sources=sources_for(frames,ids,years,manifest,meta)
     filters={'page':page,'years':years,'area':area,'directions':directions,'city':city,'points':ids}
+    if focus:
+        filters['focus'] = focus
     emeta=metadata(manifest,filters,ids,selected,sources)
+    emeta["mapa"] = {"eixo": ROAD_SOURCE, "coordenadas": "Posições publicadas com triagem espacial. Ocorrências ANTT permanecem por km."}
+    selected_locations = radar_positions.loc[radar_positions.codigo.isin(ids)]
+    emeta["localizacao_pontos"] = json.loads(selected_locations.to_json(orient="records"))
+    if card:
+        emeta["ficha_preventiva"] = card.metadata()
     export_name=filename(emeta,'png')[:-4]
     st.info('Índice: contagens nas faixas acima de 120 km/h ÷ contagens publicadas da mesma base de tráfego × 10.000. Não representa probabilidade de acidente, veículos únicos ou autuações confirmadas.')
     st.caption('120 km/h é um limiar dos intervalos publicados, não o limite regulamentado de cada ponto. Ausência de faixa não comprova ausência real de passagem.')
@@ -180,7 +247,11 @@ def main():
         if len(eligible):
             winner=eligible.iloc[0]
             st.write(f'Maior índice da comparação ({len(eligible)} {"ponto elegível" if len(eligible)==1 else "pontos elegíveis"}): {labels[winner.identificador]} — {br(winner.por_10_mil,3)} por 10 mil; menor cobertura anual {br(winner.cobertura_minima*100,1)}%.')
-            chart(ranking(eligible,years),f'O ranking mostra {min(12,len(eligible))} de {len(eligible)} {"ponto elegível" if len(eligible)==1 else "pontos elegíveis"}. A lista completa inclui também os pontos exploratórios.',eligible.head(12)[columns],'ranking',export_name+'_ranking')
+            with st.expander('Ranking dos pontos comparáveis', expanded=False):
+                chart(ranking(eligible,years),
+                      f'Índice de faixas acima de 120 km/h por 10 mil contagens ANTT em {period_label}. '
+                      f'O gráfico mostra {min(12,len(eligible))} de {len(eligible)} pontos elegíveis. {POLICY}',
+                      eligible.head(12)[columns],'ranking',export_name+'_ranking')
         else:st.info('Nenhum ponto atende aos critérios da comparação anual neste período. Veja na tabela os dias com dados e o total de contagens.')
         table(eq[columns],'todos os pontos com publicação')
     elif page==PAGES[1]:
@@ -214,20 +285,21 @@ def main():
             st.subheader(source.fonte);st.write(source.text())
             if source.intervalos:st.caption('Intervalos disponíveis: '+'; '.join(' a '.join(pair) for pair in source.intervalos)+'. Não certificam completude da fonte.')
         st.warning('Não somar acidentes ANTT e PRF nem atribuir automaticamente acidentes a um radar. Repetições ANTT sem ID são preservadas. Associação negativa não significa que velocidade proteja contra acidentes.')
-    st.subheader('Dias publicados por ponto e ano')
-    table(cov,'cobertura anual e intervalo da fonte')
-    st.caption('O intervalo usa o inventário do arquivo bruto, igual para todos os pontos; 2026 de tráfego vai até 30/06. Cobertura não comprova operação contínua. O grupo histórico reúne os pontos com ≥90% de dias em cada ano de 2024 e 2025.')
+    if page != PAGES[4]:
+        st.subheader('Dias publicados por ponto e ano')
+        table(cov,'cobertura anual e intervalo da fonte')
+        st.caption('O intervalo usa o inventário do arquivo bruto, igual para todos os pontos; 2026 de tráfego vai até 30/06. Cobertura não comprova operação contínua. O grupo histórico reúne os pontos com ≥90% de dias em cada ano de 2024 e 2025.')
     stages['conteudo_s']=perf_counter()-content_started
     export_started=perf_counter()
     possible=frames['antt_possiveis_diario'].loc[lambda x:x.ano.isin(years)&x.identificador.isin(ids)]
-    document=markdown_report(selected,eq,cov,emeta,possible)
+    document=markdown_report(selected,eq,cov,emeta,possible,card)
     if page==PAGES[4]:
         with st.container(key='print_report'):st.markdown(document)
     st.subheader('Exportar esta consulta')
-    st.caption('CSV brasileiro: UTF-8, ponto e vírgula e vírgula decimal. ZIP inclui CSV técnico, cobertura, relatório e metadados completos. O PNG está no menu do gráfico. O relatório pode ser impresso pelo navegador.')
+    st.caption('CSV brasileiro: UTF-8, ponto e vírgula e vírgula decimal. ZIP inclui CSV técnico, localização, cobertura, relatório e metadados completos. O PNG está no menu do gráfico. O relatório pode ser impresso pelo navegador.')
     st.download_button('Baixar comparação em CSV (pt-BR)',csv_bytes(eq[columns],emeta),filename(emeta,'csv'),'text/csv',on_click='ignore')
     st.download_button('Baixar relatório em Markdown',document.encode(),filename(emeta,'md'),'text/markdown',on_click='ignore')
-    extra={}
+    extra={"localizacao_pt-BR.csv": selected_locations.rename(columns={"codigo": "identificador"})}
     if page==PAGES[2]:extra['historico_mensal.csv']=g[['identificador','mes','passagens','altas','dias','cobertura_dias','por_10_mil']]
     st.download_button('Baixar consulta completa em ZIP',bundle(eq[columns],cov,emeta,document,extra),filename(emeta,'zip'),'application/zip',on_click='ignore')
     with st.expander('Método, versões e fontes verificáveis'):
